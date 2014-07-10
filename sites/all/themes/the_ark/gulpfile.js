@@ -13,11 +13,10 @@ gulp.task('bower', function () {
 });
 
 gulp.task('browserify', ['bower'], function () {
-  gulp.src('./js/*.js')
+  gulp.src('./js/the-ark.js')
     .pipe(plumber())
-    // .pipe(browserify())
-    // .pipe(gulp.dest('./js/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
+    .pipe(browserify())
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 });

@@ -8,15 +8,15 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = css/the-ark.normalize.css
-stylesheets[all][] = css/the-ark.hacks.css
-stylesheets[all][] = css/the-ark.styles.css
-stylesheets[all][] = css/the-ark.no-query.css
+stylesheets[all][] = css/the-ark.normalize.min.css
+stylesheets[all][] = css/the-ark.hacks.min.css
+stylesheets[all][] = css/the-ark.styles.min.css
+stylesheets[all][] = css/the-ark.no-query.min.css
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/the-ark.behaviors.js
+scripts[] = js/the-ark.min.js
 
 ; ========================================
 ; Regions
