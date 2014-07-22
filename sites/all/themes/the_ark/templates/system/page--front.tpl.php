@@ -80,7 +80,7 @@
       <?php if ($site_name || $site_slogan): ?>
         <?php if ($site_name): ?>
           <h1 class="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            <a class="site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
           </h1>
         <?php endif; ?>
 
