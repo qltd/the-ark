@@ -34,8 +34,8 @@ regions[footer] = Footer
 ; ========================================
 ; Settings
 ; ========================================
-settings[toggle_logo] = 1
-settings[toggle_name] = 0
+settings[toggle_logo] = 0
+settings[toggle_name] = 1
 settings[toggle_slogan] = 0
 settings[toggle_node_user_picture] = 1
 settings[toggle_comment_user_picture] = 1
