@@ -18,7 +18,7 @@ gulp.task('browserify', ['bower'], function () {
     .pipe(browserify())
     .pipe(gulp.dest('./js/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
-    .pipe(uglify())
+    .pipe(uglify({ outSourceMap: true }))
     .pipe(gulp.dest('./js/'));
 });
 
