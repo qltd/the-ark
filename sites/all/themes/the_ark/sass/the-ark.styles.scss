@@ -34,9 +34,7 @@
 
 /*---------------------------------------------------------------------*\
 
-  1. LIBRARIES..................Stylesheet Related Resources
-    a. 3rd Party Libraries......Non-Native Stylesheets and Mixins
-    b. App Libraries............App Specific Variables and Mixins
+  1. DEPENDENCIES...............Stylesheet Dependencies
   2. UNIVERSAL STYLES...........Styles Applied to All Elements
   3. BASE STYLES................Basic and Elemental Styles
   4. COMPONENTS.................Reusable Utilities and Content
@@ -44,17 +42,14 @@
 \*---------------------------------------------------------------------*/
 
 /*------------------------------------*\
-    LIBRARIES
+    DEPENDENCIES
 \*------------------------------------*/
 
-/*--Third Party Libraries--*/
-// @import "libraries/normalize"; // symlinked css as scss from ../libraries/normalize-css/normalize.css
-// @import "libraries/html5-boilerplate"; // symlinked css as scss from ../libraries/html5-boilerplate/css/main.css
+/*--Third Party Dependencies--*/
 @import "compass"; // requires compass -- 'gem install compass' or 'bundle install'
 @import "susy"; // requires susy -- 'gem install susy' or 'bundle install'
-// @import "../libraries/font-awesome/scss/font-awesome";
 
-/*--App Libraries--*/
+/*--App Dependencies--*/
 @import "variables/**/*";
 @import "abstractions/**/*";
 

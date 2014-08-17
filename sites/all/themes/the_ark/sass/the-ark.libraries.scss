@@ -28,3 +28,8 @@
   - compile while in theme directory (sites/all/themes/s2015)           : gulp compass
   - watch for changes while in theme directory (sites/all/themes/s2015) : gulp watch
 */
+
+/*--Third Party Libraries--*/
+@import "libraries/normalize"; // symlinked css as scss from ../libraries/normalize-css/normalize.css
+@import "libraries/html5-boilerplate"; // symlinked css as scss from ../libraries/html5-boilerplate/css/main.css
+@import "../libraries/font-awesome/scss/font-awesome";
