@@ -28,12 +28,3 @@
   - compile while in theme directory (sites/all/themes/s2015)           : gulp compass
   - watch for changes while in theme directory (sites/all/themes/s2015) : gulp watch
 */
-
-// provide proper margin when admin menu is present
-body {
-  &.adminimal-menu {
-    margin: {
-      top: 29px !important;
-    }
-  }
-}

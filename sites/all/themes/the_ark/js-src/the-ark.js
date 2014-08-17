@@ -22,18 +22,3 @@
  *     \_/\_/ |_| |_|\___|_|  \___| |_| |_| |_|\__,_|___/_|\___| |_|_| \_/ \___||___/
  *
  */
-/*
-  Sass/Compass Generated Stylesheet for the Ark -- https://github.com/qltd/the-ark
-
-  - compile while in theme directory (sites/all/themes/s2015)           : gulp compass
-  - watch for changes while in theme directory (sites/all/themes/s2015) : gulp watch
-*/
-
-// provide proper margin when admin menu is present
-body {
-  &.adminimal-menu {
-    margin: {
-      top: 29px !important;
-    }
-  }
-}

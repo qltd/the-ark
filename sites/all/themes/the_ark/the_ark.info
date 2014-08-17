@@ -8,10 +8,9 @@ core = 7.x
 ; ========================================
 ; Stylesheets
 ; ========================================
-stylesheets[all][] = css/the-ark.normalize.min.css
-stylesheets[all][] = css/the-ark.hacks.min.css
-stylesheets[all][] = css/the-ark.styles.min.css
-stylesheets[all][] = css/the-ark.no-query.min.css
+stylesheets[all][] = css/the-ark.libraries.css
+stylesheets[all][] = css/the-ark.styles.css
+stylesheets[all][] = css/the-ark.hacks.css
 
 ; ========================================
 ; Scripts

@@ -13,10 +13,11 @@ gulp.task('bower', function () {
 });
 
 gulp.task('browserify', ['bower'], function () {
-  gulp.src('./js/the-ark.js')
+  gulp.src('./js-src/the-ark.js')
     .pipe(plumber())
-    .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(browserify())
+    .pipe(gulp.dest('./js/'))
+    .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 });
@@ -24,7 +25,7 @@ gulp.task('browserify', ['bower'], function () {
 gulp.task('compass', ['bower'], function () {
   gulp.src('./sass/*.scss')
     .pipe(plumber())
-    .pipe(compass({ environment: 'production', sass: './sass', css: './css' }))
+    .pipe(compass({ environment: 'production' }))
     .pipe(gulp.dest('./css/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(csso())
@@ -32,7 +33,7 @@ gulp.task('compass', ['bower'], function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['./js/*.js'], ['browserify']);
+  gulp.watch(['./js-src/*.js', './js-src/**/*.js'], ['browserify']);
   gulp.watch(['./sass/*.scss', './sass/**/*.scss'], ['compass']);
 });
 

@@ -22,26 +22,58 @@
  *     \_/\_/ |_| |_|\___|_|  \___| |_| |_| |_|\__,_|___/_|\___| |_|_| \_/ \___||___/
  *
  */
+/*
+  Sass/Compass Generated Stylesheet for the Ark -- https://github.com/qltd/the-ark
 
-// Import external libraries.
-@import "compass";
-@import "breakpoint";
-@import "singularitygs";
-@import "toolkit-no-css";
+  - compile while in theme directory (sites/all/themes/s2015)           : gulp compass
+  - watch for changes while in theme directory (sites/all/themes/s2015) : gulp watch
+*/
+/*------------------------------------*\
+    TABLE OF CONTENTS
+\*------------------------------------*/
 
-// Import variables, abstractions, base styles and components using globbing.
-//
-// Globbing will always import files alphabetically. Optimally, all your
-// components should be self-contained and explicit enough to not have any
-// contained styles leak into unrelated components: The import order should not
-// affect the result.
-//
-// If there are variables, functions or mixins that depend on each other and
-// therefore need to be imported in a specific order you can import them
-// directly. Variables-, function- or mixin providing partials should never
-// output any styles themselves: Importing them multiple times to resolve
-// dependencies shouldn't be a problem.
+/*---------------------------------------------------------------------*\
+
+  1. LIBRARIES..................Stylesheet Related Resources
+    a. 3rd Party Libraries......Non-Native Stylesheets and Mixins
+    b. App Libraries............App Specific Variables and Mixins
+  2. UNIVERSAL STYLES...........Styles Applied to All Elements
+  3. BASE STYLES................Basic and Elemental Styles
+  4. COMPONENTS.................Reusable Utilities and Content
+
+\*---------------------------------------------------------------------*/
+
+/*------------------------------------*\
+    LIBRARIES
+\*------------------------------------*/
+
+/*--Third Party Libraries--*/
+// @import "libraries/normalize"; // symlinked css as scss from ../libraries/normalize-css/normalize.css
+// @import "libraries/html5-boilerplate"; // symlinked css as scss from ../libraries/html5-boilerplate/css/main.css
+@import "compass"; // requires compass -- 'gem install compass' or 'bundle install'
+@import "susy"; // requires susy -- 'gem install susy' or 'bundle install'
+// @import "../libraries/font-awesome/scss/font-awesome";
+
+/*--App Libraries--*/
 @import "variables/**/*";
 @import "abstractions/**/*";
+
+/*------------------------------------*\
+    UNIVERSAL STYLES
+\*------------------------------------*/
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+
+/*------------------------------------*\
+    BASE STYLES
+\*------------------------------------*/
+
 @import "base/**/*";
+
+/*------------------------------------*\
+    COMPONENTS
+\*------------------------------------*/
+
 @import "components/**/*";
