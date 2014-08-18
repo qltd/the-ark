@@ -1,0 +1,135 @@
+  //----------------------------------//
+ //  Font-Face
+//----------------------------------//
+
+@font-face{
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-Light.eot');
+  src: local('Fira Sans Light'),
+    url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
+    url('../fonts/FiraSans-Light.woff') format('woff'),
+    url('../fonts/FiraSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-Regular.eot');
+  src: local('Fira Sans Regular'),
+    url('../fonts/FiraSans-Regular.eot') format('embedded-opentype'),
+    url('../fonts/FiraSans-Regular.woff') format('woff'),
+    url('../fonts/FiraSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-Italic.eot');
+  src: local('Fira Sans Regular Italic'),
+    url('../fonts/FiraSans-Italic.eot') format('embedded-opentype'),
+    url('../fonts/FiraSans-Italic.woff') format('woff'),
+    url('../fonts/FiraSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: 'Fira Sans';
+  src: url('../fonts/FiraSans-Bold.eot');
+  src: local('Fira Sans Bold'),
+    url('../fonts/FiraSans-Bold.eot') format('embedded-opentype'),
+    url('../fonts/FiraSans-Bold.woff') format('woff'),
+    url('../fonts/FiraSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+  //----------------------------------//
+ //  Mixins
+//----------------------------------//
+
+//-
+ // @mixin font-details
+ //
+ // Font mixin designed for easily adding individual attributes,
+ // without including those that are unneccesary or unstated.
+ //
+ // Priority is given to size and color, though any attribute can
+ // be targeted through the use of the 'null' value.
+ //
+ // Example: font-weight: 300 and line-height: 1
+ // @include font-details(null, null, 300, 1);
+ // OR
+ // @include font-details($weight: 300, $height: 1);
+ //
+ // @param $size {value} - <absolute-size> | <relative-size> | <length> | <percentage> | inherit
+ // @param $color {value} - <color> | inherit
+ // @param $weight {value} - normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+ // @param $height {value} - normal | <number> | <length> | <percentage>
+ // @param $style {value} - normal | italic | oblique
+ // @param $family {value} - [<family-name> | <generic-family>] | inherit
+ // @returns {declarations}
+ //-
+@mixin font-details($size: null, $color: null, $weight: null, $height: null, $style: null, $family: null) {
+  @if $family != null {
+    @if $height != null {
+      @if $size != null {
+        font: $style $weight #{$size}/#{$height} $family; // this will work even if $weight or $style == null
+      } @else {
+        font-family: $family;
+        line-height: $height;
+        @if $weight != null {
+          font-weight: $weight;
+        }
+        @if $style != null {
+          font-style: $style;
+        }
+      }
+    } @else {
+      @if $size != null {
+        font: $style $weight $size $family; // this will work even if $weight or $style == null
+      } @else {
+        font-family: $family;
+        @if $weight != null {
+          font-weight: $weight;
+        }
+        @if $style != null {
+          font-style: $style;
+        }
+      }
+    }
+  } @else {
+    @if $size != null {
+      font-size: $size;
+    }
+    @if $weight != null {
+      font-weight: $weight;
+    }
+    @if $height != null {
+      line-height: $height;
+    }
+    @if $style != null {
+      font-style: $style;
+    }
+  }
+  @if $color != null {
+    color: $color;
+  }
+}
+
+@mixin FiraSans($size: null, $color: null, $weight: null, $height: null, $style: null) {
+  $family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include font-details($size, $color, $weight, $height, $style, $family);
+}
+
+@mixin FontAwesome($size: null, $color: null) {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include font-details($size, $color);
+}
