@@ -1,0 +1,22 @@
+.tabs--primary {
+  margin: {
+    bottom: 0;
+  }
+  border: {
+    bottom: none;
+  }
+  a {
+    background-color: $gray-background;
+    color: white;
+    &.active, &:hover {
+      background-color: $teal;
+    }
+  }
+  li {
+    float: none;
+    display: inline-block;
+    margin: {
+      bottom: 0;
+    }
+  }
+}
