@@ -1,0 +1,16 @@
+name = Front Page
+description = Blocks, context, and settings for the front page.
+core = 7.x
+package = The Ark Features
+version = 7.x-1.0
+project = front_page
+dependencies[] = block
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = fe_block
+features[context][] = front
+features[ctools][] = context:context:3
+features[fe_block_boxes][] = hero_about
+features[fe_block_settings][] = block-hero_about
+features[features_api][] = api:2
+project path = sites/all/modules/the_ark_features

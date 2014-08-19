@@ -1,23 +1,23 @@
 <?php
 /**
  * @file
- * header_region.features.fe_block_settings.inc
+ * front_page.features.fe_block_settings.inc
  */
 
 /**
  * Implements hook_default_fe_block_settings().
  */
-function header_region_default_fe_block_settings() {
+function front_page_default_fe_block_settings() {
   $export = array();
 
   $export['version'] = '2.0';
 
-  $export['system-main-menu'] = array(
+  $export['block-hero_about'] = array(
     'cache' => -1,
-    'css_class' => 'primary-navigation',
+    'css_class' => 'hero-about',
     'custom' => 0,
-    'delta' => 'main-menu',
-    'module' => 'system',
+    'machine_name' => 'hero_about',
+    'module' => 'block',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
@@ -47,7 +47,7 @@ function header_region_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Menu',
+    'title' => '',
     'visibility' => 0,
   );
 
