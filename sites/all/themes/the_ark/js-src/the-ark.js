@@ -22,3 +22,9 @@
  *     \_/\_/ |_| |_|\___|_|  \___| |_| |_| |_|\__,_|___/_|\___| |_|_| \_/ \___||___/
  *
  */
+/*
+  Browserify/Uglify Generated JavaScript for the Ark -- https://github.com/qltd/the-ark
+
+  - compile while in theme directory (sites/all/themes/the_ark)           : gulp browserify
+  - watch for changes while in theme directory (sites/all/themes/the_ark) : gulp watch
+*/
