@@ -1,6 +1,7 @@
 // site colors
 $gold: #eea904;
 $orange: #f8903b;
+$purple: #14021c;
 $teal: #18b3cd;
 
 // grays
@@ -12,3 +13,6 @@ $gray-dark: #343434;
 $gray-light-background: #f3f2ee;
 $gray-background: #a6a29c;
 $gray-dark-background: #2e2b2b;
+
+// masks
+$purple-mask: rbga($purple, 0.35);
