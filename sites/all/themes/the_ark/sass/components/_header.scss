@@ -1,0 +1,45 @@
+.l-header {
+  background-image: url('/images/header');
+}
+.front {
+  .l-header {
+    background-image: url('/images/hero');
+  }
+}
+
+.l-region--header {
+  background-color: $purple-mask;
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .l-header {
+    background-image: url('/images/header/mobile_wide');
+  }
+  .front {
+    .l-header {
+      background-image: url('/images/hero/mobile_wide');
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .l-header {
+    background-image: url('/images/header/tablet');
+  }
+  .front {
+    .l-header {
+      background-image: url('/images/hero/tablet');
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .l-header {
+    background-image: url('/images/header/desktop');
+  }
+  .front {
+    .l-header {
+      background-image: url('/images/hero/desktop');
+    }
+  }
+}
