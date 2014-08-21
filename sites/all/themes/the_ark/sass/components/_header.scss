@@ -1,20 +1,30 @@
 .l-header {
+  background-color: $gray-dark;
   background-image: url('/images/header');
 }
+.l-region--header {
+  width: 480px;
+  height: 170px;
+  background-color: $purple-mask;
+}
+
 .front {
   .l-header {
     background-image: url('/images/hero');
   }
-}
-
-.l-region--header {
-  background-color: $purple-mask;
+  .l-region--header {
+    height: 340px;
+  }
 }
 
 @include breakpoint($breakpoint-mobile-wide) {
   .l-header {
     background-image: url('/images/header/mobile_wide');
   }
+  .l-region--header {
+    width: 767px;
+  }
+
   .front {
     .l-header {
       background-image: url('/images/hero/mobile_wide');
@@ -26,9 +36,17 @@
   .l-header {
     background-image: url('/images/header/tablet');
   }
+  .l-region--header {
+    width: 1024px;
+    height: 130px;
+  }
+
   .front {
     .l-header {
       background-image: url('/images/hero/tablet');
+    }
+    .l-region--header {
+      height: 500px;
     }
   }
 }
@@ -37,9 +55,26 @@
   .l-header {
     background-image: url('/images/header/desktop');
   }
+  .l-region--header {
+    width: 1340px;
+    height: 170px;
+  }
+
   .front {
     .l-header {
       background-image: url('/images/hero/desktop');
     }
+    .l-region--header {
+      height: 700px;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .l-header {
+    background-size: 100% auto;
+  }
+  .l-region--header {
+    width: 100%;
   }
 }
