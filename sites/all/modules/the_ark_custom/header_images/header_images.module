@@ -26,29 +26,11 @@ function header_images_permission () {
   );
 }
 
-function header_images_load ($type, $style = 'mobile') {
-  $type .= '_image';
-  $query = new EntityFieldQuery;
-  $result = $query
-    ->entityCondition('entity_type', 'node')
-    ->propertyCondition('type', $type)
-    ->execute();
-  $nodes = isset($result['node']) ? $result['node'] : array();
-  if (empty($nodes)) return drupal_not_found();
-  $node = $nodes[array_rand($nodes)];
-  if (!isset($node->nid)) return drupal_not_found();
-  $node = node_load($node->nid);
-  if (!isset($node->field_image['und'][0]['uri']) || !isset($node->field_image['und'][0]['filemime'])) return drupal_not_found();
-  $image_uri = header_images_load_style($style, $type, $node->field_image['und'][0]['uri']);
-  $image_mime = $node->field_image['und'][0]['filemime'];
-  $image_data = fopen($image_uri, 'rb');
-  header('Content-Type: ' . $image_mime);
-  header('Content-Length: ' . filesize($image_uri));
-  fpassthru($image_data);
-  exit;
+function header_images_not_found () {
+  return drupal_not_found(); // TODO: Handle this properly as a 404 image
 }
 
-function header_images_load_style ($style, $type, $uri) {
+function header_images_style_path ($style, $type, $uri) {
   $style = $type . '_' . $style;
   $style_path = image_style_path($style, $uri);
   if (!file_exists($style_path)) {
@@ -57,4 +39,29 @@ function header_images_load_style ($style, $type, $uri) {
     image_style_create_derivative($style, $uri, $style_path);
   }
   return $style_path;
+}
+
+function header_images_load ($type, $style = 'mobile') {
+  $type .= '_image';
+  $query = new EntityFieldQuery;
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->propertyCondition('type', $type)
+    ->propertyCondition('status', 1)
+    ->execute();
+  $nodes = isset($result['node']) ? $result['node'] : array();
+  if (empty($nodes)) return header_images_not_found();
+  $node = $nodes[array_rand($nodes)];
+  if (!isset($node->nid)) return header_images_not_found();
+  $node = node_load($node->nid);
+  if (!isset($node->field_image['und'][0]['uri'])
+    || !isset($node->field_image['und'][0]['filemime'])
+    || !file_exists($node->field_image['und'][0]['uri'])) return header_images_not_found();
+  $image_uri = header_images_style_path($style, $type, $node->field_image['und'][0]['uri']);
+  $image_mime = $node->field_image['und'][0]['filemime'];
+  $image_data = fopen($image_uri, 'rb');
+  header('Content-Type: ' . $image_mime);
+  header('Content-Length: ' . filesize($image_uri));
+  fpassthru($image_data);
+  exit;
 }
