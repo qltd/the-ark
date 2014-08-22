@@ -37,3 +37,18 @@ body {
     }
   }
 }
+
+// Hide the toolbar or admin menu on small screens.
+@media all and (max-width: 1024px) {
+  body {
+    &.adminimal-menu {
+      margin: {
+        top: 0 !important;
+      }
+    }
+  }
+
+  #toolbar, #admin-menu {
+    display: none;
+  }
+}
