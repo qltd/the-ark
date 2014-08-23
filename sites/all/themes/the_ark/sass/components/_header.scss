@@ -6,6 +6,9 @@
 .l-region--header {
   height: 170px;
   background-color: $purple-mask;
+  background-image: url('/sites/all/themes/the_ark/images/logo.png');
+  background-position: center center;
+  background-repeat: no-repeat no-repeat;
 }
 
 .front {
@@ -14,6 +17,13 @@
   }
   .l-region--header {
     height: 340px;
+  }
+}
+
+@include breakpoint($breakpoint-hi-res) {
+  .l-region--header {
+    background-image: url('/sites/all/themes/the_ark/images/logo@2x.png');
+    background-size: 215px 110px;
   }
 }
 
