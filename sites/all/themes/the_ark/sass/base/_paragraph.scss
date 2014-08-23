@@ -10,6 +10,6 @@ p {
 
 @include breakpoint($breakpoint-desktop) {
   p {
-    font-size: 1.75rem;
+    font-size: 1.75em;
   }
 }
