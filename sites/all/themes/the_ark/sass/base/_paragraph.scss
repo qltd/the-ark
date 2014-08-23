@@ -1,0 +1,15 @@
+p {
+  @include font-details($weight: 300, $height: 1.5);
+}
+
+@include breakpoint($breakpoint-tablet) {
+  p {
+    font-size: 1.125em;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  p {
+    font-size: 1.75rem;
+  }
+}
