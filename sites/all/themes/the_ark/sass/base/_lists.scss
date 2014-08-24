@@ -1,0 +1,24 @@
+.block__content, .node__content {
+  li {
+    margin: {
+      bottom: 16px;
+    }
+    line-height: 1.5;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block__content, .node__content {
+    li {
+      font-size: 1.125em;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .block__content, .node__content {
+    li {
+      font-size: 1.75em;
+    }
+  }
+}
