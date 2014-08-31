@@ -1,0 +1,17 @@
+name = The Ark Admin
+description = Adminimal sub-theme for the Ark.
+base theme = adminimal
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Regions
+; ========================================
+regions[content_before] = Before Content
+regions[content] = Content
+regions[content_after] = After Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions_hidden[] = sidebar_first
