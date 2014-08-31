@@ -32,11 +32,17 @@ function header_region_context_default_contexts() {
           'region' => 'header',
           'weight' => '-10',
         ),
+        'menu-menu-shortcuts' => array(
+          'module' => 'menu',
+          'delta' => 'menu-shortcuts',
+          'region' => 'header',
+          'weight' => '-9',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'header',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),

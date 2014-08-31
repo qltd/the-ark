@@ -12,6 +12,45 @@ function header_region_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['menu-menu-shortcuts'] = array(
+    'cache' => -1,
+    'css_class' => 'shortcuts-navigation',
+    'custom' => 0,
+    'delta' => 'menu-shortcuts',
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['search-form'] = array(
     'cache' => -1,
     'css_class' => 'site-search',
@@ -23,27 +62,27 @@ function header_region_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'adminimal' => array(
-        'region' => 'content_before',
+        'region' => 'dashboard_inactive',
         'status' => 1,
         'theme' => 'adminimal',
         'weight' => -1,
       ),
-      'bartik' => array(
-        'region' => 'sidebar_first',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => -1,
-      ),
-      'seven' => array(
+      'omega' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'seven',
-        'weight' => -10,
+        'theme' => 'omega',
+        'weight' => -1,
       ),
       'the_ark' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'the_ark',
+        'weight' => -1,
+      ),
+      'the_ark_admin' => array(
+        'region' => 'dashboard_inactive',
+        'status' => 1,
+        'theme' => 'the_ark_admin',
         'weight' => -1,
       ),
     ),
@@ -67,22 +106,22 @@ function header_region_default_fe_block_settings() {
         'theme' => 'adminimal',
         'weight' => 0,
       ),
-      'bartik' => array(
+      'omega' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
+        'theme' => 'omega',
         'weight' => 0,
       ),
       'the_ark' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
         'weight' => 0,
       ),
     ),

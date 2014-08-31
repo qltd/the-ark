@@ -28,22 +28,22 @@ function front_page_default_fe_block_settings() {
         'theme' => 'adminimal',
         'weight' => 0,
       ),
-      'bartik' => array(
+      'omega' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
+        'theme' => 'omega',
         'weight' => 0,
       ),
       'the_ark' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
         'weight' => 0,
       ),
     ),
