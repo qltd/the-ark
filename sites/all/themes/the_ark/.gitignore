@@ -1,9 +1,5 @@
 # Ignore node module and bower folders.
-libraries
 node_modules
 
 # We absolutely don't want to have the .sass-cache in git.
 .sass-cache
-
-# Do not ingore Sass libraries
-!sass/libraries

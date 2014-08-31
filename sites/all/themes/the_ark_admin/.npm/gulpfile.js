@@ -11,10 +11,10 @@ gulp.task('browserify', function () {
   gulp.src('./js-src/*.js')
     .pipe(plumber())
     .pipe(browserify())
-    .pipe(gulp.dest('../js/'))
+    .pipe(gulp.dest('./js/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(uglify({ outSourceMap: true }))
-    .pipe(gulp.dest('../js/'));
+    .pipe(gulp.dest('./js/'));
 });
 
 gulp.task('compass', function () {
@@ -22,15 +22,15 @@ gulp.task('compass', function () {
     .pipe(plumber())
     .pipe(compass({
       config_file: './config.rb',
-      css: '../css',
+      css: 'css',
       environment: 'production',
       sass: 'sass',
       sourcemap: true
     }))
-    .pipe(gulp.dest('../css/'))
+    .pipe(gulp.dest('./css/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(csso())
-    .pipe(gulp.dest('../css/'));
+    .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('watch', function () {

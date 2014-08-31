@@ -1,0 +1,15 @@
+{
+  "name": "the_ark",
+  "version": "1.0.0",
+  "dependencies": {
+    "ckeditor": "4.4.3",
+    "font-awesome": "4.1.0",
+    "html5-boilerplate": "4.3.0",
+    "html5shiv": "fubhy/html5shiv",
+    "matchmedia": "fubhy/matchmedia",
+    "normalize-css": "3.0.1",
+    "pie": "fubhy/pie",
+    "respond": "fubhy/respond",
+    "selectivizr": "fubhy/selectivizr"
+  }
+}
