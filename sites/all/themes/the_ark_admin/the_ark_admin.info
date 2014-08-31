@@ -11,6 +11,11 @@ stylesheets[all][] = css/the-ark-admin.styles.css
 stylesheets[all][] = css/the-ark-admin.hacks.css
 
 ; ========================================
+; Scripts
+; ========================================
+scripts[] = js/the-ark-admin.min.js
+
+; ========================================
 ; Regions
 ; ========================================
 regions[content_before] = Before Content
