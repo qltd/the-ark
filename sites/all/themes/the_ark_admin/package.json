@@ -1,0 +1,20 @@
+{
+  "name": "the_ark_admin",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-compass": "^1.1.9",
+    "gulp-csso": "^0.2.9",
+    "gulp-plumber": "^0.6.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "0.2.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "install": "gulp"
+  }
+}

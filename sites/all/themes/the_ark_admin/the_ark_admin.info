@@ -1,5 +1,5 @@
 name = The Ark Admin
-description = Adminimal sub-theme for the Ark.
+description = Adminimal sub-theme for the Ark's administrative pages.
 base theme = adminimal
 engine = phptemplate
 core = 7.x
