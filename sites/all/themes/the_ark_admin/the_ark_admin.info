@@ -5,6 +5,12 @@ engine = phptemplate
 core = 7.x
 
 ; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/the-ark-admin.styles.css
+stylesheets[all][] = css/the-ark-admin.hacks.css
+
+; ========================================
 ; Regions
 ; ========================================
 regions[content_before] = Before Content

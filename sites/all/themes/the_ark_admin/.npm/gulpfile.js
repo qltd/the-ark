@@ -8,23 +8,29 @@ var gulp = require('gulp')
 
 
 gulp.task('browserify', function () {
-  gulp.src('./js-src/the-ark-admin.js')
+  gulp.src('./js-src/*.js')
     .pipe(plumber())
     .pipe(browserify())
-    .pipe(gulp.dest('./js/'))
+    .pipe(gulp.dest('../js/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(uglify({ outSourceMap: true }))
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('../js/'));
 });
 
 gulp.task('compass', function () {
   gulp.src('./sass/*.scss')
     .pipe(plumber())
-    .pipe(compass({ environment: 'production' }))
-    .pipe(gulp.dest('./css/'))
+    .pipe(compass({
+      config_file: './config.rb',
+      css: '../css',
+      environment: 'production',
+      sass: 'sass',
+      sourcemap: true
+    }))
+    .pipe(gulp.dest('../css/'))
     .pipe(rename(function (path) { path.basename += '.min'; }))
     .pipe(csso())
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('../css/'));
 });
 
 gulp.task('watch', function () {
