@@ -467,6 +467,49 @@ function event_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_related_event'
+  $field_instances['node-event-field_related_event'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Show(s) and/or event(s) related to this show or event.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_event',
+    'label' => 'Related Event(s)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_sponsor'
   $field_instances['node-event-field_sponsor'] = array(
     'bundle' => 'event',
@@ -664,6 +707,8 @@ function event_content_field_default_field_instances() {
   t('Media');
   t('Opening Acts');
   t('Opening act(s) related to this show or event.<br><br>Add an additional field for <em>each</em> act &mdash; one line per artist. ');
+  t('Related Event(s)');
+  t('Show(s) and/or event(s) related to this show or event.');
   t('Sponsor(s)');
   t('Sponsor(s) of the show or event.<br><br>This is an autocompleting field with a limited vocabulary.<br><br>If you need to add a new term, visit: <a href="/admin/structure/taxonomy/sponsor/add" target="_blank">http://theark.org/admin/structure/taxonomy/sponsor/add</a>');
   t('Spotify URI');
