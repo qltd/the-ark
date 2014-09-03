@@ -22,7 +22,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -64,7 +64,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'time',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -117,7 +117,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'time',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -160,6 +160,88 @@ function event_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_endorsement'
+  $field_instances['node-event-field_endorsement'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A quote, or other promotional text, supporting the show or event.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_endorsement',
+    'label' => 'Endorsement',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_endorsement_source'
+  $field_instances['node-event-field_endorsement_source'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If there is text in the endorsement field, this field is reserved for naming the source or author of that text.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_endorsement_source',
+    'label' => 'Endorsement Source',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_genre'
   $field_instances['node-event-field_genre'] = array(
     'bundle' => 'event',
@@ -171,8 +253,8 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -210,7 +292,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -331,7 +413,7 @@ function event_content_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -475,13 +557,13 @@ function event_content_field_default_field_instances() {
     'description' => 'Show(s) and/or event(s) related to this show or event.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -506,7 +588,7 @@ function event_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 16,
     ),
   );
 
@@ -521,8 +603,8 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -562,7 +644,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -695,11 +777,15 @@ function event_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A quote, or other promotional text, supporting the show or event.');
   t('Body');
   t('Date and Time');
   t('Doors (Date and Time)');
+  t('Endorsement');
+  t('Endorsement Source');
   t('Genre of the event or show.<br><br>This is an autocompleting field with a limited vocabulary.<br><br>If you need to add a new term, visit: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>');
   t('Genre(s)');
+  t('If there is text in the endorsement field, this field is reserved for naming the source or author of that text.');
   t('Image');
   t('Image associated with a sponsor');
   t('Link(s) related to the show or event.');

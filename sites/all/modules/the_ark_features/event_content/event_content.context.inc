@@ -28,6 +28,9 @@ function event_content_context_default_contexts() {
   );
   $context->reactions = array(
     'breadcrumb' => 'node/1',
+    'no_title' => array(
+      'no_title' => 1,
+    ),
   );
   $context->condition_mode = 0;
 
