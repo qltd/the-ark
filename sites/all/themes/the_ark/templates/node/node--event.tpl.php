@@ -78,16 +78,44 @@
  * @see template_process()
  */
 ?>
+<?php dpm($content); ?>
 <article<?php print $attributes; ?>>
-  <?php if (!empty($title_prefix) || !empty($title_suffix) || !$page): ?>
-    <header>
-      <?php print render($title_prefix); ?>
-      <?php if (!$page): ?>
-        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
+  <header>
+    <?php print render($title_prefix); ?>
+    <?php if (!$page): // teaser ?>
+      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
+
+    <?php else: // page ?>
+
+      <?php if (isset($content['field_date']['#items'][0]['value'])): ?>
+        <h2><?php print date('l, F j, Y', strtotime($content['field_date']['#items'][0]['value'] . ' UTC')); ?></h2>
       <?php endif; ?>
-      <?php print render($title_suffix); ?>
-    </header>
-  <?php endif; ?>
+      <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+
+      <?php if (isset($content['field_opener']['#items'])): ?>
+        Opener<?php if (count($content['field_opener']['#items']) > 1) print 's';?>: <?php print render($content['field_opener']); ?>
+      <?php endif; ?>
+
+      <ul>
+        <li>Doors Open: <?php print render($content['field_date_doors']); ?></li>
+        <li>Show Starts: <?php print render($content['field_date']); ?></li>
+      </ul>
+      <nav>
+        <ul>
+          <li><a href="/"><?php print t('Buy Tickets in Person'); ?></a></li>
+          <li><a href="/"><?php print t('Seating Chart'); ?></a></li>
+          <?php if (isset($content['field_link']['#items'])): ?>
+            <?php hide($content['field_link']); ?>
+            <?php foreach ($content['field_link']['#items'] as $link): ?>
+              <li><?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?></li>
+            <?php endforeach; ?>
+          <?php endif; ?>
+        </ul>
+      </nav>
+
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+  </header>
 
   <?php if ($display_submitted): ?>
     <footer class="node__submitted">
