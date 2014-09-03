@@ -78,7 +78,6 @@
  * @see template_process()
  */
 ?>
-<?php dpm($content); ?>
 <article<?php print $attributes; ?>>
   <header>
     <?php print render($title_prefix); ?>
@@ -125,6 +124,12 @@
   <?php endif; ?>
 
   <div<?php print $content_attributes; ?>>
+    <?php if (isset($content['field_endorsement'])): ?>
+      <div class="event-endorsement">
+        <?php print render($content['field_endorsement']); ?>
+        <?php print render($content['field_endorsement_source']); ?>
+      </div>
+    <?php endif; ?>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
