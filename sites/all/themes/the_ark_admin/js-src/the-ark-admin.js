@@ -28,3 +28,9 @@
   - compile while in .npm directory (sites/all/themes/the_ark_admin/.npm)           : gulp browserify
   - watch for changes while in .npm directory (sites/all/themes/the_ark_admin/.npm) : gulp watch
 */
+
+/**
+ * Components
+ */
+require('./behaviors/form-date-events.js');
+require('./behaviors/form-spotify.js');
