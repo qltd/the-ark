@@ -125,9 +125,9 @@ function event_content_field_default_field_instances() {
     'label' => 'Date and Time',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'strtotime',
       'default_value2' => 'same',
-      'default_value_code' => '',
+      'default_value_code' => '8pm',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
@@ -178,9 +178,9 @@ function event_content_field_default_field_instances() {
     'label' => 'Doors (Date and Time)',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'strtotime',
       'default_value2' => 'same',
-      'default_value_code' => '',
+      'default_value_code' => '7:30pm',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
@@ -231,9 +231,9 @@ function event_content_field_default_field_instances() {
     'label' => 'Tickets (Date and Time)',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'strtotime',
       'default_value2' => 'same',
-      'default_value_code' => '',
+      'default_value_code' => '10am',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
@@ -969,9 +969,14 @@ function event_content_field_default_field_instances() {
   // Exported field_instance: 'node-event-field_ticket_url'
   $field_instances['node-event-field_ticket_url'] = array(
     'bundle' => 'event',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'title' => 'Buy Tickets Online',
+        'url' => '<front>',
+      ),
+    ),
     'deleted' => 0,
-    'description' => 'This is the URL for purchasing tickets online.',
+    'description' => 'URL(s) for purchasing tickets online.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -989,7 +994,7 @@ function event_content_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_ticket_url',
-    'label' => 'Ticket URL',
+    'label' => 'Ticket URL(s)',
     'required' => 0,
     'settings' => array(
       'attributes' => array(
@@ -1004,7 +1009,7 @@ function event_content_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'optional',
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1068,7 +1073,7 @@ function event_content_field_default_field_instances() {
     'description' => 'Image associated with a sponsor',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -1085,7 +1090,7 @@ function event_content_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'images/sponsors',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -1110,10 +1115,10 @@ function event_content_field_default_field_instances() {
           'video' => 0,
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
           'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
-          'upload' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
           'youtube' => 0,
         ),
         'progress_indicator' => 'throbber',
@@ -1163,12 +1168,12 @@ function event_content_field_default_field_instances() {
   t('The ticket price(s) for a show or event.<br><br>Add an additional field for each ticket price tier &mdash; one line per ticket price tier.<br><br>Enter <em>0</em> to display the text <em>"Free"</em> as the ticket price.');
   t('These are the sortable images and videos that will appear on an event details page.');
   t('This image is the thumbnail representation of a show or event. It will be scaled and cropped automatically.');
-  t('This is the URL for purchasing tickets online.');
   t('This is the starting date and time of the show or event.');
   t('Thumbnail Image');
   t('Ticket Price');
-  t('Ticket URL');
+  t('Ticket URL(s)');
   t('Tickets (Date and Time)');
+  t('URL(s) for purchasing tickets online.');
   t('Venue');
   t('Venue for the show or event.<br><br>If you need to add a venue that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/venue/add" target="_blank">http://theark.org/admin/structure/taxonomy/venue/add</a>');
 

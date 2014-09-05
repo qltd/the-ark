@@ -149,6 +149,8 @@
     <?php print render($content['body']); ?>
     <div class="event-media">
       <?php
+        hide($content['field_date_tickets']);
+        
         hide($content['field_venue']);
         hide($content['field_genre']);
         hide($content['field_sponsor']);

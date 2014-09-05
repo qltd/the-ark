@@ -629,7 +629,7 @@ function event_content_field_default_field_bases() {
   // Exported field_base: 'field_ticket_url'
   $field_bases['field_ticket_url'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ticket_url',
