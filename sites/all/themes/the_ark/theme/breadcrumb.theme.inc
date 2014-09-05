@@ -16,7 +16,7 @@ function the_ark_breadcrumb ($variables) {
     $delimiter = ' <span class="breadcrumb-delimiter">&gt;</span> ';
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
     $output .= '<div class="breadcrumb">' . implode($delimiter, $breadcrumb) . $delimiter;
-    $output .= l(html_entity_decode(strip_tags(drupal_get_title()), ENT_QUOTES | ENT_HTML5), current_path()) . '</div>';
+    $output .= l(html_entity_decode(strip_tags(drupal_get_title()), ENT_QUOTES), current_path()) . '</div>';
     return $output;
   } else {
     $output = '<div class="breadcrumb empty-breadcrumb">&nbsp;</div>';
