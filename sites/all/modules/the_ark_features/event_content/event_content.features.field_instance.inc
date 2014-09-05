@@ -22,7 +22,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -50,7 +50,47 @@ function event_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 10,
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_coheadlining_act'
+  $field_instances['node-event-field_coheadlining_act'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Co-headlining act(s) related to this show or event.<br><br>Add an additional field for each act — one line per artist.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_coheadlining_act',
+    'label' => 'Co-headlining Act(s)',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
     ),
   );
 
@@ -71,7 +111,7 @@ function event_content_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -103,7 +143,7 @@ function event_content_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 7,
+      'weight' => 10,
     ),
   );
 
@@ -124,7 +164,7 @@ function event_content_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -156,7 +196,103 @@ function event_content_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 8,
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_date_tickets'
+  $field_instances['node-event-field_date_tickets'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => 'The date and time when tickets will become available for sale.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long_12',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date_tickets',
+    'label' => 'Tickets (Date and Time)',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 1,
+        'input_format' => 'm/d/Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_doors_only'
+  $field_instances['node-event-field_doors_only'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box if this event or show has tickets that can only be purchased at the venue.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_doors_only',
+    'label' => 'Doors-only Show',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 15,
     ),
   );
 
@@ -172,7 +308,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -198,7 +334,7 @@ function event_content_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 14,
+      'weight' => 17,
     ),
   );
 
@@ -214,7 +350,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -238,7 +374,7 @@ function event_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 15,
+      'weight' => 18,
     ),
   );
 
@@ -247,14 +383,14 @@ function event_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Genre of the event or show.<br><br>This is an autocompleting field with a limited vocabulary.<br><br>If you need to add a new term, visit: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>',
+    'description' => 'Genre of the event or show.<br><br>If you need to add a genre that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 11,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -271,14 +407,11 @@ function event_content_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
     ),
   );
 
@@ -292,7 +425,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -342,7 +475,7 @@ function event_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 13,
+      'weight' => 21,
     ),
   );
 
@@ -351,14 +484,14 @@ function event_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Link(s) related to the show or event.',
+    'description' => 'Link(s) related to the show or event.<br><br>External sites for artists, organizations, etc.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -396,7 +529,7 @@ function event_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -413,7 +546,7 @@ function event_content_field_default_field_instances() {
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 9,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -459,7 +592,46 @@ function event_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 12,
+      'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_notes'
+  $field_instances['node-event-field_notes'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_notes',
+    'label' => 'Special Notes (Admin Only)',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 23,
     ),
   );
 
@@ -475,7 +647,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -486,7 +658,7 @@ function event_content_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_opener',
-    'label' => 'Opening Acts',
+    'label' => 'Opening Act(s)',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -499,7 +671,7 @@ function event_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -508,7 +680,7 @@ function event_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'The individual ticket price for a show or event.<br><br>Do <em>NOT</em> include "$".<br><br>Leave field blank if the show or event does not have a cost.',
+    'description' => 'The ticket price(s) for a show or event.<br><br>Add an additional field for each ticket price tier &mdash; one line per ticket price tier.<br><br>Enter <em>0</em> to display the text <em>"Free"</em> as the ticket price.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -520,7 +692,7 @@ function event_content_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_decimal',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -536,7 +708,7 @@ function event_content_field_default_field_instances() {
     'settings' => array(
       'max' => '',
       'min' => '',
-      'prefix' => '',
+      'prefix' => '$',
       'suffix' => '',
       'user_register_form' => FALSE,
     ),
@@ -545,7 +717,7 @@ function event_content_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 13,
     ),
   );
 
@@ -563,7 +735,7 @@ function event_content_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 13,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -588,7 +760,132 @@ function event_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_sold_out'
+  $field_instances['node-event-field_sold_out'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box if a show or event no longer has tickets available for purchase.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sold_out',
+    'label' => 'Sold Out',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_special_event'
+  $field_instances['node-event-field_special_event'] = array(
+    'bundle' => 'event',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box if this is a <em>special</em> show or event.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_special_event',
+    'label' => 'Special Event',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_special_guest'
+  $field_instances['node-event-field_special_guest'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Special guest(s) related to this show or event.<br><br>Add an additional field for each act — one line per artist.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_special_guest',
+    'label' => 'Special Guest(s)',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
     ),
   );
 
@@ -597,14 +894,14 @@ function event_content_field_default_field_instances() {
     'bundle' => 'event',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Sponsor(s) of the show or event.<br><br>This is an autocompleting field with a limited vocabulary.<br><br>If you need to add a new term, visit: <a href="/admin/structure/taxonomy/sponsor/add" target="_blank">http://theark.org/admin/structure/taxonomy/sponsor/add</a>',
+    'description' => 'Sponsor(s) of the show or event.<br><br>If you need to add a sponsor that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/sponsor/add" target="_blank">http://theark.org/admin/structure/taxonomy/sponsor/add</a>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 12,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -621,14 +918,11 @@ function event_content_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 9,
     ),
   );
 
@@ -644,7 +938,7 @@ function event_content_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -668,7 +962,61 @@ function event_content_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'node-event-field_ticket_url'
+  $field_instances['node-event-field_ticket_url'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This is the URL for purchasing tickets online.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ticket_url',
+    'label' => 'Ticket URL',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 14,
     ),
   );
 
@@ -688,7 +1036,7 @@ function event_content_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -771,7 +1119,7 @@ function event_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -779,33 +1127,48 @@ function event_content_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('A quote, or other promotional text, supporting the show or event.');
   t('Body');
+  t('Check this box if a show or event no longer has tickets available for purchase.');
+  t('Check this box if this event or show has tickets that can only be purchased at the venue.');
+  t('Check this box if this is a <em>special</em> show or event.');
+  t('Co-headlining Act(s)');
+  t('Co-headlining act(s) related to this show or event.<br><br>Add an additional field for each act — one line per artist.');
   t('Date and Time');
   t('Doors (Date and Time)');
+  t('Doors-only Show');
   t('Endorsement');
   t('Endorsement Source');
-  t('Genre of the event or show.<br><br>This is an autocompleting field with a limited vocabulary.<br><br>If you need to add a new term, visit: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>');
+  t('Genre of the event or show.<br><br>If you need to add a genre that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>');
   t('Genre(s)');
   t('If there is text in the endorsement field, this field is reserved for naming the source or author of that text.');
   t('Image');
   t('Image associated with a sponsor');
-  t('Link(s) related to the show or event.');
+  t('Link(s) related to the show or event.<br><br>External sites for artists, organizations, etc.');
   t('Links');
   t('Media');
-  t('Opening Acts');
+  t('Opening Act(s)');
   t('Opening act(s) related to this show or event.<br><br>Add an additional field for <em>each</em> act &mdash; one line per artist. ');
   t('Related Event(s)');
   t('Show(s) and/or event(s) related to this show or event.');
+  t('Sold Out');
+  t('Special Event');
+  t('Special Guest(s)');
+  t('Special Notes (Admin Only)');
+  t('Special guest(s) related to this show or event.<br><br>Add an additional field for each act — one line per artist.');
   t('Sponsor(s)');
-  t('Sponsor(s) of the show or event.<br><br>This is an autocompleting field with a limited vocabulary.<br><br>If you need to add a new term, visit: <a href="/admin/structure/taxonomy/sponsor/add" target="_blank">http://theark.org/admin/structure/taxonomy/sponsor/add</a>');
+  t('Sponsor(s) of the show or event.<br><br>If you need to add a sponsor that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/sponsor/add" target="_blank">http://theark.org/admin/structure/taxonomy/sponsor/add</a>');
   t('Spotify URI');
   t('The URI of a Spotify playlist, album, or song.<br><br>Right-clicking a playlist, album, or song in the Spotify desktop application will produce an option, <em>"Copy Spotify URI"</em>, which will provide this value.<br><br>Example Value: <strong><em>spotify:user:insakeilbach:playlist:3CWymyaNGpuJjS8g3Vc1Ud</em></strong>');
   t('The date and time associated with doors opening for a show or event.');
-  t('The individual ticket price for a show or event.<br><br>Do <em>NOT</em> include "$".<br><br>Leave field blank if the show or event does not have a cost.');
+  t('The date and time when tickets will become available for sale.');
+  t('The ticket price(s) for a show or event.<br><br>Add an additional field for each ticket price tier &mdash; one line per ticket price tier.<br><br>Enter <em>0</em> to display the text <em>"Free"</em> as the ticket price.');
   t('These are the sortable images and videos that will appear on an event details page.');
   t('This image is the thumbnail representation of a show or event. It will be scaled and cropped automatically.');
+  t('This is the URL for purchasing tickets online.');
   t('This is the starting date and time of the show or event.');
   t('Thumbnail Image');
   t('Ticket Price');
+  t('Ticket URL');
+  t('Tickets (Date and Time)');
   t('Venue');
   t('Venue for the show or event.<br><br>If you need to add a venue that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/venue/add" target="_blank">http://theark.org/admin/structure/taxonomy/venue/add</a>');
 
