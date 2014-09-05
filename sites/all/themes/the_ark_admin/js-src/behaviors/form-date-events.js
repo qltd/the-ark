@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.theArkAdminFormDateEvents = {
+  Drupal.admin.behaviors.theArkAdminFormDateEvents = {
     attach: function () {}
   };
 })(jQuery);

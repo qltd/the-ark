@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.theArkAdminFormSpotify = {
+  Drupal.admin.behaviors.theArkAdminFormSpotify = {
     attach: function () {}
   };
 })(jQuery);
