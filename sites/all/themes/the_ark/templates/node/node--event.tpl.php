@@ -79,7 +79,7 @@
  */
 ?>
 <article<?php print $attributes; ?>>
-  <header>
+  <header class="event-header">
     <?php print render($title_prefix); ?>
     <?php if (!$page): // teaser ?>
       <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
@@ -87,26 +87,42 @@
     <?php else: // page ?>
 
       <?php if (isset($content['field_date']['#items'][0]['value'])): ?>
-        <h2><?php print date('l, F j, Y', strtotime($content['field_date']['#items'][0]['value'] . ' UTC')); ?></h2>
+        <h2 class="event-date"><?php print date('l, F j, Y', strtotime($content['field_date']['#items'][0]['value'] . ' UTC')); ?></h2>
       <?php endif; ?>
-      <h1<?php print $title_attributes; ?>><?php print $title; ?></h1>
+      <h1 property="dc:title" class="node__title event-title"><?php print $title; ?></h1>
 
+      <?php print render($content['field_coheadlining_act']); ?>
+      <?php if (isset($content['field_special_guest']['#items'])): ?>
+        <div class="event-special-guest">
+          <span class="event-special-guest-label">With Special Guest<?php if (count($content['field_special_guest']['#items']) > 1) print 's';?>:</span> <?php print render($content['field_special_guest']); ?>
+        </div>
+      <?php endif; ?>
       <?php if (isset($content['field_opener']['#items'])): ?>
-        Opener<?php if (count($content['field_opener']['#items']) > 1) print 's';?>: <?php print render($content['field_opener']); ?>
+        <div class="event-opener">
+          <span class="event-opener-label">Opener<?php if (count($content['field_opener']['#items']) > 1) print 's';?>:</span> <?php print render($content['field_opener']); ?>
+        </div>
       <?php endif; ?>
 
-      <ul>
-        <li>Doors Open: <?php print render($content['field_date_doors']); ?></li>
-        <li>Show Starts: <?php print render($content['field_date']); ?></li>
+      <?php if (isset($content['field_ticket_url']['#items'][0]['url'])): ?>
+      <?php endif; ?>
+
+      <ul class="event-time-list">
+        <?php if (isset($content['field_date_tickets']['#items'][0]['value']) && strtotime($content['field_date_tickets']['#items'][0]['value'] . ' UTC') >= time()): ?>
+          <li class="event-time-item event-time-tickets">Tickets On-sale: <?php print render($content['field_date_tickets']); ?></li>
+        <?php endif; ?>
+        <?php if (isset($content['field_date_doors'])): ?>
+          <li class="event-time-item event-time-doors">Doors Open: <?php print render($content['field_date_doors']); ?></li>
+        <?php endif; ?>
+        <li class="event-time-item event-time-show">Show Starts: <?php print render($content['field_date']); ?></li>
       </ul>
-      <nav>
-        <ul>
-          <li><a href="/"><?php print t('Buy Tickets in Person'); ?></a></li>
-          <li><a href="/"><?php print t('Seating Chart'); ?></a></li>
+      <nav class="event-navigation">
+        <ul class="event-navigation-list">
+          <li class="event-navigation-item"><a href="/"><?php print t('Buy Tickets in Person'); ?></a></li>
+          <li class="event-navigation-item"><a href="/"><?php print t('Seating Chart'); ?></a></li>
           <?php if (isset($content['field_link']['#items'])): ?>
             <?php hide($content['field_link']); ?>
             <?php foreach ($content['field_link']['#items'] as $link): ?>
-              <li><?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?></li>
+              <li class="event-navigation-item"><?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?></li>
             <?php endforeach; ?>
           <?php endif; ?>
         </ul>
@@ -130,12 +146,19 @@
         <?php print render($content['field_endorsement_source']); ?>
       </div>
     <?php endif; ?>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
-    ?>
+    <?php print render($content['body']); ?>
+    <div class="event-media">
+      <?php
+        hide($content['field_venue']);
+        hide($content['field_genre']);
+        hide($content['field_sponsor']);
+        hide($content['field_price']);
+        // We hide the comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        print render($content);
+      ?>
+    </div>
   </div>
 
   <?php print render($content['links']); ?>
