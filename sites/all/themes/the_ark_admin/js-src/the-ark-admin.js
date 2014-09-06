@@ -32,5 +32,5 @@
 /**
  * Components
  */
-require('./behaviors/form-date-events.js');
-require('./behaviors/form-spotify.js');
+//require('./behaviors/form-date-events.js');
+//require('./behaviors/form-spotify.js');

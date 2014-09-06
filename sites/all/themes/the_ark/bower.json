@@ -6,6 +6,7 @@
     "font-awesome": "4.1.0",
     "html5-boilerplate": "4.3.0",
     "html5shiv": "fubhy/html5shiv",
+    "jquery.browser": "0.0.6",
     "matchmedia": "fubhy/matchmedia",
     "normalize-css": "3.0.1",
     "pie": "fubhy/pie",
