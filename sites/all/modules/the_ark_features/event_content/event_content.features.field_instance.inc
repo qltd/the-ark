@@ -972,7 +972,7 @@ function event_content_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'title' => 'Buy Tickets Online',
-        'url' => '<front>',
+        'url' => 'null',
       ),
     ),
     'deleted' => 0,
@@ -1128,6 +1128,62 @@ function event_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-venue-field_seating_url'
+  $field_instances['taxonomy_term-venue-field_seating_url'] = array(
+    'bundle' => 'venue',
+    'default_value' => array(
+      0 => array(
+        'title' => 'Seating Chart',
+        'url' => 'null',
+        'attributes' => array(
+          'target' => '_blank',
+        ),
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This is the URL for the venue\'s seating chart or map.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_seating_url',
+    'label' => 'Seating Chart URL',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'user',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('A quote, or other promotional text, supporting the show or event.');
@@ -1153,6 +1209,7 @@ function event_content_field_default_field_instances() {
   t('Opening Act(s)');
   t('Opening act(s) related to this show or event.<br><br>Add an additional field for <em>each</em> act &mdash; one line per artist. ');
   t('Related Event(s)');
+  t('Seating Chart URL');
   t('Show(s) and/or event(s) related to this show or event.');
   t('Sold Out');
   t('Special Event');
@@ -1168,6 +1225,7 @@ function event_content_field_default_field_instances() {
   t('The ticket price(s) for a show or event.<br><br>Add an additional field for each ticket price tier &mdash; one line per ticket price tier.<br><br>Enter <em>0</em> to display the text <em>"Free"</em> as the ticket price.');
   t('These are the sortable images and videos that will appear on an event details page.');
   t('This image is the thumbnail representation of a show or event. It will be scaled and cropped automatically.');
+  t('This is the URL for the venue\'s seating chart or map.');
   t('This is the starting date and time of the show or event.');
   t('Thumbnail Image');
   t('Ticket Price');
