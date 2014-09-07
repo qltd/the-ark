@@ -1,0 +1,15 @@
+<?php
+
+function tech_log_menu () {
+  $items = array();
+  return $items;
+}
+
+function tech_log_permission () {
+  return array(
+    'manage tech logs' => array(
+      'title' => t('Manage tech logs'),
+      'description' => t('View and manage tech logs for events at the Ark.'),
+    ),
+  );
+}
