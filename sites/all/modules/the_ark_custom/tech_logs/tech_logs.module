@@ -2,6 +2,12 @@
 
 function tech_log_menu () {
   $items = array();
+  // $items['shows-events/%/%/%/%/tech-log'] = array(
+  //   'page callback' => 'tech_log_load',
+  //   'access callback' => 'user_access',
+  //   'access arguments' => array('manage tech logs'),
+  //   'page arguments' => array(1, 2, 3, 4),
+  // );
   return $items;
 }
 
@@ -12,4 +18,8 @@ function tech_log_permission () {
       'description' => t('View and manage tech logs for events at the Ark.'),
     ),
   );
+}
+
+function tech_log_load () {
+  
 }
