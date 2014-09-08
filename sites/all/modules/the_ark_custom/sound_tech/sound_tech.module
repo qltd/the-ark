@@ -1,0 +1,60 @@
+<?php
+
+function sound_tech_menu () {
+  $items = array();
+  $items['admin/sound-tech/%'] = array(
+    'access arguments' => array('manage sound tech'),
+    'access callback' => 'user_access',
+    'page arguments' => array(2),
+    'page callback' => 'sound_tech_show',
+    'title arguments' => array(2),
+    'title callback' => 'sound_tech_title',
+  );
+  return $items;
+}
+
+function sound_tech_permission () {
+  return array(
+    'manage sound tech' => array(
+      'title' => t('Manage sound tech'),
+      'description' => t('View and manage sound tech for events at the Ark.'),
+    ),
+  );
+}
+
+function sound_tech_title ($nid) {
+  $node = node_load($nid);
+  if (empty($node) || !isset($node->title)) return '';
+  return 'Sound Tech: ' . $node->title;
+}
+
+function sound_tech_show ($nid) {
+  $node = node_load($nid);
+  if (empty($node)) return drupal_not_found();
+  return drupal_get_form('sound_tech_show_form');
+}
+
+function sound_tech_show_form () {
+  $form = array();
+  $form['sound_techs'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Sound Techs'),
+  );
+  $form['date_load'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Load-in Time'),
+	);
+  $form['notes'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Notes'),
+  );
+  $form['submit'] = array(
+	  '#type' => 'submit',
+	  '#value' => t('Save'),
+	);
+	return $form;
+}
+
+function sound_tech_show_form_submit ($form, &$form_state) {
+  dpm($form_state);
+}

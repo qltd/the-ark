@@ -1,5 +1,0 @@
-name = The Ark Tech Logs
-description = Module that provides management tools for event tech logs.
-core = 7.x
-package = The Ark Custom
-version = 7.x-1.0
