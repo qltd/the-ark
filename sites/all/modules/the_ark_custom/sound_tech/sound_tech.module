@@ -77,5 +77,6 @@ function sound_tech_user_form_submit ($form, &$form_state) {
       5 => 'sound tech',
     ),
   );
+  $user_fields['field_sound_tech_duty']['und'][0]['value'] = 'retired';
   user_save(null, $user_fields);
 }
