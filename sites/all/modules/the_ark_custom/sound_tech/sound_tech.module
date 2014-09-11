@@ -78,7 +78,7 @@ function sound_tech_edit_user ($uid) {
   return drupal_get_form('sound_tech_user_form', $sound_tech_user);
 }
 
-function sound_tech_user_form ($form, &$form_state, $sound_tech_user) {
+function sound_tech_user_form ($form, &$form_state, $sound_tech_user = array()) {
   $form = array();
   $form['uid'] = array(
     '#type' => 'hidden',
