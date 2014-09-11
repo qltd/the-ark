@@ -22,8 +22,8 @@ function sound_tech_menu () {
     'title' => 'Add Sound Tech User',
   );
   $items['admin/sound-tech/users/%/edit'] = array(
-    'access arguments' => array('manage sound tech user accounts'),
-    'access callback' => 'user_access',
+    'access arguments' => array(3),
+    'access callback' => 'sound_tech_edit_user_access',
     'page arguments' => array(3),
     'page callback' => 'sound_tech_edit_user',
     'title arguments' => array(3),
@@ -45,11 +45,16 @@ function sound_tech_permission () {
   );
 }
 
+function sound_tech_edit_user_access ($uid) {
+  global $user;
+  if ($user->uid === $uid || isset($user->roles[3]) || isset($user->roles[4])) return true;
+  return false;
+}
+
 function sound_tech_edit_user_title ($uid) {
   $sound_tech_user = user_load($uid);
   return isset($sound_tech_user->name) ? 'Edit ' . $sound_tech_user->name . '\'s Sound Tech User Account' : '';
 }
-
 
 function sound_tech_index () {
   return '';
