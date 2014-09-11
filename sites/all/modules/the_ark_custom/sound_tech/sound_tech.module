@@ -82,7 +82,7 @@ function sound_tech_user_form ($form, &$form_state, $sound_tech_user = array()) 
   $form = array();
   $form['uid'] = array(
     '#type' => 'hidden',
-    '#value' => $sound_tech_user['uid'],
+    '#value' => isset($sound_tech_user['uid']) ? $sound_tech_user['uid'] : '',
   );
   $form['name'] = array(
     '#type' => 'fieldset',
@@ -114,7 +114,7 @@ function sound_tech_user_form ($form, &$form_state, $sound_tech_user = array()) 
   $form['email'] = array(
     '#type' => 'textfield',
     '#title' => t('Email'),
-    '#default_value' => $sound_tech_user['mail'],
+    '#default_value' => isset($sound_tech_user['mail']) ? $sound_tech_user['mail'] : '',
     '#required' => true,
   );
   $form['sound_tech_duty'] = array(
