@@ -17,7 +17,7 @@ $edit_link = isset($field->last_render)
   : '';
 
 if (isset($user_roles[5]) && count($user_roles) === 2) {
-  print l(t('edit'), 'admin/sound-tech/users/'. $user_id .'/edit');
+  print l(t('edit'), 'admin/sound-tech/people/'. $user_id .'/edit');
 } elseif ($user->uid === $user_id) {
   print $edit_link;
 }

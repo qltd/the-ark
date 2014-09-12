@@ -2,19 +2,19 @@
 
 function sound_tech_menu () {
   $items = array();
-  $items['admin/sound-tech/users/%'] = array(
+  $items['admin/sound-tech/people/%'] = array(
     'access arguments' => array('manage sound tech user accounts'),
     'access callback' => 'user_access',
     'page arguments' => array(3),
     'page callback' => 'sound_tech_show_user',
   );
-  $items['admin/sound-tech/users/add'] = array(
+  $items['admin/sound-tech/people/add'] = array(
     'access arguments' => array('manage sound tech user accounts'),
     'access callback' => 'user_access',
     'page callback' => 'sound_tech_add_user',
     'title' => 'Add Sound Tech User',
   );
-  $items['admin/sound-tech/users/%/edit'] = array(
+  $items['admin/sound-tech/people/%/edit'] = array(
     'access arguments' => array(3),
     'access callback' => 'sound_tech_edit_user_access',
     'page arguments' => array(3),
@@ -228,5 +228,5 @@ function sound_tech_user_form_submit ($form, &$form_state) {
   else $user_fields['field_phone_work'] = array();
 
   user_save(empty($values['uid']) ? null : (object) array('uid' => $values['uid']), $user_fields);
-  drupal_goto('admin/sound-tech/users');
+  drupal_goto('admin/sound-tech/people');
 }
