@@ -19,12 +19,12 @@ function sound_tech_feature_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'admin/sound-tech/users/*/edit' => 'admin/sound-tech/users/*/edit',
+        'admin/sound-tech/people/*/edit' => 'admin/sound-tech/people/*/edit',
       ),
     ),
   );
   $context->reactions = array(
-    'breadcrumb' => 'admin/sound-tech/users',
+    'breadcrumb' => 'node/30',
   );
   $context->condition_mode = 0;
 

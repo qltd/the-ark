@@ -79,6 +79,7 @@ function sound_tech_feature_views_default_views() {
   $handler = $view->new_display('page', 'Sound Tech Users - Page', 'sound_tech_users_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sound Tech Users';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -273,6 +274,243 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Sound Tech Users - Block */
+  $handler = $view->new_display('block', 'Sound Tech Users - Block', 'sound_tech_users_block');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'uid' => 'uid',
+    'edit_node' => 'edit_node',
+    'name' => 'name',
+    'field_name_last' => 'field_name_last',
+    'rid' => 'rid',
+    'field_sound_tech_duty' => 'field_sound_tech_duty',
+    'mail' => 'mail',
+    'field_phone_home' => 'field_phone_home',
+    'field_phone_mobile' => 'field_phone_mobile',
+    'field_phone_work' => 'field_phone_work',
+    'nothing' => 'nothing',
+  );
+  $handler->display->display_options['style_options']['default'] = 'field_name_last';
+  $handler->display->display_options['style_options']['info'] = array(
+    'uid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_name_last' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'rid' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_sound_tech_duty' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'mail' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_phone_home' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_phone_mobile' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_phone_work' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'nothing' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<ul class="action-links"><li><a href="/admin/sound-tech/people/add">Add sound tech user</a></li></ul>';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: User: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'users';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: User: Last Name */
+  $handler->display->display_options['fields']['field_name_last']['id'] = 'field_name_last';
+  $handler->display->display_options['fields']['field_name_last']['table'] = 'field_data_field_name_last';
+  $handler->display->display_options['fields']['field_name_last']['field'] = 'field_name_last';
+  $handler->display->display_options['fields']['field_name_last']['label'] = 'Name';
+  $handler->display->display_options['fields']['field_name_last']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_name_last']['alter']['text'] = '[name]';
+  $handler->display->display_options['fields']['field_name_last']['element_label_colon'] = FALSE;
+  /* Field: User: Roles */
+  $handler->display->display_options['fields']['rid']['id'] = 'rid';
+  $handler->display->display_options['fields']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['fields']['rid']['field'] = 'rid';
+  $handler->display->display_options['fields']['rid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['rid']['type'] = 'ul';
+  /* Field: User: Sound Tech Duty */
+  $handler->display->display_options['fields']['field_sound_tech_duty']['id'] = 'field_sound_tech_duty';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['table'] = 'field_data_field_sound_tech_duty';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['field'] = 'field_sound_tech_duty';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['label'] = 'Duty/Position';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['element_label_colon'] = FALSE;
+  /* Field: User: E-mail */
+  $handler->display->display_options['fields']['mail']['id'] = 'mail';
+  $handler->display->display_options['fields']['mail']['table'] = 'users';
+  $handler->display->display_options['fields']['mail']['field'] = 'mail';
+  $handler->display->display_options['fields']['mail']['element_label_colon'] = FALSE;
+  /* Field: User: Home */
+  $handler->display->display_options['fields']['field_phone_home']['id'] = 'field_phone_home';
+  $handler->display->display_options['fields']['field_phone_home']['table'] = 'field_data_field_phone_home';
+  $handler->display->display_options['fields']['field_phone_home']['field'] = 'field_phone_home';
+  $handler->display->display_options['fields']['field_phone_home']['label'] = '';
+  $handler->display->display_options['fields']['field_phone_home']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_phone_home']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_phone_home']['alter']['text'] = '<li><strong>Home</strong> [field_phone_home]</li>';
+  $handler->display->display_options['fields']['field_phone_home']['element_label_colon'] = FALSE;
+  /* Field: User: Mobile */
+  $handler->display->display_options['fields']['field_phone_mobile']['id'] = 'field_phone_mobile';
+  $handler->display->display_options['fields']['field_phone_mobile']['table'] = 'field_data_field_phone_mobile';
+  $handler->display->display_options['fields']['field_phone_mobile']['field'] = 'field_phone_mobile';
+  $handler->display->display_options['fields']['field_phone_mobile']['label'] = '';
+  $handler->display->display_options['fields']['field_phone_mobile']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_phone_mobile']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_phone_mobile']['alter']['text'] = '<li><strong>Mobile</strong> [field_phone_mobile]</li>';
+  $handler->display->display_options['fields']['field_phone_mobile']['element_label_colon'] = FALSE;
+  /* Field: User: Work */
+  $handler->display->display_options['fields']['field_phone_work']['id'] = 'field_phone_work';
+  $handler->display->display_options['fields']['field_phone_work']['table'] = 'field_data_field_phone_work';
+  $handler->display->display_options['fields']['field_phone_work']['field'] = 'field_phone_work';
+  $handler->display->display_options['fields']['field_phone_work']['label'] = '';
+  $handler->display->display_options['fields']['field_phone_work']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_phone_work']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_phone_work']['alter']['text'] = '<li><strong>Work</strong> [field_phone_work]</li>';
+  $handler->display->display_options['fields']['field_phone_work']['element_label_colon'] = FALSE;
+  /* Field: Phone Numbers */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Phone Numbers';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Phone';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<ul>[field_phone_home][field_phone_mobile][field_phone_work]</ul>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: User: Last Name (field_name_last) */
+  $handler->display->display_options['sorts']['field_name_last_value']['id'] = 'field_name_last_value';
+  $handler->display->display_options['sorts']['field_name_last_value']['table'] = 'field_data_field_name_last';
+  $handler->display->display_options['sorts']['field_name_last_value']['field'] = 'field_name_last_value';
+  /* Sort criterion: User: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'users';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: User: Active */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'users';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: User: Roles */
+  $handler->display->display_options['filters']['rid']['id'] = 'rid';
+  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
+  $handler->display->display_options['filters']['rid']['field'] = 'rid';
+  $handler->display->display_options['filters']['rid']['value'] = array(
+    5 => '5',
+    4 => '4',
+  );
+  /* Filter criterion: User: Sound Tech Duty (field_sound_tech_duty) */
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['id'] = 'field_sound_tech_duty_value';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['table'] = 'field_data_field_sound_tech_duty';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['field'] = 'field_sound_tech_duty_value';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['expose']['operator_id'] = 'field_sound_tech_duty_value_op';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['expose']['label'] = 'Duty/Position';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['expose']['operator'] = 'field_sound_tech_duty_value_op';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['expose']['identifier'] = 'field_sound_tech_duty_value';
+  $handler->display->display_options['filters']['field_sound_tech_duty_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+  );
   $export['sound_tech_accounts'] = $view;
 
   return $export;

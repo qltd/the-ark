@@ -62,8 +62,8 @@ function header_region_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'adminimal' => array(
-        'region' => 'dashboard_inactive',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'adminimal',
         'weight' => -1,
       ),
