@@ -30,7 +30,13 @@
 */
 
 /**
+ * jQuery Extensions
+ */
+require('./extensions/get-query-parameters.js');
+
+/**
  * Components
  */
 require('./behaviors/form-date-events.js');
+require('./behaviors/form-date-sound-tech.js');
 require('./behaviors/form-spotify.js');
