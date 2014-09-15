@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Edit link field for sound tech users view
+ * Edit link field for sound tech events view
  */
 
 global $user;
