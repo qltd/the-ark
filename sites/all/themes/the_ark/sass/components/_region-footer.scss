@@ -1,6 +1,31 @@
 .l-footer {
-  height: 700px;
+  height: 800px;
+  background-attachment: fixed;
   background-color: $gray-footer-background;
-  //background-image: url('/images/header');
+  background-image: url('/sites/all/themes/the_ark/images/footer/footer.jpg');
   background-position: center top;
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .l-footer {
+    background-image: url('/sites/all/themes/the_ark/images/footer/footer-mobile-wide.jpg');
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .l-footer {
+    background-image: url('/sites/all/themes/the_ark/images/footer/footer-tablet.jpg');
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .l-footer {
+    background-image: url('/sites/all/themes/the_ark/images/footer/footer-desktop.jpg');
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .l-footer {
+    background-size: 100% auto;
+  }
 }
