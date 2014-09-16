@@ -12,15 +12,14 @@ function footer_region_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Contact information for the Ark footer region';
-  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'footer_contact';
-  $fe_block_boxes->body = '<p>The Ark</p>
+  $fe_block_boxes->body = '<p class="org">The Ark</p>
 
-<p>316 S. Main St.</p>
+<p class="adr"><span class="street-address">316 S. Main St.</span><br />
+<span class="locality">Ann Arbor</span>, <span class="region">MI</span> <span class="postal-code">48104</span></p>
 
-<p>Ann Arbor, MI 48104</p>
-
-<p>Office: (734) 761-1800</p>
+<p class="tel">Office: (734) 761-1800</p>
 ';
 
   $export['footer_contact'] = $fe_block_boxes;
