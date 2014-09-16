@@ -74,6 +74,24 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'entityreference_fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: User: Sound Tech Duty */
+  $handler->display->display_options['fields']['field_sound_tech_duty']['id'] = 'field_sound_tech_duty';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['table'] = 'field_data_field_sound_tech_duty';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['field'] = 'field_sound_tech_duty';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['label'] = '';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_sound_tech_duty']['alter']['text'] = '<strong>[field_sound_tech_duty]</strong>';
+  $handler->display->display_options['fields']['field_sound_tech_duty']['element_label_colon'] = FALSE;
 
   /* Display: Sound Tech Users - Page */
   $handler = $view->new_display('page', 'Sound Tech Users - Page', 'sound_tech_users_page');
