@@ -1,9 +1,13 @@
 .l-footer {
-  height: 800px;
   background-attachment: fixed;
-  background-color: $gray-footer-background;
+  background-color: $gray-light;
   background-image: url('/sites/all/themes/the_ark/images/footer/footer.jpg');
-  background-position: center top;
+  background-position: center bottom;
+}
+
+.l-region--footer {
+  height: 800px;
+  background-color: $gray-mask;
 }
 
 @include breakpoint($breakpoint-mobile-wide) {
