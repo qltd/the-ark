@@ -52,25 +52,3 @@ function sound_tech_permission () {
     ),
   );
 }
-
-function sound_tech_custom_theme () {
-  if (arg(0) === 'node' && is_numeric(arg(1))) {
-    $node = node_load(arg(1));
-    if (isset($node->type) && ($node->type === 'sound_tech' || $node->type === 'sound_tech_page')) {
-      return 'the_ark_admin';
-    }
-  }
-}
-
-function sound_tech_node_access ($node, $op, $account) { // deny anonymous or unauthorized access to sound tech content
-  $type = is_string($node) ? $node : $node->type;
-  if (($type === 'sound_tech' || $type === 'sound_tech_page') && $op === 'view') {
-    global $user;
-    if (isset($user->roles[3]) || isset($user->roles[4]) || isset($user->roles[5])) {
-      return NODE_ACCESS_ALLOW;
-    } else {
-      return NODE_ACCESS_DENY;
-    }
-  }
-  return NODE_ACCESS_IGNORE;
-}
