@@ -92,6 +92,13 @@
   </div>
 
   <footer class="l-footer" role="contentinfo">
-    <?php print render($page['footer']); ?>
+    <div class="l-regionset--footer">
+      <div class="l-static--footer footer-block"></div>
+      <?php print render($page['footer']); ?>
+      <div class="l-static--footer footer-block">
+        <p>Copyright <?php echo date("Y") ?>. All Rights Reserved.</p>
+        <p>Site + Development <a href="http://qltd.com" class="q-ltd" target="_blank">Q LTD</a></p>
+      </div>
+    </div>
   </footer>
 </div>
