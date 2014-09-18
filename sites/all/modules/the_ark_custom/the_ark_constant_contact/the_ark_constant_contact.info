@@ -1,0 +1,5 @@
+name = The Ark Constant Contact
+description = Module that provides ability to add/update users for the Ark's Constant Contact account.
+core = 7.x
+package = The Ark Custom
+version = 7.x-1.0

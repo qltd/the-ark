@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * Constant Contact PHP SDK for v2 API
+ * https://github.com/constantcontact/php-sdk
+ */
+require_once dirname(__FILE__) . '/cc-sdk/src/Ctct/autoload.php';
+
+require_once dirname(__FILE__) . '/includes/the_ark_constant_contact.admin.inc';
+require_once dirname(__FILE__) . '/includes/the_ark_constant_contact.contacts.inc';
+
+function the_ark_constant_contact_menu () {
+  $items = array();
+  $items['admin/constant-contact'] = array(
+    'access arguments' => array('manage constant contact'),
+    'access callback' => 'user_access',
+    'description' => 'Interface for managing Constant Contact API keys and access tokens',
+    'page callback' => 'the_ark_constant_contact_admin',
+    'title' => 'Constant Contact API access',
+  );
+  return $items;
+}
+
+function the_ark_constant_contact_permission () {
+  return array(
+    'manage constant contact' => array(
+      'title' => t('Manage Constant Contact'),
+      'description' => t('Manage Constant Contact API keys and access tokens.'),
+    ),
+    'add contact to constant contact' => array(
+      'title' => t('Add contact to Constant Contact'),
+      'description' => t('Add email addresses to the Ark\'s Constant Contact list.'),
+    ),
+  );
+}
