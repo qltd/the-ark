@@ -6,11 +6,7 @@
     bottom: none;
   }
   a {
-    background-color: $gray-background;
-    color: white;
-    &.active, &:hover {
-      background-color: $teal;
-    }
+    @extend .button;
   }
   li {
     float: none;

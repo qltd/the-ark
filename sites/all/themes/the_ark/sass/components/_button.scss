@@ -1,5 +1,10 @@
 .button {
+  @include font-details($weight: 300);
   background-color: $orange;
   color: white;
+  white-space: nowrap;
   text-transform: uppercase;
+  &.active, &:hover {
+    background-color: $teal;
+  }
 }
