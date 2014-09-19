@@ -3,6 +3,9 @@
     margin: {
       bottom: 16px;
     }
+    margin: {
+      bottom: 1.6rem;
+    }
     line-height: 1.5;
   }
 }
@@ -10,7 +13,8 @@
 @include breakpoint($breakpoint-tablet) {
   .block__content, .node__content {
     li {
-      font-size: 1.125em;
+      font-size: 18px;
+      font-size: 1.8rem;
     }
   }
 }
@@ -18,7 +22,8 @@
 @include breakpoint($breakpoint-desktop) {
   .block__content, .node__content {
     li {
-      font-size: 1.75em;
+      font-size: 28px;
+      font-size: 2.8rem;
     }
   }
 }

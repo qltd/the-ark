@@ -1,3 +1,4 @@
 body {
-  @include FiraSans(16px, $gray-light, 400);
+  font-size: 16px;
+  @include FiraSans(1.6rem, $gray-light, 400);
 }

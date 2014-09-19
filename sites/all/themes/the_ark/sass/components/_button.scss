@@ -1,7 +1,9 @@
 .button {
-  @include font-details($size: 14px, $weight: 300);
+  font-size: 14px;
+  @include font-details($size: 1.4rem, $weight: 300);
   @include transition(background-color $transition-duration ease-out);
   padding: 10px 40px;
+  padding: 1rem 4rem;
   background-color: $orange;
   color: white;
   white-space: nowrap;
