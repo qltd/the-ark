@@ -4,9 +4,6 @@
   label {
     display: none;
   }
-  .constant-contact-paragraph {
-    text-align: center;
-  }
   .form-text {
     position: absolute;
     padding: {
@@ -21,4 +18,9 @@
     float: right;
     margin: 15px 15px 15px 0;
   }
+}
+
+.constant-contact-paragraph {
+  @include font-details($size: 18px);
+  text-align: center;
 }

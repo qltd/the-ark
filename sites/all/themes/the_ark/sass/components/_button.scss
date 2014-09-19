@@ -1,11 +1,12 @@
 .button {
   @include font-details($size: 14px, $weight: 300);
+  @include transition(background-color $transition-duration ease-out);
   padding: 10px 40px;
   background-color: $orange;
   color: white;
   white-space: nowrap;
   text-transform: uppercase;
   &.active, &:hover {
-    background-color: $teal;
+    background-color: lighten($orange, 20%);
   }
 }

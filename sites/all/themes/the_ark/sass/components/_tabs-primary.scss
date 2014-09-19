@@ -10,9 +10,21 @@
   }
   li {
     float: none;
-    display: inline-block;
+    display: block;
     margin: {
-      bottom: 0;
+      right: 0;
+      bottom: 15px;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .tabs--primary {
+    li {
+      display: inline-block;
+      margin: {
+        right: 15px;
+      }
     }
   }
 }
