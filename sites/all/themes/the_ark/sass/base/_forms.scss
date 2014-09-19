@@ -10,7 +10,7 @@ input[type=reset],
 input[type=submit],
 button,
 select,
-textarea {
+textarea { // text, select, and button inputs
   @include appearance(none);
   border: none;
 }
@@ -18,7 +18,7 @@ textarea {
 input[type=button],
 input[type=reset],
 input[type=submit],
-button {
+button { // button inputs
   @extend .button; // see button component for additional styles
 }
 
@@ -28,7 +28,7 @@ input[type=tel],
 input[type=number],
 input[type=color],
 input[type=email],
-input[type=password] {
+input[type=password] { // single-line text inputs
   height: 40px;
 }
 
@@ -39,9 +39,19 @@ input[type=number],
 input[type=color],
 input[type=email],
 input[type=password],
-textarea {
+textarea { // single- and multi-line text inputs
+  padding: {
+    right: 10px;
+    left: 10px;
+  }
   width: 100%;
   background-color: $gray-light-background;
+}
+
+textarea { // multi-line text inputs
+  padding: {
+    top: 5px;
+  }
 }
 
 input[type=text],
@@ -55,6 +65,6 @@ textarea,
 label,
 input + .description,
 .form-item label,
-.form-actions label {
-  @include font-details($weight: 300, $style: italic);
+.form-actions label { // text inputs, labels, and descriptions
+  @include font-details($size: 18px, $weight: 300, $style: italic);
 }

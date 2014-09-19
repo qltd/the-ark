@@ -27,7 +27,7 @@ function the_ark_constant_contact_block_view($delta = '') {
 function the_ark_constant_contact_contacts_form ($form, &$form_state) {
   $form = array();
   $form['constant_contact_form_header'] = array(
-    '#markup' => t('Get updates on upcoming shows, Ark news, and more. Your information is safe with us.'),
+    '#markup' => t('<p class="constant-contact-paragraph">Get updates on upcoming shows, Ark news, and more.<br>Your information is safe with us.</p>'),
   );
   $form['email'] = array(
     '#type' => 'textfield',
@@ -39,7 +39,7 @@ function the_ark_constant_contact_contacts_form ($form, &$form_state) {
   );
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Submit'),
+    '#value' => t('Sign Up'),
   );
   return $form;
 }
