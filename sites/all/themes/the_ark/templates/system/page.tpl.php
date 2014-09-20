@@ -97,7 +97,7 @@
       <?php print render($page['footer']); ?>
       <div class="l-static--footer footer-block">
         <p class="footer-copyright footer-paragraph">Copyright <?php echo date("Y") ?>. All Rights Reserved.</p>
-        <p class="footer-development footer-paragraph">Site + Development <a href="http://qltd.com" class="q-ltd" target="_blank">Q LTD</a></p>
+        <p class="footer-development footer-paragraph">Site Design + Development <a href="http://qltd.com" class="q-ltd" target="_blank">Q LTD</a></p>
       </div>
     </div>
   </footer>

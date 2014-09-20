@@ -1,3 +1,23 @@
 .footer-development {
   @include font-details($style: italic);
 }
+
+.q-ltd {
+  @extend .image-replace;
+  display: block;
+  margin: 10px auto 0;
+  margin: 1rem auto 0;
+  width: 150px;
+  width: 15rem;
+  height: 31px;
+  height: 3.1rem;
+  background-image: url('/sites/all/themes/the_ark/images/footer/qltd.png');
+}
+
+@include breakpoint($breakpoint-hi-res) {
+  .q-ltd {
+    background-image: url('/sites/all/themes/the_ark/images/footer/qltd@2x.png');
+    background-size: 150px 31px;
+    background-size: 15rem 3.1rem;
+  }
+}
