@@ -35,14 +35,18 @@ body {
     margin: {
       top: 29px !important;
     }
+    margin: {
+      top: 2.9rem !important;
+    }
     .l-header {
       background-position: center 29px;
+      background-position: center 2.9rem;
     }
   }
 }
 
 // Hide the toolbar or admin menu on small screens.
-@media all and (max-width: 1024px) {
+@media all and (max-width: 64rem) { // 1024px
   body {
     &.adminimal-menu {
       margin: {
