@@ -4,7 +4,12 @@ a {
   &.active {
     color: $teal;
   }
-  &:hover {
-    text-decoration: underline;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

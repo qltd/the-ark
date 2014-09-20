@@ -2,4 +2,21 @@
   .menu {
     text-align: center;
   }
+  .menu-link {
+    font-size: 14px;
+    line-height: 35px;
+    @include font-details($size: 1.4rem, $height: 3.5rem);
+    display: block;
+    margin: 2px auto 1px;
+    margin: 0.2rem auto 0.1rem;
+    border: 1px solid $teal;
+    width: 165px;
+    width: 16.5rem;
+    height: 35px;
+    height: 3.5rem;
+    &.active {
+      color: $gold;
+      border-color: $gold;
+    }
+  }
 }
