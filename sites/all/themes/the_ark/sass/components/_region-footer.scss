@@ -8,8 +8,8 @@
 .l-regionset--footer {
   height: 800px;
   height: 80rem;
-  padding: 60px 20px 0;
-  padding: 6rem 2rem 0;
+  padding: 42px 20px 0;
+  padding: 4.2rem 2rem 0;
   background-color: $gray-mask;
 }
 
@@ -22,6 +22,15 @@
 @include breakpoint($breakpoint-tablet) {
   .l-footer {
     background-image: url('/sites/all/themes/the_ark/images/footer/footer-tablet.jpg');
+  }
+
+  .l-regionset--footer {
+    padding: {
+      top: 60px;
+    }
+    padding: {
+      top: 6rem;
+    }
   }
 }
 

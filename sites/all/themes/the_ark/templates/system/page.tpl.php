@@ -93,7 +93,6 @@
 
   <footer class="l-footer" role="contentinfo">
     <div class="l-regionset--footer">
-      <div class="l-static--footer footer-block"></div>
       <?php print render($page['footer']); ?>
       <div class="l-static--footer footer-block">
         <p class="footer-copyright footer-paragraph">Copyright <?php echo date("Y") ?>. All Rights Reserved.</p>
