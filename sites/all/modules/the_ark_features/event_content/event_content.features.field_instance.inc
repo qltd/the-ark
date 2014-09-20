@@ -440,7 +440,7 @@ function event_content_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 0,
+      'default_image' => 57,
       'file_directory' => 'images/events',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1077,20 +1077,55 @@ function event_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-sponsor-field_featured'
+  $field_instances['taxonomy_term-sponsor-field_featured'] = array(
+    'bundle' => 'sponsor',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box if the sponsor should be featured in the footer.<br><br>When multiple sponsors have this box checked, a single, randomly-selected featured sponsor will be displayed on each page load.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_featured',
+    'label' => 'Featured Sponsor',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-sponsor-field_image'
   $field_instances['taxonomy_term-sponsor-field_image'] = array(
     'bundle' => 'sponsor',
     'deleted' => 0,
-    'description' => 'Image associated with a sponsor',
+    'description' => 'General image for a sponsor &mdash; this is the image that will be displayed on events associated with the sponsor.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'file_entity',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'file_view_mode' => 'default',
         ),
-        'type' => 'image',
+        'type' => 'file_rendered',
         'weight' => 0,
       ),
     ),
@@ -1135,7 +1170,112 @@ function event_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 1,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-sponsor-field_image_footer'
+  $field_instances['taxonomy_term-sponsor-field_image_footer'] = array(
+    'bundle' => 'sponsor',
+    'deleted' => 0,
+    'description' => 'Include a footer image for featured sponsors.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_image_footer',
+    'label' => 'Footer Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'images/sponsors/footer',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 'private',
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-sponsor-field_link_sponsor'
+  $field_instances['taxonomy_term-sponsor-field_link_sponsor'] = array(
+    'bundle' => 'sponsor',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'URL for the sponsor\'s website.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_link_sponsor',
+    'label' => 'Link',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 2,
     ),
   );
 
@@ -1200,6 +1340,7 @@ function event_content_field_default_field_instances() {
   t('A quote, or other promotional text, supporting the show or event.');
   t('Body');
   t('Check this box if a show or event no longer has tickets available for purchase.');
+  t('Check this box if the sponsor should be featured in the footer.<br><br>When multiple sponsors have this box checked, a single, randomly-selected featured sponsor will be displayed on each page load.');
   t('Check this box if this event or show has tickets that can only be purchased at the venue.');
   t('Check this box if this is a <em>special</em> show or event.');
   t('Co-headlining Act(s)');
@@ -1209,11 +1350,15 @@ function event_content_field_default_field_instances() {
   t('Doors-only Show');
   t('Endorsement');
   t('Endorsement Source');
+  t('Featured Sponsor');
+  t('Footer Image');
+  t('General image for a sponsor &mdash; this is the image that will be displayed on events associated with the sponsor.');
   t('Genre of the event or show.<br><br>If you need to add a genre that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>');
   t('Genre(s)');
   t('If there is text in the endorsement field, this field is reserved for naming the source or author of that text.');
   t('Image');
-  t('Image associated with a sponsor');
+  t('Include a footer image for featured sponsors.');
+  t('Link');
   t('Link(s) related to the show or event.<br><br>External sites for artists, organizations, etc.');
   t('Links');
   t('Media');
@@ -1242,6 +1387,7 @@ function event_content_field_default_field_instances() {
   t('Ticket Price');
   t('Ticket URL(s)');
   t('Tickets (Date and Time)');
+  t('URL for the sponsor\'s website.');
   t('URL(s) for purchasing tickets online.');
   t('Venue');
   t('Venue for the show or event.<br><br>If you need to add a venue that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/venue/add" target="_blank">http://theark.org/admin/structure/taxonomy/venue/add</a>');
