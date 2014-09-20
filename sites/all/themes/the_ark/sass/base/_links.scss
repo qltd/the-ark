@@ -1,4 +1,10 @@
 a {
   color: $teal;
   text-decoration: none;
+  &.active {
+    color: $teal;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
 }

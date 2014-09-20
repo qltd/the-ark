@@ -42,6 +42,7 @@ input[type=color],
 input[type=email],
 input[type=password],
 textarea { // single- and multi-line text inputs
+  @include transition(background-color $transition-duration ease-out);
   padding: {
     right: 10px;
     left: 10px;
@@ -52,6 +53,10 @@ textarea { // single- and multi-line text inputs
   }
   width: 100%;
   background-color: $gray-light-background;
+  &:focus {
+    outline: 0;
+    background-color: $orange-lighter;
+  }
 }
 
 textarea { // multi-line text inputs

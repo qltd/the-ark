@@ -9,6 +9,9 @@
   white-space: nowrap;
   text-transform: uppercase;
   &.active, &:hover {
-    background-color: lighten($orange, 20%);
+    background-color: $orange-light;
+  }
+  &:hover {
+    text-decoration: none;
   }
 }

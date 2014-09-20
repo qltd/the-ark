@@ -4,6 +4,10 @@ $orange: #f8903b;
 $purple: #14021c;
 $teal: #18b3cd;
 
+// light variants
+$orange-light: lighten($orange, 20%);
+$orange-lighter: lighten($orange, 30%);
+
 // grays
 $gray-light: #595354;
 $gray: #494949;

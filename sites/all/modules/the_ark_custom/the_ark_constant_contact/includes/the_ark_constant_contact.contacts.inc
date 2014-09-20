@@ -62,6 +62,8 @@ function the_ark_constant_contact_contacts_form_submit ($form, &$form_state) {
       $contact->addList('1');
       $returnContact = $cc->addContact($access_token, $contact, true);
       watchdog('the_ark_constant_contact', 'Constant Contact: Added contact %email', array('%email' => $email), WATCHDOG_INFO);
+    } else {
+      watchdog('the_ark_constant_contact', 'Constant Contact: Duplicate contact %email', array('%email' => $email), WATCHDOG_NOTICE);
     }
     drupal_set_message(t('Thank you! You will now receive regular updates from The Ark.'));
 
