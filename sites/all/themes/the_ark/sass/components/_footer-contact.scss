@@ -6,3 +6,22 @@
     color: white;
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .footer-contact {
+    .footer-paragraph {
+      display: inline;
+      margin: {
+        right: 25px;
+      }
+      margin: {
+        right: 2.5rem;
+      }
+    }
+    .contact-telephone {
+      margin: {
+        right: 0;
+      }
+    }
+  }
+}
