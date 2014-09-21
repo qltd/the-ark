@@ -28,3 +28,5 @@
   - compile while in .npm directory (sites/all/themes/the_ark/.npm)           : gulp browserify
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
+
+require('./behaviors/footer-contact.js');

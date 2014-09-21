@@ -9,6 +9,12 @@
 
 @include breakpoint($breakpoint-tablet) {
   .footer-contact {
+    margin: {
+      top: 60px;
+    }
+    margin: {
+      top: 6rem;
+    }
     .footer-paragraph {
       display: inline;
       margin: {

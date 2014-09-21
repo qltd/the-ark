@@ -16,3 +16,14 @@
   max-width: 550px;
   max-width: 55rem;
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .footer-sponsor-featured {
+    margin: {
+      top: 60px;
+    }
+    margin: {
+      top: 6rem;
+    }
+  }
+}

@@ -21,3 +21,14 @@
     background-size: 15rem 3.1rem;
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .footer-development {
+    margin: {
+      top: 40px;
+    }
+    margin: {
+      top: 4rem;
+    }
+  }
+}
