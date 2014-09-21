@@ -29,8 +29,8 @@ function front_page_context_default_contexts() {
         'block-1' => array(
           'module' => 'block',
           'delta' => '1',
-          'region' => 'header',
-          'weight' => '-5',
+          'region' => 'hero',
+          'weight' => '-10',
         ),
       ),
     ),
