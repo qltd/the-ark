@@ -53,7 +53,7 @@ function header_region_default_fe_block_settings() {
 
   $export['search-form'] = array(
     'cache' => -1,
-    'css_class' => 'site-search header-site-search',
+    'css_class' => 'search-site header-search',
     'custom' => 0,
     'delta' => 'form',
     'module' => 'search',
