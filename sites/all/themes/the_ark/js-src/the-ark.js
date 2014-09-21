@@ -29,4 +29,5 @@
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
-require('./behaviors/footer-contact.js');
+require('./behaviors/header-search');
+require('./behaviors/footer-contact');
