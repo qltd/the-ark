@@ -21,6 +21,15 @@
   }
 }
 
+@include breakpoint($breakpoint-mobile-wide) {
+  .footer-navigation {
+    .menu-link {
+      width: 330px;
+      width: 33rem;
+    }
+  }
+}
+
 @include breakpoint($breakpoint-tablet) {
   .footer-navigation {
     margin: {
@@ -61,6 +70,7 @@
       display: inline;
       margin: 0;
       border: none;
+      width: auto;
       line-height: inherit;
     }
   }
