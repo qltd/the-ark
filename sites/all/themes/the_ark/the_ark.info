@@ -1,5 +1,5 @@
 name = The Ark
-description = Omega sub-theme for the Ark's user-facing pages.
+description = Omega sub-theme for the Ark\'s user-facing pages.
 base theme = omega
 screenshot = screenshot.png
 engine = phptemplate
