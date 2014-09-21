@@ -14,11 +14,7 @@
   .block__title {
     font-size: 14px;
     @include font-details($size: 1.4rem, $weight: 300, $style: italic);
-    margin: {
-      bottom: 10px;
-    }
-    margin: {
-      bottom: 1rem;
-    }
+    margin: 0 0 10px;
+    margin: 0 0 1rem;
   }
 }

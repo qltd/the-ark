@@ -14,7 +14,7 @@ function header_region_default_fe_block_settings() {
 
   $export['menu-menu-shortcuts'] = array(
     'cache' => -1,
-    'css_class' => 'shortcuts-navigation',
+    'css_class' => 'shortcuts-navigation header-navigation-shortcuts',
     'custom' => 0,
     'delta' => 'menu-shortcuts',
     'module' => 'menu',
@@ -53,7 +53,7 @@ function header_region_default_fe_block_settings() {
 
   $export['search-form'] = array(
     'cache' => -1,
-    'css_class' => 'site-search',
+    'css_class' => 'site-search header-site-search',
     'custom' => 0,
     'delta' => 'form',
     'module' => 'search',
@@ -92,7 +92,7 @@ function header_region_default_fe_block_settings() {
 
   $export['system-main-menu'] = array(
     'cache' => -1,
-    'css_class' => 'primary-navigation',
+    'css_class' => 'primary-navigation header-navigation-primary',
     'custom' => 0,
     'delta' => 'main-menu',
     'module' => 'system',

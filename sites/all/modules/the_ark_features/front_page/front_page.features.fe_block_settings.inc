@@ -14,7 +14,7 @@ function front_page_default_fe_block_settings() {
 
   $export['block-hero_about'] = array(
     'cache' => -1,
-    'css_class' => 'hero-about',
+    'css_class' => 'hero-about header-hero-about',
     'custom' => 0,
     'machine_name' => 'hero_about',
     'module' => 'block',
