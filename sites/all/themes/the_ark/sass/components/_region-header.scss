@@ -4,7 +4,7 @@
   background-image: url('/images/header');
   background-position: center top;
 }
-.l-region--header {
+.l-regionset--header {
   height: 170px;
   height: 17rem;
   background-color: $purple-mask;
@@ -17,14 +17,14 @@
   .l-header {
     background-image: url('/images/hero');
   }
-  .l-region--header {
+  .l-regionset--header {
     height: 340px;
     height: 34rem;
   }
 }
 
 @include breakpoint($breakpoint-hi-res) {
-  .l-region--header {
+  .l-regionset--header {
     background-image: url('/sites/all/themes/the_ark/images/logo@2x.png');
     background-size: 215px 110px;
     background-size: 21.5rem 11rem;
@@ -47,7 +47,7 @@
   .l-header {
     background-image: url('/images/header/tablet');
   }
-  .l-region--header {
+  .l-regionset--header {
     height: 130px;
     height: 13rem;
   }
@@ -56,7 +56,7 @@
     .l-header {
       background-image: url('/images/hero/tablet');
     }
-    .l-region--header {
+    .l-regionset--header {
       height: 500px;
       height: 50rem;
     }
@@ -67,7 +67,7 @@
   .l-header {
     background-image: url('/images/header/desktop');
   }
-  .l-region--header {
+  .l-regionset--header {
     height: 170px;
     height: 17rem;
   }
@@ -76,7 +76,7 @@
     .l-header {
       background-image: url('/images/hero/desktop');
     }
-    .l-region--header {
+    .l-regionset--header {
       height: 700px;
       height: 70rem;
     }
