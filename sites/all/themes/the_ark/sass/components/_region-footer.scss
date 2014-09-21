@@ -32,12 +32,6 @@
       top: 6rem;
     }
   }
-
-  .l-static--footer {
-    margin: {
-      top: 0;
-    }
-  }
 }
 
 @include breakpoint($breakpoint-desktop) {
