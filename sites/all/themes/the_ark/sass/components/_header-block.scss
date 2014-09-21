@@ -1,6 +1,8 @@
 .header-block {
-  color: white;
+  @include font-details($color: white);
   .block__title {
     margin: 0;
+    font-size: 12px;
+    @include font-details($size: 1.2rem, $weight: 400);
   }
 }
