@@ -1,5 +1,0 @@
-name = The Ark Navigation Blocks
-description = Module that creates, populates, and maintains blocks for primary navigation.
-core = 7.x
-package = The Ark Custom
-version = 7.x-1.0
