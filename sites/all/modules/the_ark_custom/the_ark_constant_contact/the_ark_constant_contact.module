@@ -14,9 +14,23 @@ function the_ark_constant_contact_menu () {
   $items['admin/constant-contact'] = array(
     'access arguments' => array('manage constant contact'),
     'access callback' => 'user_access',
-    'description' => 'Interface for managing Constant Contact API keys and access tokens',
+    'description' => 'Constant Contact integration for the Ark.',
+    'page callback' => 'the_ark_constant_contact_page',
+    'title' => 'Constant Contact',
+  );
+  $items['admin/constant-contact/form'] = array(
+    'title' => 'Form',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+  );
+  $items['admin/constant-contact/settings'] = array(
+    'access arguments' => array('manage constant contact'),
+    'access callback' => 'user_access',
+    'description' => 'Interface for managing Constant Contact API keys and access tokens.',
     'page callback' => 'the_ark_constant_contact_admin',
-    'title' => 'Constant Contact API access',
+    'title' => 'Settings',
+    'type' => MENU_LOCAL_TASK,
+    'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
   );
   return $items;
 }

@@ -6,6 +6,10 @@ use Ctct\Components\Contacts\ContactList;
 use Ctct\Components\Contacts\EmailAddress;
 use Ctct\Exceptions\CtctException;
 
+function the_ark_constant_contact_page () {
+  return drupal_get_form('the_ark_constant_contact_contacts_form');
+};
+
 function the_ark_constant_contact_block_info() {
   $blocks['the_ark_constant_contact'] = array(
     'info' => t('The Ark Constant Contact Form'),
@@ -19,6 +23,7 @@ function the_ark_constant_contact_block_view($delta = '') {
     case 'the_ark_constant_contact':
       $block['subject'] = null;
       $block['content'] = drupal_get_form('the_ark_constant_contact_contacts_form');
+      $block['content']['#contextual_links']['constant_contact'] = array('admin/constant-contact', array());
       break;
   }
   return $block;
@@ -27,7 +32,10 @@ function the_ark_constant_contact_block_view($delta = '') {
 function the_ark_constant_contact_contacts_form ($form, &$form_state) {
   $form = array();
   $form['constant_contact_form_header'] = array(
-    '#markup' => t('<p class="constant-contact-paragraph">Get updates on upcoming shows, Ark news, and more. Your information is safe with us.</p>'),
+    '#markup' => t(
+      '<p class="constant-contact-paragraph">@text</p>',
+      array('@text' => variable_get('the_ark_constant_contact_description'))
+    ),
   );
   $form['email'] = array(
     '#type' => 'textfield',

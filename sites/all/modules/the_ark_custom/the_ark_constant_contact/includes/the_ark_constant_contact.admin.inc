@@ -21,6 +21,13 @@ function the_ark_constant_contact_admin_form ($form, &$form_state) {
     '#required' => TRUE,
     '#default_value' => variable_get('the_ark_constant_contact_access_token'),
   );
+  $form['the_ark_constant_contact_description'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Constant Contact Form Text'),
+    '#required' => TRUE,
+    '#default_value' => variable_get('the_ark_constant_contact_description'),
+    '#description' => t('This is the text that appears above the sign up field in the footer.'),
+  );
   $form = system_settings_form($form);
   return $form;
 }
