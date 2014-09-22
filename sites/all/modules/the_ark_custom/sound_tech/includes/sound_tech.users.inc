@@ -2,7 +2,7 @@
 
 function sound_tech_edit_user_access ($uid) {
   global $user;
-  if ($user->uid === $uid || isset($user->roles[3]) || isset($user->roles[4])) return true;
+  if ($user->uid === $uid || user_access('manage sound tech user accounts')) return true;
   return false;
 }
 
