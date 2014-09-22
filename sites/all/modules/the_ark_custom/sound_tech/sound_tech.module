@@ -22,7 +22,8 @@ function sound_tech_menu () {
   $items['admin/sound-tech/people/add'] = array(
     'access arguments' => array('manage sound tech user accounts'),
     'access callback' => 'user_access',
-    'page callback' => 'sound_tech_add_user',
+    'page arguments' => array('sound_tech_user_form'),
+    'page callback' => 'drupal_get_form',
     'title' => 'Add Sound Tech User',
   );
   $items['admin/sound-tech/people/%/edit'] = array(

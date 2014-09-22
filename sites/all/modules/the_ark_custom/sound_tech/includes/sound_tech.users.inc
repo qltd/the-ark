@@ -15,10 +15,6 @@ function sound_tech_show_user ($uid) {
   drupal_goto('user/' . $uid);
 }
 
-function sound_tech_add_user () {
-  return drupal_get_form('sound_tech_user_form');
-}
-
 function sound_tech_edit_user ($uid) {
   $sound_tech_user = user_load($uid);
   if (empty($sound_tech_user)) return drupal_not_found();
