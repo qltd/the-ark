@@ -1,10 +1,16 @@
 <?php
 
-function admin_content_allow_roles ($role_keys) { // helper function for admin_content_node_access()
-  global $user;
-  foreach ($role_keys as $key => $role_key) {
-    if (isset($user->roles[$role_key])) return NODE_ACCESS_ALLOW;
-  }
+function admin_content_permission () {
+  return array(
+    'view header and hero pages' => array(
+      'title' => t('View header and hero pages'),
+      'description' => t('View header and hero pages.'),
+    ),
+  );
+}
+
+function admin_content_allow ($permission) { // helper function for admin_content_node_access()
+  if (user_access($permission)) return NODE_ACCESS_ALLOW;
   return NODE_ACCESS_DENY;
 }
 
@@ -21,9 +27,9 @@ function admin_content_node_access ($node, $op, $account) { // deny anonymous or
   if ($op === 'view') {
     $type = is_string($node) ? $node : $node->type;
     if (in_array($type, array('sound_tech', 'sound_tech_page')))
-      return admin_content_allow_roles(array(3,4,5));
+      return admin_content_allow('view sound tech pages'); // defined in sound_tech module
     if (in_array($type, array('header_image', 'hero_image')))
-      return admin_content_allow_roles(array(3));
+      return admin_content_allow('view header and hero pages');
   }
   return NODE_ACCESS_IGNORE;
 }
