@@ -1,9 +1,5 @@
 <?php
 
-function the_ark_constant_contact_admin () {
-  return drupal_get_form('the_ark_constant_contact_admin_form');
-}
-
 function the_ark_constant_contact_admin_form ($form, &$form_state) {
   $form = array();
   $form['the_ark_help'] = array(

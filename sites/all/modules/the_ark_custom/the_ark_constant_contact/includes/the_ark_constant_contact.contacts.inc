@@ -6,10 +6,6 @@ use Ctct\Components\Contacts\ContactList;
 use Ctct\Components\Contacts\EmailAddress;
 use Ctct\Exceptions\CtctException;
 
-function the_ark_constant_contact_page () {
-  return drupal_get_form('the_ark_constant_contact_contacts_form');
-};
-
 function the_ark_constant_contact_block_info() {
   $blocks['the_ark_constant_contact'] = array(
     'info' => t('The Ark Constant Contact Form'),

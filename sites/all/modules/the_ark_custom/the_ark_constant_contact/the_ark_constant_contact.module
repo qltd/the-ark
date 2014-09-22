@@ -15,7 +15,8 @@ function the_ark_constant_contact_menu () {
     'access arguments' => array('manage constant contact'),
     'access callback' => 'user_access',
     'description' => 'Constant Contact integration for the Ark.',
-    'page callback' => 'the_ark_constant_contact_page',
+    'page arguments' => array('the_ark_constant_contact_contacts_form'),
+    'page callback' => 'drupal_get_form',
     'title' => 'Constant Contact',
   );
   $items['admin/constant-contact/form'] = array(
@@ -27,7 +28,8 @@ function the_ark_constant_contact_menu () {
     'access arguments' => array('manage constant contact'),
     'access callback' => 'user_access',
     'description' => 'Interface for managing Constant Contact API keys and access tokens.',
-    'page callback' => 'the_ark_constant_contact_admin',
+    'page arguments' => array('the_ark_constant_contact_admin_form'),
+    'page callback' => 'drupal_get_form',
     'title' => 'Settings',
     'type' => MENU_LOCAL_TASK,
     'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
