@@ -29,9 +29,22 @@
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
+@import "breakpoint"; // requires breakpoint -- 'gem install breakpoint' or 'bundle install'
+@import "variables/**/*";
+
 // provide proper margin when admin menu is present
-body {
-  &.adminimal-menu {
+.adminimal-menu {
+  margin: {
+    top: 0 !important;
+  }
+}
+
+#toolbar, #admin-menu {
+  display: none;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .adminimal-menu {
     margin: {
       top: 29px !important;
     }
@@ -42,23 +55,21 @@ body {
       background-position: center 29px;
       background-position: center 2.9rem;
     }
-  }
-}
-
-// Hide the toolbar or admin menu on small screens.
-@media all and (max-width: 64rem) { // 1024px
-  body {
-    &.adminimal-menu {
-      margin: {
-        top: 0 !important;
+    .l-regionwrapper--header {
+      top: 29px;
+      top: 2.9rem;
+      &.headroom--unpinned {
+        top: -11px;
+        top: -1.1rem;
       }
-      .l-header {
-        background-position: center top;
-      }
+    }
+    .header-navigation-primary > .menu {
+      top: 29px;
+      top: 2.9rem;
     }
   }
 
   #toolbar, #admin-menu {
-    display: none;
+    display: block;
   }
-}
+};

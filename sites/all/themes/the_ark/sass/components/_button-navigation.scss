@@ -19,8 +19,8 @@
   width: 25%;
   height: 40px;
   height: 4rem;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:before {
@@ -31,5 +31,8 @@
     background-color: $gray-light;
     background-color: $gray-light-mask;
     color: $gold;
+  }
+  &:hover {
+    text-decoration: none;
   }
 }

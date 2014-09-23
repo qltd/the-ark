@@ -21,8 +21,13 @@
   }
 }
 .header-navigation-region {
-  > .menu {
-
+  > .menu { // 2nd level menus
+    margin: {
+      left: 20px;
+    }
+    margin: {
+      left: 2rem;
+    }
   }
   .menu-link { // 2nd level links
     font-size: 14px;
