@@ -1,5 +1,16 @@
 .header-navigation-shortcuts {
   .menu-link {
     @extend .button-navigation;
+    @extend .icon-replace;
+  }
+  .menu-shortcuts-listen {
+    &:before {
+      content: "\f025"; // FontAwesome headphones
+    }
+  }
+  .menu-shortcuts-ticket-information {
+    &:before {
+      content: "\f145"; // FontAwesome ticket
+    }
   }
 }

@@ -4,5 +4,9 @@
   }
   .form-submit {
     @extend .button-navigation;
+    @extend .icon-replace;
+    &:before {
+      content: "\f002" // FontAwesome search
+    }
   }
 }
