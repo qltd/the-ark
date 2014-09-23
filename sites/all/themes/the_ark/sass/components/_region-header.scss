@@ -13,9 +13,14 @@
   background-repeat: no-repeat;
 }
 .l-region--header {
+  @include transition(top $transition-duration-extended ease-in);
   position: fixed;
   top: 0;
   width: 100%;
+  &.headroom--unpinned {
+    top: -40px;
+    top: -4rem;
+  }
 }
 
 
