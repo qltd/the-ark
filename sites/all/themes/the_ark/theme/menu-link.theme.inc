@@ -34,7 +34,8 @@ function the_ark_primary_navigation_content ($element) {
       $markup .= the_ark_block_in_menu_render('block', '6');
       break;
   }
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $menu_item . $sub_menu . $markup . "</li>\n";
+  $container = '<div class="header-navigation-region">' . $sub_menu . $markup . '</div>';
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $menu_item . $container . "</li>\n";
 }
 
 function the_ark_primary_navigation_related_links ($nid) {
