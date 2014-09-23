@@ -18,6 +18,11 @@
   .menu-link {
     font-size: 18px;
     @include font-details($size: 1.8rem, $color: white, $weight: 300);
+    @include transition(background-color $transition-duration ease-out, color $transition-duration ease-out);
+    &:hover, &.active {
+      @include font-details($color: $gold);
+      text-decoration: none;
+    }
   }
 }
 .header-navigation-region {
