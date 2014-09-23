@@ -5,6 +5,9 @@
   .form-submit {
     @extend .button-navigation;
     @extend .icon-replace;
+    border: {
+      right: none;
+    }
     &:before {
       content: "\f002" // FontAwesome search
     }

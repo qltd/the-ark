@@ -16,6 +16,7 @@
   @include transition(top $transition-duration-extended ease-in);
   position: fixed;
   top: 0;
+  margin: 0 auto;
   width: 100%;
   &.headroom--unpinned {
     top: -40px;
@@ -62,6 +63,10 @@
     height: 130px;
     height: 13rem;
   }
+  // .l-region--header {
+  //   width: 320px;
+  //   width: 32rem;
+  // }
 
   .front {
     .l-header {
