@@ -33,7 +33,7 @@
 @import "variables/**/*";
 
 // provide proper margin when admin menu is present
-.adminimal-menu {
+body.admin-menu {
   margin: {
     top: 0 !important;
   }
@@ -44,13 +44,15 @@
 }
 
 @include breakpoint($breakpoint-desktop) {
-  .adminimal-menu {
+  body.admin-menu {
     margin: {
       top: 29px !important;
     }
     margin: {
       top: 2.9rem !important;
     }
+  }
+  .adminimal-menu {
     .l-header {
       background-position: center 29px;
       background-position: center 2.9rem;
