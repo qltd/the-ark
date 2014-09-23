@@ -68,7 +68,9 @@
 <div class="l-page">
   <header class="l-header" role="banner">
     <div class="l-regionset--header">
-      <?php print render($page['header']); ?>
+      <div class="l-regionwrapper--header">
+        <?php print render($page['header']); ?>
+      </div>
       <?php print render($page['hero']); ?>
     </div>
   </header>
