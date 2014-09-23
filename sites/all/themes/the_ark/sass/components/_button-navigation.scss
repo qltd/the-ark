@@ -1,7 +1,9 @@
 .button-navigation {
+  //@extend .text-hide;
   display: block;
   float: left;
   z-index: 10;
+  overflow: hidden;
   padding: 0;
   background-color: $gray;
   background-color: $gray-mask;
@@ -11,6 +13,16 @@
   font-size: 12px;
   line-height: 40px;
   @include font-details($size: 1.2rem, $color: white, $weight: 300, $height: 4rem);
+  text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+  &:hover {
+    background-color: $gray;
+    background-color: $gray-mask;
+  }
+  &:before {
+    @include FontAwesome($size: 12px);
+    display: block;
+    content: '';
+  }
 }
