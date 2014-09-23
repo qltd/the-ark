@@ -1,4 +1,7 @@
 .header-navigation-primary {
+  .block__title {
+    @extend .button-navigation;
+  }
   .menu {
     display: none;
   }

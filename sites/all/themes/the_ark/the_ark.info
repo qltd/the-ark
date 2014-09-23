@@ -15,6 +15,8 @@ stylesheets[all][] = css/the-ark.hacks.css
 ; ========================================
 ; Scripts
 ; ========================================
+scripts[] = libraries/headroom.js/dist/headroom.js
+scripts[] = libraries/headroom.js/dist/jQuery.headroom.js
 scripts[] = js/the-ark.min.js
 
 ; ========================================

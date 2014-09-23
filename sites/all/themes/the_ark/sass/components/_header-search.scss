@@ -2,4 +2,7 @@
   .form-text {
     display: none;
   }
+  .form-submit {
+    @extend .button-navigation;
+  }
 }

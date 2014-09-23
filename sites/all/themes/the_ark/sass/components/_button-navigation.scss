@@ -1,0 +1,16 @@
+.button-navigation {
+  display: block;
+  float: left;
+  z-index: 10;
+  padding: 0;
+  background-color: $gray;
+  background-color: $gray-mask;
+  width: 25%;
+  height: 40px;
+  height: 4rem;
+  font-size: 12px;
+  line-height: 40px;
+  @include font-details($size: 1.2rem, $color: white, $weight: 300, $height: 4rem);
+  text-align: center;
+  cursor: pointer;
+}

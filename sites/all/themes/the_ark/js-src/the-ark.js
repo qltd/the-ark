@@ -29,5 +29,6 @@
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
+require('./behaviors/region-header');
 require('./behaviors/header-search');
 require('./behaviors/footer-contact');

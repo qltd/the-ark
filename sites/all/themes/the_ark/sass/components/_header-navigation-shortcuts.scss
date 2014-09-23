@@ -1,3 +1,5 @@
 .header-navigation-shortcuts {
-  // display: none;
+  .menu-link {
+    @extend .button-navigation;
+  }
 }
