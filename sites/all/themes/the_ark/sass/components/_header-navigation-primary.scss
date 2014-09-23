@@ -3,12 +3,29 @@
     @extend .button-navigation;
   }
   > .menu {
-    display: none;
-    
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    padding: 20px;
+    padding: 2rem;
+    width: 320px;
+    width: 32rem;
+    height: 100%;
+    background-color: $gray-dark-background;
+    background-color: $gray-dark-mask;
+  }
+  .menu-link {
+    font-size: 18px;
+    @include font-details($size: 1.8rem, $color: white, $weight: 300);
+  }
+}
+.header-navigation-region {
+  > .menu {
+
+  }
+  .menu-link { // 2nd level links
+    font-size: 14px;
+    @include font-details($size: 1.4rem, $style: italic);
   }
 }
