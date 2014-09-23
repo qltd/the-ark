@@ -12,6 +12,162 @@ function header_region_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-header_navigation_about'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-about header-navigation-block',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_about',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-header_navigation_contact_us'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-contact-us header-navigation-block',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_contact_us',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-header_navigation_shows_events'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-shows-events header-navigation-block',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_shows_events',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-header_navigation_support'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-support header-navigation-block',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_support',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['menu-menu-shortcuts'] = array(
     'cache' => -1,
     'css_class' => 'shortcuts-navigation header-navigation-shortcuts header-block',

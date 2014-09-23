@@ -22,12 +22,16 @@ function the_ark_primary_navigation_content ($element) {
   $markup = the_ark_primary_navigation_related_links(str_replace('node/', '', $element['#href']));
   switch ($element['#href']) {
     case 'node/2': // About
+      $markup .= the_ark_block_in_menu_render('block', '3');
       break;
     case 'node/5': // Contact Us
+      $markup .= the_ark_block_in_menu_render('block', '4');
       break;
     case 'node/1': // Shows & Events
+      $markup .= the_ark_block_in_menu_render('block', '5');
       break;
     case 'node/3': // Support the Ark
+      $markup .= the_ark_block_in_menu_render('block', '6');
       break;
   }
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $menu_item . $sub_menu . $markup . "</li>\n";
