@@ -23,6 +23,10 @@
     top: -4rem;
   }
 }
+.l-region--header {
+  max-width: 320px;
+  @include container(32rem);
+}
 
 
 .front {
@@ -62,11 +66,6 @@
   .l-regionset--header {
     height: 130px;
     height: 13rem;
-  }
-  .l-region--header {
-    margin: 0 auto;
-    width: 320px;
-    width: 32rem;
   }
 
   .front {
