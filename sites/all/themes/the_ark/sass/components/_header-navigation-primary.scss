@@ -15,6 +15,10 @@
     background-color: $gray-dark-background;
     background-color: $gray-dark-mask;
   }
+  .menu-item {
+    margin: 20px 0;
+    margin: 2rem 0;
+  }
   .menu-top-level-item {
     border: {
       top: 1px solid $gray-light;
@@ -22,9 +26,21 @@
     border: {
       top: 1px solid $white-mask;
     }
+    padding: {
+      top: 15px;
+    }
+    padding: {
+      top: 1.5rem;
+    }
     &.first {
+      margin: {
+        top: 0;
+      }
       border: {
         top: none;
+      }
+      padding: {
+        top: 0;
       }
     }
   }
