@@ -4,7 +4,7 @@ function the_ark_menu_link ($variables) {
   $variables['element']['#attributes']['class'][] = 'menu-item';
   $variables['element']['#localized_options']['attributes']['class'][] = 'menu-link';
 
-  $primary = array( // main menu top-level links with dropdowns
+  $primary = array( // main menu top-level links with dropdowns; name can vary, path must match
     'About' => 'node/2',
     'Contact Us' => 'node/5',
     'Home' => '<front>',
