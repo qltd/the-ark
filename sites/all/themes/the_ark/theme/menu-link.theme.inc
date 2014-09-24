@@ -7,8 +7,10 @@ function the_ark_menu_link ($variables) {
   $primary = array( // main menu top-level links with dropdowns
     'About' => 'node/2',
     'Contact Us' => 'node/5',
+    'Home' => '<front>',
     'Shows & Events' => 'node/1',
     'Support the Ark' => 'node/3',
+    'Our Blog' => 'http://www.findyourfolk.org/',
   );
 
   if ($variables['element']['#theme'] === 'menu_link__main_menu' && in_array($variables['element']['#href'], $primary))
@@ -17,24 +19,32 @@ function the_ark_menu_link ($variables) {
 }
 
 function the_ark_primary_navigation_content ($element) {
+  $element['#attributes']['class'][] = 'menu-top-level-item';
+  $element['#localized_options']['attributes']['class'][] = 'menu-top-level-link';
   $menu_item = l($element['#title'], $element['#href'], $element['#localized_options']);
   $sub_menu = isset($element['#below']) ? drupal_render($element['#below']) : '';
-  $markup = the_ark_primary_navigation_related_links(str_replace('node/', '', $element['#href']));
+  $markup = '';
   switch ($element['#href']) {
     case 'node/2': // About
+      $markup .= the_ark_primary_navigation_related_links('2');
       $markup .= the_ark_block_in_menu_render('block', '3');
       break;
     case 'node/5': // Contact Us
+      $markup .= the_ark_primary_navigation_related_links('5');
       $markup .= the_ark_block_in_menu_render('block', '4');
       break;
     case 'node/1': // Shows & Events
+      $markup .= the_ark_primary_navigation_related_links('1');
       $markup .= the_ark_block_in_menu_render('block', '5');
       break;
     case 'node/3': // Support the Ark
+      $markup .= the_ark_primary_navigation_related_links('3');
       $markup .= the_ark_block_in_menu_render('block', '6');
       break;
   }
-  $container = '<div class="header-navigation-region">' . $sub_menu . $markup . '</div>';
+  $container = !empty($sub_menu) || !empty($markup)
+    ? '<div class="header-navigation-region">' . $sub_menu . $markup . '</div>'
+    : '';
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $menu_item . $container . "</li>\n";
 }
 
