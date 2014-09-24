@@ -1,0 +1,18 @@
+.button-close {
+  @extend .icon-replace;
+  display: block;
+  cursor: pointer;
+  height: 20px;
+  height: 2rem;
+  font-size: 20px;
+  color: $gray-light;
+  @include font-details($size: 2rem, $color: $white-mask, $weight: 300, $height: 1);
+  @include transition(color $transition-duration ease-out);
+  &:hover {
+    color: $gold;
+    text-decoration: none;
+  }
+  &:before {
+    content: "\f057";
+  }
+}

@@ -1,4 +1,13 @@
 .header-navigation-primary {
+  .menu-primary-close {
+    @extend .button-close;
+    position: absolute;
+    top: 23px;
+    top: 2.3rem;
+    right: 20px;
+    right: 2rem;
+    text-align: right;
+  }
   .block__title {
     @extend .button-navigation;
   }
@@ -55,13 +64,13 @@
   width: 320px;
   width: 32rem;
   height: 100%;
+  pointer-events: auto;
   background-color: $gray-dark-background;
   background-color: $gray-dark-mask;
 
   > .menu { // 1st level menus
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    pointer-events: auto;
     padding: 20px 40px 20px 20px;
     padding: 2rem 4rem 2rem 2rem;
     width: 340px;
