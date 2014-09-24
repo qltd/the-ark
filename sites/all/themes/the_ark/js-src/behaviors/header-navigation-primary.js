@@ -6,7 +6,8 @@
       if (navigation.length === 0 || toggle.length === 0) return;
 
       toggle.click(function () {
-        $('body').toggleClass('body-no-scroll');
+        $('html, body').toggleClass('document-no-scroll');
+        toggle.toggleClass('active');
         navigation.toggleClass('menu-flyout-visible');
       });
     }
