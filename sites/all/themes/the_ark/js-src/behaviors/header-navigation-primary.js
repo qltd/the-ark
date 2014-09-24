@@ -1,12 +1,12 @@
 (function ($) {
   Drupal.behaviors.theArkHeaderNavigationPrimary = {
     attach: function () {
-      var navigation = $('.header-navigation-primary > .menu')
+      var navigation = $('.menu-primary-wrapper')
         , toggle = $('.header-navigation-primary .block__title');
       if (navigation.length === 0 || toggle.length === 0) return;
 
       toggle.click(function () {
-        $('html, body').toggleClass('document-no-scroll');
+        $('body').toggleClass('document-no-scroll');
         toggle.toggleClass('active');
         navigation.toggleClass('menu-flyout-visible');
       });

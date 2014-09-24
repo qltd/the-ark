@@ -2,26 +2,6 @@
   .block__title {
     @extend .button-navigation;
   }
-  > .menu {
-    @include transition(left $transition-duration-extended ease-out);
-    position: fixed;
-    overflow: scroll;
-    z-index: 1;
-    pointer-events: auto;
-    top: 0;
-    left: -320px;
-    left: -32rem;
-    padding: 20px;
-    padding: 2rem;
-    width: 320px;
-    width: 32rem;
-    height: 100%;
-    background-color: $gray-dark-background;
-    background-color: $gray-dark-mask;
-    &.menu-flyout-visible {
-      left: 0;
-    }
-  }
   .menu-item {
     margin: 20px 0;
     margin: 2rem 0;
@@ -62,6 +42,35 @@
   .menu-top-level-link {
     font-size: 18px;
     @include font-details($size: 1.8rem);
+  }
+}
+.menu-primary-wrapper {
+  @include transition(left $transition-duration-extended ease-out);
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: -320px;
+  left: -32rem;
+  width: 320px;
+  width: 32rem;
+  height: 100%;
+  background-color: $gray-dark-background;
+  background-color: $gray-dark-mask;
+
+  > .menu { // 1st level menus
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    pointer-events: auto;
+    padding: 20px 40px 20px 20px;
+    padding: 2rem 4rem 2rem 2rem;
+    width: 340px;
+    width: 34rem;
+    height: 100%;
+  }
+
+  &.menu-flyout-visible {
+    left: 0;
   }
 }
 .header-navigation-region {
