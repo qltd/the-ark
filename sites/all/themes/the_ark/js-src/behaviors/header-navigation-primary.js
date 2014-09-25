@@ -9,7 +9,7 @@
       if (wrapper.length === 0 || navigation.length === 0) return;
 
       var toggleClasses = function (method) {
-        // body[method]('document-no-scroll');
+        body[method]('document-modal');
         toggle[method]('active');
         wrapper[method]('menu-flyout-visible');
         switch (method) {

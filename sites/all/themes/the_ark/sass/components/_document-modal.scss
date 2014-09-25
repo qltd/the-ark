@@ -1,0 +1,22 @@
+.document-modal {
+  &:after {
+    left: 0;
+    background-color: $gray-light;
+    background-color: $gray-light-mask;
+  }
+}
+
+body {
+  &:after {
+    @include transition(background-color $transition-duration-extended ease-out, left $transition-duration-extended ease-out);
+    content: '';
+    position: fixed;
+    z-index: 50; /** for an element to be visible above modal background: position must be set, and z-index must be > 50 */
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-color: rgba(white, 0);
+  }
+}

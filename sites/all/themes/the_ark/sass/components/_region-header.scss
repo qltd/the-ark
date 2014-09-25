@@ -15,7 +15,7 @@
 .l-regionwrapper--header {
   @include transition(top $transition-duration-extended ease-in);
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   width: 100%;
   &.headroom--unpinned {
@@ -36,6 +36,13 @@
   .l-regionset--header {
     height: 340px;
     height: 34rem;
+  }
+}
+
+.document-modal {
+  .l-regionwrapper--header {
+    top: -40px;
+    top: -4rem;
   }
 }
 

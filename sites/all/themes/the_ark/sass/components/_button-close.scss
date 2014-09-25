@@ -1,6 +1,6 @@
 .button-close {
   @extend .icon-replace;
-  
+
   font-size: 30px;
   color: $gray-light;
   @include font-details($size: 3rem, $color: $white-mask, $weight: 300, $height: 1);
@@ -11,10 +11,17 @@
   height: 30px;
   height: 3rem;
   &:hover {
-    color: $gold;
     text-decoration: none;
   }
   &:before {
     content: "\f057";
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .button-close {
+    &:hover {
+      color: $gold;
+    }
   }
 }

@@ -43,9 +43,11 @@
   .menu-link {
     @include font-details($color: white, $weight: 300);
     @include transition(background-color $transition-duration ease-out, color $transition-duration ease-out);
-    &:hover, &.active {
-      @include font-details($color: $gold);
+    &:hover {
       text-decoration: none;
+    }
+    &.active {
+      @include font-details($color: $gold);
     }
   }
   .menu-top-level-link {
@@ -57,7 +59,7 @@
   @include transition(left $transition-duration-extended ease-out);
   position: fixed;
   overflow: hidden;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: -320px;
   left: -32rem;
@@ -94,5 +96,16 @@
   .menu-link { // 2nd level links
     font-size: 14px;
     @include font-details($size: 1.4rem, $style: italic);
+  }
+}
+
+
+@include breakpoint($breakpoint-desktop) {
+  .header-navigation-primary {
+    .menu-link {
+      &:hover {
+        @include font-details($color: $gold);
+      }
+    }
   }
 }
