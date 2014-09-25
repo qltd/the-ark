@@ -14,19 +14,19 @@
         wrapper[method]('menu-flyout-visible');
         switch (method) {
           case 'addClass':
-            // $('html, body').on('touchmove', function (e) {
-            //   e.preventDefault();
-            // });
+            $(document).on('touchmove', function (e) {
+              e.preventDefault();
+            });
             break;
           case 'removeClass':
-            // $('html, body').off('touchmove');
+            $(document).off('touchmove');
             break;
         }
       };
 
-      // navigation.on('touchmove', function (e) {
-      //   e.stopPropagation();
-      // });
+      navigation.on('touchmove', function (e) {
+        e.stopPropagation();
+      });
 
       body.on('swiperight', function (e) {
         e.preventDefault();
