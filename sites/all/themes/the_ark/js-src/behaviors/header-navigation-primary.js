@@ -1,4 +1,15 @@
 (function ($) {
+  var clickAndCatch = function (el, delay) { // tap events made available by ToccaJS will still have a trailing click event, this function prevents the default for that click
+    el = el || $(document);
+    delay = delay || 300; // 300ms
+    el.on('click', function (e) {
+      e.preventDefault();
+    });
+    window.setTimeout(function () {
+      el.off('click');
+    }, delay);
+  };
+
   Drupal.behaviors.theArkHeaderNavigationPrimary = {
     attach: function () {
       var body = $('body')
@@ -9,6 +20,7 @@
       if (wrapper.length === 0 || navigation.length === 0) return;
 
       var toggleClasses = function (method) {
+        clickAndCatch();
         body[method]('document-modal');
         toggle[method]('active');
         wrapper[method]('menu-flyout-visible');
