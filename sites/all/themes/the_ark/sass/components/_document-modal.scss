@@ -1,4 +1,5 @@
 .document-modal {
+  @extend .document-no-scroll;
   &:after {
     left: 0;
     background-color: $gray-light;
