@@ -66,8 +66,16 @@ body.admin-menu {
       }
     }
     .menu-primary-wrapper > .menu {
-      top: 29px;
-      top: 2.9rem;
+      padding: {
+        top: 49px;
+      }
+      padding: {
+        top: 4.9rem;
+      }
+    }
+    .menu-primary-close {
+      top: 47px;
+      top: 4.7rem;
     }
   }
 

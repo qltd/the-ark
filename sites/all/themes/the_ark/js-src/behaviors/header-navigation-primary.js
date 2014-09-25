@@ -9,24 +9,24 @@
       if (wrapper.length === 0 || navigation.length === 0) return;
 
       var toggleClasses = function (method) {
-        body[method]('document-no-scroll');
+        // body[method]('document-no-scroll');
         toggle[method]('active');
         wrapper[method]('menu-flyout-visible');
         switch (method) {
           case 'addClass':
-            $('html, body').on('touchmove', function (e) {
-              e.preventDefault();
-            });
+            // $('html, body').on('touchmove', function (e) {
+            //   e.preventDefault();
+            // });
             break;
           case 'removeClass':
-            $('html, body').off('touchmove');
+            // $('html, body').off('touchmove');
             break;
         }
       };
 
-      navigation.on('touchmove', function (e) {
-        e.stopPropagation();
-      });
+      // navigation.on('touchmove', function (e) {
+      //   e.stopPropagation();
+      // });
 
       body.on('swiperight', function (e) {
         e.preventDefault();
@@ -36,7 +36,7 @@
         e.preventDefault();
         toggleClasses('removeClass');
       });
-      toggle.on('click', function () {
+      toggle.on('tap', function () {
         toggleClasses('addClass');
       });
       buttonClose.on('tap', function () {
