@@ -1,7 +1,7 @@
 <?php
 
 function the_ark_preprocess_html (&$variables) {
-  drupal_add_js(drupal_get_path('theme', 'the_ark') . '/libraries/jquery.browser/dist/jquery.browser.js',
+  drupal_add_js(drupal_get_path('theme', 'the_ark') . '/libraries/jquery.browser/dist/jquery.browser.min.js',
     array(
       'group' => JS_LIBRARY
     )

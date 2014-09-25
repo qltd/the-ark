@@ -1,13 +1,15 @@
 .button-close {
   @extend .icon-replace;
+  
+  font-size: 30px;
+  color: $gray-light;
+  @include font-details($size: 3rem, $color: $white-mask, $weight: 300, $height: 1);
+  @include transition(color $transition-duration ease-out);
+
   display: block;
   cursor: pointer;
-  height: 20px;
-  height: 2rem;
-  font-size: 20px;
-  color: $gray-light;
-  @include font-details($size: 2rem, $color: $white-mask, $weight: 300, $height: 1);
-  @include transition(color $transition-duration ease-out);
+  height: 30px;
+  height: 3rem;
   &:hover {
     color: $gold;
     text-decoration: none;
