@@ -24,24 +24,23 @@
         }
       };
 
-      navigation.bind('touchmove', function (e) {
+      navigation.on('touchmove', function (e) {
         e.stopPropagation();
       });
 
-      body.bind('swiperight', function (e) {
+      body.on('swiperight', function (e) {
         e.preventDefault();
         toggleClasses('addClass');
       });
-      navigation.bind('swipeleft', function (e) {
+      navigation.on('swipeleft', function (e) {
         e.preventDefault();
         toggleClasses('removeClass');
       });
-      toggle.bind('tap', function (e) {
-        e.preventDefault();
+      toggle.on('tap', function (e) {
+        e.stopPropagation();
         toggleClasses('addClass');
       });
-      buttonClose.bind('tap', function (e) {
-        e.preventDefault();
+      buttonClose.on('tap', function () {
         toggleClasses('removeClass');
       });
     }
