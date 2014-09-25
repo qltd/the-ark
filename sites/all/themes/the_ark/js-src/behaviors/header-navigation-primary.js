@@ -32,7 +32,7 @@
         e.preventDefault();
         toggleClasses('addClass');
       });
-      navigation.on('swipeleft', function (e) {
+      body.on('swipeleft', function (e) {
         e.preventDefault();
         toggleClasses('removeClass');
       });
