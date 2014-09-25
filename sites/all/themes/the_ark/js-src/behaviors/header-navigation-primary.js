@@ -14,12 +14,12 @@
         wrapper[method]('menu-flyout-visible');
         switch (method) {
           case 'addClass':
-            $(document).bind('touchmove', function (e) {
+            $('html, body').on('touchmove', function (e) {
               e.preventDefault();
             });
             break;
           case 'removeClass':
-            $(document).off('touchmove');
+            $('html, body').off('touchmove');
             break;
         }
       };
@@ -36,8 +36,7 @@
         e.preventDefault();
         toggleClasses('removeClass');
       });
-      toggle.on('tap', function (e) {
-        e.stopPropagation();
+      toggle.on('click', function () {
         toggleClasses('addClass');
       });
       buttonClose.on('tap', function () {
