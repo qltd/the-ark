@@ -30,11 +30,6 @@
 */
 
 /**
- * jQuery Extensions
- */
-require('./extensions/jquery.touch-gestures.js');
-
-/**
  * Components
  */
 require('./behaviors/footer-contact');
