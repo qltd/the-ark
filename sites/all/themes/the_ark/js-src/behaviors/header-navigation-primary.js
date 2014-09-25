@@ -1,22 +1,43 @@
 (function ($) {
   Drupal.behaviors.theArkHeaderNavigationPrimary = {
     attach: function () {
-      var navigation = $('.menu-primary-wrapper')
+      var body = $('body')
+        , navigation = $('.menu-primary-wrapper')
         , toggle = $('.header-navigation-primary .block__title')
         , buttonClose = $('.menu-primary-close');
       if (navigation.length === 0 || toggle.length === 0 || buttonClose.length === 0) return;
 
-      var toggleClasses = function () {
-        $('body').toggleClass('document-no-scroll');
-        toggle.toggleClass('active');
-        navigation.toggleClass('menu-flyout-visible');
+      var toggleClasses = function (method) {
+        body[method]('document-no-scroll');
+        toggle[method]('active');
+        navigation[method]('menu-flyout-visible');
+        switch (method) {
+          case 'addClass':
+            $(document).bind('touchmove', function (e) {
+              e.preventDefault();
+            });
+            break;
+          case 'removeClass':
+            $(document).off('touchmove');
+            break;
+        }
       };
 
-      toggle.click(function () {
-        toggleClasses();
+      navigation.bind('touchmove', function (e) {
+        e.stopPropagation();
       });
-      buttonClose.click(function () {
-        toggleClasses();
+
+      body.bind('swiperight', function () {
+        toggleClasses('addClass');
+      });
+      navigation.bind('swipeleft', function () {
+        toggleClasses('removeClass');
+      });
+      toggle.bind('tap', function () {
+        toggleClasses('addClass');
+      });
+      buttonClose.bind('tap', function () {
+        toggleClasses('removeClass');
       });
     }
   };

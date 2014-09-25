@@ -12,6 +12,7 @@
     "normalize-css": "3.0.1",
     "pie": "fubhy/pie",
     "respond": "fubhy/respond",
-    "selectivizr": "fubhy/selectivizr"
+    "selectivizr": "fubhy/selectivizr",
+    "Tocca.js": "0.1.0"
   }
 }
