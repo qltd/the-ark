@@ -29,6 +29,14 @@
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
+/**
+ * jQuery Extensions
+ */
+require('./extensions/jquery.touch-gestures.js');
+
+/**
+ * Components
+ */
 require('./behaviors/footer-contact');
 require('./behaviors/header-navigation-primary');
 require('./behaviors/header-search');

@@ -12,12 +12,19 @@
         navigation.toggleClass('menu-flyout-visible');
       };
 
-      toggle.click(function () {
+      toggle.bind('tap click', function (event) {
+        event.preventDefault();
+        if (event.handled === true) return;
+        event.handled = true;
         toggleClasses();
       });
-      buttonClose.click(function () {
+      buttonClose.bind('tap click', function (event) {
+        event.preventDefault();
+        if (event.handled === true) return;
+        event.handled = true;
         toggleClasses();
       });
+
     }
   };
 })(jQuery);
