@@ -26,10 +26,6 @@
             body.on('swipeleft', function () {
               toggleClasses('removeClass');
             });
-            navigation.on('swipeleft', function (e) {
-              e.stopPropagation();
-              toggleClasses('removeClass');
-            });
             buttonClose.on('tap', function () {
               toggleClasses('removeClass');
             });
@@ -39,7 +35,6 @@
             $(document).off('touchmove');
             navigation.off('touchmove');
             body.off('swipeleft');
-            navigation.off('swipeleft');
             buttonClose.off('tap');
 
             defaultListeners();

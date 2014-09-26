@@ -6,6 +6,16 @@ function the_ark_preprocess_html (&$variables) {
       'group' => JS_LIBRARY
     )
   );
+  drupal_add_js(drupal_get_path('theme', 'the_ark') . '/libraries/headroom.js/dist/headroom.min.js',
+    array(
+      'group' => JS_LIBRARY
+    )
+  );
+  drupal_add_js(drupal_get_path('theme', 'the_ark') . '/libraries/headroom.js/dist/jQuery.headroom.min.js',
+    array(
+      'group' => JS_LIBRARY
+    )
+  );
   drupal_add_js(drupal_get_path('theme', 'the_ark') . '/libraries/Tocca.js/Tocca.min.js',
     array(
       'group' => JS_LIBRARY
