@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "ckeditor": "4.4.3",
+    "fira": "mozilla/Fira",
     "font-awesome": "4.2.0",
     "headroom.js": "0.7.0",
     "html5-boilerplate": "4.3.0",

@@ -1,10 +1,13 @@
 .document-modal {
-  @extend .document-no-scroll;
+  overflow: hidden;
   &:after {
     left: 0;
     background-color: $gray-light;
     background-color: $gray-light-mask;
   }
+}
+.document-modal-mobile {
+  @extend .document-modal;
 }
 
 body {
@@ -19,5 +22,14 @@ body {
     height: 100%;
     background-color: transparent;
     background-color: rgba(white, 0);
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .document-modal-mobile {
+    overflow: inherit;
+    &:after {
+      left: -100%;
+    }
   }
 }

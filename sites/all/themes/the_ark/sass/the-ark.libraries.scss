@@ -29,6 +29,9 @@
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
+/*--Third Party Variables--*/
+$fa-font-path: "../libraries/font-awesome/fonts";
+
 /*--Third Party Libraries--*/
 @import "libraries/normalize"; // symlinked css as scss from ../libraries/normalize-css/normalize.css
 @import "libraries/html5-boilerplate"; // symlinked css as scss from ../libraries/html5-boilerplate/css/main.css

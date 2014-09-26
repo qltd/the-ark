@@ -9,7 +9,7 @@
       if (wrapper.length === 0 || navigation.length === 0) return;
 
       var toggleClasses = function (method) {
-        body[method]('document-modal');
+        body[method]('document-modal-mobile');
         toggle[method]('active');
         wrapper[method]('menu-flyout-visible');
         switch (method) {
