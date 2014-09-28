@@ -134,7 +134,7 @@
       height: 11rem;
       &:before {
         font-size: 110px;
-        @include font-details($size: 11rem);
+        @include font-details($size: 11rem, $height: 1);
         content: "\e600";
       }
       &.active {
