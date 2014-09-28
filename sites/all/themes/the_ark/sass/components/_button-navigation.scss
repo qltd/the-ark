@@ -36,3 +36,18 @@
     text-decoration: none;
   }
 }
+.button-navigation-mobile {
+  @extend .button-navigation;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .button-navigation-mobile {
+    border: {
+      right: none;
+    }
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

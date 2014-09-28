@@ -94,8 +94,12 @@
     height: 170px;
     height: 17rem;
   }
+  .l-regionwrapper--header {
+
+  }
   .l-region--header {
-    max-width: 100%;
+    max-width: 1000px;
+    @include container(100rem);
   }
 
   .front {

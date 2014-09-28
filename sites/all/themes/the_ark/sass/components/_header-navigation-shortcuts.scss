@@ -1,6 +1,6 @@
 .header-navigation-shortcuts {
   .menu-link {
-    @extend .button-navigation;
+    @extend .button-navigation-mobile;
     @extend .icon-replace;
   }
   .menu-shortcuts-listen {

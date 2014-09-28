@@ -3,7 +3,7 @@
     display: none;
   }
   .form-submit {
-    @extend .button-navigation;
+    @extend .button-navigation-mobile;
     @extend .icon-replace;
     border: {
       right: none;
