@@ -3,17 +3,19 @@
   background-color: black;
   background-image: url('/images/header');
   background-position: center top;
+  background-repeat: no-repeat;
 }
 .l-regionset--header {
   height: 170px;
   height: 17rem;
   background-color: $purple-mask;
-  // background-image: url('/sites/all/themes/the_ark/images/logo.png');
-  // background-position: center center;
-  // background-repeat: no-repeat;
 }
 .l-regionwrapper--header {
-  @include transition(top $transition-duration-extended ease-in, background-color $transition-duration ease-out);
+  @include transition(
+    top $transition-duration-extended ease-in,
+    margin-top $transition-duration-extended ease-in,
+    background-color $transition-duration ease-out
+  );
   position: fixed;
   z-index: 100;
   top: 0;
@@ -27,7 +29,6 @@
   max-width: 320px;
   @include container(32rem);
 }
-
 
 .front {
   .l-header {
@@ -45,14 +46,6 @@
     top: -4rem;
   }
 }
-
-// @include breakpoint($breakpoint-hi-res) {
-//   .l-regionset--header {
-//     background-image: url('/sites/all/themes/the_ark/images/logo@2x.png');
-//     background-size: 215px 110px;
-//     background-size: 21.5rem 11rem;
-//   }
-// }
 
 @include breakpoint($breakpoint-mobile-wide) {
   .l-header {
@@ -95,8 +88,30 @@
     height: 17rem;
   }
   .l-regionwrapper--header {
+    height: 60px;
+    height: 6rem;
     background-color: $gray;
     background-color: $gray-mask;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      top: -10rem;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      height: 10rem;
+      background-color: $gray-dark-background;
+      background-color: $gray-dark-mask;
+    }
+    &:hover {
+      margin: {
+        top: 100px;
+      }
+      margin: {
+        top: 10rem;
+      }
+    }
   }
   .l-region--header {
     max-width: 1000px;

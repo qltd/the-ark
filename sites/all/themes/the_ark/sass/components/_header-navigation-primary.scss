@@ -175,12 +175,15 @@
   }
   .menu-primary-wrapper {
     position: static;
+    overflow: inherit;
     float: left;
     width: 800px;
     width: 80rem;
     background-color: transparent;
 
     > .menu { // 1st level menus
+      overflow-y: inherit;
+      -webkit-overflow-scrolling: inherit;
       padding: 0;
       width: auto;
     }
