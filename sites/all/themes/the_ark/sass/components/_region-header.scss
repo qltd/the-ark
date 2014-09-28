@@ -8,9 +8,9 @@
   height: 170px;
   height: 17rem;
   background-color: $purple-mask;
-  background-image: url('/sites/all/themes/the_ark/images/logo.png');
-  background-position: center center;
-  background-repeat: no-repeat;
+  // background-image: url('/sites/all/themes/the_ark/images/logo.png');
+  // background-position: center center;
+  // background-repeat: no-repeat;
 }
 .l-regionwrapper--header {
   @include transition(top $transition-duration-extended ease-in);
@@ -46,13 +46,13 @@
   }
 }
 
-@include breakpoint($breakpoint-hi-res) {
-  .l-regionset--header {
-    background-image: url('/sites/all/themes/the_ark/images/logo@2x.png');
-    background-size: 215px 110px;
-    background-size: 21.5rem 11rem;
-  }
-}
+// @include breakpoint($breakpoint-hi-res) {
+//   .l-regionset--header {
+//     background-image: url('/sites/all/themes/the_ark/images/logo@2x.png');
+//     background-size: 215px 110px;
+//     background-size: 21.5rem 11rem;
+//   }
+// }
 
 @include breakpoint($breakpoint-mobile-wide) {
   .l-header {
@@ -93,6 +93,9 @@
   .l-regionset--header {
     height: 170px;
     height: 17rem;
+  }
+  .l-region--header {
+    max-width: 100%;
   }
 
   .front {

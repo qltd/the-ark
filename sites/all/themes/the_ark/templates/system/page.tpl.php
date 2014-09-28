@@ -68,7 +68,12 @@
 <div class="l-page">
   <header class="l-header" role="banner">
     <div class="l-regionset--header">
-      <div class="l-regionwrapper--header">
+      <?php if ($site_name): ?>
+        <h1 class="site-name header-site-name">
+          <a class="site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
+        </h1>
+      <?php endif; ?>
+      <div class="l-regionwrapper--header headroom--top">
         <?php print render($page['header']); ?>
       </div>
       <?php print render($page['hero']); ?>

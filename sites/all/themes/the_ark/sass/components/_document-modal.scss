@@ -1,6 +1,8 @@
 .document-modal {
   overflow: hidden;
+  pointer-events: none;
   &:after {
+    pointer-events: auto;
     left: 0;
     background-color: $gray-light;
     background-color: $gray-light-mask;
@@ -28,6 +30,7 @@ body {
 @include breakpoint($breakpoint-desktop) {
   .document-modal-mobile {
     overflow: inherit;
+    pointer-events: inherit;
     &:after {
       left: -100%;
     }

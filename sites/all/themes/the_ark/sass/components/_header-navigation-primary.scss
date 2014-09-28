@@ -54,12 +54,16 @@
     font-size: 18px;
     @include font-details($size: 1.8rem);
   }
+  .menu-primary-home {
+    @extend .icon-logo-replace-desktop;
+  }
 }
 .menu-primary-wrapper {
   @include transition(left $transition-duration-extended ease-out);
   position: fixed;
   overflow: hidden;
   z-index: 100;
+  pointer-events: auto;
   top: 0;
   left: -320px;
   left: -32rem;
@@ -102,10 +106,107 @@
 
 @include breakpoint($breakpoint-desktop) {
   .header-navigation-primary {
+    .menu-primary-close, .block__title {
+      display: none;
+    }
     .menu-link {
       &:hover {
         @include font-details($color: $gold);
       }
+    }
+    .menu-top-level-item {
+      margin: 0;
+      border: {
+        top: 0;
+      }
+      padding: 0;
+      width: inherit;
+    }
+    .menu-top-level-link {
+      font-size: 16px;
+      @include font-details($size: 1.6rem, $weight: 400);
+    }
+    .menu-primary-home { // extends .icon-logo-replace-desktop in global styles
+      display: block;
+      width: 215px;
+      width: 21.5rem;
+      height: 110px;
+      height: 11rem;
+      &:before {
+        font-size: 110px;
+        @include font-details($size: 11rem);
+        content: "\e600";
+      }
+      &.active {
+        @include font-details($color: white);
+      }
+      &:hover {
+        @include font-details($color: $gold);
+      }
+    }
+    // .menu-primary-home {
+    //   @include span(isolate 1 at 4 of 6);
+    // }
+    // .menu-primary-shows-events {
+    //   @include span(1 of 6);
+    // }
+    // .menu-primary-about {
+    //   @include span(1 of 6);
+    // }
+    // .menu-primary-support {
+    //   @include span(1 of 6);
+    // }
+    // .menu-primary-contact {
+    //   @include span(1 of 6);
+    // }
+    // .menu-primary-blog {
+    //   @include span(last 1 of 6);
+    // }
+
+  }
+  .menu-primary-wrapper {
+    position: inherit;
+    left: 0;
+    width: inherit;
+
+    > .menu { // 1st level menus
+      padding: 0;
+      width: inherit;
+    }
+  }
+
+  // .menu-primary-wrapper {
+  //   @include transition(margin $transition-duration-extended ease-out);
+  //   position: relative;
+  //   overflow: inherit;
+  //   left: 0;
+  //   width: 100%;
+  //   background-color: inherit;
+  //   &:before {
+  //     content: '';
+  //     position: absolute;
+  //     top: -100px;
+  //     top: -10rem;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100px;
+  //     height: 10rem;
+  //     background-color: $gray-dark-background;
+  //     background-color: $gray-dark-mask;
+  //   }
+  //   &:hover {
+  //     margin: {
+  //       top: 100px;
+  //     }
+  //     margin: {
+  //       top: 10rem;
+  //     }
+  //   }
+  // }
+
+  .header-navigation-region {
+    > .menu { // 2nd level menus
+      display: none;
     }
   }
 }

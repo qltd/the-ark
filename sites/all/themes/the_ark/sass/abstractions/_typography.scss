@@ -1,66 +1,5 @@
   //----------------------------------//
- //  Font-Face
-//----------------------------------//
-
-$fira-font-path: '../libraries/fira';
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('#{$fira-font-path}/eot/FiraSans-Light.eot');
-    src: local('Fira Sans Light'),
-         url('#{$fira-font-path}/eot/FiraSans-Light.eot') format('embedded-opentype'),
-         url('#{$fira-font-path}/woff/FiraSans-Light.woff') format('woff'),
-         url('#{$fira-font-path}/ttf/FiraSans-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('#{$fira-font-path}/eot/FiraSans-LightItalic.eot');
-    src: local('Fira Sans Light Italic'),
-         url('#{$fira-font-path}/eot/FiraSans-LightItalic.eot') format('embedded-opentype'),
-         url('#{$fira-font-path}/woff/FiraSans-LightItalic.woff') format('woff'),
-         url('#{$fira-font-path}/ttf/FiraSans-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('#{$fira-font-path}/eot/FiraSans-Regular.eot');
-    src: local('Fira Sans Regular'),
-         url('#{$fira-font-path}/eot/FiraSans-Regular.eot') format('embedded-opentype'),
-         url('#{$fira-font-path}/woff/FiraSans-Regular.woff') format('woff'),
-         url('#{$fira-font-path}/ttf/FiraSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('#{$fira-font-path}/eot/FiraSans-Italic.eot');
-    src: local('Fira Sans Regular Italic'),
-         url('#{$fira-font-path}/eot/FiraSans-Italic.eot') format('embedded-opentype'),
-         url('#{$fira-font-path}/woff/FiraSans-Italic.woff') format('woff'),
-         url('#{$fira-font-path}/ttf/FiraSans-Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('#{$fira-font-path}/eot/FiraSans-Bold.eot');
-    src: local('Fira Sans Bold'),
-         url('#{$fira-font-path}/eot/FiraSans-Bold.eot') format('embedded-opentype'),
-         url('#{$fira-font-path}/woff/FiraSans-Bold.woff') format('woff'),
-         url('#{$fira-font-path}/ttf/FiraSans-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-  //----------------------------------//
- //  Mixins
+ //  TYPOGRAPHY MIXINS
 //----------------------------------//
 
 //-
@@ -138,7 +77,16 @@ $fira-font-path: '../libraries/fira';
 }
 
 @mixin FontAwesome($size: null, $color: null, $height: null) {
-  font-family: FontAwesome;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include font-details($size, $color, null, $height);
+}
+
+@mixin TheArkFont($size: null, $color: null, $height: null) {
+  font-family: 'The Ark';
   font-style: normal;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
