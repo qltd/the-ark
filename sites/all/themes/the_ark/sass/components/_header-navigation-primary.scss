@@ -121,6 +121,10 @@
       }
       padding: 0;
       width: inherit;
+      &.first {
+        position: absolute;
+        width: 100%;
+      }
     }
     .menu-top-level-link {
       font-size: 16px;
@@ -128,6 +132,7 @@
     }
     .menu-primary-home { // extends .icon-logo-replace-desktop in global styles
       display: block;
+      margin: 0 auto;
       width: 215px;
       width: 21.5rem;
       height: 110px;
@@ -144,9 +149,6 @@
         @include font-details($color: $gold);
       }
     }
-    // .menu-primary-home {
-    //   @include span(isolate 1 at 4 of 6);
-    // }
     // .menu-primary-shows-events {
     //   @include span(1 of 6);
     // }
@@ -157,10 +159,10 @@
     //   @include span(1 of 6);
     // }
     // .menu-primary-contact {
-    //   @include span(1 of 6);
+    //   @include span(1 of 6 rtl);
     // }
     // .menu-primary-blog {
-    //   @include span(last 1 of 6);
+    //   @include span(1 of 6 rtl);
     // }
 
   }
