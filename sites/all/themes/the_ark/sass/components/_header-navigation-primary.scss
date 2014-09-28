@@ -115,6 +115,8 @@
       }
     }
     .menu-top-level-item {
+      position: relative;
+      z-index: 2;
       margin: 0;
       border: {
         top: 0;
@@ -123,6 +125,7 @@
       width: inherit;
       &.first {
         position: absolute;
+        z-index: 1;
         width: 100%;
       }
     }
@@ -133,13 +136,14 @@
     .menu-primary-home { // extends .icon-logo-replace-desktop in global styles
       display: block;
       margin: 0 auto;
-      width: 215px;
-      width: 21.5rem;
-      height: 110px;
-      height: 11rem;
+      width: 80px;
+      width: 8rem;
+      height: 40px;
+      height: 4rem;
+      text-align: center;
       &:before {
-        font-size: 110px;
-        @include font-details($size: 11rem, $height: 1);
+        font-size: 40px;
+        @include font-details($size: 4rem, $height: 1);
         content: "\e600";
       }
       &.active {
@@ -149,27 +153,29 @@
         @include font-details($color: $gold);
       }
     }
-    // .menu-primary-shows-events {
-    //   @include span(1 of 6);
-    // }
-    // .menu-primary-about {
-    //   @include span(1 of 6);
-    // }
-    // .menu-primary-support {
-    //   @include span(1 of 6);
-    // }
-    // .menu-primary-contact {
-    //   @include span(1 of 6 rtl);
-    // }
-    // .menu-primary-blog {
-    //   @include span(1 of 6 rtl);
-    // }
+    .menu-primary-shows-events {
+      @include span(1 of 6);
+    }
+    .menu-primary-about {
+      @include span(1 of 6);
+    }
+    .menu-primary-support {
+      @include span(1 of 6);
+    }
+    .menu-primary-contact {
+      @include span(1 of 6 rtl);
+    }
+    .menu-primary-blog {
+      @include span(1 of 6 rtl);
+    }
 
   }
   .menu-primary-wrapper {
     position: inherit;
     left: 0;
     width: inherit;
+    height: 40px;
+    height: 4rem;
 
     > .menu { // 1st level menus
       padding: 0;
