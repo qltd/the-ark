@@ -126,6 +126,7 @@
       &.first {
         position: absolute;
         z-index: 1;
+        left: 0;
         width: 100%;
       }
     }
@@ -153,32 +154,30 @@
         @include font-details($color: $gold);
       }
     }
-    // .menu-primary-shows-events {
-    //   // @include span(1 of 6);
-    //   float: left;
-    // }
-    // .menu-primary-about {
-    //   // @include span(1 of 6);
-    //   float: left;
-    // }
-    // .menu-primary-support {
-    //   // @include span(1 of 6);
-    //   float: left;
-    // }
-    // .menu-primary-contact {
-    //   // @include span(1 of 6 rtl);
-    //   float: right;
-    // }
-    // .menu-primary-blog {
-    //   // @include span(1 of 6 rtl);
-    //   float: right;
-    // }
-
+    .menu-primary-shows-events, .menu-primary-about, .menu-primary-support {
+      float: left;
+      margin: {
+        right: 60px;
+      }
+      margin: {
+        right: 6rem;
+      }
+    }
+    .menu-primary-contact, .menu-primary-blog {
+      float: right;
+      margin: {
+        left: 60px;
+      }
+      margin: {
+        left: 6rem;
+      }
+    }
   }
   .menu-primary-wrapper {
     position: static;
-    left: 0;
-    width: auto;
+    float: left;
+    width: 800px;
+    width: 80rem;
     background-color: transparent;
 
     > .menu { // 1st level menus

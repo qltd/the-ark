@@ -13,7 +13,7 @@
   // background-repeat: no-repeat;
 }
 .l-regionwrapper--header {
-  @include transition(top $transition-duration-extended ease-in);
+  @include transition(top $transition-duration-extended ease-in, background-color $transition-duration ease-out);
   position: fixed;
   z-index: 100;
   top: 0;
@@ -95,7 +95,8 @@
     height: 17rem;
   }
   .l-regionwrapper--header {
-
+    background-color: $gray;
+    background-color: $gray-mask;
   }
   .l-region--header {
     max-width: 1000px;
