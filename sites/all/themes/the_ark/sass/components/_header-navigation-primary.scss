@@ -195,37 +195,15 @@
       width: auto;
     }
   }
-
-  // .menu-primary-wrapper {
-  //   @include transition(margin $transition-duration-extended ease-out);
-  //   position: relative;
-  //   overflow: inherit;
-  //   left: 0;
-  //   width: 100%;
-  //   background-color: inherit;
-  //   &:before {
-  //     content: '';
-  //     position: absolute;
-  //     top: -100px;
-  //     top: -10rem;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100px;
-  //     height: 10rem;
-  //     background-color: $gray-dark-background;
-  //     background-color: $gray-dark-mask;
-  //   }
-  //   &:hover {
-  //     margin: {
-  //       top: 100px;
-  //     }
-  //     margin: {
-  //       top: 10rem;
-  //     }
-  //   }
-  // }
-
   .header-navigation-region {
+    position: absolute;
+    top: -240px;
+    top: -24rem;
+    left: 0;
+    margin: 0 auto;
+    width: 1000px;
+    width: 100rem;
+
     > .menu { // 2nd level menus
       display: none;
     }

@@ -23,61 +23,8 @@
  *
  */
 /*
-  Sass/Compass Generated Stylesheet for the Ark -- https://github.com/qltd/the-ark
+  Browserify/Uglify Generated JavaScript for the Ark -- https://github.com/qltd/the-ark
 
-  - compile while in .npm directory (sites/all/themes/the_ark/.npm)           : gulp compass
+  - compile while in .npm directory (sites/all/themes/the_ark/.npm)           : gulp browserify
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
-
-@import "breakpoint"; // requires breakpoint -- 'gem install breakpoint' or 'bundle install'
-@import "variables/**/*";
-
-// provide proper margin when admin menu is present
-body.admin-menu {
-  margin: {
-    top: 0 !important;
-  }
-}
-
-#toolbar, #admin-menu {
-  display: none;
-}
-
-@include breakpoint($breakpoint-desktop) {
-  body.admin-menu {
-    margin: {
-      top: 29px !important;
-    }
-    margin: {
-      top: 2.9rem !important;
-    }
-  }
-  .adminimal-menu {
-    .l-header {
-      background-position: center 29px;
-      background-position: center 2.9rem;
-    }
-    .l-regionwrapper--header {
-      top: 29px;
-      top: 2.9rem;
-      &.headroom--unpinned {
-        top: -31px;
-        top: -3.1rem;
-        &:hover {
-          top: 29px;
-          top: 2.9rem;
-        }
-      }
-    }
-    &.document-modal-mobile {
-      .l-regionwrapper--header {
-        top: 29px;
-        top: 2.9rem;
-      }
-    }
-  }
-
-  #toolbar, #admin-menu {
-    display: block;
-  }
-};

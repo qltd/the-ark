@@ -121,6 +121,9 @@
     &.headroom--unpinned {
       top: -60px;
       top: -6rem;
+      &:hover {
+        top: 0;
+      }
     }
   }
   .l-region--header {
