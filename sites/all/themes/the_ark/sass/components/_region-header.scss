@@ -13,7 +13,7 @@
 .l-regionwrapper--header {
   @include transition(
     top $transition-duration-extended ease-in,
-    margin-top $transition-duration-extended ease-in,
+    margin-top $transition-duration-extended ease-in-out,
     background-color $transition-duration ease-out
   );
   position: fixed;
@@ -95,22 +95,32 @@
     &:before {
       content: '';
       position: absolute;
-      top: -100px;
-      top: -10rem;
+      top: -240px;
+      top: -24rem;
       left: 0;
+      border: {
+        bottom: 1px solid $gray-light;
+      }
+      border: {
+        bottom: 1px solid $white-mask;
+      }
       width: 100%;
-      height: 100px;
-      height: 10rem;
+      height: 240px;
+      height: 24rem;
       background-color: $gray-dark-background;
       background-color: $gray-dark-mask;
     }
     &:hover {
       margin: {
-        top: 100px;
+        top: 240px;
       }
       margin: {
-        top: 10rem;
+        top: 24rem;
       }
+    }
+    &.headroom--unpinned {
+      top: -60px;
+      top: -6rem;
     }
   }
   .l-region--header {
@@ -125,6 +135,12 @@
     .l-regionset--header {
       height: 700px;
       height: 70rem;
+    }
+  }
+
+  .document-modal-mobile {
+    .l-regionwrapper--header {
+      top: 0;
     }
   }
 }

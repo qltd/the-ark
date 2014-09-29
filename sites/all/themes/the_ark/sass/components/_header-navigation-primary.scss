@@ -132,19 +132,20 @@
     }
     .menu-top-level-link {
       font-size: 16px;
-      @include font-details($size: 1.6rem, $weight: 400);
+      line-height: 60px;
+      @include font-details($size: 1.6rem, $weight: 400, $height: 6rem);
     }
     .menu-primary-home { // extends .icon-logo-replace-desktop in global styles
       display: block;
       margin: 0 auto;
       width: 80px;
       width: 8rem;
-      height: 40px;
-      height: 4rem;
+      height: 60px;
+      height: 6rem;
       text-align: center;
       &:before {
         font-size: 40px;
-        @include font-details($size: 4rem, $height: 1);
+        @include font-details($size: 4rem);
         content: "\e600";
       }
       &.active {
@@ -177,8 +178,14 @@
     position: static;
     overflow: inherit;
     float: left;
-    width: 800px;
-    width: 80rem;
+    padding: {
+      right: 50px;
+    }
+    padding: {
+      right: 5rem;
+    }
+    width: 850px;
+    width: 85rem;
     background-color: transparent;
 
     > .menu { // 1st level menus

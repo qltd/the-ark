@@ -42,8 +42,14 @@
 
 @include breakpoint($breakpoint-desktop) {
   .button-navigation-mobile {
+    position: relative;
+    z-index: 2;
+    line-height: 60px;
+    @include font-details($height: 6rem);
     width: 50px;
     width: 5rem;
+    height: 60px;
+    height: 6rem;
     border: {
       right: none;
     }
