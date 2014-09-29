@@ -95,8 +95,8 @@
     &:before {
       content: '';
       position: absolute;
-      top: -240px;
-      top: -24rem;
+      top: -#{map_get($navigation-flyup, height-px)};
+      top: -#{map_get($navigation-flyup, height)};
       left: 0;
       border: {
         bottom: 1px solid $gray-light;
@@ -105,17 +105,17 @@
         bottom: 1px solid $white-mask;
       }
       width: 100%;
-      height: 240px;
-      height: 24rem;
+      height: map_get($navigation-flyup, height-px);
+      height: map_get($navigation-flyup, height);
       background-color: $gray-dark-background;
       background-color: $gray-dark-mask;
     }
     &:hover {
       margin: {
-        top: 240px;
+        top: map_get($navigation-flyup, height-px);
       }
       margin: {
-        top: 24rem;
+        top: map_get($navigation-flyup, height);
       }
     }
     &.headroom--unpinned {
@@ -127,8 +127,8 @@
     }
   }
   .l-region--header {
-    max-width: 1000px;
-    @include container(100rem);
+    max-width: 1024px;
+    @include container(102.4rem);
   }
 
   .front {

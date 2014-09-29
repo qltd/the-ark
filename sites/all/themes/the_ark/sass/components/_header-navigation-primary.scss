@@ -124,22 +124,36 @@
       padding: 0;
       width: auto;
       &.first {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         left: 0;
         width: 100%;
+      }
+      &:hover {
+        > .menu-link {
+          background-color: $gray-light;
+          background-color: $white-mask;
+          @include font-details($color: $gold);
+        }
+        .header-navigation-region {
+          display: block;
+        }
       }
     }
     .menu-top-level-link {
       font-size: 16px;
       line-height: 60px;
       @include font-details($size: 1.6rem, $weight: 400, $height: 6rem);
+
+      padding: 0 30px;
+      padding: 0 3rem;
     }
     .menu-primary-home { // extends .icon-logo-replace-desktop in global styles
       display: block;
       margin: 0 auto;
-      width: 80px;
-      width: 8rem;
+      padding: 0;
+      width: 120px;
+      width: 12rem;
       height: 60px;
       height: 6rem;
       text-align: center;
@@ -151,41 +165,20 @@
       &.active {
         @include font-details($color: white);
       }
-      &:hover {
-        @include font-details($color: $gold);
-      }
     }
     .menu-primary-shows-events, .menu-primary-about, .menu-primary-support {
       float: left;
-      margin: {
-        right: 60px;
-      }
-      margin: {
-        right: 6rem;
-      }
     }
     .menu-primary-contact, .menu-primary-blog {
       float: right;
-      margin: {
-        left: 60px;
-      }
-      margin: {
-        left: 6rem;
-      }
     }
   }
   .menu-primary-wrapper {
     position: static;
     overflow: inherit;
     float: left;
-    padding: {
-      right: 50px;
-    }
-    padding: {
-      right: 5rem;
-    }
-    width: 850px;
-    width: 85rem;
+    width: 832px;
+    width: 83.2rem;
     background-color: transparent;
 
     > .menu { // 1st level menus
@@ -196,16 +189,33 @@
     }
   }
   .header-navigation-region {
+    display: none;
     position: absolute;
-    top: -240px;
-    top: -24rem;
+    top: -#{map_get($navigation-flyup, height-px)};
+    top: -#{map_get($navigation-flyup, height)};
     left: 0;
     margin: 0 auto;
-    width: 1000px;
-    width: 100rem;
+    width: map_get($navigation-flyup, width-px);
+    width: map_get($navigation-flyup, width);
+    text-align: center;
 
     > .menu { // 2nd level menus
-      display: none;
+      display: inline-block;
+      overflow: hidden;
+      margin: 0;
+      height: map_get($navigation-flyup, height-px);
+      height: map_get($navigation-flyup, height);
+      min-width: 330px;
+      min-width: 33rem;
+      max-width: 660px;
+      max-width: 66rem;
+      text-align: left;
+      -webkit-columns: 330px 2;
+      -webkit-columns: 33rem 2;
+      -moz-columns: 330px 2;
+      -moz-columns: 33rem 2;
+      columns: 330px 2;
+      columns: 33rem 2;
     }
   }
 }

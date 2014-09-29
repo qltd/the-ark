@@ -54,7 +54,11 @@
       right: none;
     }
     background-color: transparent;
-    &:hover {
+    &:hover, &.active:hover {
+      background-color: $gray-light;
+      background-color: $white-mask;
+    }
+    &.active {
       background-color: transparent;
     }
   }
