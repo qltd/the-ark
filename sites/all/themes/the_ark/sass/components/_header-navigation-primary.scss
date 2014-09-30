@@ -205,17 +205,23 @@
       margin: 0;
       height: map_get($navigation-flyup, height-px);
       height: map_get($navigation-flyup, height);
-      min-width: 330px;
-      min-width: 33rem;
-      max-width: 660px;
-      max-width: 66rem;
+      width: map_get($navigation-column, width-px);
+      width: map_get($navigation-column, width);
       text-align: left;
-      -webkit-columns: 330px 2;
-      -webkit-columns: 33rem 2;
-      -moz-columns: 330px 2;
-      -moz-columns: 33rem 2;
-      columns: 330px 2;
-      columns: 33rem 2;
+    }
+    > .menu-set {
+      width: map_get($navigation-column, width-px) * 2;
+      width: map_get($navigation-column, width) * 2;
+    }
+    .menu-set-list {
+      float: left;
+      width: map_get($navigation-column, width-px);
+      width: map_get($navigation-column, width);
+    }
+    .menu-item {
+      margin: 0;
+      padding: 5px 0;
+      padding: 0.5rem 0;
     }
   }
 }
