@@ -52,7 +52,7 @@ function the_ark_primary_navigation_sub_menu ($sub_menu) {
   if (empty($sub_menu)) return '';
   $menu_items = array_slice($sub_menu, 0, count($sub_menu) - 2);
   if (count($menu_items) > 5) {
-    $theme_items = array_slice($sub_menu, count($sub_menu) - 2);
+    // $theme_items = array_slice($sub_menu, count($sub_menu) - 2);
     $menu_left = '<li class="menu-set-item"><ul class="menu menu-set-list">';
     $menu_left .= drupal_render(array_slice($menu_items, 0, round(count($menu_items) / 2)));
     $menu_left .= '</ul></li>';
