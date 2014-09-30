@@ -5,6 +5,14 @@ $navigation-flyup: (
   width-px: 1000px
 );
 
+$navigation-flyup-headings: (
+  about: 'About',
+  blog: 'Our Blog',
+  contact: 'Contact Us',
+  shows-events: 'Shows & Events',
+  support: 'Support The Ark'
+);
+
 $navigation-column: (
   width: 25rem,
   width-px: 250px
