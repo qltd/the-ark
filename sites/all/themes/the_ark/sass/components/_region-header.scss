@@ -127,6 +127,13 @@
         top: 0;
       }
     }
+    &.headroom--top {
+      background-color: transparent;
+      &:hover {
+        background-color: $gray-dark-background;
+        background-color: $gray-dark-mask;
+      }
+    }
   }
   .l-region--header {
     max-width: map_get($navigation, width-px);
