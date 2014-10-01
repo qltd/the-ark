@@ -51,11 +51,89 @@ function header_region_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-header_navigation_blog'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-blog header-navigation-block',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_blog',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-header_navigation_contact_us'] = array(
     'cache' => -1,
     'css_class' => 'header-navigation-contact-us header-navigation-block',
     'custom' => 0,
     'machine_name' => 'header_navigation_contact_us',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-header_navigation_home'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-home header-navigation-block',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_home',
     'module' => 'block',
     'node_types' => array(),
     'pages' => '',

@@ -14,7 +14,7 @@
   @include transition(
     top $transition-duration-extended ease-in,
     margin-top $transition-duration-extended ease-in-out,
-    background-color $transition-duration ease-out
+    background-color $transition-duration-extended ease-out
   );
   position: fixed;
   z-index: 100;
@@ -117,6 +117,8 @@
       margin: {
         top: map_get($navigation-flyup, height);
       }
+      background-color: $gray-dark-background;
+      background-color: $gray-dark-mask;
     }
     &.headroom--unpinned {
       top: -60px;

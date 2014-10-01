@@ -20,6 +20,15 @@ function header_region_default_fe_block_boxes() {
   $export['header_navigation_about'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Header navigation block for the Our Blog menu';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'header_navigation_blog';
+  $fe_block_boxes->body = '<p>Header navigation block for the Our Blog&nbsp;menu.</p>
+';
+
+  $export['header_navigation_blog'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Header navigation block for the Contact Us menu';
   $fe_block_boxes->format = 'filtered_html';
   $fe_block_boxes->machine_name = 'header_navigation_contact_us';
@@ -27,6 +36,15 @@ function header_region_default_fe_block_boxes() {
 ';
 
   $export['header_navigation_contact_us'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Header navigation block for the Home menu';
+  $fe_block_boxes->format = 'filtered_html';
+  $fe_block_boxes->machine_name = 'header_navigation_home';
+  $fe_block_boxes->body = '<p>Header navigation block for the Home menu.</p>
+';
+
+  $export['header_navigation_home'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Header navigation block for the Shows & Events menu';
