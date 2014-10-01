@@ -21,8 +21,9 @@ function the_ark_menu_link ($variables) {
 function the_ark_primary_navigation_content ($element) {
   $element['#attributes']['class'][] = 'menu-top-level-item';
   $element['#localized_options']['attributes']['class'][] = 'menu-top-level-link';
-  $menu_item = l($element['#title'], $element['#href'], $element['#localized_options']);
-  $sub_menu = isset($element['#below']) && !empty($element['#below']) ? the_ark_primary_navigation_sub_menu($element['#below']) : '';
+  $sub_menu = isset($element['#below']) && !empty($element['#below'])
+    ? the_ark_primary_navigation_sub_menu($element)
+    : '';
   $markup = '';
   switch ($element['#href']) {
     case 'node/2': // About
@@ -45,13 +46,17 @@ function the_ark_primary_navigation_content ($element) {
   $container = !empty($sub_menu) || !empty($markup)
     ? '<div class="header-navigation-region">' . $sub_menu . $markup . '</div>'
     : '';
+  $menu_item = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $menu_item . $container . "</li>\n";
 }
 
-function the_ark_primary_navigation_sub_menu ($sub_menu) {
-  if (empty($sub_menu)) return '';
+function the_ark_primary_navigation_sub_menu (&$element) {
+  if (empty($element['#below'])) return '';
+  $sub_menu = $element['#below'];
   $menu_items = array_slice($sub_menu, 0, count($sub_menu) - 2);
   if (count($menu_items) > 5) {
+    $element['#attributes']['class'][] = 'menu-set-top-level-item';
+    $element['#localized_options']['attributes']['class'][] = 'menu-set-top-level-link';
     // $theme_items = array_slice($sub_menu, count($sub_menu) - 2);
     $menu_left = '<li class="menu-set-item"><ul class="menu menu-set-list">';
     $menu_left .= drupal_render(array_slice($menu_items, 0, round(count($menu_items) / 2)));
