@@ -127,8 +127,8 @@
     }
   }
   .l-region--header {
-    max-width: 1024px;
-    @include container(102.4rem);
+    max-width: map_get($navigation, width-px);
+    @include container(map_get($navigation, width));
   }
 
   .front {
