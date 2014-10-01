@@ -30,6 +30,9 @@ function the_ark_primary_navigation_content ($element) {
       $markup .= the_ark_primary_navigation_related_links('2');
       $markup .= the_ark_block_in_menu_render('block', '3');
       break;
+    case '<front>':
+      $markup .= the_ark_block_in_menu_render('block', '8');
+      break;
     case 'node/5': // Contact Us
       $markup .= the_ark_primary_navigation_related_links('5');
       $markup .= the_ark_block_in_menu_render('block', '4');
@@ -41,6 +44,9 @@ function the_ark_primary_navigation_content ($element) {
     case 'node/3': // Support the Ark
       $markup .= the_ark_primary_navigation_related_links('3');
       $markup .= the_ark_block_in_menu_render('block', '6');
+      break;
+    case 'http://www.findyourfolk.org/':
+      $markup .= the_ark_block_in_menu_render('block', '7');
       break;
   }
   $container = !empty($sub_menu) || !empty($markup)

@@ -161,6 +161,9 @@
         z-index: 1;
         left: 0;
         width: 100%;
+        .header-navigation-region {
+          width: 100%;
+        }
       }
       &:hover {
         > .menu-link {
@@ -222,6 +225,12 @@
       }
       &:after {
         left: inherit;
+        margin: {
+          left: -320px;
+        }
+        margin: {
+          left: -32rem;
+        }
       }
       &.active {
         @include font-details($color: white);
