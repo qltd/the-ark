@@ -70,8 +70,8 @@ function the_ark_primary_navigation_related_links ($nid) {
   if (!isset($node->field_related_page['und'])) return $markup;
   $related_pages = $node->field_related_page['und'];
   $markup .= '<div class="header-navigation-related-links header-navigation-block">';
-  $markup .= '<h3 class="related-links-title">Related</h3>';
-  $markup .= '<ul class="related-links-menu">';
+  $markup .= '<h3 class="related-links-title">Related Pages:</h3>';
+  $markup .= '<ul class="menu related-links-menu">';
   foreach ($related_pages as $key => $value) {
     if (isset($value['target_id'])) {
       $page = node_load($value['target_id']);

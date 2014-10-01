@@ -1,0 +1,19 @@
+.header-navigation-related-links {
+  .related-links-title {
+    font-size: 14px;
+    @include font-details($size: 1.4rem, $weight: 400, $style: italic);
+  }
+  .related-links-menu-item {
+    padding: 5px 0;
+    padding: 0.5rem 0;
+  }
+  .related-links-menu-link {
+    font-size: 14px;
+    @include font-details($size: 1.4rem, $color: white, $weight: 300);
+    text-transform: uppercase;
+    &:hover {
+      @include font-details($color: $gold);
+      text-decoration: none;
+    }
+  }
+}
