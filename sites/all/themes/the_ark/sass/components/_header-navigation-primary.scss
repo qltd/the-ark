@@ -121,6 +121,9 @@
 }
 .header-navigation-region {
   > .menu { // 2nd level menus
+    @extend .header-navigation-block;
+
+    display: block;
     margin: {
       left: 20px;
     }
@@ -262,15 +265,8 @@
 
     > .menu { // 2nd level menus
       display: inline-block;
-      vertical-align: top;
-      overflow: hidden;
       margin: 60px 0 0;
       margin: 6rem 0 0;
-      height: map_get($navigation-flyup, height-px);
-      height: map_get($navigation-flyup, height);
-      width: map_get($navigation-column, width-px);
-      width: map_get($navigation-column, width);
-      text-align: left;
     }
     > .menu-set {
       width: map_get($navigation-column, width-px) * 2;
@@ -286,14 +282,5 @@
       padding: 5px 0;
       padding: 0.5rem 0;
     }
-  }
-  .header-navigation-block {
-    display: inline-block;
-    vertical-align: top;
-    height: map_get($navigation-flyup, height-px);
-    height: map_get($navigation-flyup, height);
-    width: map_get($navigation-column, width-px);
-    width: map_get($navigation-column, width);
-    text-align: left;
   }
 }
