@@ -130,8 +130,8 @@
     }
     &.headroom--top {
       background-color: transparent;
-      height: 90px;
-      height: 9rem;
+      height: 120px;
+      height: 12rem;
 
       &:hover {
         background-color: $gray-dark-background;
@@ -160,8 +160,8 @@
         }
       }
       .menu-top-level-link {
-        padding: 50px 20px 0;
-        padding: 5rem 2rem 0;
+        padding: 50px 20px 10px;
+        padding: 5rem 2rem 1rem;
       }
       .menu-primary-home {
         line-height: 90px;
