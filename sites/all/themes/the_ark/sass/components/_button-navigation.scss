@@ -2,7 +2,12 @@
   font-size: 12px;
   line-height: 40px;
   @include font-details($size: 1.2rem, $color: white, $weight: 300, $height: 4rem);
-  @include transition(background-color $transition-duration ease-out, color $transition-duration ease-out);
+  @include transition(
+    background-color $transition-duration ease-out,
+    color $transition-duration ease-out,
+    padding $transition-duration-extended ease-out,
+    height $transition-duration-extended ease-out
+  );
 
   display: block;
   float: left;
@@ -60,6 +65,23 @@
     }
     &.active {
       background-color: transparent;
+    }
+  }
+  .l-regionwrapper--header {
+    &.headroom--top {
+      &:hover {
+        .button-navigation {
+          padding: 0;
+          height: 60px;
+          height: 6rem;
+        }
+      }
+      .button-navigation {
+        padding: 50px 0 10px;
+        padding: 5rem 0 1rem;
+        height: 120px;
+        height: 12rem;
+      }
     }
   }
 }
