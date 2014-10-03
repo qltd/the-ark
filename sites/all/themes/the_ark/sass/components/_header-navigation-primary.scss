@@ -200,7 +200,7 @@
     .menu-top-level-link {
       font-size: 16px;
       line-height: 60px;
-      @include font-details($size: 1.6rem, $weight: 400, $height: 6rem);
+      @include font-details($size: 1.6rem, $weight: 700, $height: 6rem);
 
       padding: 0 30px;
       padding: 0 3rem;
@@ -211,7 +211,7 @@
       }
       &:after {
         font-size: 28px;
-        @include font-details($size: 2.8rem, $color: white, $weight: 300);
+        @include font-details($size: 2.8rem, $color: white, $weight: 400);
 
         position: absolute;
         z-index: 100;

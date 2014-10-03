@@ -1,15 +1,49 @@
 .header-hero-about {
   position: absolute;
-  top: 260px;
-  top: 26rem;
-  padding: 0 10px;
-  padding: 0 1rem;
-  min-height: 80px;
-  min-height: 8rem;
+  top: 230px;
+  top: 23rem;
   width: 100%;
   min-width: 320px;
   min-width: 32rem;
   background-color: $teal;
   background-color: $teal-mask;
   text-align: center;
+}
+.hero-about-paragraph {
+  font-size: 20px;
+  @include font-details($size: 2rem, $weight: 700);
+
+  margin: 10px auto;
+  margin: 1rem auto;
+  width: 275px;
+  width: 27.5rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .header-hero-about {
+    top: 260px;
+    top: 26rem;
+    background-color: transparent;
+  }
+  .hero-about-paragraph {
+    font-size: 28px;
+    @include font-details($size: 2.8rem);
+
+    width: 560px;
+    width: 56rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .header-hero-about {
+    top: 340px;
+    top: 34rem;
+  }
+  .hero-about-paragraph {
+    font-size: 36px;
+    @include font-details($size: 3.6rem);
+
+    width: 750px;
+    width: 75rem;
+  }
 }

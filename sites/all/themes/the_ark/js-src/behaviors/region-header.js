@@ -6,7 +6,7 @@
 
       Headroom.options = Headroom.options || {};
       if ($('.front').length === 0) Headroom.options.offset = 40;
-      else Headroom.options.offset = 340;
+      else Headroom.options.offset = 220;
       header.headroom();
     }
   };
