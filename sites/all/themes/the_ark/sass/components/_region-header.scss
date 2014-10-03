@@ -109,7 +109,7 @@
       height: map_get($navigation-flyup, height-px);
       height: map_get($navigation-flyup, height);
       background-color: $gray-dark-background;
-      background-color: $gray-dark-mask;
+      // background-color: $gray-dark-mask;
     }
     &:hover {
       margin: {
@@ -119,7 +119,7 @@
         top: map_get($navigation-flyup, height);
       }
       background-color: $gray-dark-background;
-      background-color: $gray-dark-mask;
+      // background-color: $gray-dark-mask;
     }
     &.headroom--unpinned {
       top: -60px;
@@ -135,7 +135,7 @@
 
       &:hover {
         background-color: $gray-dark-background;
-        background-color: $gray-dark-mask;
+        // background-color: $gray-dark-mask;
         height: 60px;
         height: 6rem;
 

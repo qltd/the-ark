@@ -120,7 +120,7 @@
   height: 100%;
   pointer-events: auto;
   background-color: $gray-dark-background;
-  background-color: $gray-dark-mask;
+  // background-color: $gray-dark-mask;
 
   > .menu { // 1st level menus
     overflow-y: scroll;
