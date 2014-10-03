@@ -66,6 +66,7 @@
     );
 
     &:after {
+      @include transition(color $transition-duration ease-out);
       display: none;
     }
   }
