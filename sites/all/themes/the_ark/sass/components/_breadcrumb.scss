@@ -1,8 +1,14 @@
 .breadcrumb {
+  font-size: 12px;
+  @include font-details($size: 1.2rem);
+
   padding: 0 20px;
   padding: 0 2rem;
   text-align: center;
   a {
     white-space: nowrap;
+  }
+  .active {
+    color: $gray-light;
   }
 }

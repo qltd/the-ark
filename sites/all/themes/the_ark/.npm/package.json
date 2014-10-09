@@ -1,6 +1,7 @@
 {
   "name": "the_ark",
   "version": "1.0.0",
+  "private": true,
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.6",
