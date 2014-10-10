@@ -34,11 +34,8 @@
 @include breakpoint($breakpoint-tablet) {
   .front {
     .header-site-name {
-      display: block;
       padding: {
         top: 90px;
-      }
-      padding: {
         top: 9rem;
       }
     }
@@ -48,11 +45,5 @@
 @include breakpoint($breakpoint-desktop) {
   .header-site-name {
     display: none;
-  }
-
-  .front {
-    .header-site-name {
-      display: none;
-    }
   }
 }
