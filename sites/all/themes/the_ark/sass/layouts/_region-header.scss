@@ -64,10 +64,6 @@
   .l-header {
     background-image: url('/images/header/tablet');
   }
-  .l-regionset--header {
-    height: 130px;
-    height: 13rem;
-  }
 
   .front {
     .l-header {
@@ -83,10 +79,6 @@
 @include breakpoint($breakpoint-desktop) {
   .l-header {
     background-image: url('/images/header/desktop');
-  }
-  .l-regionset--header {
-    height: 170px;
-    height: 17rem;
   }
   .l-regionwrapper--header {
     height: 60px;

@@ -1,8 +1,8 @@
 .header-site-name {
   display: block;
   margin: 0;
-  padding: 75px 0 0;
-  padding: 7.5rem 0 0;
+  padding: 50px 0 0;
+  padding: 5rem 0 0;
 }
 .site-name-link {
   @extend .icon-logo-replace;
@@ -22,11 +22,16 @@
   }
 }
 
-@include breakpoint($breakpoint-tablet) {
+.front {
   .header-site-name {
-    display: none;
+    padding: {
+      top: 75px;
+      top: 7.5rem;
+    }
   }
+}
 
+@include breakpoint($breakpoint-tablet) {
   .front {
     .header-site-name {
       display: block;
@@ -41,6 +46,10 @@
 }
 
 @include breakpoint($breakpoint-desktop) {
+  .header-site-name {
+    display: none;
+  }
+
   .front {
     .header-site-name {
       display: none;
