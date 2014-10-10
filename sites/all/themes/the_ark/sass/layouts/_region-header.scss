@@ -25,6 +25,9 @@
     top: -40px;
     top: -4rem;
   }
+  &.no-js {
+    position: absolute;
+  }
 }
 .l-region--header {
   max-width: 320px;

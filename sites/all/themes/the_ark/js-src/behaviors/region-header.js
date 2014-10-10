@@ -3,6 +3,7 @@
     attach: function () {
       var header = $('.l-regionwrapper--header');
       if (header.length === 0 || !Headroom) return;
+      header.removeClass('no-js');
 
       Headroom.options = Headroom.options || {};
       if ($('.front').length === 0) Headroom.options.offset = 40;

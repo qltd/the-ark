@@ -73,7 +73,7 @@
           <a class="site-name-link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
         </h1>
       <?php endif; ?>
-      <div class="l-regionwrapper--header headroom--top">
+      <div class="l-regionwrapper--header headroom--top no-js">
         <?php print render($page['header']); ?>
       </div>
       <?php print render($page['hero']); ?>
