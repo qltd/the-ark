@@ -30,9 +30,13 @@
 */
 
 /**
+ * Configuration
+ */
+require('./config/headroom');
+
+/**
  * Components
  */
 require('./behaviors/footer-contact');
 require('./behaviors/header-navigation-primary');
 require('./behaviors/header-search');
-require('./behaviors/region-header');
