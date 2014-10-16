@@ -33,6 +33,12 @@
     DEPENDENCIES
 \*------------------------------------*/
 
+/*--Third Party Dependencies--*/
+@import "../libraries/bourbon/dist/bourbon";
+@import "../libraries/compass-breakpoint/stylesheets/breakpoint";
+@import "../libraries/susy/sass/susy";
+
+/*--App Dependencies--*/
 @import "variables/**/*";
 @import "abstractions/**/*";
 

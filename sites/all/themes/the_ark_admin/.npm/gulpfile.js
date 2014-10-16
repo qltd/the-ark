@@ -1,41 +1,14 @@
-var gulp = require('gulp')
-  , browserify = require('gulp-browserify')
-  , compass = require('gulp-compass')
-  , csso = require('gulp-csso')
-  , plumber = require('gulp-plumber')
-  , rename = require('gulp-rename')
-  , uglify = require('gulp-uglify');
+var gulp = require('gulp');
 
-
-gulp.task('browserify', function () {
-  gulp.src('./js-src/*.js')
-    .pipe(plumber())
-    .pipe(browserify())
-    .pipe(gulp.dest('./js/'))
-    .pipe(rename(function (path) { path.basename += '.min'; }))
-    .pipe(uglify({ outSourceMap: true }))
-    .pipe(gulp.dest('./js/'));
-});
-
-gulp.task('compass', function () {
-  gulp.src('./sass/*.scss')
-    .pipe(plumber())
-    .pipe(compass({
-      config_file: './config.rb',
-      css: 'css',
-      environment: 'production',
-      sass: 'sass',
-      sourcemap: true
-    }))
-    .pipe(gulp.dest('./css/'))
-    .pipe(rename(function (path) { path.basename += '.min'; }))
-    .pipe(csso())
-    .pipe(gulp.dest('./css/'));
-});
+require('./.gulp/bower'); //  task(s):  bower
+require('./.gulp/css');   //  task(s):  css, css-install
+require('./.gulp/js');    //  task(s):  js, js-main, js-install
 
 gulp.task('watch', function () {
-  gulp.watch(['./js-src/*.js', './js-src/**/*.js'], ['browserify']);
-  gulp.watch(['./sass/*.scss', './sass/**/*.scss'], ['compass']);
+  gulp.watch(['./bower.json'], ['bower']);
+  gulp.watch(['./js-src/*.js', './js-src/**/*.js'], ['js']);
+  gulp.watch(['./sass/*.scss', './sass/**/*.scss'], ['css']);
 });
 
-gulp.task('default', ['browserify', 'compass']);
+gulp.task('default', ['css', 'js']);
+gulp.task('install', ['bower', 'css-install', 'js-install']);
