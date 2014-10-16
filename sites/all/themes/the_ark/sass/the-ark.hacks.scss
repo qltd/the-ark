@@ -29,7 +29,8 @@
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
-@import "breakpoint"; // requires breakpoint -- 'gem install breakpoint' or 'bundle install'
+@import "../libraries/bourbon/dist/bourbon";
+@import "../libraries/compass-breakpoint/stylesheets/breakpoint";
 @import "variables/**/*";
 
 // provide proper margin when admin menu is present

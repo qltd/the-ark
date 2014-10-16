@@ -46,9 +46,9 @@
 \*------------------------------------*/
 
 /*--Third Party Dependencies--*/
-@import "compass"; // requires compass -- 'gem install compass' or 'bundle install'
-@import "breakpoint"; // requires breakpoint -- 'gem install breakpoint' or 'bundle install'
-@import "susy"; // requires susy -- 'gem install susy' or 'bundle install'
+@import "../libraries/bourbon/dist/bourbon";
+@import "../libraries/compass-breakpoint/stylesheets/breakpoint";
+@import "../libraries/susy/sass/susy";
 
 /*--App Dependencies--*/
 @import "variables/**/*";
