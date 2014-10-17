@@ -15,8 +15,8 @@
   height: 110px;
   height: 11rem;
   &:before {
-    font-size: 110px;
-    @include font-details($size: 11rem, $height: 1);
+    @include font-details($size: 110px, $height: 1);
+    font-size: 11rem;
 
     content: "\e600";
   }

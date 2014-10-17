@@ -8,12 +8,13 @@
   color: white;
   text-align: center;
   .footer-paragraph {
-    font-size: 14px;
+    @include font-details($size: 14px);
     font-size: 1.4rem;
   }
   .block__title {
-    font-size: 14px;
-    @include font-details($size: 1.4rem, $weight: 300, $style: italic);
+    @include font-details($size: 14px, $weight: 300, $style: italic);
+    font-size: 1.4rem;
+
     margin: 0 0 10px;
     margin: 0 0 1rem;
   }

@@ -3,9 +3,9 @@
 }
 .q-ltd {
   @extend .icon-logo-replace;
-  font-size: 31px;
-  @include font-details($size: 3.1rem, $color: white, $weight: 700, $height: 1);
   @include transition(color $transition-duration ease-out);
+  @include font-details($size: 31px, $color: white, $weight: 700, $height: 1);
+  font-size: 3.1rem;
 
   display: block;
   margin: 10px auto 0;

@@ -1,10 +1,9 @@
 .button-close {
   @extend .icon-replace;
-
-  font-size: 30px;
-  color: $gray-light;
-  @include font-details($size: 3rem, $color: $white-mask, $weight: 300, $height: 1);
   @include transition(color $transition-duration ease-out);
+  @include font-details($size: 30px, $color: $gray-light, $weight: 300, $height: 1);
+  color: $white-mask;
+  font-size: 3rem;
 
   display: block;
   cursor: pointer;

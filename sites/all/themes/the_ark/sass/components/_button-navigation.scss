@@ -1,13 +1,13 @@
 .button-navigation {
-  font-size: 12px;
-  line-height: 40px;
-  @include font-details($size: 1.2rem, $color: white, $weight: 300, $height: 4rem);
   @include transition(
     background-color $transition-duration ease-out,
     color $transition-duration ease-out,
     padding $transition-duration-extended ease-out,
     height $transition-duration-extended ease-out
   );
+  @include font-details($size: 12px, $color: white, $weight: 300, $height: 40px);
+  font-size: 1.2rem;
+  line-height: 4rem;
 
   display: block;
   float: left;
@@ -47,10 +47,11 @@
 
 @include breakpoint($breakpoint-desktop) {
   .button-navigation-mobile {
+    @include font-details($height: 60px);
+    line-height: 6rem;
+
     position: relative;
     z-index: 2;
-    line-height: 60px;
-    @include font-details($height: 6rem);
     width: 50px;
     width: 5rem;
     height: 60px;

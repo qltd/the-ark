@@ -139,8 +139,8 @@
           padding: 0 3rem;
         }
         .menu-primary-home {
-          line-height: 60px;
-          @include font-details($height: 6rem);
+          @include font-details($height: 60px);
+          line-height: 6rem;
 
           padding: 0 20px;
           padding: 0 2rem;
@@ -149,8 +149,8 @@
           height: 60px;
           height: 6rem;
           &:before {
-            font-size: 40px;
-            @include font-details($size: 4rem);
+            @include font-details($size: 40px);
+            font-size: 4rem;
           }
         }
       }
@@ -159,8 +159,8 @@
         padding: 5rem 2rem 1rem;
       }
       .menu-primary-home {
-        line-height: 90px;
-        @include font-details($height: 9rem);
+        @include font-details($height: 90px);
+        line-height: 9rem;
 
         padding: 30px 0 0;
         padding: 3rem 0 0;
@@ -169,8 +169,8 @@
         height: 120px;
         height: 12rem;
         &:before {
-          font-size: 90px;
-          @include font-details($size: 9rem);
+          @include font-details($size: 90px);
+          font-size: 9rem;
         }
         &:after {
           line-height: 60px;

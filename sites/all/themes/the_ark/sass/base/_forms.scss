@@ -80,6 +80,6 @@ label,
 input + .description,
 .form-item label,
 .form-actions label { // text inputs, labels, and descriptions
-  font-size: 18px;
-  @include font-details($size: 1.8rem, $weight: 300, $style: italic);
+  @include font-details($size: 18px, $weight: 300, $style: italic);
+  font-size: 1.8rem;
 }

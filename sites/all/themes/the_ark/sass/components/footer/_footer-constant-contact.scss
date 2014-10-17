@@ -36,8 +36,9 @@
 }
 
 .constant-contact-paragraph {
-  font-size: 14px;
-  @include font-details($size: 1.4rem);
+  @include font-details($size: 14px);
+  font-size: 1.4rem;
+
   text-align: center;
 }
 
@@ -64,7 +65,7 @@
   }
 
   .constant-contact-paragraph {
-    font-size: 18px;
-    @include font-details($size: 1.8rem);
+    @include font-details($size: 18px);
+    font-size: 1.8rem;
   }
 }
