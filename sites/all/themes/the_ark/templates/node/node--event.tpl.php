@@ -128,7 +128,7 @@
       <?php if (isset($content['field_ticket_url']['#items'])): ?>
         <div class="event-tickets">
         <?php foreach ($content['field_ticket_url']['#items'] as $key => $item): ?>
-          <?php $item['attributes']['class'] = array('button', 'event-tickets-link'); ?>
+          <?php $item['attributes']['class'] = array('event-tickets-link'); ?>
           <?php print l($item['title'], $item['url'], array('attributes' => $item['attributes'],)); ?>
         <?php endforeach; ?>
         </div>
@@ -160,11 +160,15 @@
 
       <nav class="event-navigation">
         <ul class="event-navigation-list">
-          <li class="event-navigation-item"><a href="/"><?php print t('Buy Tickets in Person'); ?></a></li>
-          <li class="event-navigation-item"><a href="/"><?php print t('Seating Chart'); ?></a></li>
+          <li class="event-navigation-item">
+            <a class="event-navigation-link" href="/"><?php print t('Buy Tickets in Person'); ?></a>
+          </li>
+          <li class="event-navigation-item">
+            <a class="event-navigation-link" href="/"><?php print t('Seating Chart'); ?></a>
+          </li>
           <?php if (isset($content['field_link']['#items'])): ?>
-            <?php hide($content['field_link']); ?>
             <?php foreach ($content['field_link']['#items'] as $link): ?>
+              <?php $link['attributes']['class'] = array('event-navigation-link'); ?>
               <li class="event-navigation-item"><?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?></li>
             <?php endforeach; ?>
           <?php endif; ?>
@@ -199,6 +203,7 @@
         hide($content['field_date']);
         hide($content['field_date_doors']);
         hide($content['field_date_tickets']);
+        hide($content['field_link']);
         hide($content['field_venue']);
         hide($content['field_genre']);
         hide($content['field_sponsor']);

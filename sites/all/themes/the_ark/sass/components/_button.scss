@@ -7,12 +7,19 @@
   padding: 1rem 4rem;
   background-color: $orange;
   color: white;
-  white-space: nowrap;
   text-transform: uppercase;
   &.active, &:hover {
     background-color: $orange-light;
   }
   &:hover {
     text-decoration: none;
+  }
+}
+.button-gray {
+  @extend .button;
+
+  background-color: $gray-background;
+  &.active, &:hover {
+    background-color: lighten($gray-background, 20%);
   }
 }

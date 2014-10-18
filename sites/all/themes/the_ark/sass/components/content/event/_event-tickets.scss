@@ -6,6 +6,8 @@
   text-align: center;
 }
 .event-tickets-link {
+  @extend .button;
+
   display: block;
   margin: 0 0 15px;
   margin: 0 0 1.5rem;
