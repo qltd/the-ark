@@ -9,8 +9,8 @@
   @extend .button;
 
   display: block;
-  margin: 0 0 15px;
-  margin: 0 0 1.5rem;
+  margin: 0 0 2px;
+  margin: 0 0 0.2rem;
 }
 
 @include breakpoint($breakpoint-tablet) {

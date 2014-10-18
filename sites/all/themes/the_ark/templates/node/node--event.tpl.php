@@ -179,13 +179,6 @@
     <?php print render($title_suffix); ?>
   </header>
 
-  <?php if ($display_submitted): ?>
-    <footer class="node__submitted">
-      <?php print $user_picture; ?>
-      <p class="submitted"><?php print $submitted; ?></p>
-    </footer>
-  <?php endif; ?>
-
   <div<?php print $content_attributes; ?>>
     <?php if (isset($content['field_endorsement'])): ?>
       <div class="event-endorsement">
