@@ -129,7 +129,10 @@
         <div class="event-tickets">
         <?php foreach ($content['field_ticket_url']['#items'] as $key => $item): ?>
           <?php $item['attributes']['class'] = array('event-tickets-link'); ?>
-          <?php print l($item['title'], $item['url'], array('attributes' => $item['attributes'],)); ?>
+          <?php print l($item['title'], $item['url'], array(
+            'attributes' => $item['attributes'],
+            'html' => true,
+          )); ?>
         <?php endforeach; ?>
         </div>
       <?php endif; ?>
@@ -170,7 +173,10 @@
             <?php foreach ($content['field_link']['#items'] as $link): ?>
               <?php $link['attributes']['class'] = array('event-navigation-link'); ?>
               <li class="event-navigation-item">
-                <?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?>
+                <?php print l($link['title'], $link['url'], array(
+                  'attributes' => $link['attributes'],
+                  'html' => true,
+                )); ?>
               </li>
             <?php endforeach; ?>
           <?php endif; ?>
