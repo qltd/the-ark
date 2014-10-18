@@ -1,0 +1,20 @@
+.event-tickets {
+  margin: 20px 0;
+  margin: 2rem 0;
+  padding: 0 20px;
+  padding: 0 2rem;
+  text-align: center;
+}
+.event-tickets-link {
+  display: block;
+  margin: 0 0 15px;
+  margin: 0 0 1.5rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-tickets-link {
+    display: inline-block;
+    margin: 0 10px;
+    margin: 0 1rem;
+  }
+}

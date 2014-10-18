@@ -125,7 +125,13 @@
         </div>
       <?php endif; ?>
 
-      <?php if (isset($content['field_ticket_url']['#items'][0]['url'])): ?>
+      <?php if (isset($content['field_ticket_url']['#items'])): ?>
+        <div class="event-tickets">
+        <?php foreach ($content['field_ticket_url']['#items'] as $key => $item): ?>
+          <?php $item['attributes']['class'] = array('button', 'event-tickets-link'); ?>
+          <?php print l($item['title'], $item['url'], array('attributes' => $item['attributes'],)); ?>
+        <?php endforeach; ?>
+        </div>
       <?php endif; ?>
 
       <ul class="event-time-list">
