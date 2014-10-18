@@ -89,9 +89,15 @@
       <?php if (isset($content['field_date']['#items'][0]['value'])): ?>
         <h2 class="event-date"><?php print date('l, F j, Y', strtotime($content['field_date']['#items'][0]['value'] . ' UTC')); ?></h2>
       <?php endif; ?>
-      <h1 property="dc:title" class="node__title event-title"><?php print $title; ?></h1>
+      <h1 property="dc:title" class="node__title event-title">
+        <?php print $title; ?>
+        <?php if (isset($content['field_coheadlining_act']['#items'])): ?>
+          <?php foreach ($content['field_coheadlining_act']['#items'] as $key => $item): ?>
+            <?php print ' <span class="delimiter">//</span> ' . $item['safe_value']; ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
+      </h1>
 
-      <?php print render($content['field_coheadlining_act']); ?>
       <?php if (isset($content['field_special_guest']['#items'])): ?>
         <div class="event-special-guest">
           <span class="event-special-guest-label">With Special Guest<?php if (count($content['field_special_guest']['#items']) > 1) print 's';?>:</span> <?php print render($content['field_special_guest']); ?>
@@ -150,7 +156,7 @@
     <div class="event-media">
       <?php
         hide($content['field_date_tickets']);
-        
+
         hide($content['field_venue']);
         hide($content['field_genre']);
         hide($content['field_sponsor']);
