@@ -187,7 +187,7 @@
     <?php print render($title_suffix); ?>
   </header>
 
-  <div<?php print $content_attributes; ?>>
+  <div class="node__content event-content">
     <?php if (isset($content['field_endorsement'][0]['#markup'])): ?>
       <div class="event-endorsement">
         <div class="event-endorsement-body">
@@ -200,26 +200,25 @@
         <?php endif; ?>
       </div>
     <?php endif; ?>
-    <?php print render($content['body']); ?>
+
     <div class="event-media">
-      <?php
-        hide($content['field_coheadlining_act']);
-        hide($content['field_special_guest']);
-        hide($content['field_opener']);
-        hide($content['field_ticket_url']);
-        hide($content['field_date']);
-        hide($content['field_date_doors']);
-        hide($content['field_date_tickets']);
-        hide($content['field_link']);
-        hide($content['field_venue']);
-        hide($content['field_genre']);
-        hide($content['field_sponsor']);
-        hide($content['field_price']);
-        hide($content['comments']);
-        hide($content['links']);
-        print render($content);
-      ?>
+      <?php if (isset($content['field_media'])): ?>
+        <div class="event-images-videos">
+          <?php print render($content['field_media']); ?>
+        </div>
+      <?php endif; ?>
+      <?php if (isset($content['field_spotify_uri'])): ?>
+        <div class="event-spotify">
+          <?php print render($content['field_spotify_uri']); ?>
+        </div>
+      <?php endif; ?>
     </div>
+
+    <?php if (isset($content['body'][0]['#markup'])): ?>
+      <div class="event-body">
+        <?php print $content['body'][0]['#markup']; ?>
+      </div>
+    <?php endif; ?>
   </div>
 
   <?php print render($content['links']); ?>
