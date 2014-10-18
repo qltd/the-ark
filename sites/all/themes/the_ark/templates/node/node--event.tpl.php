@@ -135,14 +135,29 @@
       <?php endif; ?>
 
       <ul class="event-time-list">
-        <?php if (isset($content['field_date_tickets']['#items'][0]['value']) && strtotime($content['field_date_tickets']['#items'][0]['value'] . ' UTC') >= time()): ?>
-          <li class="event-time-item event-time-tickets">Tickets On-sale: <?php print render($content['field_date_tickets']); ?></li>
+        <?php if (
+        isset($content['field_date_tickets'][0]['#markup']) &&
+        isset($content['field_date_tickets']['#items'][0]['value']) &&
+        strtotime($content['field_date_tickets']['#items'][0]['value'] . ' UTC') >= time()): ?>
+          <li class="event-time-item event-time-tickets">
+            <span class="event-header-label">Tickets On-sale:</span>
+            <?php print $content['field_date_tickets'][0]['#markup']; ?>
+          </li>
         <?php endif; ?>
-        <?php if (isset($content['field_date_doors'])): ?>
-          <li class="event-time-item event-time-doors">Doors Open: <?php print render($content['field_date_doors']); ?></li>
+        <?php if (isset($content['field_date_doors'][0]['#markup'])): ?>
+          <li class="event-time-item event-time-doors">
+            <span class="event-header-label">Doors Open:</span>
+            <?php print $content['field_date_doors'][0]['#markup']; ?>
+          </li>
         <?php endif; ?>
-        <li class="event-time-item event-time-show">Show Starts: <?php print render($content['field_date']); ?></li>
+        <?php if (isset($content['field_date'][0]['#markup'])): ?>
+          <li class="event-time-item event-time-show">
+            <span class="event-header-label">Show Starts:</span>
+            <?php print $content['field_date'][0]['#markup']; ?>
+          </li>
+        <?php endif; ?>
       </ul>
+
       <nav class="event-navigation">
         <ul class="event-navigation-list">
           <li class="event-navigation-item"><a href="/"><?php print t('Buy Tickets in Person'); ?></a></li>
@@ -177,8 +192,11 @@
     <?php print render($content['body']); ?>
     <div class="event-media">
       <?php
-        hide($content['field_date_tickets']);
+        hide($content['field_coheadlining_act']);
+        hide($content['field_special_guest']);
+        hide($content['field_opener']);
 
+        hide($content['field_date_tickets']);
         hide($content['field_venue']);
         hide($content['field_genre']);
         hide($content['field_sponsor']);
