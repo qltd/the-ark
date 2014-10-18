@@ -169,7 +169,9 @@
           <?php if (isset($content['field_link']['#items'])): ?>
             <?php foreach ($content['field_link']['#items'] as $link): ?>
               <?php $link['attributes']['class'] = array('event-navigation-link'); ?>
-              <li class="event-navigation-item"><?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?></li>
+              <li class="event-navigation-item">
+                <?php print l($link['title'], $link['url'], array('attributes' => $link['attributes'],)); ?>
+              </li>
             <?php endforeach; ?>
           <?php endif; ?>
         </ul>
