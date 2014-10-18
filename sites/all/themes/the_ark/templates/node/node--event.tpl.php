@@ -182,10 +182,16 @@
   </header>
 
   <div<?php print $content_attributes; ?>>
-    <?php if (isset($content['field_endorsement'])): ?>
+    <?php if (isset($content['field_endorsement'][0]['#markup'])): ?>
       <div class="event-endorsement">
-        <?php print render($content['field_endorsement']); ?>
-        <?php print render($content['field_endorsement_source']); ?>
+        <div class="event-endorsement-body">
+          <?php print $content['field_endorsement'][0]['#markup']; ?>
+        </div>
+        <?php if (isset($content['field_endorsement_source'][0]['#markup'])): ?>
+          <div class="event-endorsement-source">
+            <?php print $content['field_endorsement_source'][0]['#markup']; ?>
+          </div>
+        <?php endif; ?>
       </div>
     <?php endif; ?>
     <?php print render($content['body']); ?>

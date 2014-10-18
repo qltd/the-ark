@@ -1,0 +1,35 @@
+.event-endorsement {
+  padding: 20px;
+  padding: 2rem;
+  background-color: $teal-light;
+  color: white;
+  text-align: center;
+}
+.event-endorsement-body, .event-endorsement-source {
+  margin: 0 auto;
+  max-width: 650px;
+  max-width: 65rem;
+}
+.event-endorsement-body {
+  @include font-details($size: 18px, $style: italic);
+  font-size: 1.8rem;
+}
+.event-endorsement-source {
+  @include font-details($size: 14px);
+  font-size: 1.4rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-endorsement-body {
+    > p {
+      @include font-details($size: 18px);
+      font-size: 1.8rem;
+    }
+  }
+  .event-endorsement-source {
+    > p {
+      @include font-details($size: 14px);
+      font-size: 1.4rem;
+    }
+  }
+}
