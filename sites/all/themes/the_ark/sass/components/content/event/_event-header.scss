@@ -1,0 +1,17 @@
+.event-header {
+  .event-header-label {
+    margin: {
+      right: 6px;
+      right: 0.6rem;
+    }
+  }
+  .delimiter {
+    margin: {
+      right: 3px;
+      right: 0.3rem;
+    }
+    color: $gray-background;
+    letter-spacing: -3px;
+    letter-spacing: -0.3rem;
+  }
+}

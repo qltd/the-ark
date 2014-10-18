@@ -87,8 +87,11 @@
     <?php else: // page ?>
 
       <?php if (isset($content['field_date']['#items'][0]['value'])): ?>
-        <h2 class="event-date"><?php print date('l, F j, Y', strtotime($content['field_date']['#items'][0]['value'] . ' UTC')); ?></h2>
+        <h2 class="event-date">
+          <?php print date('l, F j, Y', strtotime($content['field_date']['#items'][0]['value'] . ' UTC')); ?>
+        </h2>
       <?php endif; ?>
+
       <h1 property="dc:title" class="node__title event-title">
         <?php print $title; ?>
         <?php if (isset($content['field_coheadlining_act']['#items'])): ?>
@@ -100,12 +103,25 @@
 
       <?php if (isset($content['field_special_guest']['#items'])): ?>
         <div class="event-special-guest">
-          <span class="event-special-guest-label">With Special Guest<?php if (count($content['field_special_guest']['#items']) > 1) print 's';?>:</span> <?php print render($content['field_special_guest']); ?>
+          <span class="event-special-guest-label event-header-label">
+            With Special Guest<?php if (count($content['field_special_guest']['#items']) > 1) print 's';?>:
+          </span>
+          <?php foreach ($content['field_special_guest']['#items'] as $key => $item): ?>
+            <?php if ($key !== 0) print ' <span class="delimiter">//</span> '; ?>
+            <?php print $item['safe_value']; ?>
+          <?php endforeach; ?>
         </div>
       <?php endif; ?>
+
       <?php if (isset($content['field_opener']['#items'])): ?>
         <div class="event-opener">
-          <span class="event-opener-label">Opener<?php if (count($content['field_opener']['#items']) > 1) print 's';?>:</span> <?php print render($content['field_opener']); ?>
+          <span class="event-opener-label event-header-label">
+            Opener<?php if (count($content['field_opener']['#items']) > 1) print 's';?>:
+          </span>
+          <?php foreach ($content['field_opener']['#items'] as $key => $item): ?>
+            <?php if ($key !== 0) print ' <span class="delimiter">//</span> '; ?>
+            <?php print $item['safe_value']; ?>
+          <?php endforeach; ?>
         </div>
       <?php endif; ?>
 
