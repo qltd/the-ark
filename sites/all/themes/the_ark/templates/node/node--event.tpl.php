@@ -195,13 +195,14 @@
         hide($content['field_coheadlining_act']);
         hide($content['field_special_guest']);
         hide($content['field_opener']);
-
+        hide($content['field_ticket_url']);
+        hide($content['field_date']);
+        hide($content['field_date_doors']);
         hide($content['field_date_tickets']);
         hide($content['field_venue']);
         hide($content['field_genre']);
         hide($content['field_sponsor']);
         hide($content['field_price']);
-        // We hide the comments and links now so that we can render them later.
         hide($content['comments']);
         hide($content['links']);
         print render($content);
