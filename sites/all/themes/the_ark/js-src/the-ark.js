@@ -25,7 +25,7 @@
 /*
   Browserify/Uglify Generated JavaScript for the Ark -- https://github.com/qltd/the-ark
 
-  - compile while in .npm directory (sites/all/themes/the_ark/.npm)           : gulp browserify
+  - compile while in .npm directory (sites/all/themes/the_ark/.npm)           : gulp js
   - watch for changes while in .npm directory (sites/all/themes/the_ark/.npm) : gulp watch
 */
 
