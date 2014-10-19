@@ -89,7 +89,7 @@
     ?>
     <?php if (isset($content['field_file_image_credit_text'][0]['#markup'])): ?>
       <div class="image-credit">
-        <span class="image-credit-label">Credit:</span>&nbsp;&nbsp;
+        <span class="image-credit-label">Credit:</span>
         <?php print $content['field_file_image_credit_text'][0]['#markup']; ?>
       </div>
     <?php endif; ?>
