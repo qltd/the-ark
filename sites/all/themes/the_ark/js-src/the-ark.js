@@ -40,3 +40,4 @@ require('./config/headroom');
 require('./behaviors/footer-contact');
 require('./behaviors/header-navigation-primary');
 require('./behaviors/header-search');
+require('./behaviors/video');
