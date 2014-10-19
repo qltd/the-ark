@@ -21,13 +21,13 @@
 
 @include breakpoint($breakpoint-tablet) {
   .event-endorsement-body {
-    > p {
+    > .event-endorsement-paragraph {
       @include font-details($size: 18px);
       font-size: 1.8rem;
     }
   }
   .event-endorsement-source {
-    > p {
+    > .event-endorsement-paragraph {
       @include font-details($size: 14px);
       font-size: 1.4rem;
     }

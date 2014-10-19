@@ -191,33 +191,53 @@
     <?php if (isset($content['field_endorsement'][0]['#markup'])): ?>
       <div class="event-endorsement">
         <div class="event-endorsement-body">
-          <?php print $content['field_endorsement'][0]['#markup']; ?>
+          <?php print str_replace(
+            '<p',
+            '<p class="event-endorsement-paragraph"',
+            $content['field_endorsement'][0]['#markup']
+          ); ?>
         </div>
         <?php if (isset($content['field_endorsement_source'][0]['#markup'])): ?>
           <div class="event-endorsement-source">
-            <?php print $content['field_endorsement_source'][0]['#markup']; ?>
+            <?php print str_replace(
+              '<p',
+              '<p class="event-endorsement-paragraph"',
+              $content['field_endorsement_source'][0]['#markup']);
+            ?>
           </div>
         <?php endif; ?>
       </div>
     <?php endif; ?>
 
-    <div class="event-media">
-      <?php if (isset($content['field_media'])): ?>
-        <div class="event-images-videos">
-          <?php print render($content['field_media']); ?>
+    <?php if (isset($content['field_media']) || isset($content['field_spotify_uri'])): ?>
+      <section class="event-media">
+        <h2>Photos &amp; Videos</h2>
+        <div class="event-media-content">
+          <?php if (isset($content['field_media'])): ?>
+            <div class="event-images-videos">
+              <?php print render($content['field_media']); ?>
+            </div>
+          <?php endif; ?>
+          <?php if (isset($content['field_spotify_uri'])): ?>
+            <div class="event-spotify">
+              <?php print render($content['field_spotify_uri']); ?>
+            </div>
+          <?php endif; ?>
         </div>
-      <?php endif; ?>
-      <?php if (isset($content['field_spotify_uri'])): ?>
-        <div class="event-spotify">
-          <?php print render($content['field_spotify_uri']); ?>
-        </div>
-      <?php endif; ?>
-    </div>
+      </section>
+    <?php endif; ?>
 
     <?php if (isset($content['body'][0]['#markup'])): ?>
-      <div class="event-body">
-        <?php print $content['body'][0]['#markup']; ?>
-      </div>
+      <section class="event-body">
+        <h2>Description</h2>
+        <div class="event-body-content">
+          <?php print str_replace(
+            '<p',
+            '<p class="event-body-paragraph"',
+            $content['body'][0]['#markup']);
+          ?>
+        </div>
+      </section>
     <?php endif; ?>
   </div>
 
