@@ -51,7 +51,7 @@
   <div class="field__items"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>
       <div class="field__item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>>
-        <iframe src="https://embed.spotify.com/?uri=<?php print render($item); ?>" width="640" height="720" frameborder="0" allowtransparency="true"></iframe>
+        <iframe class="spotify-player" src="https://embed.spotify.com/?uri=<?php print render($item); ?>" width="580" height="660" frameborder="0" allowtransparency="true"></iframe>
       </div>
     <?php endforeach; ?>
   </div>
