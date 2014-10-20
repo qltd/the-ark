@@ -211,8 +211,8 @@
 
     <?php if (isset($content['field_media']) || isset($content['field_spotify_uri'])): ?>
       <section class="event-media">
-        <h2 class="event-media-title">Photos &amp; Videos</h2>
-        <div class="event-media-content">
+        <h2 class="event-media-title expander">Photos &amp; Videos</h2>
+        <div class="event-media-content expander-content">
 
           <?php if (isset($content['field_media']['#items'])): ?>
             <div class="event-images-videos">
@@ -241,8 +241,8 @@
 
     <?php if (isset($content['body'][0]['#markup'])): ?>
       <section class="event-body">
-        <h2 class="event-media-title">Description</h2>
-        <div class="event-body-content">
+        <h2 class="event-media-title expander">Description</h2>
+        <div class="event-body-content expander-content">
           <?php print str_replace(
             '<p',
             '<p class="event-body-paragraph"',

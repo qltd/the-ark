@@ -37,6 +37,7 @@ require('./config/headroom');
 /**
  * Components
  */
+require('./behaviors/expander');
 require('./behaviors/footer-contact');
 require('./behaviors/header-navigation-primary');
 require('./behaviors/header-search');

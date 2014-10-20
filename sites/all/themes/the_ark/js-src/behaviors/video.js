@@ -7,6 +7,8 @@
         , offsetWidth = parseInt(videos[i].offsetWidth || 0);
       if (height > 0 && width > 0 && offsetWidth > 0 && offsetWidth !== width)
         $(videos[i]).css('height', (( height * offsetWidth ) / width ) + 'px');
+      else
+        $(videos[i]).removeAttr('style');
     }
   };
 
