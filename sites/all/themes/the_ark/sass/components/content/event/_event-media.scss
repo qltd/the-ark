@@ -26,14 +26,18 @@
 }
 .event-spotify {
   overflow: hidden;
-  margin: 0 auto;
-  width: 300px;
-  width: 30rem;
+  padding: 0 20px;
+  max-width: 100%;
+  .field__item {
+    margin: 0 auto;
+    width: 280px;
+    width: 28rem;
+  }
   .spotify-player {
-    width: 300px;
-    width: 30rem;
-    height: 350px;
-    height: 35rem;
+    width: 280px;
+    width: 28rem;
+    height: 80px;
+    height: 8rem;
   }
 }
 
