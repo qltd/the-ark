@@ -31,8 +31,14 @@
   .field__item {
     overflow: hidden;
     margin: 0 auto;
+    border: {
+      radius: 3px;
+      radius: 0.3rem;
+    }
     width: 280px;
     width: 28rem;
+    height: 80px;
+    height: 8rem;
   }
   .spotify-player {
     width: 280px;
