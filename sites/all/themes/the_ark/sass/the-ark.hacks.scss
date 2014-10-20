@@ -40,9 +40,9 @@ body.admin-menu {
   }
 }
 
-// prevent invisible content from being wider than layout
+// hide invisible content
 .element-invisible {
-  max-width: 100%;
+  display: none;
 }
 
 // hide admin toolbar in mobile/tablet

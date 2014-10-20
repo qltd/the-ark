@@ -2,9 +2,52 @@
 
 }
 .event-media-content {
-  text-align: center;
+  padding: 20px 0;
+  padding: 2rem 0;
 }
 .event-images-videos {
-  padding: 20px;
-  padding: 2rem;
+  padding: 0 20px;
+  padding: 0 2rem;
+  .file {
+    margin: 20px auto;
+    margin: 2rem auto;
+    width: 580px;
+    width: 58rem;
+    max-width: 100%;
+  }
+  .file-video {
+    margin: {
+      top: 12px;
+      top: 1.2rem;
+      bottom: 12px;
+      bottom: 1.2rem;
+    }
+  }
+}
+.event-spotify {
+  margin: 0 auto;
+  width: 300px;
+  width: 30rem;
+  .spotify-player {
+    position: relative;
+    left: -7px;
+    left: -0.7rem;
+    width: 300px;
+    width: 30rem;
+    height: 360px;
+    height: 36rem;
+  }
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .event-spotify {
+    width: 460px;
+    width: 46rem;
+    .spotify-player {
+      width: 460px;
+      width: 46rem;
+      height: 520px;
+      height: 52rem;
+    }
+  }
 }
