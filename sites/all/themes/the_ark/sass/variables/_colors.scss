@@ -9,8 +9,10 @@ $yellow: #ffbc00;
 $orange-light: lighten($orange, 20%);
 $orange-lighter: lighten($orange, 30%);
 $teal-light: #52c7da;
+$yellow-light: lighten($yellow, 20%);
 
 // grays
+$gray-lighter: lighten(#a6a29c, 20%);
 $gray-light: #595354;
 $gray: #494949;
 $gray-dark: #343434;

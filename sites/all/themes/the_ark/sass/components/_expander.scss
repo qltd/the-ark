@@ -15,7 +15,7 @@
   &:hover {
     background-color: $teal-light;
     &:before {
-      background-color: lighten($yellow, 20%);
+      background-color: $yellow-light;
     }
   }
   &:before {
@@ -36,9 +36,9 @@
 .expander-collapsed {
   background-color: $gray-background;
   &:hover {
-    background-color: lighten($gray-background, 20%);
+    background-color: $gray-lighter;
     &:before {
-      background-color: lighten($gray-background, 20%);
+      background-color: $gray-lighter;
     }
   }
   &:before {

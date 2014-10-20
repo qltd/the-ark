@@ -20,6 +20,6 @@
 
   background-color: $gray-background;
   &.active, &:hover {
-    background-color: lighten($gray-background, 20%);
+    background-color: $gray-lighter;
   }
 }
