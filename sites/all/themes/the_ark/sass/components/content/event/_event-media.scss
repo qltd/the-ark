@@ -25,29 +25,25 @@
   }
 }
 .event-spotify {
-  margin: 0 auto;
-  width: 300px;
-  width: 30rem;
   .spotify-player {
     position: relative;
-    left: -7px;
-    left: -0.7rem;
-    width: 300px;
-    width: 30rem;
-    height: 360px;
-    height: 36rem;
+    left: -5px;
+    left: -0.5rem;
+    width: 100%;
+    height: 350px;
+    height: 35rem;
   }
 }
 
 @include breakpoint($breakpoint-mobile-wide) {
-  .event-spotify {
-    width: 460px;
-    width: 46rem;
-    .spotify-player {
-      width: 460px;
-      width: 46rem;
-      height: 520px;
-      height: 52rem;
-    }
-  }
+  // .event-spotify {
+  //   width: 460px;
+  //   width: 46rem;
+  //   .spotify-player {
+  //     width: 460px;
+  //     width: 46rem;
+  //     height: 520px;
+  //     height: 52rem;
+  //   }
+  // }
 }
