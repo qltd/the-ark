@@ -1,0 +1,18 @@
+.event-sponsors {
+  @extend %clearfix;
+  margin: 20px;
+  border: {
+    top: 1px solid $gray-lighter;
+    bottom: 1px solid $gray-lighter;
+  }
+  text-align: center;
+  color: $gray-background;
+}
+.event-sponsors-title {
+  @include font-details($size: 14px, $style: italic);
+  font-size: 1.4rem;
+}
+.event-sponsors-list {
+  padding: 0;
+  list-style: none;
+}
