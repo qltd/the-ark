@@ -220,7 +220,6 @@
       <section class="event-media">
         <h2 class="event-media-title expander">Photos &amp; Videos</h2>
         <div class="event-media-content expander-content">
-
           <?php if (isset($content['field_media']['#items'])): ?>
             <div class="event-images-videos">
               <?php foreach ($content['field_media']['#items'] as $key => $item): ?>
@@ -241,7 +240,6 @@
               <?php print render($content['field_spotify_uri']); ?>
             </div>
           <?php endif; ?>
-
         </div>
       </section>
     <?php endif; ?>
@@ -260,11 +258,33 @@
     <?php endif; ?>
 
     <?php if (isset($content['field_sponsor']['#items'])): ?>
-      <section>
-        <h2>Presented with support from</h2>
-        <?php foreach ($content['field_sponsor']['#items'] as $key => $item): ?>
-          <?php $term = taxonomy_term_load($item['target_id']); ?>
-        <?php endforeach; ?>
+      <section class="event-sponsors">
+        <h2 class="event-sponsors-title">Presented with support from</h2>
+        <ul class="event-sponsors-list">
+          <?php foreach ($content['field_sponsor']['#items'] as $key => $item): ?>
+            <li class="event-sponsors-list-item">
+              <?php $term = taxonomy_term_load($item['target_id']); ?>
+              <?php if (isset($term->field_image['und'][0]) && isset($term->field_image['und'][0]['uri'])): ?>
+                <?php
+                  $image = $term->field_image['und'][0];
+                  print theme('image_style', array(
+                    'alt' => $image['alt'],
+                    'path' => $image['uri'],
+                    'style_name' => 'sponsor',
+                    'title' => $image['title'],
+                    'attributes' => array(
+                      'class' => array(
+                        'event-sponsors-sponsor-image',
+                      ),
+                    )
+                  ));
+                ?>
+                <?php else: ?>
+                  <span class="event-sponsors-sponsor-name"><?php print $term->name; ?></span>
+                <?php endif; ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
       </section>
     <?php endif; ?>
 
