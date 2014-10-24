@@ -125,7 +125,13 @@
         </div>
       <?php endif; ?>
 
-      <?php if (isset($content['field_ticket_url']['#items'])): ?>
+      <?php if (
+        isset($content['field_ticket_url']['#items']) &&
+        isset($content['field_ticket_url']['#items'][0]['url']) &&
+        strpos($content['field_ticket_url']['#items'][0]['url'], '/null') === false &&
+        isset($content['field_date']['#items'][0]['value']) &&
+        strtotime($content['field_date']['#items'][0]['value'] . ' UTC') >= time()
+      ): ?>
         <div class="event-tickets">
         <?php foreach ($content['field_ticket_url']['#items'] as $key => $item): ?>
           <?php $item['attributes']['class'] = array('event-tickets-link'); ?>
@@ -139,9 +145,10 @@
 
       <ul class="event-time-list">
         <?php if (
-        isset($content['field_date_tickets'][0]['#markup']) &&
-        isset($content['field_date_tickets']['#items'][0]['value']) &&
-        strtotime($content['field_date_tickets']['#items'][0]['value'] . ' UTC') >= time()): ?>
+          isset($content['field_date_tickets'][0]['#markup']) &&
+          isset($content['field_date_tickets']['#items'][0]['value']) &&
+          strtotime($content['field_date_tickets']['#items'][0]['value'] . ' UTC') >= time()
+        ): ?>
           <li class="event-time-item event-time-tickets">
             <span class="event-header-label">Tickets On-sale:</span>
             <?php print $content['field_date_tickets'][0]['#markup']; ?>
@@ -251,6 +258,16 @@
         </div>
       </section>
     <?php endif; ?>
+
+    <?php if (isset($content['field_sponsor']['#items'])): ?>
+      <section>
+        <h2>Presented with support from</h2>
+        <?php foreach ($content['field_sponsor']['#items'] as $key => $item): ?>
+          <?php $term = taxonomy_term_load($item['target_id']); ?>
+        <?php endforeach; ?>
+      </section>
+    <?php endif; ?>
+
   </div>
 
   <?php print render($content['links']); ?>
