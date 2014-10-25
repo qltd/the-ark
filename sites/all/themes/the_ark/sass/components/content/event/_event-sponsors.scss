@@ -1,11 +1,12 @@
 .event-sponsors {
-  @extend %clearfix;
-  margin: 20px;
-  margin: 2rem;
+  margin: 30px 20px;
+  margin: 3rem 2rem;
   border: {
     top: 1px solid $gray-lighter;
     bottom: 1px solid $gray-lighter;
   }
+  padding: 10px 0 0;
+  padding: 1rem 0 0;
   text-align: center;
   color: $gray-background;
 }
@@ -16,4 +17,10 @@
 .event-sponsors-list {
   padding: 0;
   list-style: none;
+  .event-sponsors-list-item {
+    margin: {
+      bottom: 30px;
+      bottom: 3rem;
+    }
+  }
 }
