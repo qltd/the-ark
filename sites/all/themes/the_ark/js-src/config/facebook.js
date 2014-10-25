@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.facebookConfig = {
+  Drupal.behaviors.theArkFacebookConfig = {
     attach: function () {
       var button = $('.facebook-share');
       if (button.length === 0) return;
@@ -16,6 +16,8 @@
           name: element.data('title'),
           description: element.data('description')
         }, function (response) {});
+
+        return false;
       });
     }
   };

@@ -34,6 +34,7 @@
  */
 require('./config/facebook');
 require('./config/headroom');
+require('./config/twitter');
 
 /**
  * Components
