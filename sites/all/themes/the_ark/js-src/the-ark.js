@@ -32,6 +32,7 @@
 /**
  * Configuration
  */
+require('./config/facebook');
 require('./config/headroom');
 
 /**

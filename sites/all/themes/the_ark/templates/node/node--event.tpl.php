@@ -288,6 +288,19 @@
       </section>
     <?php endif; ?>
 
+    <div class="event-social">
+      <a
+        class="event-social-button event-social-facebook facebook-share"
+        href="<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
+        role="button"
+        <?php if (isset($content['body'][0]['#markup']))
+          print 'data-description="' . strip_tags(text_summary($content['body'][0]['#markup'], null, 300)) . '"'; ?>
+        <?php if (isset($content['field_image']['#items'][0]['uri']))
+          print 'data-image="' . file_create_url($content['field_image']['#items'][0]['uri']) . '"'; ?>
+        data-title="<?php print $title; ?>">Share</a>
+      <a class="event-social-button event-social-twitter twitter-tweet" href="" role="button">Tweet</a>
+    </div>
+
   </div>
 
   <?php print render($content['links']); ?>

@@ -31,6 +31,27 @@ function the_ark_preprocess_html (&$variables) {
       'preprocess' => FALSE,
     )
   );
+  drupal_add_js( // Facebook JavaScript SDK
+    'window.fbAsyncInit = function() {
+      FB.init({
+        appId      : \'1485589191708334\',
+        xfbml      : true,
+        version    : \'v2.1\'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, \'script\', \'facebook-jssdk\'));',
+    array(
+      'type' => 'inline',
+    )
+  );
+
 
   // Add conditional stylesheets for IE
   drupal_add_css(drupal_get_path('theme', 'the_ark') . '/css/the-ark.lte-ie9.min.css',

@@ -21,6 +21,7 @@
   "globals": {
     "document": false,
     "Drupal": false,
+    "FB": false,
     "Headroom": false,
     "Modernizr": false,
     "require": false,
