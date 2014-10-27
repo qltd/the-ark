@@ -1,3 +1,30 @@
 .event-content {
   background-color: $gray-light-background;
 }
+
+@include breakpoint($breakpoint-desktop) {
+  .event-content-primary {
+    @include container(1000px);
+    max-width: 100rem;
+
+    margin: {
+      top: 20px;
+      top: 2rem;
+    }
+  }
+  .event-body {
+    float: right;
+    max-width: 50%;
+  }
+  .event-media {
+    float: left;
+    max-width: 50%;
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .event-content-primary {
+    max-width: 1160px;
+    max-width: 116rem;
+  }
+}

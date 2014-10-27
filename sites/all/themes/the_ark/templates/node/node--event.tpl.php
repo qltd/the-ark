@@ -216,46 +216,48 @@
       </div>
     <?php endif; ?>
 
-    <?php if (isset($content['field_media']) || isset($content['field_spotify_uri'])): ?>
-      <section class="event-media">
-        <h2 class="event-media-title expander">Photos &amp; Videos</h2>
-        <div class="event-media-content expander-content">
-          <?php if (isset($content['field_media']['#items'])): ?>
-            <div class="event-images-videos">
-              <?php foreach ($content['field_media']['#items'] as $key => $item): ?>
-                <?php if ($item['type'] === 'image' && isset($content['field_media'][$key]['file'])) {
-                  $content['field_media'][$key]['file']['#image_style'] = 'event_image';
-                }
-                elseif (isset($content['field_media'][$key]['file']['#options'])) {
-                  $content['field_media'][$key]['file']['#options']['width'] = '580';
-                  $content['field_media'][$key]['file']['#options']['height'] = '365';
-                } ?>
-                <?php print render($content['field_media'][$key]); ?>
-              <?php endforeach; ?>
-            </div>
-          <?php endif; ?>
+    <div class="event-content-primary">
+      <?php if (isset($content['body'][0]['#markup'])): ?>
+        <section class="event-body">
+          <h2 class="event-media-title expander">Description</h2>
+          <div class="event-body-content expander-content">
+            <?php print str_replace(
+              '<p',
+              '<p class="event-body-paragraph"',
+              $content['body'][0]['#markup']);
+            ?>
+          </div>
+        </section>
+      <?php endif; ?>
 
-          <?php if (isset($content['field_spotify_uri'])): ?>
-            <div class="event-spotify">
-              <?php print render($content['field_spotify_uri']); ?>
-            </div>
-          <?php endif; ?>
-        </div>
-      </section>
-    <?php endif; ?>
+      <?php if (isset($content['field_media']) || isset($content['field_spotify_uri'])): ?>
+        <section class="event-media">
+          <h2 class="event-media-title expander">Photos &amp; Videos</h2>
+          <div class="event-media-content expander-content">
+            <?php if (isset($content['field_media']['#items'])): ?>
+              <div class="event-images-videos">
+                <?php foreach ($content['field_media']['#items'] as $key => $item): ?>
+                  <?php if ($item['type'] === 'image' && isset($content['field_media'][$key]['file'])) {
+                    $content['field_media'][$key]['file']['#image_style'] = 'event_image';
+                  }
+                  elseif (isset($content['field_media'][$key]['file']['#options'])) {
+                    $content['field_media'][$key]['file']['#options']['width'] = '580';
+                    $content['field_media'][$key]['file']['#options']['height'] = '365';
+                  } ?>
+                  <?php print render($content['field_media'][$key]); ?>
+                <?php endforeach; ?>
+              </div>
+            <?php endif; ?>
 
-    <?php if (isset($content['body'][0]['#markup'])): ?>
-      <section class="event-body">
-        <h2 class="event-media-title expander">Description</h2>
-        <div class="event-body-content expander-content">
-          <?php print str_replace(
-            '<p',
-            '<p class="event-body-paragraph"',
-            $content['body'][0]['#markup']);
-          ?>
-        </div>
-      </section>
-    <?php endif; ?>
+            <?php if (isset($content['field_spotify_uri'])): ?>
+              <div class="event-spotify">
+                <?php print render($content['field_spotify_uri']); ?>
+              </div>
+            <?php endif; ?>
+          </div>
+        </section>
+      <?php endif; ?>
+    </div>
 
     <?php if (isset($content['field_sponsor']['#items'])): ?>
       <section class="event-sponsors">
@@ -288,7 +290,6 @@
               <?php if (isset($term->field_link_sponsor['und'][0]['url'])): ?>
                 </a>
               <?php endif; ?>
-              <?php dpm($term); ?>
             </li>
           <?php endforeach; ?>
         </ul>

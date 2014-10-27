@@ -6,6 +6,8 @@
   padding: 2rem 0;
 }
 .event-images-videos {
+  @extend %clearfix;
+
   padding: 0 20px;
   padding: 0 2rem;
   .file {
@@ -57,6 +59,108 @@
     .spotify-player {
       width: 440px;
       width: 44rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-media-content {
+    padding: {
+      top: 0;
+    }
+  }
+  .event-images-videos {
+    margin: 0 auto;
+    padding: 0;
+    width: 740px;
+    width: 74rem;
+    .file {
+      float: left;
+      margin: 20px;
+      margin: 2rem;
+      width: 330px;
+      width: 33rem;
+      max-height: 208px;
+      max-height: 20.8rem;
+    }
+  }
+  .event-spotify {
+    margin: {
+      top: 20px;
+      top: 2rem;
+    }
+    .field__item {
+      width: 700px;
+      width: 70rem;
+      height: 780px;
+      height: 78rem;
+    }
+    .spotify-player {
+      width: 700px;
+      width: 70rem;
+      height: 780px;
+      height: 78rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .event-media-content {
+    margin: {
+      top: 10px;
+      top: 1rem;
+    }
+  }
+  .event-images-videos {
+    .file {
+      float: none;
+      margin: 20px 0;
+      margin: 2rem 0;
+      width: 500px;
+      width: 50rem;
+      max-height: 315px;
+      max-height: 31.5rem;
+    }
+  }
+  .event-spotify {
+    margin: 0;
+    padding: 0;
+    .field__item {
+      width: 500px;
+      width: 50rem;
+      height: 580px;
+      height: 58rem;
+    }
+    .spotify-player {
+      width: 500px;
+      width: 50rem;
+      height: 580px;
+      height: 58rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .event-images-videos {
+    .file {
+      width: 580px;
+      width: 58rem;
+      max-height: 365px;
+      max-height: 36.5rem;
+    }
+  }
+  .event-spotify {
+    .field__item {
+      width: 580px;
+      width: 58rem;
+      height: 660px;
+      height: 66rem;
+    }
+    .spotify-player {
+      width: 580px;
+      width: 58rem;
+      height: 660px;
+      height: 66rem;
     }
   }
 }
