@@ -128,7 +128,7 @@
       <?php if (
         isset($content['field_ticket_url']['#items']) &&
         isset($content['field_ticket_url']['#items'][0]['url']) &&
-        strpos($content['field_ticket_url']['#items'][0]['url'], '/null') === false &&
+        strpos($content['field_ticket_url']['#items'][0]['url'], 'null') === false &&
         isset($content['field_date']['#items'][0]['value']) &&
         strtotime($content['field_date']['#items'][0]['value'] . ' UTC') >= time()
       ): ?>
