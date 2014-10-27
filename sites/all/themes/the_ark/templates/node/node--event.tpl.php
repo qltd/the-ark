@@ -264,6 +264,9 @@
           <?php foreach ($content['field_sponsor']['#items'] as $key => $item): ?>
             <li class="event-sponsors-list-item">
               <?php $term = taxonomy_term_load($item['target_id']); ?>
+              <?php if (isset($term->field_link_sponsor['und'][0]['url'])): ?>
+                <a class="event-sponsors-sponsor-link" href="<?php print $term->field_link_sponsor['und'][0]['url']; ?>" target="_blank">
+              <?php endif; ?>
               <?php if (isset($term->field_image['und'][0]) && isset($term->field_image['und'][0]['uri'])): ?>
                 <?php
                   $image = $term->field_image['und'][0];
@@ -279,9 +282,13 @@
                     )
                   ));
                 ?>
-                <?php else: ?>
-                  <span class="event-sponsors-sponsor-name"><?php print $term->name; ?></span>
-                <?php endif; ?>
+              <?php else: ?>
+                <span class="event-sponsors-sponsor-name"><?php print $term->name; ?></span>
+              <?php endif; ?>
+              <?php if (isset($term->field_link_sponsor['und'][0]['url'])): ?>
+                </a>
+              <?php endif; ?>
+              <?php dpm($term); ?>
             </li>
           <?php endforeach; ?>
         </ul>
