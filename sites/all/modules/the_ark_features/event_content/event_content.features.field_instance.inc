@@ -210,7 +210,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long_12',
+          'format_type' => 'date_time_short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -423,9 +423,13 @@ function event_content_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -505,6 +509,7 @@ function event_content_field_default_field_instances() {
     'label' => 'Links',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -518,6 +523,7 @@ function event_content_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -587,9 +593,8 @@ function event_content_field_default_field_instances() {
           'media_default--media_browser_my_files' => 0,
           'media_internet' => 'media_internet',
           'upload' => 'upload',
-          'youtube' => 'youtube',
+          'youtube' => 0,
         ),
-        'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
       'weight' => 20,
@@ -607,7 +612,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -822,7 +827,7 @@ function event_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1008,6 +1013,7 @@ function event_content_field_default_field_instances() {
     'label' => 'Ticket URL(s)',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1021,6 +1027,7 @@ function event_content_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1117,7 +1124,7 @@ function event_content_field_default_field_instances() {
   $field_instances['taxonomy_term-sponsor-field_image'] = array(
     'bundle' => 'sponsor',
     'deleted' => 0,
-    'description' => 'General image for a sponsor &mdash; this is the image that will be displayed on events associated with the sponsor.',
+    'description' => 'General image for a sponsor &mdash; this is the image that will be displayed on events associated with the sponsor, and should be gray in color.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1167,7 +1174,6 @@ function event_content_field_default_field_instances() {
           'upload' => 'upload',
           'youtube' => 0,
         ),
-        'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
       'weight' => 3,
@@ -1178,7 +1184,7 @@ function event_content_field_default_field_instances() {
   $field_instances['taxonomy_term-sponsor-field_image_footer'] = array(
     'bundle' => 'sponsor',
     'deleted' => 0,
-    'description' => 'Include a footer image for featured sponsors.',
+    'description' => 'Include a footer image for featured sponsors &mdash; this image should be white in color.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1225,7 +1231,6 @@ function event_content_field_default_field_instances() {
           'upload' => 'upload',
           'youtube' => 0,
         ),
-        'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
       'weight' => 4,
@@ -1251,6 +1256,7 @@ function event_content_field_default_field_instances() {
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1264,6 +1270,7 @@ function event_content_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1307,6 +1314,7 @@ function event_content_field_default_field_instances() {
     'label' => 'Seating Chart URL',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1320,6 +1328,7 @@ function event_content_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1352,12 +1361,12 @@ function event_content_field_default_field_instances() {
   t('Endorsement Source');
   t('Featured Sponsor');
   t('Footer Image');
-  t('General image for a sponsor &mdash; this is the image that will be displayed on events associated with the sponsor.');
+  t('General image for a sponsor &mdash; this is the image that will be displayed on events associated with the sponsor, and should be gray in color.');
   t('Genre of the event or show.<br><br>If you need to add a genre that is not listed, refresh or return to this form after visiting: <a href="/admin/structure/taxonomy/genre/add" target="_blank">http://theark.org/admin/structure/taxonomy/genre/add</a>');
   t('Genre(s)');
   t('If there is text in the endorsement field, this field is reserved for naming the source or author of that text.');
   t('Image');
-  t('Include a footer image for featured sponsors.');
+  t('Include a footer image for featured sponsors &mdash; this image should be white in color.');
   t('Link');
   t('Link(s) related to the show or event.<br><br>External sites for artists, organizations, etc.');
   t('Links');
