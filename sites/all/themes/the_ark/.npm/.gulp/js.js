@@ -34,15 +34,6 @@ function js (name) {
 function jsMain () {
   return js('the-ark.js');
 }
-function jsIE9 () {
-  return js('the-ark.lte-ie9.js');
-}
-function jsAll () {
-  jsMain();
-  jsIE9();
-}
 
-gulp.task('js', jsAll);
-gulp.task('js-main', jsMain);
-gulp.task('js-ie9', jsIE9);
-gulp.task('js-install', ['bower'], jsAll);
+gulp.task('js', jsMain);
+gulp.task('js-install', ['bower'], jsMain);
