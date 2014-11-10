@@ -1,0 +1,14 @@
+.date-heading {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  text-align: center;
+
+  h3 {
+    @include font-details($size: 38px, $weight: 300);
+    font-size: 3.8rem;
+
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}

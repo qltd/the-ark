@@ -1,0 +1,16 @@
+.calendar-column {
+  border: {
+    bottom: 1px solid $gray-lighter;
+  }
+  &.no-entry, &.empty {
+    display: none;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .calendar-column {
+    &.no-entry, &.empty {
+      display: block;
+    }
+  }
+}

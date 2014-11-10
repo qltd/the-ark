@@ -14,3 +14,11 @@ function the_ark_form_alter(&$form, &$form_state, $form_id) {
     );
   }
 }
+
+function the_ark_css_alter(&$css) {
+  $calendar_path = drupal_get_path('module', 'calendar');
+  $date_path = drupal_get_path('module', 'date');
+
+  unset($css[$calendar_path . '/css/calendar_multiday.css']);
+  unset($css[$date_path . '/date_views/css/date_views.css']);
+}

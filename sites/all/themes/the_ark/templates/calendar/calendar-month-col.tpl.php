@@ -12,7 +12,10 @@ $headers = (isset($item['header_id'])) ? ' headers="'. $item['header_id'] .'" ' 
 ?>
 <div <?php print $id; ?>class="calendar-column <?php print $item['class'] ?>"<?php print $date . $headers . $day; ?>>
   <div class="calendar-column-inner">
-    <span class="calendar-column-date"><?php print $item['day_of_month']; ?></span>
+    <div class="calendar-column-date">
+      <span class="day-of-month"><?php print $item['day_of_month']; ?></span>
+      <span class="day-of-week"><?php print $item['header_id']; ?></span>
+    </div>
     <?php print $item['entry']; ?>
   </div>
 </div>

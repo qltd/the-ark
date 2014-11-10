@@ -1,0 +1,18 @@
+.calendar-column-date {
+  @include font-details($weight: 300);
+  text-transform: uppercase;
+
+  .day-of-month {
+    @include font-details($size: 30px);
+    font-size: 3rem;
+  }
+  .day-of-week {
+    @include font-details($size: 18px);
+    font-size: 1.8rem;
+
+    margin: {
+      left: 5px;
+      left: 0.5rem;
+    }
+  }
+}
