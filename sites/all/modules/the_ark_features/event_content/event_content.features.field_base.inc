@@ -507,22 +507,33 @@ function event_content_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_price'
-  $field_bases['field_price'] = array(
+  // Exported field_base: 'field_price_display'
+  $field_bases['field_price_display'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_price',
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'field_name' => 'field_price_display',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'number',
+    'module' => 'text',
     'settings' => array(
-      'decimal_separator' => '.',
+      'max_length' => 255,
     ),
     'translatable' => 0,
-    'type' => 'number_float',
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_related_event'
