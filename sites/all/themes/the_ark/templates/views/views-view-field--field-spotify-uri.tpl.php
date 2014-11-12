@@ -22,13 +22,16 @@
  * the view is modified.
  */
 ?>
-<?php $spotify_link = 'http://open.spotify.com/' . str_replace(':', '/', str_replace('spotify:', '', $output)); ?>
-
-<?php print l(t('Spotify'), $spotify_link , array(
-  'attributes' => array(
-    'class' => array(
-      'spotify-link'
+<?php if (!empty($output)): ?>
+  <?php $spotify_link = 'http://open.spotify.com/' . str_replace(':', '/', str_replace('spotify:', '', $output)); ?>
+  <?php print l(t('Spotify'), $spotify_link , array(
+    'attributes' => array(
+      'class' => array(
+        'spotify-link'
+      ),
+      'target' => '_blank',
     ),
-    'target' => '_blank',
-  ),
-)); ?>
+  )); ?>
+<?php else: ?>
+  
+<?php endif; ?>
