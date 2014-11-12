@@ -24,7 +24,7 @@
 ?>
 
 <?php if (!preg_match('/href=".*ark\.(dev|qltdclient\.com|org)\/null"/', $output)): ?>
-  <?php print $output; ?>
+  <?php print str_replace('<a href', '<a class="tickets-link" href', $output); ?>
 <?php else: ?>
-  <span class="no-link">Tickets not available online</span>
+  <span class="tickets-no-link">Tickets not available online</span>
 <?php endif; ?>
