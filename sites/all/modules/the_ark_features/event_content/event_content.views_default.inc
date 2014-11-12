@@ -63,7 +63,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Event Link';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">View Event</a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="event-link" href="[path]">View Event</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Spotify URI */
   $handler->display->display_options['fields']['field_spotify_uri']['id'] = 'field_spotify_uri';
