@@ -171,7 +171,12 @@
       <nav class="event-navigation">
         <ul class="event-navigation-list">
           <li class="event-navigation-item">
-            <a class="event-navigation-link" href="/"><?php print t('Buy Tickets in Person'); ?></a>
+            <?php dpm($content['field_doors_only']); ?>
+            <?php if (!isset($content['field_doors_only'][0]['#markup']) || $content['field_doors_only'][0]['#markup'] === 0): ?>
+              <a class="event-navigation-link" href="/"><?php print t('Buy Tickets in Person'); ?></a>
+            <?php else: ?>
+              <a class="event-navigation-link" href="/"><?php print t('Buy Tickets at the Door'); ?></a>
+            <?php endif; ?>
           </li>
           <li class="event-navigation-item">
             <a class="event-navigation-link" href="/"><?php print t('Seating Chart'); ?></a>
