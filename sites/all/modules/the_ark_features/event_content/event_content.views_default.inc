@@ -63,7 +63,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Event Link';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">View</a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">View Event</a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Spotify URI */
   $handler->display->display_options['fields']['field_spotify_uri']['id'] = 'field_spotify_uri';
@@ -71,6 +71,15 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['field_spotify_uri']['field'] = 'field_spotify_uri';
   $handler->display->display_options['fields']['field_spotify_uri']['label'] = '';
   $handler->display->display_options['fields']['field_spotify_uri']['element_label_colon'] = FALSE;
+  /* Field: Content: Ticket URL(s) */
+  $handler->display->display_options['fields']['field_ticket_url']['id'] = 'field_ticket_url';
+  $handler->display->display_options['fields']['field_ticket_url']['table'] = 'field_data_field_ticket_url';
+  $handler->display->display_options['fields']['field_ticket_url']['field'] = 'field_ticket_url';
+  $handler->display->display_options['fields']['field_ticket_url']['label'] = '';
+  $handler->display->display_options['fields']['field_ticket_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ticket_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_ticket_url']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ticket_url']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
