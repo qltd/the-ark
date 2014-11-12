@@ -19,7 +19,7 @@
  */
 //dsm('Display: '. $display_type .': '. $min_date_formatted .' to '. $max_date_formatted);
 ?>
-<section class="calendar">
+<section class="calendar-month">
   <header class="calendar-header">
     <?php foreach ($day_names as $id => $cell): ?>
       <div class="calendar-header-day <?php print $cell['class']; ?>" id="<?php print $cell['header_id'] ?>">

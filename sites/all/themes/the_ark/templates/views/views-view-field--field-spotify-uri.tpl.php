@@ -33,5 +33,5 @@
     ),
   )); ?>
 <?php else: ?>
-  
+  <span class="spotify-no-link">No spotify playlist available</span>
 <?php endif; ?>
