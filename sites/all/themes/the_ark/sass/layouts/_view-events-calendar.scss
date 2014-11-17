@@ -1,3 +1,10 @@
 .view-events-calendar {
   background-color: $gray-light-background;
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .view-events-calendar {
+    padding: 0 60px;
+    padding: 0 6rem;
+  }
+}

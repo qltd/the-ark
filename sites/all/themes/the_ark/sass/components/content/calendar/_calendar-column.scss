@@ -5,6 +5,9 @@
   &.no-entry, &.empty {
     display: none;
   }
+  .item {
+    @extend %clearfix;
+  }
 }
 
 @include breakpoint($breakpoint-desktop) {

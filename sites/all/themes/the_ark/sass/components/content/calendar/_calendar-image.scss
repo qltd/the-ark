@@ -4,3 +4,15 @@
     bottom: 0.5rem;
   }
 }
+
+@include breakpoint($breakpoint-tablet $breakpoint-desktop) {
+  .calendar-image {
+    float: left;
+    margin: {
+      right: 30px;
+      right: 3rem;
+      bottom: 70px;
+      bottom: 7rem;
+    }
+  }
+}

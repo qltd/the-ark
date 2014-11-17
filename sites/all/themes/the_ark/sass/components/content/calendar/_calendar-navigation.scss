@@ -61,3 +61,25 @@
     content: "\f145";
   }
 }
+
+@include breakpoint($breakpoint-tablet $breakpoint-desktop) {
+  .event-link, .spotify-link, .spotify-no-link, .tickets-link, .tickets-no-link  {
+    position: absolute;
+    margin: {
+      top: 140px;
+      top: 14rem;
+    }
+  }
+  .spotify-link, .spotify-no-link {
+    margin: {
+      left: 53px;
+      left: 5.3rem;
+    }
+  }
+  .tickets-no-link, .tickets-link {
+    margin: {
+      left: 106px;
+      left: 10.6rem;
+    }
+  }
+}

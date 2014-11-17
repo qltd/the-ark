@@ -21,3 +21,12 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .calendar-column-date {
+    margin: {
+      right: 0;
+      left: 0;
+    }
+  }
+}

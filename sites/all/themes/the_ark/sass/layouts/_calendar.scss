@@ -7,3 +7,20 @@
     opacity: 0.25;
   }
 }
+
+// ONLY between tablet and desktop
+@include breakpoint($breakpoint-tablet $breakpoint-desktop) {
+  .calendar {
+    width: auto;
+  }
+}
+
+// tablet and above
+@include breakpoint($breakpoint-tablet) {
+  .calendar {
+    margin: {
+      right: 0;
+      left: 0;
+    }
+  }
+}
