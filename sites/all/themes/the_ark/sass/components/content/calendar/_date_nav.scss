@@ -34,6 +34,10 @@
     height: 3rem;
     width: 30px;
     width: 3rem;
+    &:hover {
+      text-decoration: none;
+      color: $gold;
+    }
   }
 }
 .date-prev {
