@@ -52,6 +52,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['element_wrapper_class'] = 'calendar-image';
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'event_thumbnail',
@@ -85,6 +86,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -93,33 +95,47 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['field_coheadlining_act']['id'] = 'field_coheadlining_act';
   $handler->display->display_options['fields']['field_coheadlining_act']['table'] = 'field_data_field_coheadlining_act';
   $handler->display->display_options['fields']['field_coheadlining_act']['field'] = 'field_coheadlining_act';
-  $handler->display->display_options['fields']['field_coheadlining_act']['label'] = ' // ';
+  $handler->display->display_options['fields']['field_coheadlining_act']['label'] = '';
+  $handler->display->display_options['fields']['field_coheadlining_act']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_coheadlining_act']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_coheadlining_act']['alter']['text'] = '<a href="[path]">[field_coheadlining_act]</a>';
+  $handler->display->display_options['fields']['field_coheadlining_act']['alter']['text'] = ' <span class="delimiter">//</span> <a href="[path]">[field_coheadlining_act]</a>';
   $handler->display->display_options['fields']['field_coheadlining_act']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_coheadlining_act']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_coheadlining_act']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_coheadlining_act']['separator'] = ' // ';
+  $handler->display->display_options['fields']['field_coheadlining_act']['separator'] = '';
+  /* Field: Title Display */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Title Display';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[title][field_coheadlining_act]';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_1']['element_wrapper_class'] = 'calendar-title-display';
   /* Field: Content: Special Guest(s) */
   $handler->display->display_options['fields']['field_special_guest']['id'] = 'field_special_guest';
   $handler->display->display_options['fields']['field_special_guest']['table'] = 'field_data_field_special_guest';
   $handler->display->display_options['fields']['field_special_guest']['field'] = 'field_special_guest';
+  $handler->display->display_options['fields']['field_special_guest']['label'] = 'Special Guest';
+  $handler->display->display_options['fields']['field_special_guest']['element_wrapper_class'] = 'calendar-guest-opener';
   $handler->display->display_options['fields']['field_special_guest']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_special_guest']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_special_guest']['separator'] = ' // ';
+  $handler->display->display_options['fields']['field_special_guest']['separator'] = ' <span class="delimiter">//</span> ';
   /* Field: Content: Opening Act(s) */
   $handler->display->display_options['fields']['field_opener']['id'] = 'field_opener';
   $handler->display->display_options['fields']['field_opener']['table'] = 'field_data_field_opener';
   $handler->display->display_options['fields']['field_opener']['field'] = 'field_opener';
-  $handler->display->display_options['fields']['field_opener']['label'] = 'Opener(s)';
+  $handler->display->display_options['fields']['field_opener']['label'] = 'Opener';
+  $handler->display->display_options['fields']['field_opener']['element_wrapper_class'] = 'calendar-guest-opener';
   $handler->display->display_options['fields']['field_opener']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_opener']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_opener']['separator'] = ' // ';
+  $handler->display->display_options['fields']['field_opener']['separator'] = ' <span class="delimiter">//</span> ';
   /* Field: Content: Load-in Time */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['label'] = '';
+  $handler->display->display_options['fields']['field_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_date']['settings'] = array(
     'format_type' => 'time',
@@ -133,7 +149,19 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['field_price_display']['table'] = 'field_data_field_price_display';
   $handler->display->display_options['fields']['field_price_display']['field'] = 'field_price_display';
   $handler->display->display_options['fields']['field_price_display']['label'] = '';
+  $handler->display->display_options['fields']['field_price_display']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_price_display']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_price_display']['alter']['text'] = ', [field_price_display]';
   $handler->display->display_options['fields']['field_price_display']['element_label_colon'] = FALSE;
+  /* Field: Time and Ticket Price */
+  $handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+  $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_2']['ui_name'] = 'Time and Ticket Price';
+  $handler->display->display_options['fields']['nothing_2']['label'] = '';
+  $handler->display->display_options['fields']['nothing_2']['alter']['text'] = '[field_date][field_price_display]';
+  $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing_2']['element_wrapper_class'] = 'calendar-time-price';
   /* Sort criterion: Content: Load-in Time (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';

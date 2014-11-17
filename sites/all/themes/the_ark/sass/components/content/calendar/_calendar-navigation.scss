@@ -7,6 +7,10 @@
 
   display: block;
   float: left;
+  margin: {
+    bottom: 5px;
+    bottom: 0.5rem;
+  }
   border: {
     right: 1px solid $gray-light;
   }
@@ -29,7 +33,7 @@
   }
 }
 
-.spotify-no-link, .tickets-no-link, .past .tickets-link {
+.spotify-no-link, .tickets-no-link {
   &, &:hover {
     background: {
       color: $gray-lighter;
