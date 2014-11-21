@@ -9,7 +9,7 @@
 }
 
 // ONLY between tablet and desktop
-@include breakpoint($breakpoint-tablet $breakpoint-desktop) {
+@include breakpoint($breakpoint-tablet $breakpoint-desktop - 0.0625) {
   .calendar {
     width: auto;
   }
@@ -22,5 +22,13 @@
       right: 0;
       left: 0;
     }
+  }
+}
+
+// ONLY between desktop and desktop-wide
+@include breakpoint($breakpoint-desktop $breakpoint-desktop-wide - 0.0625) {
+  .calendar {
+    width: 115px;
+    width: 11.5rem;
   }
 }

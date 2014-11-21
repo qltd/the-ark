@@ -62,7 +62,7 @@
   }
 }
 
-@include breakpoint($breakpoint-tablet $breakpoint-desktop) {
+@include breakpoint($breakpoint-tablet $breakpoint-desktop - 0.0625) {
   .event-link, .spotify-link, .spotify-no-link, .tickets-link, .tickets-no-link  {
     position: absolute;
     margin: {
@@ -81,5 +81,16 @@
       left: 106px;
       left: 10.6rem;
     }
+  }
+}
+
+@include breakpoint($breakpoint-desktop $breakpoint-desktop-wide - 0.0625) {
+  .event-link, .spotify-link, .spotify-no-link {
+    width: 38px;
+    width: 3.8rem;
+  }
+  .tickets-link, .tickets-no-link  {
+    width: 39px;
+    width: 3.9rem;
   }
 }

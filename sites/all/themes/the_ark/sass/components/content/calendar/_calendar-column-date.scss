@@ -30,3 +30,24 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-desktop $breakpoint-desktop-wide - 0.0625) {
+  .calendar-column-date {
+    width: 115px;
+    width: 11.5rem;
+
+    .day-of-month {
+      @include font-details($size: 24px);
+      font-size: 2.4rem;
+    }
+    .day-of-week {
+      @include font-details($size: 14px);
+      font-size: 1.4rem;
+
+      margin: {
+        left: 5px;
+        left: 0.5rem;
+      }
+    }
+  }
+}

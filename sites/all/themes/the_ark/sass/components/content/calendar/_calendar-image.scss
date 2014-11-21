@@ -5,7 +5,7 @@
   }
 }
 
-@include breakpoint($breakpoint-tablet $breakpoint-desktop) {
+@include breakpoint($breakpoint-tablet $breakpoint-desktop - 0.0625) {
   .calendar-image {
     float: left;
     margin: {
