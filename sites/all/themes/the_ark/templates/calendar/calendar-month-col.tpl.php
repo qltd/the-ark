@@ -5,11 +5,44 @@
  *
  * - $item: The item to render within a td element.
  */
-$id = (isset($item['id'])) ? 'id="' . $item['id'] . '" ' : '';
-$date = (isset($item['date'])) ? ' data-date="' . $item['date'] . '" ' : '';
-$day = (isset($item['day_of_month'])) ? ' data-day-of-month="' . $item['day_of_month'] . '" ' : '';
-$headers = (isset($item['header_id'])) ? ' headers="'. $item['header_id'] .'" ' : '';
+$calendar_date_raw = arg(2);
+$calendar_date = !empty($calendar_date_raw)
+  ? date_parse_from_format('Y-m', $calendar_date_raw)
+  : date('Y-m');
+$calendar_month = isset($calendar_date['month'])
+  ? intval($calendar_date['month'])
+  : intval(date('m'));
+
+$item_date_raw = isset($item['date'])
+  ? $item['date']
+  : date();
+$item_date = !empty($item_date_raw)
+  ? date_parse_from_format('Y-m-d', $item_date_raw)
+  : date('Y-m-d');
+$item_month = isset($item_date['month'])
+  ? intval($item_date['month'])
+  : intval(date('m'));
+
+if ($item_month === $calendar_month) {
+  $item['class'] .= ' current-month';
+} elseif ($item_month < $calendar_month) {
+  $item['class'] .= ' previous-month';
+} elseif ($item_month > $calendar_month) {
+  $item['class'] .= ' next-month';
+}
+
+$id = (isset($item['id']))
+  ? 'id="' . $item['id'] . '" '
+  : '';
+$date = ' data-date="' . $item_date_raw . '" ';
+$day = (isset($item['day_of_month']))
+  ? ' data-day-of-month="' . $item['day_of_month'] . '" '
+  : '';
+$headers = (isset($item['header_id']))
+  ? ' headers="'. $item['header_id'] .'" '
+  : '';
 ?>
+
 <div <?php print $id; ?>class="calendar-column <?php print $item['class'] ?>"<?php print $date . $headers . $day; ?>>
   <div class="calendar-column-inner">
     <div class="calendar-column-date">
