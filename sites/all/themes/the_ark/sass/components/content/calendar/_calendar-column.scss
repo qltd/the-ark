@@ -23,12 +23,19 @@
     }
     min-height: 260px;
     min-height: 26rem;
-    
+
     &.no-entry, &.empty {
       display: block;
     }
   }
   .calendar-column-previous-month, .calendar-column-next-month {
     display: block;
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .calendar-column {
+    min-height: 300px;
+    min-height: 30rem;
   }
 }
