@@ -8,7 +8,7 @@
 $calendar_date_raw = arg(2);
 $calendar_date = !empty($calendar_date_raw)
   ? date_parse_from_format('Y-m', $calendar_date_raw)
-  : date('Y-m');
+  : array('month' => date('m'),);
 $calendar_month = isset($calendar_date['month'])
   ? intval($calendar_date['month'])
   : intval(date('m'));
@@ -18,7 +18,7 @@ $item_date_raw = isset($item['date'])
   : date();
 $item_date = !empty($item_date_raw)
   ? date_parse_from_format('Y-m-d', $item_date_raw)
-  : date('Y-m-d');
+  : array('month' => date('m'),);
 $item_month = isset($item_date['month'])
   ? intval($item_date['month'])
   : intval(date('m'));
