@@ -9,6 +9,9 @@
     @extend %clearfix;
   }
 }
+.calendar-column-previous-month, .calendar-column-next-month {
+  display: none;
+}
 
 @include breakpoint($breakpoint-desktop) {
   .calendar-column {
@@ -18,8 +21,14 @@
     border: {
       bottom: none;
     }
+    min-height: 260px;
+    min-height: 26rem;
+    
     &.no-entry, &.empty {
       display: block;
     }
+  }
+  .calendar-column-previous-month, .calendar-column-next-month {
+    display: block;
   }
 }

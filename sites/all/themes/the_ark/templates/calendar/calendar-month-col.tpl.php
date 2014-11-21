@@ -24,11 +24,11 @@ $item_month = isset($item_date['month'])
   : intval(date('m'));
 
 if ($item_month === $calendar_month) {
-  $item['class'] .= ' current-month';
+  $item['class'] .= ' calendar-column-current-month';
 } elseif ($item_month < $calendar_month) {
-  $item['class'] .= ' previous-month';
+  $item['class'] .= ' calendar-column-previous-month';
 } elseif ($item_month > $calendar_month) {
-  $item['class'] .= ' next-month';
+  $item['class'] .= ' calendar-column-next-month';
 }
 
 $id = (isset($item['id']))

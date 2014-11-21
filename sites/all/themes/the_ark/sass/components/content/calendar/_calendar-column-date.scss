@@ -20,6 +20,10 @@
       left: 0.5rem;
     }
   }
+
+  .calendar-column-previous-month &, .calendar-column-next-month & {
+    opacity: 0.25;
+  }
 }
 
 @include breakpoint($breakpoint-tablet) {
