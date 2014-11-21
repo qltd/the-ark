@@ -12,9 +12,9 @@ Drupal.behaviors.textSummary = {
 
       $summaries.once('text-summary-wrapper').each(function(index) {
         var $summary = $(this);
-        var $summaryLabel = $summary.find('label');
+        var $summaryLabel = $summary.find('label').first();
         var $full = $widget.find('.text-full').eq(index).closest('.form-item');
-        var $fullLabel = $full.find('label');
+        var $fullLabel = $full.find('label').first();
 
         // Create a placeholder label when the field cardinality is
         // unlimited or greater than 1.
@@ -37,8 +37,8 @@ Drupal.behaviors.textSummary = {
             $a.html(Drupal.t('Hide summary'));
             $link.appendTo($summaryLabel);
           }
-          e.preventDefault();
           toggleClick = !toggleClick;
+          return false;
         }).appendTo($summaryLabel);
 
         // If no summary is set, hide the summary field.
