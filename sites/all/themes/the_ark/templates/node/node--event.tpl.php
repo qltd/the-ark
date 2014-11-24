@@ -138,6 +138,7 @@
           <?php print l($item['title'], $item['url'], array(
             'attributes' => $item['attributes'],
             'html' => true,
+            'query' => $item['query'],
           )); ?>
         <?php endforeach; ?>
         </div>
