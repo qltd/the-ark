@@ -1,0 +1,6 @@
+<?php
+
+function the_ark_redirect_init () {
+  if (current_path() === 'node/1')
+    drupal_goto('shows-events/calendar', array(), 301);
+}
