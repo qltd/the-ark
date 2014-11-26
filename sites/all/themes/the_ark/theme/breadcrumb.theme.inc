@@ -5,9 +5,19 @@ function the_ark_breadcrumb ($variables) {
   if (!empty($breadcrumb)) {
 
     // Remove column labels that do not contain links from breadcrumbs
+    $calendar_crumb = false;
     foreach ($breadcrumb as $key => $crumb) {
       if (strpos($crumb, 'nolink') !== FALSE) {
         unset($breadcrumb[$key]);
+      } elseif (
+        strpos($crumb, 'Shows &amp; Events') !== FALSE ||
+        strpos($crumb, 'Shows & Events') !== FALSE
+      ) {
+        if ($calendar_crumb === true) {
+          unset($breadcrumb[$key]);
+          unset($breadcrumb[$key-1]);
+        }
+        $calendar_crumb = true;
       }
     }
 
