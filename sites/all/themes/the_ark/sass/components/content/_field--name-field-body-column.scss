@@ -1,11 +1,13 @@
-.field--name-field-body-column {
+.field--name-field-body-column {}
 
-}
-
-@include breakpoint($breakpoint-tablet) {
+@include breakpoint($breakpoint-desktop) {
   .field--name-field-body-column {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
+    p {
+      @include font-details($size: 18px);
+      font-size: 1.8rem;
+    }
   }
 }
