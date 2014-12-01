@@ -175,6 +175,12 @@
             <?php print $content['field_date'][0]['#markup']; ?>
           </li>
         <?php endif; ?>
+        <?php if (isset($content['field_price_display'][0]['#markup'])): ?>
+          <li class="event-time-item event-price">
+            <span class="event-header-label">Ticket Price:</span>
+            <?php print $content['field_price_display'][0]['#markup']; ?>
+          </li>
+        <?php endif; ?>
       </ul>
 
       <nav class="event-navigation">
