@@ -183,6 +183,25 @@
         <?php endif; ?>
       </ul>
 
+      <?php if (
+        isset($content['field_genre']['#items']) &&
+        count($content['field_genre']['#items'] > 0)
+        ): ?>
+        <ul class="event-genre-list">
+          <?php foreach($content['field_genre']['#items'] as $key => $genre): ?>
+            <?php $genre_name = isset($genre['tid']) ?
+            taxonomy_term_load($genre['tid'])->name :
+            ''; ?>
+            <li class="event-genre-item">
+              <?php if ($key === 0): ?>
+                <span class="event-header-label">Genre:</span>
+              <?php endif; ?>
+              <?php print $genre_name; ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      <?php endif; ?>
+
       <nav class="event-navigation">
         <ul class="event-navigation-list">
           <li class="event-navigation-item">
