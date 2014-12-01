@@ -1,12 +1,13 @@
 .block__content, .node__content {
   li {
+    @include font-details($weight: 300, $height: 1.5);
+
     margin: {
       bottom: 16px;
     }
     margin: {
       bottom: 1.6rem;
     }
-    line-height: 1.5;
   }
 }
 
