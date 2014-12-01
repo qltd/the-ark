@@ -134,7 +134,15 @@
       ): ?>
         <div class="event-tickets">
         <?php foreach ($content['field_ticket_url']['#items'] as $key => $item): ?>
-          <?php $item['attributes']['class'] = array('event-tickets-link'); ?>
+          <?php if (
+            isset($content['field_sold_out']['#items'][0]['value']) &&
+            $content['field_sold_out']['#items'][0]['value'] === '1'
+          ) {
+            $item['attributes']['class'] = array('event-tickets-link--sold-out');
+            $item['title'] = 'Sold Out';
+          } else {
+            $item['attributes']['class'] = array('event-tickets-link');
+          } ?>
           <?php print l($item['title'], $item['url'], array(
             'attributes' => $item['attributes'],
             'html' => true,
