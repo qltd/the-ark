@@ -1,0 +1,13 @@
+.block-full-feature {
+  padding: 80px;
+  padding: 8rem;
+  background-color: $gray-light-background;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-full-feature {
+    .block__content {
+      overflow: hidden;
+    }
+  }
+}
