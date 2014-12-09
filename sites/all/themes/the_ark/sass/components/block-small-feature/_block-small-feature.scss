@@ -7,3 +7,16 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .block-small-feature {
+
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .block-small-feature {
+    max-width: 664px;
+    max-width: 66.4rem;
+  }
+}
