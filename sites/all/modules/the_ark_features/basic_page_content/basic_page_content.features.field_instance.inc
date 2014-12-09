@@ -166,7 +166,7 @@ function basic_page_content_field_default_field_instances() {
     ),
     'entity_type' => 'field_collection_item',
     'field_name' => 'field_augmented_links_title',
-    'label' => 'TItle',
+    'label' => 'Title',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -585,7 +585,6 @@ function basic_page_content_field_default_field_instances() {
   t('Links enhanced with images and descriptions.');
   t('Other pages or events related to this page.<br><br>If this page is <em>"Shows"</em>, <em>"About"</em>, <em>"Support the Ark"</em>, or <em>"Contact Us"</em>, these will appear as related links in the primary navigation.');
   t('Related Page(s)');
-  t('TItle');
   t('This field contains the two-columned text that appears directly below the content of the main body field.<br><br>In some circumstances, this content may have a layout that does not use two-columns.');
   t('This is the text that will appear at the top of the expandable details section.');
   t('This is the text that will appear on the button that reveals details for this particular set of details.');
