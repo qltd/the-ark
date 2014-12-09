@@ -1,0 +1,24 @@
+.augmented-links-view {
+  margin: 50px auto;
+  margin: 5rem auto;
+  max-width: 280px;
+  max-width: 28rem;
+
+  .even, .odd {
+    @extend %clearfix;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-links-view {
+    max-width: 700px;
+    max-width: 70rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .augmented-links-view {
+    max-width: 880px;
+    max-width: 88rem;
+  }
+}
