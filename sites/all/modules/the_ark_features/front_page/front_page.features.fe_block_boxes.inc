@@ -33,9 +33,8 @@ function front_page_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Left small feature for homepage.';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'home_small_feature_left';
-  $fe_block_boxes->body = '<img alt="Hoots performing live on the ark stage" src="/sites/default/files/hoots_smFeat.png">
-
-<p>Photos</p>
+  $fe_block_boxes->body = '<a href="https://www.flickr.com/photos/annarborark/" target="_blank"><img alt="Hoots performing live on the ark stage" src="/sites/default/files/hoots_smFeat.png" /></a>
+<h3>Photos</h3>
 
 <p>Browse through Ark imagery from past to present.</p>
 ';
@@ -46,8 +45,8 @@ function front_page_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Right small feature for home page. ';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'home_small_feature_right';
-  $fe_block_boxes->body = '<img alt="38th ann arbor folk festival logo" src="/sites/default/files/folk-fest-logo_smFeat.png">
-<p>Announcements</p>
+  $fe_block_boxes->body = '<a href="/shows-events/events-workshops/folk-festival" target="_self"><img alt="38th ann arbor folk festival logo" src="/sites/default/files/folk-fest-logo_smFeat.png" /></a>
+<h3>Announcements</h3>
 
 <p>The Folk Festival is coming up soon.&nbsp;Get your tickets now!</p>
 ';
