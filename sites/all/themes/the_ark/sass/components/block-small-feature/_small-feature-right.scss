@@ -1,11 +1,7 @@
 @include breakpoint($breakpoint-tablet) {
   .small-feature-right {
-    margin-left: 0.25%;
+    margin-left: .25%;
     width: 49.75%;
     float: right;
   }
-}
-
-@include breakpoint($breakpoint-desktop) {
-
 }

@@ -1,22 +1,13 @@
 .block-small-feature {
+  margin: {
+    bottom: 5px;
+    bottom: .5rem;
+  }
+  background-color: $teal;
   .block__content {
-    background-color: $teal;
     padding: {
       bottom: 25px;
       bottom: 2.5rem;
     }
-  }
-}
-
-@include breakpoint($breakpoint-tablet) {
-  .block-small-feature {
-
-  }
-}
-
-@include breakpoint($breakpoint-desktop-wide) {
-  .block-small-feature {
-    max-width: 664px;
-    max-width: 66.4rem;
   }
 }
