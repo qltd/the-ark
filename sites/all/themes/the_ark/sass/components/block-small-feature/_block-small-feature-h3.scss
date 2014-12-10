@@ -1,18 +1,16 @@
 .block-small-feature {
-  p {
+  h3 {
     margin: 0;
     padding: 0 25px;
     padding: 0 2.5rem;
-    text-align: left;
-    color: #ffffff;
   }
 }
 
 @include breakpoint($breakpoint-desktop-wide) {
   .block-small-feature {
-      p {
-        padding: 0 50px;
-        padding: 0 5rem;
-      }
+    h3 {
+      padding: 0 50px;
+      padding: 0 5rem;
+    }
   }
 }

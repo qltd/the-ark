@@ -11,3 +11,30 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .block-small-feature {
+    margin: {
+      bottom: 4px;
+      bottom: .4rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .block-small-feature {
+    margin: {
+      bottom: 5px;
+      bottom: .5rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .block-small-feature {
+    margin: {
+      bottom: 7px;
+      bottom: .7rem;
+    }
+  }
+}
