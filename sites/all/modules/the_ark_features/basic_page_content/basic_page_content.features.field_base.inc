@@ -316,6 +316,35 @@ function basic_page_content_field_default_field_bases() {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_expandable_details_prefix'
+  $field_bases['field_expandable_details_prefix'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_expandable_details_prefix',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_expandable_details_title'
   $field_bases['field_expandable_details_title'] = array(
     'active' => 1,

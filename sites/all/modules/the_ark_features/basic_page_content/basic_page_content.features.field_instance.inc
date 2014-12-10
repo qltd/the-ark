@@ -299,6 +299,40 @@ function basic_page_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_expandable_details-field_expandable_details_prefix'
+  $field_instances['field_collection_item-field_expandable_details-field_expandable_details_prefix'] = array(
+    'bundle' => 'field_expandable_details',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '<em>Optional</em> title prefix.<br><br>On the "Membership" page, this would be the dollar amount associated with a benefit &mdash; ex. $5.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_expandable_details_prefix',
+    'label' => 'Title Prefix',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_expandable_details-field_expandable_details_title'
   $field_instances['field_collection_item-field_expandable_details-field_expandable_details_title'] = array(
     'bundle' => 'field_expandable_details',
@@ -318,7 +352,7 @@ function basic_page_content_field_default_field_instances() {
     'label' => 'Title',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -572,6 +606,7 @@ function basic_page_content_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<em>Optional</em> title prefix.<br><br>On the "Membership" page, this would be the dollar amount associated with a benefit &mdash; ex. $5.');
   t('Additional Content (optional)');
   t('Augmented Links');
   t('Body');
@@ -590,6 +625,7 @@ function basic_page_content_field_default_field_instances() {
   t('This is the text that will appear on the button that reveals details for this particular set of details.');
   t('This will render as a button if you include a URL. If you do not include a URL it will simply render as plain-text.');
   t('Title');
+  t('Title Prefix');
 
   return $field_instances;
 }
