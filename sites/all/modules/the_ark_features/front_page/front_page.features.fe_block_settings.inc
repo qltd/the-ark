@@ -51,5 +51,122 @@ function front_page_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-home_full_feature'] = array(
+    'cache' => -1,
+    'css_class' => 'block-full-feature',
+    'custom' => 0,
+    'machine_name' => 'home_full_feature',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['block-home_small_feature_left'] = array(
+    'cache' => -1,
+    'css_class' => 'block-small-feature small-feature-left',
+    'custom' => 0,
+    'machine_name' => 'home_small_feature_left',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['block-home_small_feature_right'] = array(
+    'cache' => -1,
+    'css_class' => 'block-small-feature small-feature-right',
+    'custom' => 0,
+    'machine_name' => 'home_small_feature_right',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }

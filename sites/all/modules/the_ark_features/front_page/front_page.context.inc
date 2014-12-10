@@ -32,6 +32,24 @@ function front_page_context_default_contexts() {
           'region' => 'hero',
           'weight' => '-10',
         ),
+        'block-10' => array(
+          'module' => 'block',
+          'delta' => '10',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'block-11' => array(
+          'module' => 'block',
+          'delta' => '11',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'block-9' => array(
+          'module' => 'block',
+          'delta' => '9',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
       ),
     ),
   );
