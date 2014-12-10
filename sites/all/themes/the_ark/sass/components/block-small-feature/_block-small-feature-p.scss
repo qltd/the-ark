@@ -6,6 +6,10 @@
     text-align: left;
     color: #ffffff;
   }
+  p:first-of-type {
+    font-size: 14px;
+    @include font-details($size: 1.4rem, $style: italic);
+  }
 }
 
 @include breakpoint($breakpoint-desktop-wide) {
