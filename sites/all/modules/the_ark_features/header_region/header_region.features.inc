@@ -91,7 +91,7 @@ function header_region_image_default_styles() {
   // Exported image style: header_image_tablet.
   $styles['header_image_tablet'] = array(
     'name' => 'header_image_tablet',
-    'label' => 'Header Image Tablet (1024x130)',
+    'label' => 'Header Image Tablet (1024x170)',
     'effects' => array(
       11 => array(
         'label' => 'Scale and crop',
@@ -104,7 +104,7 @@ function header_region_image_default_styles() {
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 1024,
-          'height' => 130,
+          'height' => 170,
         ),
         'weight' => 1,
       ),
