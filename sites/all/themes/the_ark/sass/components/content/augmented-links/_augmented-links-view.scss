@@ -17,6 +17,13 @@
     }
     max-width: 700px;
     max-width: 70rem;
+
+    .even, .odd {
+      margin: {
+        bottom: 75px;
+        bottom: 7.5rem;
+      }
+    }
   }
 }
 

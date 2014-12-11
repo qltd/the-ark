@@ -11,6 +11,11 @@
 
 @include breakpoint($breakpoint-tablet) {
   .augmented-link-text {
+    margin: {
+      left: 300px;
+      left: 30rem;
+    }
+
     &, & > p {
       @include font-details($size: 18px, $height: 1.5);
       font-size: 1.8rem;

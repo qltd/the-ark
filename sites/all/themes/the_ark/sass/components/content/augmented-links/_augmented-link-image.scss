@@ -3,11 +3,5 @@
 @include breakpoint($breakpoint-tablet) {
   .augmented-link-image {
     float: left;
-    margin: {
-      right: 20px;
-      right: 2rem;
-      bottom: 75px;
-      bottom: 7.5rem;
-    }
   }
 }
