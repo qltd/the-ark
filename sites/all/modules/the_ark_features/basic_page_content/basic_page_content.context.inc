@@ -33,6 +33,12 @@ function basic_page_content_context_default_contexts() {
           'module' => 'views',
           'delta' => 'augmented_links-augmented_links',
           'region' => 'content',
+          'weight' => '2',
+        ),
+        'views-637e14a258bd08f8590c64f5e238b1b8' => array(
+          'module' => 'views',
+          'delta' => '637e14a258bd08f8590c64f5e238b1b8',
+          'region' => 'content',
           'weight' => '1',
         ),
       ),
