@@ -35,9 +35,9 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
   $handler->display->display_options['row_options']['skip_blank'] = 0;
   $handler->display->display_options['row_options']['semantic_html'] = array(
-    'title' => array(
+    'field_augmented_links' => array(
       'element_type' => 'div',
-      'class' => '',
+      'class' => 'augment-links-item',
     ),
   );
   /* Field: Content: Augmented Links */
@@ -104,7 +104,7 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['row_options']['semantic_html'] = array(
     'field_expandable_details' => array(
       'element_type' => 'div',
-      'class' => '',
+      'class' => 'expandable-details-item',
     ),
   );
   /* Field: Content: Expandable Details */
