@@ -46,6 +46,7 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['fields']['field_augmented_links']['field'] = 'field_augmented_links';
   $handler->display->display_options['fields']['field_augmented_links']['label'] = '';
   $handler->display->display_options['fields']['field_augmented_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_augmented_links']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_augmented_links']['type'] = 'field_collection_fields';
   $handler->display->display_options['fields']['field_augmented_links']['settings'] = array(
     'view_mode' => 'token',
@@ -113,6 +114,7 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['fields']['field_expandable_details']['field'] = 'field_expandable_details';
   $handler->display->display_options['fields']['field_expandable_details']['label'] = '';
   $handler->display->display_options['fields']['field_expandable_details']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_expandable_details']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_expandable_details']['type'] = 'field_collection_fields';
   $handler->display->display_options['fields']['field_expandable_details']['settings'] = array(
     'view_mode' => 'token',
