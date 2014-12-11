@@ -37,7 +37,7 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['row_options']['semantic_html'] = array(
     'field_augmented_links' => array(
       'element_type' => 'div',
-      'class' => 'augment-links-item',
+      'class' => 'augmented-links-item',
     ),
   );
   /* Field: Content: Augmented Links */

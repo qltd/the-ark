@@ -3,10 +3,6 @@
   margin: 5rem auto;
   max-width: 280px;
   max-width: 28rem;
-
-  .even, .odd {
-    @extend %clearfix;
-  }
 }
 
 @include breakpoint($breakpoint-tablet) {
@@ -17,13 +13,6 @@
     }
     max-width: 700px;
     max-width: 70rem;
-
-    .even, .odd {
-      margin: {
-        bottom: 75px;
-        bottom: 7.5rem;
-      }
-    }
   }
 }
 
