@@ -11,8 +11,7 @@
 @include breakpoint($breakpoint-tablet) {
   .augmented-link-link {
     margin: {
-      bottom: 75px;
-      bottom: 7.5rem;
+      bottom: 0;
     }
   }
 }
