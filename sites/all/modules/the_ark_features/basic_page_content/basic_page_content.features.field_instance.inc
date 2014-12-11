@@ -125,7 +125,7 @@ function basic_page_content_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => 'user',
         'title' => '',
       ),
       'display' => array(
@@ -139,7 +139,7 @@ function basic_page_content_field_default_field_instances() {
       'title_value' => '',
       'url' => 0,
       'user_register_form' => FALSE,
-      'validate_url' => 1,
+      'validate_url' => 0,
     ),
     'widget' => array(
       'active' => 0,
