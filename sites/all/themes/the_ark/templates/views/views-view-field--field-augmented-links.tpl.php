@@ -21,15 +21,17 @@ if (isset($row->field_field_augmented_links[0]['rendered']['entity']['field_coll
       $item['field_augmented_links_link']['#items'][0]['title'] :
       'Visit Page';
     $link_url = isset($item['field_augmented_links_link']['#items'][0]['url']) ?
-      $item['field_augmented_links_link']['#items'][0]['url'] :
-      '/';
+      ltrim($item['field_augmented_links_link']['#items'][0]['url'], '/') :
+      '';
     $link_attributes = isset($item['field_augmented_links_link']['#items'][0]['attributes']) ?
       $item['field_augmented_links_link']['#items'][0]['attributes'] :
       array();
     $link_attributes['class'] = array('augmented-link-link',);
-    $link = l($link_title, $link_url, array(
-      'attributes' => $link_attributes,
-    ));
+    $link = !empty($link_url) ?
+      l($link_title, $link_url, array(
+        'attributes' => $link_attributes,
+      )) :
+      '';
   }
 ?>
 
