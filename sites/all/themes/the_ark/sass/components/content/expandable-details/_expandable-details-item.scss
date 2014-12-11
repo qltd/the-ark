@@ -1,0 +1,13 @@
+.expandable-details-item {
+  @extend %clearfix;
+
+  border: {
+    bottom: 1px solid $gray-lighter;
+  }
+
+  .first > & {
+    border: {
+      top: 1px solid $gray-lighter;
+    }
+  }
+}

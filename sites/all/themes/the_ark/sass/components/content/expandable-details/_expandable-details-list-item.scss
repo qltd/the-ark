@@ -1,0 +1,17 @@
+.expandable-details-list-item {
+  .expandable-details-list > & {
+    @include font-details($size: 14px, $height: 1.75);
+    font-size: 1.4rem;
+
+    margin: 0;
+  }
+
+  &:before {
+    content: '>';
+    position: absolute;
+    margin: {
+      left: -10px;
+      left: -1rem;
+    }
+  }
+}

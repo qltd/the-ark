@@ -1,0 +1,28 @@
+.expandable-details-expander {
+  @include icon-replace();
+  @include font-details($size: 20px, $color: $gray-light);
+  font-size: 2rem;
+
+  display: inline-block;
+  padding: {
+    top: 10px;
+    top: 1rem;
+  }
+  width: 40px;
+  width: 4rem;
+  height: 40px;
+  height: 4rem;
+  background: {
+    color: $gray-light-background;
+  }
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:before {
+    content: '\f0d7';
+  }
+}
