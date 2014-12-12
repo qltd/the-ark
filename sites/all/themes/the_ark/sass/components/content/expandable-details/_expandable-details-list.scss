@@ -1,12 +1,11 @@
 .expandable-details-list {
-  display: none;
   padding: {
     left: 10px;
     left: 1rem;
   }
   list-style: none;
 
-  .expandable-details-item-active & {
-    display: block;
+  .expandable-details-item-collapsed & {
+    display: none;
   }
 }

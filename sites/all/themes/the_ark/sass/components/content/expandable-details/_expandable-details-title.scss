@@ -10,7 +10,7 @@
     @include FontAwesome($size: 20px, $color: $gray-light);
     font-size: 2rem;
 
-    content: '\f0d7';
+    content: '\f0d8';
     display: block;
     float: right;
     margin: {
@@ -31,9 +31,9 @@
     text-align: center;
   }
 
-  .expandable-details-item-active & {
+  .expandable-details-item-collapsed & {
     &:before {
-      content: '\f0d8';
+      content: '\f0d7';
     }
   }
 }
