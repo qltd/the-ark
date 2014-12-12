@@ -1,4 +1,12 @@
 .expandable-details-link {
-  display: block;
-  clear: left;
+  @extend .button;
+
+  display: none;
+  margin: 30px 0;
+  margin: 3rem 0;
+  text-align: center;
+
+  .expandable-details-item-active > & {
+    display: block;
+  }
 }

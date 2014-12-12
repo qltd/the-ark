@@ -1,5 +1,39 @@
 .expandable-details-title {
-  margin: {
-    top: 0;
+  margin: 0;
+  padding: {
+    top: 7px;
+    top: 0.7rem;
+  }
+  cursor: pointer;
+
+  &:before {
+    @include FontAwesome($size: 20px, $color: $gray-light);
+    font-size: 2rem;
+
+    content: '\f0d7';
+    display: block;
+    float: right;
+    margin: {
+      top: -7px;
+      top: -0.7rem;
+    }
+    padding: {
+      top: 10px;
+      top: 1rem;
+    }
+    width: 40px;
+    width: 4rem;
+    height: 40px;
+    height: 4rem;
+    background: {
+      color: $gray-light-background;
+    }
+    text-align: center;
+  }
+
+  .expandable-details-item-active & {
+    &:before {
+      content: '\f0d8';
+    }
   }
 }
