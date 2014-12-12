@@ -1,4 +1,5 @@
 .block-small-feature {
+  margin-bottom: 0.5%;
   margin: {
     bottom: 5px;
     bottom: .5rem;
@@ -14,27 +15,24 @@
 
 @include breakpoint($breakpoint-tablet) {
   .block-small-feature {
-    margin: {
-      bottom: 4px;
-      bottom: .4rem;
-    }
+    margin-bottom: 0.5%;
   }
 }
-
-@include breakpoint($breakpoint-desktop) {
-  .block-small-feature {
-    margin: {
-      bottom: 5px;
-      bottom: 0.5rem;
-    }
-  }
-}
-
-@include breakpoint($breakpoint-desktop-wide) {
-  .block-small-feature {
-    margin: {
-      bottom: 8px;
-      bottom: 0.8rem;
-    }
-  }
-}
+//
+// @include breakpoint($breakpoint-desktop) {
+//   .block-small-feature {
+//     margin: {
+//       bottom: 5px;
+//       bottom: 0.5rem;
+//     }
+//   }
+// }
+//
+// @include breakpoint($breakpoint-desktop-wide) {
+//   .block-small-feature {
+//     margin: {
+//       bottom: 8px;
+//       bottom: 0.8rem;
+//     }
+//   }
+// }
