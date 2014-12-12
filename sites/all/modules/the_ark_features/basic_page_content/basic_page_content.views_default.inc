@@ -101,13 +101,30 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'semanticviews_default';
   $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
-  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['skip_blank'] = 1;
   $handler->display->display_options['row_options']['semantic_html'] = array(
     'field_expandable_details' => array(
       'element_type' => 'div',
       'class' => 'expandable-details-item',
     ),
   );
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '[field_expandable_details_heading]';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  /* Field: Content: Heading */
+  $handler->display->display_options['fields']['field_expandable_details_heading']['id'] = 'field_expandable_details_heading';
+  $handler->display->display_options['fields']['field_expandable_details_heading']['table'] = 'field_data_field_expandable_details_heading';
+  $handler->display->display_options['fields']['field_expandable_details_heading']['field'] = 'field_expandable_details_heading';
+  $handler->display->display_options['fields']['field_expandable_details_heading']['label'] = '';
+  $handler->display->display_options['fields']['field_expandable_details_heading']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_expandable_details_heading']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_expandable_details_heading']['alter']['text'] = '<h2>[field_expandable_details_heading]</h2>';
+  $handler->display->display_options['fields']['field_expandable_details_heading']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_expandable_details_heading']['hide_empty'] = TRUE;
   /* Field: Content: Expandable Details */
   $handler->display->display_options['fields']['field_expandable_details']['id'] = 'field_expandable_details';
   $handler->display->display_options['fields']['field_expandable_details']['table'] = 'field_data_field_expandable_details';
