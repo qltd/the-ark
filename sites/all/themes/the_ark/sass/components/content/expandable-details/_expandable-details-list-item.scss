@@ -15,3 +15,21 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .expandable-details-list-item {
+    .expandable-details-list > & {
+      @include font-details($size: 16px);
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .expandable-details-list-item {
+    .expandable-details-list > & {
+      @include font-details($size: 18px);
+      font-size: 1.8rem;
+    }
+  }
+}

@@ -7,6 +7,7 @@
   cursor: pointer;
 
   &:before {
+    @include transition(background-color $transition-duration ease-out);
     @include FontAwesome($size: 20px, $color: $gray-light);
     font-size: 2rem;
 
@@ -31,9 +32,25 @@
     text-align: center;
   }
 
+  &:hover {
+    &:before {
+      background: {
+        color: $gray-lighter-background;
+      }
+    }
+  }
+
   .expandable-details-item-collapsed & {
     &:before {
       content: '\f0d7';
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .expandable-details-title {
+    &:before {
+      display: none;
     }
   }
 }

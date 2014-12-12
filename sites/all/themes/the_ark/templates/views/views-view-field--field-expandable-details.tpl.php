@@ -46,8 +46,8 @@ if (isset($row->field_field_expandable_details[0]['rendered']['entity']['field_c
     <?php endforeach; ?>
   </ul>
 </div>
-<a class="expandable-details-expander" role="button"><?php print $expand_label; ?></a>
 <?php print $link; ?>
+<a class="expandable-details-expander" role="button" data-expander-label="<?php print $expand_label; ?>">Close <?php print $expand_label; ?></a>
 
 <?php
 endif;

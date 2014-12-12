@@ -10,3 +10,23 @@
     display: none;
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .expandable-details-link {
+    float: right;
+    margin: 0;
+    width: 135px;
+    width: 13.5rem;
+
+    .expandable-details-item-collapsed > & {
+      display: block;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .expandable-details-link {
+    width: 180px;
+    width: 18rem;
+  }
+}
