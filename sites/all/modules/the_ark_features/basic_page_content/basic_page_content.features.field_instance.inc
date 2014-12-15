@@ -366,6 +366,74 @@ function basic_page_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_tabs-field_tab_body'
+  $field_instances['field_collection_item-field_tabs-field_tab_body'] = array(
+    'bundle' => 'field_tabs',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_tab_body',
+    'label' => 'Body',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_tabs-field_tab_title'
+  $field_instances['field_collection_item-field_tabs-field_tab_title'] = array(
+    'bundle' => 'field_tabs',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_tab_title',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-page-body'
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
@@ -422,7 +490,7 @@ function basic_page_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -458,7 +526,7 @@ function basic_page_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -499,7 +567,7 @@ function basic_page_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -535,7 +603,7 @@ function basic_page_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -574,7 +642,7 @@ function basic_page_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -603,6 +671,42 @@ function basic_page_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_tabs'
+  $field_instances['node-page-field_tabs'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Selectable, detail-containing tabs.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tabs',
+    'label' => 'Tabs',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('<em>Optional</em> title prefix.<br><br>On the "Membership" page, this would be the dollar amount associated with a benefit &mdash; ex. $5.');
@@ -619,6 +723,8 @@ function basic_page_content_field_default_field_instances() {
   t('Links enhanced with images and descriptions.');
   t('Other pages or events related to this page.<br><br>If this page is <em>"Shows"</em>, <em>"About"</em>, <em>"Support the Ark"</em>, or <em>"Contact Us"</em>, these will appear as related links in the primary navigation.');
   t('Related Page(s)');
+  t('Selectable, detail-containing tabs.');
+  t('Tabs');
   t('This field contains the two-columned text that appears directly below the content of the main body field.<br><br>In some circumstances, this content may have a layout that does not use two-columns.');
   t('This is the text that will appear at the top of the expandable details section.');
   t('This is the text that will appear on the button that reveals details for this particular set of details.');
