@@ -83,3 +83,49 @@ input + .description,
   @include font-details($size: 18px, $weight: 300, $style: italic);
   font-size: 1.8rem;
 }
+
+input[type='checkbox'] {
+  opacity: 0;
+  //float: left;
+}
+
+input[type='checkbox'] + label {
+  display: inline-block;
+  margin: 10px;
+  margin: 1rem;
+  padding: 5px 0 5px 50px;
+  padding: 0.5rem 0 0.5rem 5rem;
+  clear: none;
+  cursor: pointer;
+  background: url(../images/checkbox.png) left center no-repeat;
+  background-size: 40px 40px;
+  background-size: 4rem 4rem;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url(../images/checkbox-checked.png) left center no-repeat;
+  background-size: 40px 40px;
+  background-size: 4rem 4rem;
+}
+
+input[type='radio'] {
+  opacity: 0;
+}
+
+input[type='radio'] + label {
+  display: inline-block;
+  margin: 10px;
+  margin: 1rem;
+  padding: 5px 0 5px 50px;
+  padding: 0.5rem 0 0.5rem 5rem;
+  cursor: pointer;
+  background: url(../images/radio-button-off.png) left center no-repeat;
+  background-size: 30px 30px;
+  background-size: 3rem 3rem;
+}
+
+input[type='radio']:checked + label {
+  background: url(../images/radio-button-on.png) left center no-repeat;
+  background-size: 30px 30px;
+  background-size: 3rem 3rem;
+}
