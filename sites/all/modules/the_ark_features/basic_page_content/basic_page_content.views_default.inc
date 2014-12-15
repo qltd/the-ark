@@ -79,6 +79,57 @@ function basic_page_content_views_default_views() {
   $export['augmented_links'] = $view;
 
   $view = new view();
+  $view->name = 'basic_page_columned_text';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Basic Page Columned Text';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'columned-text-view';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
+  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['semantic_html'] = array(
+    'field_body_column' => array(
+      'element_type' => 'div',
+      'class' => 'columned-text-item',
+    ),
+  );
+  /* Field: Content: Additional Content (optional) */
+  $handler->display->display_options['fields']['field_body_column']['id'] = 'field_body_column';
+  $handler->display->display_options['fields']['field_body_column']['table'] = 'field_data_field_body_column';
+  $handler->display->display_options['fields']['field_body_column']['field'] = 'field_body_column';
+  $handler->display->display_options['fields']['field_body_column']['label'] = '';
+  $handler->display->display_options['fields']['field_body_column']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_body_column']['hide_empty'] = TRUE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Columned Text Block */
+  $handler = $view->new_display('block', 'Columned Text Block', 'basic_page_columned_text');
+  $export['basic_page_columned_text'] = $view;
+
+  $view = new view();
   $view->name = 'expandable_details';
   $view->description = '';
   $view->tag = 'default';

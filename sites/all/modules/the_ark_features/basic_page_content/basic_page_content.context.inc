@@ -29,17 +29,23 @@ function basic_page_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-augmented_links-augmented_links' => array(
-          'module' => 'views',
-          'delta' => 'augmented_links-augmented_links',
-          'region' => 'content',
-          'weight' => '2',
-        ),
         'views-637e14a258bd08f8590c64f5e238b1b8' => array(
           'module' => 'views',
           'delta' => '637e14a258bd08f8590c64f5e238b1b8',
           'region' => 'content',
           'weight' => '1',
+        ),
+        'views-91d176007d2fc0f60c9a11ccb6bc950f' => array(
+          'module' => 'views',
+          'delta' => '91d176007d2fc0f60c9a11ccb6bc950f',
+          'region' => 'content',
+          'weight' => '2',
+        ),
+        'views-augmented_links-augmented_links' => array(
+          'module' => 'views',
+          'delta' => 'augmented_links-augmented_links',
+          'region' => 'content',
+          'weight' => '3',
         ),
       ),
     ),
