@@ -1,11 +1,5 @@
-.field--name-field-body-column {
-  margin: 0 auto;
-  padding: 0 20px;
-  padding: 0 2rem;
-  max-width: 600px;
-  max-width: 60rem;
-
-  p, ul, h1, h2, h3, h4, h5, h6 {
+.columned-text-item {
+  & > p, & > ul, & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
     margin: {
       top: 0;
     }
@@ -13,8 +7,8 @@
 }
 
 @include breakpoint($breakpoint-tablet) {
-  .field--name-field-body-column {
-    p, li {
+  .columned-text-item {
+    & > p, & > li {
       @include font-details($size: 18px);
       font-size: 1.8rem;
     }
@@ -22,9 +16,7 @@
 }
 
 @include breakpoint($breakpoint-desktop) {
-  .field--name-field-body-column {
-    max-width: 1000px;
-    max-width: 100rem;
+  .columned-text-item {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
@@ -35,7 +27,7 @@
     -moz-column-gap: 4rem;
     column-gap: 4rem;
 
-    p, ul {
+    & > p, & > ul {
       page-break-inside: avoid;
       -webkit-column-break-inside: avoid;
       column-break-inside: avoid;
