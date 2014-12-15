@@ -214,5 +214,67 @@ function basic_page_content_views_default_views() {
   $handler = $view->new_display('block', 'Expandable Details', 'expandable_details');
   $export['expandable_details'] = $view;
 
+  $view = new view();
+  $view->name = 'tabs';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Tabs';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'tabs-view';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
+  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['semantic_html'] = array(
+    'title' => array(
+      'element_type' => 'div',
+      'class' => '',
+    ),
+  );
+  /* Field: Content: Tabs */
+  $handler->display->display_options['fields']['field_tabs']['id'] = 'field_tabs';
+  $handler->display->display_options['fields']['field_tabs']['table'] = 'field_data_field_tabs';
+  $handler->display->display_options['fields']['field_tabs']['field'] = 'field_tabs';
+  $handler->display->display_options['fields']['field_tabs']['label'] = '';
+  $handler->display->display_options['fields']['field_tabs']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tabs']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_tabs']['type'] = 'field_collection_fields';
+  $handler->display->display_options['fields']['field_tabs']['settings'] = array(
+    'view_mode' => 'token',
+  );
+  $handler->display->display_options['fields']['field_tabs']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_tabs']['delta_offset'] = '0';
+  /* Sort criterion: Content: Tabs (field_tabs:delta) */
+  $handler->display->display_options['sorts']['delta']['id'] = 'delta';
+  $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_tabs';
+  $handler->display->display_options['sorts']['delta']['field'] = 'delta';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Tabs */
+  $handler = $view->new_display('block', 'Tabs', 'tabs');
+  $handler->display->display_options['block_description'] = 'Tabs';
+  $export['tabs'] = $view;
+
   return $export;
 }

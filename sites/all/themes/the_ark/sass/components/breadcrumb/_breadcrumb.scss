@@ -5,10 +5,11 @@
   padding: 0 20px;
   padding: 0 2rem;
   text-align: center;
-  a {
+
+  & > a {
     white-space: nowrap;
   }
-  .active {
+  & > .active {
     color: $gray-light;
   }
 }
