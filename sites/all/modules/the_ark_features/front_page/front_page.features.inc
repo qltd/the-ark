@@ -14,6 +14,13 @@ function front_page_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function front_page_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function front_page_image_default_styles() {
@@ -119,6 +126,14 @@ function front_page_image_default_styles() {
  */
 function front_page_node_info() {
   $items = array(
+    'billboard' => array(
+      'name' => t('Billboard'),
+      'base' => 'node_content',
+      'description' => t('Billboards that are displayed on the front page.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'hero_image' => array(
       'name' => t('Hero Image'),
       'base' => 'node_content',
