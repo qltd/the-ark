@@ -3,21 +3,31 @@
     bottom: 5px;
     bottom: 0.5rem;
   }
-  padding: 60px 25px 120px;
-  padding: 6rem 2.5rem 12rem;
-  background: url(../images/history-montage.png) no-repeat bottom center;
+  padding: 60px 25px 140px;
+  padding: 6rem 2.5rem 14rem;
+  background: url(../images/history-collage_mobile.png) no-repeat bottom center;
   background-size: contain;
   text-align: center;
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .block-main-feature {
+    padding: {
+      bottom: 190px;
+      bottom: 19rem;
+    }
+  }
 }
 
 @include breakpoint($breakpoint-tablet) {
   .block-main-feature {
     margin-bottom: 0.5%;
     padding: {
-      bottom: 150px;
-      bottom: 15rem;
+      bottom: 210px;
+      bottom: 21rem;
     }
-    background-size: auto;
+    background: url(../images/history-collage_desktop.png) no-repeat bottom center;
+    background-size: contain;
   }
 }
 
@@ -25,10 +35,11 @@
   .block-main-feature {
     margin: 0 auto 0.5%;
     padding: {
-      bottom: 200px;
-      bottom: 20rem;
+      bottom: 250px;
+      bottom: 25rem;
     }
     max-width: 1024px;
     max-width: 102.4rem;
+    background-size: auto;
   }
 }
