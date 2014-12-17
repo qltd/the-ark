@@ -239,9 +239,9 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
   $handler->display->display_options['row_options']['skip_blank'] = 0;
   $handler->display->display_options['row_options']['semantic_html'] = array(
-    'title' => array(
+    'field_tabs' => array(
       'element_type' => 'div',
-      'class' => '',
+      'class' => 'tabs-item',
     ),
   );
   /* Field: Content: Tabs */

@@ -1,7 +1,0 @@
-.tabs-title {}
-
-@include breakpoint($breakpoint-tablet) {
-  .tabs-title {
-    display: block;
-  }
-}

@@ -11,8 +11,8 @@ if (isset($row->field_field_tabs[0]['rendered']['entity']['field_collection_item
   }
 ?>
 
-<h2 class="tabs-title expander"><?php print $title; ?></h2>
-<div class="tabs-content expander-content"><?php print $body; ?></div>
+<h2 class="tab-title expander"><?php print $title; ?></h2>
+<div class="tab-content expander-content"><?php print $body; ?></div>
 
 <?php
 endif;
