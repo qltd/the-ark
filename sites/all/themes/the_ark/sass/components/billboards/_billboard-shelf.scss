@@ -1,0 +1,21 @@
+.billboard-shelf {
+  padding: 25px;
+  padding: 2.5rem;
+  background: $teal;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .billboard-shelf {
+    height: 120px;
+    height: 12rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+    .billboard-shelf {
+      z-index: 1;
+      visibility: hidden;
+      opacity: 0;
+      height: auto;
+    }
+}

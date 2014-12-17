@@ -1,0 +1,7 @@
+.billboard-body {
+  p {
+    margin: 0;
+    @include font-details(16px, #fff, 100);
+    font-size: 1.6rem;
+  }
+}

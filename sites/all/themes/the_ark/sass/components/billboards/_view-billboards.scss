@@ -1,0 +1,21 @@
+@include breakpoint($breakpoint-tablet) {
+  .view-billboards {
+    overflow: hidden;
+    .first {
+      padding: {
+        right: 3px;
+        right: 0.3rem;
+      }
+      width: 50%;
+      float: left;
+    }
+    .last {
+      padding: {
+        left: 3px;
+        left: 0.3rem;
+      }
+      width: 50%;
+      float: right;
+    }
+  }
+}
