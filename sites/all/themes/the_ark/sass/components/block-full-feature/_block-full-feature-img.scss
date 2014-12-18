@@ -19,8 +19,11 @@
       }
       width: 280px;
       width: 28rem;
+      max-width: none;
       height: 210px;
       height: 21rem;
+      display: table-cell;
+      vertical-align: middle;
     }
   }
 }
