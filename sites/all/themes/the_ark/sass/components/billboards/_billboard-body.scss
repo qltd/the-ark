@@ -5,3 +5,12 @@
     font-size: 1.6rem;
   }
 }
+
+@include breakpoint($breakpoint-desktop) {
+  .billboard-body {
+    p {
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+  }
+}

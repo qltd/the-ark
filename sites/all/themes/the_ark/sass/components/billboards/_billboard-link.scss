@@ -9,14 +9,6 @@
 
 @include breakpoint($breakpoint-desktop) {
   .billboard-link {
-    margin-bottom: -90px;
-    &:hover {
-      .billboard-shelf {
-        visibility: visible;
-        opacity: 1;
-        margin-top: -96px;
-        transition: margin 0.3s ease-out;
-      }
-    }
+    position: relative;
   }
 }
