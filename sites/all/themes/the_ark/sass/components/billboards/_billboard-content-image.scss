@@ -1,4 +1,6 @@
 .content-image {
-  display: block;
-  width: 100%;
+  .billboard-link > & {
+    display: block;
+    width: 100%;
+  }
 }
