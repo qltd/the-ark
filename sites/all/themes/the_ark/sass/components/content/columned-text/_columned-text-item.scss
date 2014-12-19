@@ -8,7 +8,7 @@
 
 @include breakpoint($breakpoint-tablet) {
   .columned-text-item {
-    &, & > p, & > li {
+    &, & > p, li {
       @include font-details($size: 18px);
       font-size: 1.8rem;
     }
