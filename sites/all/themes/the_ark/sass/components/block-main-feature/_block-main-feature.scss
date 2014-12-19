@@ -43,3 +43,9 @@
     background-size: auto;
   }
 }
+
+// @include breakpoint($breakpoint-desktop $breakpoint-hi-res) {
+//   background: url(../images/history-collage_desktop_2x.jpg) no-repeat bottom center;
+//   background-size: 1024px;
+//   background-size: 102.4rem;
+// }

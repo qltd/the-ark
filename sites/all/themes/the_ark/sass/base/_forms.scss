@@ -29,7 +29,8 @@ input[type=tel],
 input[type=number],
 input[type=color],
 input[type=email],
-input[type=password] { // single-line text inputs
+input[type=password],
+select { // single-line text inputs
   height: 40px;
   height: 4rem;
 }
@@ -41,6 +42,7 @@ input[type=number],
 input[type=color],
 input[type=email],
 input[type=password],
+select,
 textarea { // single- and multi-line text inputs
   @include transition(background-color $transition-duration ease-out);
   padding: {
@@ -126,4 +128,23 @@ input[type='radio']:checked + label {
   background: url(../images/radio-button-on.png) left center no-repeat;
   background-size: 30px 30px;
   background-size: 3rem 3rem;
+}
+
+select {
+ background: $gray-light-background url(../images/custom-select.png) right center no-repeat;
+ background-size: 40px 40px;
+ padding-right: 40px;
+}
+
+.webform-component-date {
+  select {
+    margin: {
+      bottom: 15px;
+      bottom: 1.5rem;
+    }
+    border-radius: 0;
+  }
+  .day {
+    margin-bottom: 0;
+  }
 }
