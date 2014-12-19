@@ -40,29 +40,5 @@ function front_page_default_fe_block_boxes() {
 
   $export['home_full_feature_main'] = $fe_block_boxes;
 
-  $fe_block_boxes = new stdClass();
-  $fe_block_boxes->info = 'Left small feature for homepage.';
-  $fe_block_boxes->format = 'admin_html';
-  $fe_block_boxes->machine_name = 'home_small_feature_left';
-  $fe_block_boxes->body = '<a href="https://www.flickr.com/photos/annarborark/" target="_blank"><img alt="Hoots performing live on the ark stage" src="../sites/all/themes/the_ark/images/hoots_smFeat.png" /></a>
-<h3>Photos</h3>
-
-<p>Browse through Ark imagery from past to present.</p>
-';
-
-  $export['home_small_feature_left'] = $fe_block_boxes;
-
-  $fe_block_boxes = new stdClass();
-  $fe_block_boxes->info = 'Right small feature for home page. ';
-  $fe_block_boxes->format = 'admin_html';
-  $fe_block_boxes->machine_name = 'home_small_feature_right';
-  $fe_block_boxes->body = '<a href="/shows-events/events-workshops/folk-festival" target="_self"><img alt="38th ann arbor folk festival logo" src="../sites/all/themes/the_ark/images/folk-fest-logo_smFeat.png" /></a>
-<h3>Announcements</h3>
-
-<p>The Folk Festival is coming up soon.&nbsp;Get your tickets now!</p>
-';
-
-  $export['home_small_feature_right'] = $fe_block_boxes;
-
   return $export;
 }
