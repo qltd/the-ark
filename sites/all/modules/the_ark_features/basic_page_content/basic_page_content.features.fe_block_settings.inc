@@ -129,6 +129,45 @@ function basic_page_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-tabs-tab_toggles'] = array(
+    'cache' => -1,
+    'css_class' => 'tab-toggles-block',
+    'custom' => 0,
+    'delta' => 'tabs-tab_toggles',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-tabs-tabs'] = array(
     'cache' => -1,
     'css_class' => 'tabs-block',

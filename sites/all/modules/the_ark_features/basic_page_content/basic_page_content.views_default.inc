@@ -274,6 +274,24 @@ function basic_page_content_views_default_views() {
   /* Display: Tabs */
   $handler = $view->new_display('block', 'Tabs', 'tabs');
   $handler->display->display_options['block_description'] = 'Tabs';
+
+  /* Display: Toggles */
+  $handler = $view->new_display('block', 'Toggles', 'tab_toggles');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'tab-toggles-view';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
+  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['semantic_html'] = array(
+    'field_tabs' => array(
+      'element_type' => 'div',
+      'class' => 'tab-toggles-item',
+    ),
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $export['tabs'] = $view;
 
   return $export;
