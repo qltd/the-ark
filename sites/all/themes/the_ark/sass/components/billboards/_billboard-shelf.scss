@@ -1,24 +1,25 @@
 .billboard-shelf {
   padding: 25px;
   padding: 2.5rem;
-  background: $teal;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $teal;
+  background-color: $teal-mask;
 }
 
 @include breakpoint($breakpoint-tablet) {
   .billboard-shelf {
-    height: 120px;
-    height: 12rem;
+
   }
 }
 
 @include breakpoint($breakpoint-desktop) {
     .billboard-shelf {
       height: auto;
-      position: absolute;
-      left: 0;
       bottom: -99px;
       bottom: -9.9rem;
-      width: 100%;
       @include transition(transform $transition-duration ease-out);
 
       .billboard-link:hover > & {

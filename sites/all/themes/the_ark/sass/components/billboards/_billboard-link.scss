@@ -4,11 +4,12 @@
     bottom: 6px;
     bottom: 0.6rem;
   }
+  position: relative;
   overflow: hidden;
 }
 
 @include breakpoint($breakpoint-desktop) {
   .billboard-link {
-    position: relative;
+
   }
 }
