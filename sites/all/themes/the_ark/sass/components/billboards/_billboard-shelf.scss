@@ -17,11 +17,13 @@
       position: absolute;
       left: 0;
       bottom: -99px;
+      bottom: -9.9rem;
       width: 100%;
       @include transition(transform $transition-duration ease-out);
 
       .billboard-link:hover > & {
         transform: translateY(-99px);
+        transform: translateY(-9.9rem);
       }
     }
 }
