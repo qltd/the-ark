@@ -1,0 +1,65 @@
+.tab-toggle {
+  @extend .button-gray;
+  @include font-details($size: 16px);
+  font-size: 1.6rem;
+
+  position: relative;
+  z-index: 1;
+  display: block;
+  float: left;
+  border: 2px solid white;
+  padding: 20px 10px;
+  padding: 2rem 1rem;
+  width: 33.33%;
+  text-align: center;
+  text-transform: none;
+}
+
+.tab-toggle-active {
+  background: {
+    color: $teal;
+  }
+  &:after {
+    @include transition(border-color $transition-duration ease-out);
+
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -10px;
+    bottom: -1rem;
+    left: 50%;
+    margin: {
+      left: -10px;
+      left: -1rem;
+    }
+
+    border: {
+      top: 10px solid $teal;
+      right: 10px solid transparent;
+      left: 10px solid transparent;
+      top: {
+        width: 1rem;
+      }
+      right: {
+        width: 1rem;
+      }
+      left: {
+        width: 1rem;
+      }
+    }
+  }
+
+  &:hover {
+    background: {
+      color: $teal-light;
+    }
+
+    &:after {
+      border: {
+        top: {
+          color: $teal-light;
+        }
+      }
+    }
+  }
+}

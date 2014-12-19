@@ -44,4 +44,5 @@ require('./behaviors/expander');
 require('./behaviors/footer-contact');
 require('./behaviors/header-navigation-primary');
 require('./behaviors/header-search');
+require('./behaviors/tabs');
 require('./behaviors/video');

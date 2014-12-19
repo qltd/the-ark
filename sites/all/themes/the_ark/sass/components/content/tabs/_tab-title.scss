@@ -2,17 +2,6 @@
 
 @include breakpoint($breakpoint-tablet) {
   .tab-title {
-    float: left;
-    display: block;
-    border: 2px solid white;
-    width: 33.33%;
-    background-color: $gray-background;
-
-    &:before {
-      display: none;
-    }
-    &:hover {
-      background-color: $gray-lighter;
-    }
+    display: none;
   }
 }
