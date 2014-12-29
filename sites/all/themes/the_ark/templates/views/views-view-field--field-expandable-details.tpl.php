@@ -27,10 +27,14 @@ if (isset($row->field_field_expandable_details[0]['rendered']['entity']['field_c
     $link_attributes = isset($item['field_expandable_details_link']['#items'][0]['attributes']) ?
       $item['field_expandable_details_link']['#items'][0]['attributes'] :
       array();
+    $link_query = isset($item['field_expandable_details_link']['#items'][0]['query']) ?
+      $item['field_expandable_details_link']['#items'][0]['query'] :
+      array();
     $link_attributes['class'] = array('expandable-details-link',);
     $link = !empty($link_url) ?
       l($link_title, $link_url, array(
         'attributes' => $link_attributes,
+        'query' => $link_query,
       )) :
       '<span class="expandable-details-no-link">'. $link_title .'</span>';
   }
