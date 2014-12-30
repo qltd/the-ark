@@ -14,7 +14,7 @@ function header_region_default_fe_block_settings() {
 
   $export['block-header_navigation_about'] = array(
     'cache' => -1,
-    'css_class' => 'header-navigation-about header-navigation-block',
+    'css_class' => 'header-navigation-about header-navigation-block header-navigation-promo',
     'custom' => 0,
     'machine_name' => 'header_navigation_about',
     'module' => 'block',
@@ -53,7 +53,7 @@ function header_region_default_fe_block_settings() {
 
   $export['block-header_navigation_blog'] = array(
     'cache' => -1,
-    'css_class' => 'header-navigation-blog header-navigation-block',
+    'css_class' => 'header-navigation-blog header-navigation-block header-navigation-promo',
     'custom' => 0,
     'machine_name' => 'header_navigation_blog',
     'module' => 'block',
@@ -90,9 +90,48 @@ function header_region_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-header_navigation_calendar'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-tickets header-navigation-block header-navigation-promo',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_calendar',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-header_navigation_contact_us'] = array(
     'cache' => -1,
-    'css_class' => 'header-navigation-contact-us header-navigation-block',
+    'css_class' => 'header-navigation-contact-us header-navigation-block header-navigation-promo',
     'custom' => 0,
     'machine_name' => 'header_navigation_contact_us',
     'module' => 'block',
@@ -168,9 +207,87 @@ function header_region_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-header_navigation_listen_spotify'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-listen header-navigation-block header-navigation-promo',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_listen_spotify',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-header_navigation_listen_youtube'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-listen header-navigation-block header-navigation-promo',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_listen_youtube',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['block-header_navigation_shows_events'] = array(
     'cache' => -1,
-    'css_class' => 'header-navigation-shows-events header-navigation-block',
+    'css_class' => 'header-navigation-shows-events header-navigation-block header-navigation-promo',
     'custom' => 0,
     'machine_name' => 'header_navigation_shows_events',
     'module' => 'block',
@@ -209,9 +326,48 @@ function header_region_default_fe_block_settings() {
 
   $export['block-header_navigation_support'] = array(
     'cache' => -1,
-    'css_class' => 'header-navigation-support header-navigation-block',
+    'css_class' => 'header-navigation-support header-navigation-block header-navigation-promo',
     'custom' => 0,
     'machine_name' => 'header_navigation_support',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['block-header_navigation_ticket_info'] = array(
+    'cache' => -1,
+    'css_class' => 'header-navigation-tickets header-navigation-block header-navigation-promo',
+    'custom' => 0,
+    'machine_name' => 'header_navigation_ticket_info',
     'module' => 'block',
     'node_types' => array(),
     'pages' => '',
