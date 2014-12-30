@@ -1,9 +1,8 @@
 .expandable-details-list {
   padding: {
-    left: 10px;
-    left: 1rem;
+    left: 20px;
+    left: 2rem;
   }
-  list-style: none;
 
   .expandable-details-item-collapsed & {
     display: none;

@@ -5,15 +5,6 @@
 
     margin: 0;
   }
-
-  &:before {
-    content: '>';
-    position: absolute;
-    margin: {
-      left: -10px;
-      left: -1rem;
-    }
-  }
 }
 
 @include breakpoint($breakpoint-tablet) {
