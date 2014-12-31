@@ -33,7 +33,7 @@
   }
 }
 
-.spotify-no-link, .tickets-no-link {
+.spotify-no-link, .tickets-no-link, .tickets-link-sold-out {
   &, &:hover {
     background: {
       color: $gray-lighter;

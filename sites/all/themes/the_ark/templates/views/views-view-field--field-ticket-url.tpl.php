@@ -21,10 +21,36 @@
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
  */
+
+$event = isset($row->_field_data['nid']['entity']) ?
+  $row->_field_data['nid']['entity'] :
+  array();
+
+$sold_out = isset($event->field_sold_out['und'][0]['value']) ?
+  $event->field_sold_out['und'][0]['value'] :
+  '0';
+
+$ticket = isset($event->field_ticket_url['und'][0]) ?
+  $event->field_ticket_url['und'][0] :
+  array();
+
+$attributes = isset($ticket['attributes']) ?
+  $ticket['attributes'] :
+  array();
+
+$attributes['target'] = '_blank';
+$attributes['class'][] = 'tickets-link';
+if ($sold_out === '1') {
+  $attributes['class'][] = 'tickets-link-sold-out';
+  $ticket['title'] = 'Sold Out';
+}
+
 ?>
 
-<?php if (!preg_match('/href=".*ark\.(dev|qltdclient\.com|org)\/null"/', $output)): ?>
-  <?php print str_replace('<a href', '<a class="tickets-link" href', $output); ?>
+<?php if (isset($ticket['url']) && $ticket['url'] !== 'null'): ?>
+  <?php print l($ticket['title'], $ticket['url'], array(
+    'attributes' => $attributes
+  )); ?>
 <?php else: ?>
   <span class="tickets-no-link">Tickets not available online</span>
 <?php endif; ?>
