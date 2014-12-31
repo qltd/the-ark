@@ -21,6 +21,11 @@ function the_ark_breadcrumb ($variables) {
       }
     }
 
+    // Add home link to breadcrumbs that are missing this value
+    if (isset($breadcrumb[0]) && strpos($breadcrumb[0], 'Home') === FALSE) {
+      array_unshift($breadcrumb, '<a href="/">Home</a>');
+    }
+
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
     $delimiter = ' <span class="breadcrumb-delimiter">&gt;</span> ';
