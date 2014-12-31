@@ -138,6 +138,39 @@ function basic_page_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'membership';
+  $context->description = 'This is the Membership page context.';
+  $context->tag = 'page';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support-the-ark/membership' => 'support-the-ark/membership',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-17' => array(
+          'module' => 'block',
+          'delta' => '17',
+          'region' => 'content',
+          'weight' => '0',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('This is the Membership page context.');
+  t('page');
+  $export['membership'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'tech_volunteer';
   $context->description = 'This is the page context for the Tech Volunteers page.';
   $context->tag = 'page';

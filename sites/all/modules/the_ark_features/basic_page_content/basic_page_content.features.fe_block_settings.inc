@@ -12,6 +12,45 @@ function basic_page_content_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['block-membership_icon_list'] = array(
+    'cache' => -1,
+    'css_class' => 'icon-list-block',
+    'custom' => 0,
+    'machine_name' => 'membership_icon_list',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-637e14a258bd08f8590c64f5e238b1b8'] = array(
     'cache' => -1,
     'css_class' => 'expandable-details-block',
