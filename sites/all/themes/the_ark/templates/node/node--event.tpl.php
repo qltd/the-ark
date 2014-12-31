@@ -224,9 +224,18 @@
               <a class="event-navigation-link" href="/shows-events/ticket-information"><?php print t('Tickets Sold at the Door'); ?></a>
             <?php endif; ?>
           </li>
-          <li class="event-navigation-item">
-            <a class="event-navigation-link" href="/"><?php print t('Seating Chart'); ?></a>
-          </li>
+          <?php if (isset($content['field_venue']['#items'][0]['tid'])): ?>
+            <?php $term = taxonomy_term_load($content['field_venue']['#items'][0]['tid']); ?>
+            <?php if (isset($term->field_seating_url['und'][0]['url'])): ?>
+              <li class="event-navigation-item">
+                <?php $link = $term->field_seating_url['und'][0]; ?>
+                <?php $link['attributes']['class'] = array('event-navigation-link'); ?>
+                <?php print l($link['title'], $link['url'], array(
+                  'attributes' => $link['attributes']
+                )); ?>
+              </li>
+            <?php endif; ?>
+          <?php endif; ?>
           <?php if (isset($content['field_link']['#items'])): ?>
             <?php foreach ($content['field_link']['#items'] as $link): ?>
               <?php $link['attributes']['class'] = array('event-navigation-link'); ?>
