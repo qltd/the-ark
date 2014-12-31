@@ -92,6 +92,16 @@
         </h2>
       <?php endif; ?>
 
+      <?php if (
+        isset($content['field_venue'][0]['#title']) &&
+        isset($content['field_venue']['#items'][0]['tid']) &&
+        $content['field_venue']['#items'][0]['tid'] !== "1"
+      ): ?>
+        <h3 class="event-venue">
+          At <?php print $content['field_venue'][0]['#title']; ?>
+        </h3>
+      <?php endif; ?>
+
       <h1 property="dc:title" class="node__title event-title">
         <?php print $title; ?>
         <?php if (isset($content['field_coheadlining_act']['#items'])): ?>
