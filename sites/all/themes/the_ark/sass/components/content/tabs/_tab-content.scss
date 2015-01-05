@@ -1,17 +1,5 @@
 .tab-content {
-  padding: 20px;
-  padding: 2rem;
   background: {
     color: $gray-light-background;
-  }
-  text-align: center;
-}
-
-@include breakpoint($breakpoint-tablet) {
-  .tab-content{
-    &, & > p, & > li {
-      @include font-details($size: 18px);
-      font-size: 1.8rem;
-    }
   }
 }

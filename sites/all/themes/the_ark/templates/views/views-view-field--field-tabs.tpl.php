@@ -16,7 +16,11 @@ if (isset($row->field_field_tabs[0]['rendered']['entity']['field_collection_item
 
 <div class="tab-container" data-tab-id="<?php print $count; ?>">
   <h2 class="tab-title expander"><?php print $title; ?></h2>
-  <div class="tab-content expander-content"><?php print $body; ?></div>
+  <div class="tab-content expander-content">
+    <div class="tab-content-body">
+      <?php print $body; ?>
+    </div>
+  </div>
 </div>
 
 <?php
