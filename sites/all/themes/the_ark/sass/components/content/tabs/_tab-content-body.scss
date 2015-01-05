@@ -9,7 +9,7 @@
 
 @include breakpoint($breakpoint-tablet) {
   .tab-content-body {
-    &, & > p, & > li {
+    &, & > p, & li {
       @include font-details($size: 18px);
       font-size: 1.8rem;
     }
