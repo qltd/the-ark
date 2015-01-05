@@ -476,6 +476,10 @@ function event_content_views_default_views() {
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -534,6 +538,96 @@ function event_content_views_default_views() {
     'image_style' => 'sponsor',
     'image_link' => '',
   );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
+
+  /* Display: Corporate Sponsors - Block */
+  $handler = $view->new_display('block', 'Corporate Sponsors - Block', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-corporate-sponsors';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['style_options']['list']['element_type'] = 'ul';
+  $handler->display->display_options['style_options']['list']['class'] = 'corporate-sponsors-list';
+  $handler->display->display_options['style_options']['row']['element_type'] = 'li';
+  $handler->display->display_options['style_options']['row']['class'] = 'corporate-sponsors-item';
+  $handler->display->display_options['style_options']['row']['last_every_nth'] = '4';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
+  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['semantic_html'] = array(
+    'name' => array(
+      'element_type' => 'div',
+      'class' => 'sponsor-name',
+    ),
+    'field_image' => array(
+      'element_type' => 'div',
+      'class' => 'sponsor-logo-wrap',
+    ),
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Link */
+  $handler->display->display_options['fields']['field_link_sponsor']['id'] = 'field_link_sponsor';
+  $handler->display->display_options['fields']['field_link_sponsor']['table'] = 'field_data_field_link_sponsor';
+  $handler->display->display_options['fields']['field_link_sponsor']['field'] = 'field_link_sponsor';
+  $handler->display->display_options['fields']['field_link_sponsor']['label'] = '';
+  $handler->display->display_options['fields']['field_link_sponsor']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link_sponsor']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link_sponsor']['click_sort_column'] = 'url';
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['alter']['path'] = '[field_link_sponsor]';
+  $handler->display->display_options['fields']['field_image']['alter']['external'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'sponsor',
+    'image_link' => '',
+  );
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Name */
+  $handler->display->display_options['sorts']['name']['id'] = 'name';
+  $handler->display->display_options['sorts']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['name']['field'] = 'name';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'sponsor' => 'sponsor',
+  );
+  $handler->display->display_options['filters']['machine_name']['group'] = 1;
+  /* Filter criterion: Taxonomy term: Corporate Sponsor (field_corporate) */
+  $handler->display->display_options['filters']['field_corporate_value']['id'] = 'field_corporate_value';
+  $handler->display->display_options['filters']['field_corporate_value']['table'] = 'field_data_field_corporate';
+  $handler->display->display_options['filters']['field_corporate_value']['field'] = 'field_corporate_value';
+  $handler->display->display_options['filters']['field_corporate_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_corporate_value']['group'] = 1;
   $export['sponsors'] = $view;
 
   return $export;

@@ -105,6 +105,39 @@ function basic_page_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'corporate_sponsorhip';
+  $context->description = 'This is the page context for the Corporate Sponsorship page.';
+  $context->tag = 'page';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'support-the-ark/corporate-sponsorship' => 'support-the-ark/corporate-sponsorship',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-sponsors-block_1' => array(
+          'module' => 'views',
+          'delta' => 'sponsors-block_1',
+          'region' => 'content',
+          'weight' => '5',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('This is the page context for the Corporate Sponsorship page.');
+  t('page');
+  $export['corporate_sponsorhip'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'loader_volunteer';
   $context->description = 'This is the page context for the Volunteer Loaders page.';
   $context->tag = 'page';

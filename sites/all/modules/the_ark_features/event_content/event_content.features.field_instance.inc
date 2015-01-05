@@ -1078,6 +1078,42 @@ function event_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-sponsor-field_corporate'
+  $field_instances['taxonomy_term-sponsor-field_corporate'] = array(
+    'bundle' => 'sponsor',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box if sponsor\'s logo should be displayed on the corporate-sponsorship page.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_corporate',
+    'label' => 'Corporate Sponsor',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-sponsor-field_featured'
   $field_instances['taxonomy_term-sponsor-field_featured'] = array(
     'bundle' => 'sponsor',
@@ -1170,7 +1206,7 @@ function event_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1227,7 +1263,7 @@ function event_content_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1276,7 +1312,7 @@ function event_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1343,11 +1379,13 @@ function event_content_field_default_field_instances() {
   t('A quote, or other promotional text, supporting the show or event.');
   t('Body');
   t('Check this box if a show or event no longer has tickets available for purchase.');
+  t('Check this box if sponsor\'s logo should be displayed on the corporate-sponsorship page.');
   t('Check this box if the sponsor should be featured in the footer.<br><br>When multiple sponsors have this box checked, a single, randomly-selected featured sponsor will be displayed on each page load.');
   t('Check this box if this event or show has tickets that can only be purchased at the venue.');
   t('Check this box if this is a <em>special</em> show or event.');
   t('Co-headlining Act(s)');
   t('Co-headlining act(s) related to this show or event.<br><br>Add an additional field for each act — one line per artist.');
+  t('Corporate Sponsor');
   t('Date and Time');
   t('Doors (Date and Time)');
   t('Doors-only Show');
