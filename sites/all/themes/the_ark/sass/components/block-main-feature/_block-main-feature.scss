@@ -1,8 +1,6 @@
 .block-main-feature {
-  margin: {
-    bottom: 6px;
-    bottom: 0.6rem;
-  }
+  margin: 0 auto 1px;
+  margin: 0 auto 0.1rem;
   padding: 60px 25px 140px;
   padding: 6rem 2.5rem 14rem;
   background: url(../images/history-collage_mobile.png) no-repeat bottom center;
@@ -32,8 +30,6 @@
 
 @include breakpoint($breakpoint-desktop) {
   .block-main-feature {
-    margin: 0 auto 6px;
-    margin: 0 auto 0.6rem;
     padding: {
       bottom: 250px;
       bottom: 25rem;

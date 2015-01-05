@@ -142,6 +142,14 @@ function front_page_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'tab' => array(
+      'name' => t('Homepage Tab'),
+      'base' => 'node_content',
+      'description' => t('A tab that will appear on the homepage.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;

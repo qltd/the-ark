@@ -38,21 +38,21 @@ function front_page_context_default_contexts() {
           'region' => 'content',
           'weight' => '-10',
         ),
-        'block-10' => array(
-          'module' => 'block',
-          'delta' => '10',
+        'views-tabs-homepage_tab_toggles' => array(
+          'module' => 'views',
+          'delta' => 'tabs-homepage_tab_toggles',
           'region' => 'content',
           'weight' => '-9',
+        ),
+        'views-tabs-homepage_tabs' => array(
+          'module' => 'views',
+          'delta' => 'tabs-homepage_tabs',
+          'region' => 'content',
+          'weight' => '-8',
         ),
         'views-billboards-block' => array(
           'module' => 'views',
           'delta' => 'billboards-block',
-          'region' => 'content',
-          'weight' => '-8',
-        ),
-        'block-11' => array(
-          'module' => 'block',
-          'delta' => '11',
           'region' => 'content',
           'weight' => '-7',
         ),
