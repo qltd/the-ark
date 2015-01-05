@@ -13,8 +13,21 @@ function the_ark_menu_link ($variables) {
     'Our Blog' => 'http://www.findyourfolk.org/',
   );
 
-  if ($variables['element']['#theme'] === 'menu_link__main_menu' && in_array($variables['element']['#href'], $primary))
-    return the_ark_primary_navigation_content($variables['element']);
+  $shortcuts = array( // shortcut menu top-level links; name can vary, path must match
+    'Listen' => 'node/17',
+    'Ticket Information' => 'node/6',
+  );
+
+  if ((
+      $variables['element']['#theme'] === 'menu_link__main_menu' &&
+      in_array($variables['element']['#href'], $primary)
+    ) || (
+      $variables['element']['#theme'] === 'menu_link__menu_shortcuts' &&
+      in_array($variables['element']['#href'], $shortcuts)
+    )) {
+      return the_ark_primary_navigation_content($variables['element']);
+    }
+
   return theme_menu_link($variables);
 }
 
@@ -47,6 +60,14 @@ function the_ark_primary_navigation_content ($element) {
       break;
     case 'http://www.findyourfolk.org/':
       $markup .= the_ark_block_in_menu_render('block', '7');
+      break;
+    case 'node/17': // Listen
+      $markup .= the_ark_block_in_menu_render('block', '14');
+      $markup .= the_ark_block_in_menu_render('block', '15');
+      break;
+    case 'node/6': // Ticket Information
+      $markup .= the_ark_block_in_menu_render('block', '16');
+      $markup .= the_ark_block_in_menu_render('block', '13');
       break;
   }
   $container = !empty($sub_menu) || !empty($markup)

@@ -14,3 +14,49 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-desktop) {
+  .header-navigation-shortcuts {
+    .menu-top-level-item {
+      &:hover {
+        .header-navigation-region {
+          display: block;
+        }
+      }
+    }
+    .header-navigation-region {
+      display: none;
+      position: absolute;
+      overflow: hidden;
+      top: -#{map_get($navigation-flyup, height-px)};
+      top: -#{map_get($navigation-flyup, height)};
+      left: 0;
+      margin: 0 auto;
+      height: map_get($navigation-flyup, height-px);
+      height: map_get($navigation-flyup, height);
+      width: map_get($navigation, width-px);
+      width: map_get($navigation, width);
+      text-align: center;
+
+      > .menu { // 2nd level menus
+        display: inline-block;
+        margin: 60px 0 0;
+        margin: 6rem 0 0;
+      }
+      > .menu-set {
+        width: map_get($navigation-column, width-px) * 2;
+        width: map_get($navigation-column, width) * 2;
+      }
+      .menu-set-list {
+        float: left;
+        width: map_get($navigation-column, width-px);
+        width: map_get($navigation-column, width);
+      }
+      .menu-item {
+        margin: 0;
+        padding: 5px 0;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}
