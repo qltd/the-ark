@@ -135,6 +135,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['field_venue']['table'] = 'field_data_field_venue';
   $handler->display->display_options['fields']['field_venue']['field'] = 'field_venue';
   $handler->display->display_options['fields']['field_venue']['label'] = '';
+  $handler->display->display_options['fields']['field_venue']['element_class'] = 'calendar-venue';
   $handler->display->display_options['fields']['field_venue']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_venue']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Load-in Time */
