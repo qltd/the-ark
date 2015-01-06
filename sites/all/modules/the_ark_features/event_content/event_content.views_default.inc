@@ -130,6 +130,13 @@ function event_content_views_default_views() {
   $handler->display->display_options['fields']['field_opener']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_opener']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_opener']['separator'] = ' <span class="delimiter">//</span> ';
+  /* Field: Content: Venue */
+  $handler->display->display_options['fields']['field_venue']['id'] = 'field_venue';
+  $handler->display->display_options['fields']['field_venue']['table'] = 'field_data_field_venue';
+  $handler->display->display_options['fields']['field_venue']['field'] = 'field_venue';
+  $handler->display->display_options['fields']['field_venue']['label'] = '';
+  $handler->display->display_options['fields']['field_venue']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_venue']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Load-in Time */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
