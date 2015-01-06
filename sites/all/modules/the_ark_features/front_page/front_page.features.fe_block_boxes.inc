@@ -24,7 +24,7 @@ function front_page_default_fe_block_boxes() {
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'home_full_feature';
   $fe_block_boxes->body = '<img alt="Exterior shot of The Ark in Ann Arbor, Michigan" src="../sites/all/themes/the_ark/images/the-ark_fullFeat.png" />
-<p>Located on Main Street in downtown Ann Arbor. We have a page for <a href="#">things to do and see</a> in the area, as well as <a href="/contact/directions-parking">driving directions</a> to the club. If you’d like to get in touch, please <a href="/contact">contact us</a>.</p>
+<p>We’re located on Main Street in downtown Ann Arbor, Michigan. See&nbsp;<a href="/contact/directions-parking">driving directions</a> to the club. If you’d like to get in touch, please <a href="/contact">contact us</a>.</p>
 ';
 
   $export['home_full_feature'] = $fe_block_boxes;

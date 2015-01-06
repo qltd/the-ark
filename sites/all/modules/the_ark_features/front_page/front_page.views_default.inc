@@ -46,6 +46,7 @@ function front_page_views_default_views() {
   $handler->display->display_options['fields']['field_billboard_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_billboard_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_billboard_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_billboard_link']['type'] = 'link_plain';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
