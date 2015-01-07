@@ -15,16 +15,12 @@
         switch (method) {
           case 'addClass':
             toggle.off('tap');
-            body.off('swiperight');
 
             $(document).on('touchmove', function (e) {
               e.preventDefault();
             });
             navigation.on('touchmove', function (e) {
               e.stopPropagation();
-            });
-            body.on('swipeleft', function () {
-              toggleClasses('removeClass');
             });
             buttonClose.on('tap', function () {
               toggleClasses('removeClass');
@@ -34,7 +30,6 @@
           case 'removeClass':
             $(document).off('touchmove');
             navigation.off('touchmove');
-            body.off('swipeleft');
             buttonClose.off('tap');
 
             defaultListeners();
@@ -44,9 +39,6 @@
 
       var defaultListeners = function () {
         toggle.on('tap', function () {
-          toggleClasses('addClass');
-        });
-        body.on('swiperight', function () {
           toggleClasses('addClass');
         });
       };
