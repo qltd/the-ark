@@ -22,10 +22,7 @@ function header_region_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Header navigation block for the Our Blog menu';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'header_navigation_blog';
-  $fe_block_boxes->body = '<img alt="Find your folk logo" src="/sites/default/files/blog.png" />
-
-<a href="http://www.findyourfolk.org/" target="_blank">Text link</a>
-';
+  $fe_block_boxes->body = '<img alt="Find Your Folk logo" src="/sites/default/files/FindYourFolk_0.jpg" /> <a href="http://www.findyourfolk.org/" target="_blank">Visit our blog</a>';
 
   $export['header_navigation_blog'] = $fe_block_boxes;
 
@@ -50,8 +47,7 @@ function header_region_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Header navigation block for the Home menu';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'header_navigation_home';
-  $fe_block_boxes->body = '<p><img alt="where music lives" src="/sites/default/files/images/home.png" style="height:109px; width:685px" /></p>
-';
+  $fe_block_boxes->body = '<a href="/"><img alt="where music lives" src="/sites/default/files/images/home.png" /></a>';
 
   $export['header_navigation_home'] = $fe_block_boxes;
 

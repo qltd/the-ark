@@ -192,6 +192,9 @@
             display: block;
           }
         }
+        > .menu-primary-home:after {
+          display: none;
+        }
         .header-navigation-region {
           display: block;
         }
