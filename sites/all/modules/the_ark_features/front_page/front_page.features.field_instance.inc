@@ -86,7 +86,7 @@ function front_page_field_default_field_instances() {
         'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'user',
+        'target' => 'default',
         'title' => '',
       ),
       'display' => array(
