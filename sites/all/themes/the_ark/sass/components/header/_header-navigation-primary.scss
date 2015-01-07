@@ -175,7 +175,7 @@
       padding: 0;
       width: auto;
       &.first {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         left: 0;
         width: 100%;
@@ -290,6 +290,17 @@
     width: map_get($navigation, width-px);
     width: map_get($navigation, width);
     text-align: center;
+
+    &:before { // ensures hover is maintained over full width of screen
+      content: '';
+      display: block;
+      position: fixed;
+      z-index: -1;
+      left: 0;
+      height: map_get($navigation-flyup, height-px);
+      height: map_get($navigation-flyup, height);
+      width: 100%;
+    }
 
     > .menu { // 2nd level menus
       display: inline-block;
