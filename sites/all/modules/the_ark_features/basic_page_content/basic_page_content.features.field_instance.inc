@@ -707,6 +707,88 @@ function basic_page_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-quote-field_quote'
+  $field_instances['node-quote-field_quote'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the quote content.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_quote',
+    'label' => 'Quote',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 8,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_quote_source'
+  $field_instances['node-quote-field_quote_source'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'If there is text in the quote field, this field is reserved for naming the source or author of that text.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_quote_source',
+    'label' => 'Quote Source',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 150,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('<em>Optional</em> title prefix.<br><br>On the "Membership" page, this would be the dollar amount associated with a benefit &mdash; ex. $5.');
@@ -714,14 +796,18 @@ function basic_page_content_field_default_field_instances() {
   t('Augmented Links');
   t('Body');
   t('Details');
+  t('Enter the quote content.');
   t('Expandable Details');
   t('Expandable list of details with an optional link.');
   t('Expander Title');
   t('Heading');
+  t('If there is text in the quote field, this field is reserved for naming the source or author of that text.');
   t('Image');
   t('Link');
   t('Links enhanced with images and descriptions.');
   t('Other pages or events related to this page.<br><br>If this page is <em>"Shows"</em>, <em>"About"</em>, <em>"Support the Ark"</em>, or <em>"Contact Us"</em>, these will appear as related links in the primary navigation.');
+  t('Quote');
+  t('Quote Source');
   t('Related Page(s)');
   t('Selectable, detail-containing tabs.');
   t('Tabs');

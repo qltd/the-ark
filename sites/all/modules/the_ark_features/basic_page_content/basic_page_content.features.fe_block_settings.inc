@@ -168,6 +168,45 @@ function basic_page_content_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-quotes_display-block'] = array(
+    'cache' => -1,
+    'css_class' => 'block-quotes-display',
+    'custom' => 0,
+    'delta' => 'quotes_display-block',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'omega' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'omega',
+        'weight' => 0,
+      ),
+      'the_ark' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark',
+        'weight' => 0,
+      ),
+      'the_ark_admin' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'the_ark_admin',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-tabs-tab_toggles'] = array(
     'cache' => -1,
     'css_class' => 'tab-toggles-block',

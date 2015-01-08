@@ -13,6 +13,39 @@ function basic_page_content_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'about';
+  $context->description = 'This is the About page context.';
+  $context->tag = 'page';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about' => 'about',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-quotes_display-block' => array(
+          'module' => 'views',
+          'delta' => 'quotes_display-block',
+          'region' => 'content',
+          'weight' => '8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('This is the About page context.');
+  t('page');
+  $export['about'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'basic';
   $context->description = '';
   $context->tag = 'content';

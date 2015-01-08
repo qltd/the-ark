@@ -68,6 +68,14 @@ function basic_page_content_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'quote' => array(
+      'name' => t('Quote'),
+      'base' => 'node_content',
+      'description' => t('Use this content type to add quotes to The Ark site. Currently displayed on the About page.'),
+      'has_title' => '1',
+      'title_label' => t('Quote Name'),
+      'help' => t('The Quote Name is used for content management purposes only. It will not be shown to the user.'),
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;

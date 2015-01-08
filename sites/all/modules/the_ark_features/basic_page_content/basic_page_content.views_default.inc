@@ -215,6 +215,73 @@ function basic_page_content_views_default_views() {
   $export['expandable_details'] = $view;
 
   $view = new view();
+  $view->name = 'quotes_display';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Quotes Display';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'view-quotes-display';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Quote Source */
+  $handler->display->display_options['fields']['field_quote_source']['id'] = 'field_quote_source';
+  $handler->display->display_options['fields']['field_quote_source']['table'] = 'field_data_field_quote_source';
+  $handler->display->display_options['fields']['field_quote_source']['field'] = 'field_quote_source';
+  $handler->display->display_options['fields']['field_quote_source']['label'] = '';
+  $handler->display->display_options['fields']['field_quote_source']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_quote_source']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quote_source']['type'] = 'text_plain';
+  /* Field: Content: Quote */
+  $handler->display->display_options['fields']['field_quote']['id'] = 'field_quote';
+  $handler->display->display_options['fields']['field_quote']['table'] = 'field_data_field_quote';
+  $handler->display->display_options['fields']['field_quote']['field'] = 'field_quote';
+  $handler->display->display_options['fields']['field_quote']['label'] = '';
+  $handler->display->display_options['fields']['field_quote']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_quote']['alter']['text'] = '<div class="quote-wrap">
+<div class="quote-body">
+<p class="quote-paragraph">[field_quote]</p>
+</div>
+<div class="quote-source">[field_quote_source]</div>
+</div>';
+  $handler->display->display_options['fields']['field_quote']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quote']['type'] = 'text_plain';
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'quote' => 'quote',
+  );
+
+  /* Display: Quotes Display */
+  $handler = $view->new_display('block', 'Quotes Display', 'block');
+  $export['quotes_display'] = $view;
+
+  $view = new view();
   $view->name = 'tabs';
   $view->description = '';
   $view->tag = 'default';
