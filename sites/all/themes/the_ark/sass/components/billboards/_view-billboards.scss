@@ -8,6 +8,11 @@
       }
       width: 50%;
       float: left;
+
+      .view-about-page-billboards & {
+        padding: 0;
+        float: none;
+      }
     }
     .last {
       padding: {
@@ -16,6 +21,11 @@
       }
       width: 50%;
       float: right;
+
+      .view-about-page-billboards & {
+        padding: 0;
+        float: none;
+      }
     }
   }
 }
