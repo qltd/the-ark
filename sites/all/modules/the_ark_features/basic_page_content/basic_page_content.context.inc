@@ -155,7 +155,7 @@ function basic_page_content_context_default_contexts() {
           'module' => 'views',
           'delta' => 'sponsors-block_1',
           'region' => 'content',
-          'weight' => '5',
+          'weight' => '10',
         ),
       ),
     ),
