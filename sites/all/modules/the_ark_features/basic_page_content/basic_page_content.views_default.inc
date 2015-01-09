@@ -482,8 +482,12 @@ function basic_page_content_views_default_views() {
   <h2 class="tab-title expander">[title]</h2>
   <div class="tab-content expander-content">
     <div class="tab-content-body">
-      [field_tab_media]
-      [body]
+      <div class="tab-content-body-media">
+        [field_tab_media]
+      </div>
+      <div class="tab-content-body-text">
+        [body]
+      </div>
     </div>
   </div>
 </div>';

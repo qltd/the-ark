@@ -170,7 +170,7 @@ function basic_page_content_default_fe_block_settings() {
 
   $export['views-quotes_display-block'] = array(
     'cache' => -1,
-    'css_class' => 'block-quotes-display',
+    'css_class' => '',
     'custom' => 0,
     'delta' => 'quotes_display-block',
     'module' => 'views',
