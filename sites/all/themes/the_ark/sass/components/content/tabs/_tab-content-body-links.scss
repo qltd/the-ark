@@ -4,10 +4,15 @@
 }
 
 .tab-content-body-link-span {
-  margin: 0 0.5rem;
-  margin: 0 5px;
   text-transform: uppercase;
   white-space: nowrap;
+
+  &:after {
+    content: '|';
+    display: inline;
+    margin: 0 0.5rem 0 1rem;
+    margin: 0 5px 0 10px;
+  }
 
   &:first-child {
     margin: {
@@ -29,6 +34,10 @@
   &:last-child {
     margin: {
       right: 0;
+    }
+
+    &:after {
+      display: none;
     }
   }
 
