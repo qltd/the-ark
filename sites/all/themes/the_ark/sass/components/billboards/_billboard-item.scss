@@ -1,15 +1,15 @@
-.billboards-item {
+.billboard-item {
 
 }
 
 @include breakpoint($breakpoint-tablet) {
-  .billboards-item {
+  .billboard-item {
     overflow: hidden;
   }
 }
 
 @include breakpoint($breakpoint-desktop) {
-  .billboards-item {
+  .billboard-item {
 
   }
 }
