@@ -1,3 +1,10 @@
-.tab-content-body-text {
-  
+.tab-content-body-text {}
+
+@include breakpoint($breakpoint-desktop) {
+  .tab-content-body-text {
+    margin: {
+      left: 55rem;
+      left: 550px;
+    }
+  }
 }
