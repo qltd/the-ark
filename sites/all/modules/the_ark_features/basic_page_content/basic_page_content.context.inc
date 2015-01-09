@@ -32,6 +32,12 @@ function basic_page_content_context_default_contexts() {
           'region' => 'content',
           'weight' => '8',
         ),
+        'views-billboards-block_1' => array(
+          'module' => 'views',
+          'delta' => 'billboards-block_1',
+          'region' => 'content',
+          'weight' => '9',
+        ),
       ),
     ),
   );

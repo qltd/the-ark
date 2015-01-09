@@ -111,6 +111,86 @@ function front_page_views_default_views() {
 
   /* Display: Homepage Billboards */
   $handler = $view->new_display('block', 'Homepage Billboards', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'home-page-billboards';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Order (field_order) */
+  $handler->display->display_options['sorts']['field_order_value']['id'] = 'field_order_value';
+  $handler->display->display_options['sorts']['field_order_value']['table'] = 'field_data_field_order';
+  $handler->display->display_options['sorts']['field_order_value']['field'] = 'field_order_value';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'billboard' => 'billboard',
+  );
+  /* Filter criterion: Content: Display on (field_display_on) */
+  $handler->display->display_options['filters']['field_display_on_value']['id'] = 'field_display_on_value';
+  $handler->display->display_options['filters']['field_display_on_value']['table'] = 'field_data_field_display_on';
+  $handler->display->display_options['filters']['field_display_on_value']['field'] = 'field_display_on_value';
+  $handler->display->display_options['filters']['field_display_on_value']['value'] = array(
+    1 => '1',
+  );
+
+  /* Display: About Page Billboards */
+  $handler = $view->new_display('block', 'About Page Billboards', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'view-about-page-billboards';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['style_options']['list']['element_type'] = 'ul';
+  $handler->display->display_options['style_options']['list']['class'] = 'billboards-list';
+  $handler->display->display_options['style_options']['row']['element_type'] = 'li';
+  $handler->display->display_options['style_options']['row']['class'] = 'billboards-list-item';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
+  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['semantic_html'] = array(
+    'nothing' => array(
+      'element_type' => 'div',
+      'class' => 'billboards-item',
+    ),
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Order (field_order) */
+  $handler->display->display_options['sorts']['field_order_value']['id'] = 'field_order_value';
+  $handler->display->display_options['sorts']['field_order_value']['table'] = 'field_data_field_order';
+  $handler->display->display_options['sorts']['field_order_value']['field'] = 'field_order_value';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'billboard' => 'billboard',
+  );
+  /* Filter criterion: Content: Display on (field_display_on) */
+  $handler->display->display_options['filters']['field_display_on_value']['id'] = 'field_display_on_value';
+  $handler->display->display_options['filters']['field_display_on_value']['table'] = 'field_data_field_display_on';
+  $handler->display->display_options['filters']['field_display_on_value']['field'] = 'field_display_on_value';
+  $handler->display->display_options['filters']['field_display_on_value']['value'] = array(
+    0 => '0',
+  );
   $export['billboards'] = $view;
 
   return $export;

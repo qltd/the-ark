@@ -111,6 +111,43 @@ function front_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-billboard-field_display_on'
+  $field_instances['node-billboard-field_display_on'] = array(
+    'bundle' => 'billboard',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_display_on',
+    'label' => 'Display on',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-billboard-field_image'
   $field_instances['node-billboard-field_image'] = array(
     'bundle' => 'billboard',
@@ -501,6 +538,7 @@ function front_page_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Display on');
   t('Image');
   t('Link');
   t('Media');

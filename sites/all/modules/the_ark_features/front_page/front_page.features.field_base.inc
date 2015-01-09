@@ -40,6 +40,32 @@ function front_page_field_default_field_bases() {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_display_on'
+  $field_bases['field_display_on'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_display_on',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'About Page',
+        1 => 'Home Page',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_order'
   $field_bases['field_order'] = array(
     'active' => 1,

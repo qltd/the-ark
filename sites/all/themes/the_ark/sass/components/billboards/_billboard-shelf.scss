@@ -23,8 +23,8 @@
       @include transition(transform $transition-duration ease-out);
 
       .view-about-page-billboards & {
-        bottom: -40px;
-        bottom: -4rem;
+        //bottom: -40px;
+        //bottom: -4rem;
       }
 
       .billboard-link:hover > & {
