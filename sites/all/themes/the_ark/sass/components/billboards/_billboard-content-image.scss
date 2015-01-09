@@ -4,3 +4,9 @@
     width: 100%;
   }
 }
+
+@include breakpoint($breakpoint-tablet) {
+  .content-image {
+    
+  }
+}
