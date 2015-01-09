@@ -473,6 +473,14 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: Primary Link */
+  $handler->display->display_options['fields']['field_primary_link']['id'] = 'field_primary_link';
+  $handler->display->display_options['fields']['field_primary_link']['table'] = 'field_data_field_primary_link';
+  $handler->display->display_options['fields']['field_primary_link']['field'] = 'field_primary_link';
+  $handler->display->display_options['fields']['field_primary_link']['label'] = '';
+  $handler->display->display_options['fields']['field_primary_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_primary_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_primary_link']['click_sort_column'] = 'url';
   /* Field: Content: Related Links */
   $handler->display->display_options['fields']['field_related_links']['id'] = 'field_related_links';
   $handler->display->display_options['fields']['field_related_links']['table'] = 'field_data_field_related_links';
@@ -499,6 +507,9 @@ function basic_page_content_views_default_views() {
       </div>
       <div class="tab-content-body-text">
         [body]
+      </div>
+      <div class="tab-content-body-primary-link">
+        [field_primary_link]
       </div>
       <div class="tab-content-body-links">
         [field_related_links]
