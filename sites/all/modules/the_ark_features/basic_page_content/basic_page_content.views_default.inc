@@ -473,6 +473,18 @@ function basic_page_content_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: Related Links */
+  $handler->display->display_options['fields']['field_related_links']['id'] = 'field_related_links';
+  $handler->display->display_options['fields']['field_related_links']['table'] = 'field_data_field_related_links';
+  $handler->display->display_options['fields']['field_related_links']['field'] = 'field_related_links';
+  $handler->display->display_options['fields']['field_related_links']['label'] = '';
+  $handler->display->display_options['fields']['field_related_links']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_related_links']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_related_links']['alter']['text'] = '<span class="tab-content-body-link-span">[field_related_links]</span>';
+  $handler->display->display_options['fields']['field_related_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_related_links']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_related_links']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_related_links']['separator'] = ' ';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -487,6 +499,9 @@ function basic_page_content_views_default_views() {
       </div>
       <div class="tab-content-body-text">
         [body]
+      </div>
+      <div class="tab-content-body-links">
+        [field_related_links]
       </div>
     </div>
   </div>
