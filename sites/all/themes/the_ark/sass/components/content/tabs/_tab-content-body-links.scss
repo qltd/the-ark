@@ -1,0 +1,38 @@
+.tab-content-body-links {
+  @include font-details($size: 14px, $weight: 300);
+  font-size: 1.4rem;
+}
+
+.tab-content-body-link-span {
+  margin: 0 0.5rem;
+  margin: 0 5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:first-child {
+    margin: {
+      left: 0;
+    }
+
+    &:before {
+      @include font-details($weight: 400, $style: italic);
+
+      content: 'Related Links:';
+      display: block;
+      margin: {
+        bottom: 10px;
+        bottom: 1rem;
+      }
+    }
+  }
+
+  &:last-child {
+    margin: {
+      right: 0;
+    }
+  }
+
+  > a {
+    @include font-details($weight: 400);
+  }
+}
