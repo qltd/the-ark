@@ -47,8 +47,8 @@
       break-after: avoid;
     }
 
-    // Specific override for pages: Club Volunteers, Tech Volunteers, Volunteer Loaders
-    .page-node-97 &, .page-node-98 &, .page-node-99 & {
+    // Specific override for pages: Contact Us, Club Volunteers, Tech Volunteers, Volunteer Loaders,
+    .page-node-5 &, .page-node-97 &, .page-node-98 &, .page-node-99 & {
       -webkit-column-count: 1;
       -moz-column-count: 1;
       column-count: 1;

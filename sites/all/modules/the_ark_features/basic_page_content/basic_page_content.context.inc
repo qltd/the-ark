@@ -68,12 +68,6 @@ function basic_page_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-637e14a258bd08f8590c64f5e238b1b8' => array(
-          'module' => 'views',
-          'delta' => '637e14a258bd08f8590c64f5e238b1b8',
-          'region' => 'content',
-          'weight' => '1',
-        ),
         'views-tabs-tab_toggles' => array(
           'module' => 'views',
           'delta' => 'tabs-tab_toggles',
@@ -140,6 +134,39 @@ function basic_page_content_context_default_contexts() {
   t('This is the page context for the Club Volunteers page.');
   t('page');
   $export['club_volunteer'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'contact_us';
+  $context->description = 'This is the Contact Us page context.';
+  $context->tag = 'page';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'contact' => 'contact',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'webform-client-block-282' => array(
+          'module' => 'webform',
+          'delta' => 'client-block-282',
+          'region' => 'content',
+          'weight' => '10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('This is the Contact Us page context.');
+  t('page');
+  $export['contact_us'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
@@ -228,6 +255,12 @@ function basic_page_content_context_default_contexts() {
           'delta' => '17',
           'region' => 'content',
           'weight' => '0',
+        ),
+        'views-637e14a258bd08f8590c64f5e238b1b8' => array(
+          'module' => 'views',
+          'delta' => '637e14a258bd08f8590c64f5e238b1b8',
+          'region' => 'content',
+          'weight' => '1',
         ),
       ),
     ),

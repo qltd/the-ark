@@ -1,17 +1,17 @@
 .l-content {
   padding: 20px 0;
   padding: 2rem 0;
-  .page-node-97 &, .page-node-98 &, .page-node-99 & {
-    @extend %clearfix;
-  }
 }
 
 @include breakpoint($breakpoint-desktop) {
   .l-content {
-    .page-node-71 &, .page-node-97 &, .page-node-98 &, .page-node-99 & {
+    .page-node-5 &, .page-node-71 &, .page-node-97 &, .page-node-98 &, .page-node-99 & {
       margin: 0 auto;
       max-width: 1000px;
       max-width: 100rem;
+    }
+    .page-node-5 &, .page-node-97 &, .page-node-98 &, .page-node-99 & {
+      overflow: hidden;
     }
   }
 }
