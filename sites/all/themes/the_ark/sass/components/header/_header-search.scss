@@ -1,15 +1,40 @@
 .header-search {
-  .form-text {
-    display: none;
+  .form-type-textfield {
+    @include transition(
+      left $transition-duration ease-out,
+      width $transition-duration ease-out
+    );
+
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    left: 240px;
+    left: 24rem;
   }
+  .form-type-textfield-active {
+    left: 0;
+    width: 240px;
+    width: 24rem;
+  }
+
   .form-submit {
     @extend .button-navigation-mobile;
     @extend .icon-replace;
+
+    position: relative;
     border: {
       right: none;
     }
     &:before {
       content: "\f002" // FontAwesome search
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .header-search {
+    .form-type-textfield {
+      display: none;
     }
   }
 }
