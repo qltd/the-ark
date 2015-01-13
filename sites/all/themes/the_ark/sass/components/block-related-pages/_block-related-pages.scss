@@ -1,0 +1,21 @@
+.block-related-pages {
+  padding: 0 25px;
+  padding: 0 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-related-pages {
+    margin: 0 auto;
+    max-width: 650px;
+    max-width: 65rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .block-related-pages {
+    max-width: 900px;
+    max-width: 90rem;
+  }
+}
