@@ -39,6 +39,7 @@ require('./config/twitter');
 /**
  * Components
  */
+require('./behaviors/calendar');
 require('./behaviors/columned-text');
 require('./behaviors/expandable-details');
 require('./behaviors/expander');
