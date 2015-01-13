@@ -148,6 +148,10 @@
     margin: {
       left: 2rem;
     }
+
+    .menu { // 3rd level menus
+      display: none;
+    }
   }
   .menu-link { // 2nd level links
     @include font-details($size: 14px, $style: italic);
