@@ -26,10 +26,14 @@ if (isset($row->field_field_augmented_links[0]['rendered']['entity']['field_coll
     $link_attributes = isset($item['field_augmented_links_link']['#items'][0]['attributes']) ?
       $item['field_augmented_links_link']['#items'][0]['attributes'] :
       array();
+    $link_query = isset($item['field_augmented_links_link']['#items'][0]['query']) ?
+      $item['field_augmented_links_link']['#items'][0]['query'] :
+      array();
     $link_attributes['class'] = array('augmented-link-link',);
     $link = !empty($link_url) ?
       l($link_title, $link_url, array(
         'attributes' => $link_attributes,
+        'query' => $link_query,
       )) :
       '';
   }
