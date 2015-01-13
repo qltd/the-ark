@@ -152,6 +152,9 @@
     .menu { // 3rd level menus
       display: none;
     }
+    .menu-set-list {
+      display: block;
+    }
   }
   .menu-link { // 2nd level links
     @include font-details($size: 14px, $style: italic);
