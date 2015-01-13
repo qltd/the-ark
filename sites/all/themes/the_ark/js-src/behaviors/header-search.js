@@ -30,6 +30,7 @@
       submit.on('click', function (event) {
         event.preventDefault();
         if (text.val()) form.submit();
+        else if (textContainer.hasClass('form-type-textfield-active')) text.focus();
       });
 
       text.on('tap', function (event) {
