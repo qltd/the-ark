@@ -32,6 +32,8 @@
 .l-region--header {
   max-width: 320px;
   @include container(32rem);
+
+  position: relative;
 }
 
 .front {
