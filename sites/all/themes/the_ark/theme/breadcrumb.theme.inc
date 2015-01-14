@@ -18,6 +18,11 @@ function the_ark_breadcrumb ($variables) {
           unset($breadcrumb[$key-1]);
         }
         $calendar_crumb = true;
+      } elseif (
+        strpos($crumb, '/search') !== FALSE &&
+        strpos($crumb, 'active') === FALSE
+      ) {
+        unset($breadcrumb[$key]);
       }
     }
 
