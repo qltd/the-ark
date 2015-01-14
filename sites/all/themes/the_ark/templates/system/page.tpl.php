@@ -110,4 +110,7 @@
       </div>
     </div>
   </footer>
+  <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to view this site.</p>
+  <![endif]-->
 </div>
