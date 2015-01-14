@@ -1,16 +1,32 @@
-function twoDigit (num) {
-  return ('0' + num).slice(-2);
-}
-
-function togglePastEventsText (action) {
-  return 'Click to ' + action + ' Past Events';
-}
-
 (function ($) {
+
+  function togglePastEventsText (action) {
+    return 'Click to ' + action + ' Past Events';
+  }
+
+  var monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+
   Drupal.behaviors.theArkCalendar = {
     attach: function () {
       var container = $('.calendar-body');
       if (container.length === 0) return;
+
+      var dateNav = $('.date-nav').clone();
+      dateNav.children('.date-heading').remove();
+      container.append(dateNav);
 
       var today = container.find('.today');
       if (today.length === 0) return;
