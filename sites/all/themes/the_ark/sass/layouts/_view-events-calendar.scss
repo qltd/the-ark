@@ -1,5 +1,11 @@
 .view-events-calendar {
   background-color: $gray-light-background;
+
+  &.events-upcoming-view {
+    @extend %clearfix;
+
+    background-color: inherit;
+  }
 }
 
 @include breakpoint($breakpoint-tablet) {
