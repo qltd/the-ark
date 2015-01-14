@@ -157,11 +157,17 @@ function basic_page_content_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'webform-client-block-282' => array(
+        'webform-client-block-294' => array(
           'module' => 'webform',
-          'delta' => 'client-block-282',
+          'delta' => 'client-block-294',
           'region' => 'content',
-          'weight' => '10',
+          'weight' => '5',
+        ),
+        'block-18' => array(
+          'module' => 'block',
+          'delta' => '18',
+          'region' => 'content',
+          'weight' => '6',
         ),
       ),
     ),

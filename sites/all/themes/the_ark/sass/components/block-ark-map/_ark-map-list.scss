@@ -1,0 +1,21 @@
+.ark-map-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .ark-map-list {
+    margin: {
+      top: 10px;
+      top: 1rem;
+    }
+    overflow: hidden;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .ark-map-list {
+    
+  }
+}
