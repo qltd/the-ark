@@ -406,7 +406,6 @@ function event_content_views_default_views() {
   /* Display: Upcoming */
   $handler = $view->new_display('block', 'Upcoming', 'events_upcoming');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Upcoming Shows';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'events-upcoming-view';
   $handler->display->display_options['display_description'] = 'Upcoming events block';
@@ -465,6 +464,14 @@ function event_content_views_default_views() {
     ),
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="events-upcoming-title">Upcoming Shows</h2>
+<a class="events-upcoming-view-calendar-link" href="/shows-events/calendar">View Calendar</a>';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
