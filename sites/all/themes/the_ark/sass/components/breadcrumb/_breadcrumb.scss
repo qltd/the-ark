@@ -12,4 +12,8 @@
   & > .active {
     color: $gray-light;
   }
+  .front & {
+    display: none;
+    visibility: hidden;
+  }
 }

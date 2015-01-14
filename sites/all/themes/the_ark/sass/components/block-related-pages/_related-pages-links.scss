@@ -14,7 +14,12 @@
       @include font-details(1.6rem, null, 400, null, italic);
     }
   }
-  a {
-    white-space: nowrap;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .related-pages-links {
+    a {
+      white-space: nowrap;
+    }
   }
 }
