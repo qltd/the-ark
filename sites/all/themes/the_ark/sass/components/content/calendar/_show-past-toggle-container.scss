@@ -1,0 +1,13 @@
+.show-past-toggle-container {
+  padding: {
+    top: 10px;
+    top: 1rem;
+  }
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .show-past-toggle-container {
+    display: none;
+  }
+}

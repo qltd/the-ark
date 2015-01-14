@@ -2,7 +2,7 @@
   border: {
     bottom: 1px solid $gray-lighter;
   }
-  &.no-entry, &.empty {
+  &.no-entry, &.empty, &.past-hidden {
     display: none;
   }
   .item {
@@ -24,7 +24,7 @@
     min-height: 260px;
     min-height: 26rem;
 
-    &.no-entry, &.empty {
+    &.no-entry, &.empty, &.past-hidden {
       display: block;
     }
   }
