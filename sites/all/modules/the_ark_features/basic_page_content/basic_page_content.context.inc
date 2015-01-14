@@ -92,6 +92,12 @@ function basic_page_content_context_default_contexts() {
           'region' => 'content',
           'weight' => '5',
         ),
+        'views-related_links-related_pages' => array(
+          'module' => 'views',
+          'delta' => 'related_links-related_pages',
+          'region' => 'content',
+          'weight' => '6',
+        ),
       ),
     ),
   );
