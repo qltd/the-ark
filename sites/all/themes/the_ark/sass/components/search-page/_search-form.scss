@@ -1,0 +1,22 @@
+.search-form {
+  padding: 0 25px;
+  padding: 0 2.5rem;
+  label {
+    margin: {
+      bottom: 10px;
+      bottom: 1rem;
+    }
+  }
+  input {
+    margin: {
+      bottom: 30px;
+      bottom: 3rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .search-form {
+    padding: 0;
+  }
+}

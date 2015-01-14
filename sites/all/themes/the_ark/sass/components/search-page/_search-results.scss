@@ -1,0 +1,10 @@
+.search-results {
+  padding: 0 25px;
+  padding: 0 2.5rem;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .search-results {
+    padding: 0;
+  }
+}
