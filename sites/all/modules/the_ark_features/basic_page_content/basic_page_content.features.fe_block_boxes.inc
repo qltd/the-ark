@@ -11,6 +11,29 @@ function basic_page_content_default_fe_block_boxes() {
   $export = array();
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Static map image of The Ark location with links.';
+  $fe_block_boxes->format = 'admin_html';
+  $fe_block_boxes->machine_name = 'ark_map';
+  $fe_block_boxes->body = '<article class="ark-map">
+  <h2 class="ark-map-title">Find us on the map!</h2>
+  <a href="https://goo.gl/maps/umo04" target="_blank"><img alt="the ark on google maps" src="http://placehold.it/1450x1000"></a>
+  <ul class="ark-map-list">
+      <li class="ark-map-list-item">
+        <a class="ark-map-link" href="https://goo.gl/maps/umo04" target="_blank">View on Google Maps</a>
+      </li>
+      <li class="ark-map-list-item">
+        <a class="ark-map-link" href="/contact/directions-parking">Directions &amp; Parking</a>
+      </li>
+      <li class="ark-map-list-item">
+        <a class="ark-map-link" href="#">Ann Arbor Info</a>
+      </li>
+  </ul>
+</article>
+';
+
+  $export['ark_map'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'List of icons for the membership page.';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'membership_icon_list';

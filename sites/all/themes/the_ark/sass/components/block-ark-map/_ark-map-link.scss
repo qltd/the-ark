@@ -1,0 +1,27 @@
+.ark-map-link {
+  @extend .button;
+  display: block;
+  margin: {
+    bottom: 10px;
+    bottom: 1rem;
+  }
+  padding: 15px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .ark-map-link {
+
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .ark-map-link {
+    padding: 0 15px;
+    padding: 0 1.5rem;
+    height: 75px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

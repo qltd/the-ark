@@ -1,0 +1,20 @@
+.ark-map-list-item {
+
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .ark-map-list-item {
+    width: 33.33%;
+    float: left;
+    padding-left: 10px;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .ark-map-list-item {
+    display: table;
+  }
+}
