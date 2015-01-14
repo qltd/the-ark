@@ -12,11 +12,9 @@ function the_ark_form_alter(&$form, &$form_state, $form_id) {
       '#suffix' => '</button>',
       '#markup' => t('Search'),
     );
-    $form['actions']['submit'] = array( // replace search submit input tag with button tag
-      '#prefix' => '<button type="submit" class="form-submit">',
-      '#suffix' => '</button>',
-      '#markup' => t('Search'),
-    );
+    $form['actions']['submit']['#prefix'] = '<button type="submit" class="form-submit">';
+    $form['actions']['submit']['#suffix'] = '</button>';
+    $form['actions']['submit']['#markup'] = t('Search');
   }
 }
 
