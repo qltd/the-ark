@@ -17,9 +17,3 @@
     float: right;
   }
 }
-
-@include breakpoint($breakpoint-desktop) {
-  .ark-map-list-item {
-
-  }
-}
