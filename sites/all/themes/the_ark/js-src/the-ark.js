@@ -42,6 +42,7 @@ require('./config/twitter');
 require('./behaviors/calendar');
 require('./behaviors/columned-text');
 require('./behaviors/expandable-details');
+require('./behaviors/events-upcoming');
 require('./behaviors/expander');
 require('./behaviors/footer-contact');
 require('./behaviors/header-navigation-primary');

@@ -4,21 +4,6 @@
     return 'Click to ' + action + ' Past Events';
   }
 
-  var monthNames = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ];
-
   Drupal.behaviors.theArkCalendar = {
     attach: function () {
       var container = $('.calendar-body');
