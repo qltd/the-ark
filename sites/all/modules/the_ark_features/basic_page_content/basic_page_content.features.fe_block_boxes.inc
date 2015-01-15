@@ -15,16 +15,13 @@ function basic_page_content_default_fe_block_boxes() {
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'ark_map';
   $fe_block_boxes->body = '<article class="ark-map">
-  <h2 class="ark-map-title">Find us on the map!</h2>
-  <a href="https://goo.gl/maps/umo04" target="_blank"><img alt="the ark on google maps" src="/sites/all/themes/the_ark/images/ark-map-img.png"></a>
-  <ul class="ark-map-list">
-      <li class="ark-map-list-item map-item-first">
-        <a class="ark-map-link" href="https://goo.gl/maps/umo04" target="_blank">View on Google Maps</a>
-      </li>
-      <li class="ark-map-list-item map-item-last">
-        <a class="ark-map-link" href="/contact/directions-parking">Directions &amp; Parking</a>
-      </li>
-  </ul>
+<h2 class="ark-map-title">Find us on the map!</h2>
+<a href="https://goo.gl/maps/umo04" target="_blank"><img alt="the ark on google maps" src="/sites/all/themes/the_ark/images/ark-map-img.png" /></a>
+
+<ul class="ark-map-list">
+	<li class="ark-map-list-item"><a class="ark-map-link" href="https://goo.gl/maps/umo04" target="_blank">View on Google Maps</a></li>
+	<li class="ark-map-list-item"><a class="ark-map-link" href="/contact/directions-parking">Directions &amp; Parking</a></li>
+</ul>
 </article>
 ';
 

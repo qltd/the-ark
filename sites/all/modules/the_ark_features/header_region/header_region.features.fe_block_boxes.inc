@@ -64,10 +64,7 @@ function header_region_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Header navigation block for the Listen Youtube Menu';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'header_navigation_listen_youtube';
-  $fe_block_boxes->body = '<img alt="YouTube logo" src="/sites/default/files/listen_youtube.jpg" />
-
-<a href="https://www.youtube.com/channel/UC0FgcO7-u20nd2nIF8VG2DQ" target="_blank">YouTube</a>
-';
+  $fe_block_boxes->body = '<img alt="YouTube logo" src="/sites/default/files/listen_youtube.jpg" /> <a href="https://www.youtube.com/channel/UCcFtcouM8zBvh2SojeyAYUg" target="_blank">YouTube</a>';
 
   $export['header_navigation_listen_youtube'] = $fe_block_boxes;
 
@@ -75,7 +72,7 @@ function header_region_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Header navigation block for the Shows & Events menu';
   $fe_block_boxes->format = 'admin_html';
   $fe_block_boxes->machine_name = 'header_navigation_shows_events';
-  $fe_block_boxes->body = '<img alt="The Ark Ticket Taking" src="/sites/default/files/showsandevents.jpg" /> <a href="//shows-events/calendar">View our calendar</a>';
+  $fe_block_boxes->body = '<img alt="The Ark Ticket Taking" src="/sites/default/files/showsandevents.jpg" /> <a href="/shows-events/calendar">View our calendar</a>';
 
   $export['header_navigation_shows_events'] = $fe_block_boxes;
 
