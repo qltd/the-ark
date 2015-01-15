@@ -6,3 +6,13 @@
     }
   }
 }
+
+@include breakpoint($breakpoint-desktop) {
+  .page-search {
+    h2 {
+      padding: {
+        left: 0;
+      }
+    }
+  }
+}
