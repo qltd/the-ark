@@ -23,6 +23,7 @@ function event_content_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View Calendar';
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -403,21 +404,74 @@ function event_content_views_default_views() {
   );
 
   /* Display: Upcoming */
-  $handler = $view->new_display('block', 'Upcoming', 'block_2');
-  $handler->display->display_options['enabled'] = FALSE;
+  $handler = $view->new_display('block', 'Upcoming', 'events_upcoming');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'events-upcoming-view';
   $handler->display->display_options['display_description'] = 'Upcoming events block';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '7';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_plugin'] = 'semanticviews_default';
+  $handler->display->display_options['style_options']['row']['class'] = 'calendar-column';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_plugin'] = 'semanticviews_fields';
+  $handler->display->display_options['row_options']['skip_blank'] = 0;
+  $handler->display->display_options['row_options']['semantic_html'] = array(
+    'field_image' => array(
+      'element_type' => 'div',
+      'class' => 'calendar-image',
+    ),
+    'nothing' => array(
+      'element_type' => 'div',
+      'class' => '',
+    ),
+    'field_spotify_uri' => array(
+      'element_type' => 'div',
+      'class' => '',
+    ),
+    'field_ticket_url' => array(
+      'element_type' => 'div',
+      'class' => '',
+    ),
+    'nothing_1' => array(
+      'element_type' => 'div',
+      'class' => 'calendar-title-display',
+    ),
+    'field_special_guest' => array(
+      'element_type' => 'div',
+      'class' => 'calendar-guest-opener',
+      'label_element_type' => 'span',
+      'label_class' => '',
+    ),
+    'field_opener' => array(
+      'element_type' => 'div',
+      'class' => 'calendar-guest-opener',
+      'label_element_type' => 'span',
+      'label_class' => '',
+    ),
+    'field_venue' => array(
+      'element_type' => 'div',
+      'class' => 'calendar-venue',
+    ),
+    'nothing_2' => array(
+      'element_type' => 'div',
+      'class' => 'calendar-time-price',
+    ),
+  );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="events-upcoming-title">Upcoming Shows</h2>
+<a class="events-upcoming-view-calendar-link" href="/shows-events/calendar">View Calendar</a>';
+  $handler->display->display_options['header']['area']['format'] = 'admin_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
