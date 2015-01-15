@@ -133,10 +133,13 @@ input[type='radio']:checked + label {
 }
 
 select {
- padding-right: 40px;
- background: $gray-light-background url(../images/custom-select.png) right center no-repeat;
- background-size: 40px 40px;
- border-radius: 0;
+  padding-right: 40px;
+  background: $gray-light-background url(../images/custom-select.png) right center no-repeat;
+  background-size: 40px 40px;
+  border-radius: 0;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
 }
 
 .webform-component-date {
