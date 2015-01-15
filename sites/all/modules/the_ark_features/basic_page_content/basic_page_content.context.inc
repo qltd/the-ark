@@ -96,7 +96,7 @@ function basic_page_content_context_default_contexts() {
           'module' => 'views',
           'delta' => 'related_links-related_pages',
           'region' => 'content',
-          'weight' => '6',
+          'weight' => '12',
         ),
       ),
     ),
