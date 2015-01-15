@@ -1,13 +1,41 @@
 .events-upcoming-view {
   & > .view-header {
     @extend %clearfix;
+
+    margin: {
+      bottom: 40px;
+      bottom: 4rem;
+    }
+    padding: 0 20px;
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .events-upcoming-view {
+    & > .view-header {
+      margin: {
+        bottom: 30px;
+        bottom: 3rem;
+      }
+      padding: 0;
+      text-align: left;
+    }
   }
 }
 
 @include breakpoint($breakpoint-desktop) {
   .events-upcoming-view {
+    padding: 0;
+
     & > .view-header {
-      margin: 0 auto;
+      margin: {
+        right: auto;
+        left: auto;
+      }
+      padding: 0 20px;
+      padding: 0 2rem;
       max-width: 1000px;
       max-width: 100rem;
     }
@@ -23,6 +51,12 @@
 
 @include breakpoint($breakpoint-desktop-wide) {
   .events-upcoming-view {
+    & > .view-header {
+      padding: 0;
+      max-width: 1190px;
+      max-width: 119rem;
+    }
+
     & > .view-content {
       max-width: 1190px;
       max-width: 119rem;
