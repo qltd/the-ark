@@ -426,7 +426,7 @@ function event_content_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'event_thumbnail',
         ),
         'type' => 'image',
         'weight' => 21,
