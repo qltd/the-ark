@@ -371,7 +371,15 @@
     </div>
 
   </div>
-
+<?php 
+      $count = 0;
+      foreach($content['field_related_event'] as $event){
+        echo $count.' item <br />'; 
+        var_dump($event);
+        echo 'end '.$count.' item <br />'; 
+        $count += 1;
+      }
+?>
   <?php print render($content['links']); ?>
   <?php print render($content['comments']); ?>
 </article>
