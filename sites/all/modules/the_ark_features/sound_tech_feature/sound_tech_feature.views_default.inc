@@ -608,7 +608,7 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['relationship'] = 'reverse_field_event_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Load-in Time */
+  /* Field: Content: Date and Time */
   $handler->display->display_options['fields']['field_date_1']['id'] = 'field_date_1';
   $handler->display->display_options['fields']['field_date_1']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date_1']['field'] = 'field_date';
@@ -642,7 +642,7 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Load-in Time */
+  /* Field: Content: Date and Time */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -687,7 +687,7 @@ function sound_tech_feature_views_default_views() {
   );
   $handler->display->display_options['fields']['field_stage_plot']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_stage_plot']['multi_type'] = 'ul';
-  /* Sort criterion: Content: Load-in Time (field_date) */
+  /* Sort criterion: Content: Date and Time (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
@@ -741,7 +741,7 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Content: Load-in Time (field_date) */
+  /* Filter criterion: Content: Date and Time (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
