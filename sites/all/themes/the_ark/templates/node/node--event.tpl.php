@@ -371,15 +371,17 @@
     </div>
 
   </div>
-<?php 
-      $count = 0;
-      foreach($content['field_related_event'] as $event){
-        echo $count.' item <br />'; 
-        var_dump($event);
-        echo 'end '.$count.' item <br />'; 
-        $count += 1;
-      }
-?>
+<?php if(isset($content['field_related_event'][0])): ?>
+    <div class="block-related-pages">
+    <div class="related-pages-links">
+    <?php $count = 0; ?>
+    <?php while(!is_null($content['field_related_event'][$count])): ?>
+        <a href=""><?php print $content['field_related_event'][$count]['#markup']; ?></a> |
+        <?php $count += 1; ?>
+    <?php endwhile; ?>
+    </div>
+    </div>
+<?php endif; ?>
   <?php print render($content['links']); ?>
   <?php print render($content['comments']); ?>
 </article>
