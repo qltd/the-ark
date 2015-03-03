@@ -371,14 +371,20 @@
     </div>
 
   </div>
+<!-- related artists/events -->
 <?php if(isset($content['field_related_event'][0])): ?>
     <div class="block-related-pages">
     <div class="related-pages-links">
-    <?php $count = 0; ?>
-    <?php while(!is_null($content['field_related_event'][$count])): ?>
-        <a href=""><?php print $content['field_related_event'][$count]['#markup']; ?></a> |
-        <?php $count += 1; ?>
-    <?php endwhile; ?>
+    <?php if(!empty($content['field_related_event']['#object']->field_related_event['und'])): ?>
+        <?php foreach($content['field_related_event']['#object']->field_related_event['und'] as $related_event): ?>
+        <a href="<?php print url('node/'.$related_event['target_id']); ?>">
+            <?php echo $related_event['entity']->title; ?>
+        </a> 
+        <?php if(next($content['field_related_event']['#object']->field_related_event['und'])): ?> 
+         | <!-- we don't display the pipe if it's the last loop -->
+        <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
     </div>
     </div>
 <?php endif; ?>
