@@ -354,7 +354,8 @@ p {
 .page-shows-events-calendar .event-cal-links {
   float: left;
   position: relative;
-  top: 4.7rem; }
+  top: 4.7rem;
+  z-index: 1; }
 
 @media (max-width: 1050px) {
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar {
