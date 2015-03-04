@@ -28,3 +28,35 @@
     max-width: 116rem;
   }
 }
+
+//positioning for event genre filter
+.page-shows-events-calendar {
+    .view-filters {
+        position: relative; 
+        .views-exposed-form-events-calendar-events-calendar {
+            position: absolute; 
+            right: 0;
+            top: -12rem;
+            .views-exposed-form .views-exposed-widget {
+                float: none;
+                padding: 0;
+            }
+            #edit-submit-events-calendar {
+                padding: .6rem 3rem;
+            }
+            .views-exposed-form {
+                padding: 0; 
+            }
+        }
+    }
+}
+@media (max-width:1050px) {
+    .page-shows-events-calendar {
+        .view-filters {
+            .views-exposed-form-events-calendar-events-calendar {
+                //position filter select box vertically on mobile 
+                position: static; 
+            } 
+        } 
+    }    
+}
