@@ -39,6 +39,12 @@ function event_content_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['label'] = 'Links';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="event-cal-links"><a href="">Download PDF</a></div>';
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -182,6 +188,25 @@ function event_content_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Genre(s) (field_genre) */
+  $handler->display->display_options['filters']['field_genre_tid']['id'] = 'field_genre_tid';
+  $handler->display->display_options['filters']['field_genre_tid']['table'] = 'field_data_field_genre';
+  $handler->display->display_options['filters']['field_genre_tid']['field'] = 'field_genre_tid';
+  $handler->display->display_options['filters']['field_genre_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['operator_id'] = 'field_genre_tid_op';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['label'] = 'Filter By:';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['operator'] = 'field_genre_tid_op';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['identifier'] = 'field_genre_tid';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_genre_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_genre_tid']['vocabulary'] = 'genre';
 
   /* Display: Month */
   $handler = $view->new_display('page', 'Month', 'events_calendar');
