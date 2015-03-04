@@ -29,8 +29,8 @@
   }
 }
 
-//positioning for event genre filter
 .page-shows-events-calendar {
+    //positioning for event genre filter
     .view-filters {
         position: relative; 
         .views-exposed-form-events-calendar-events-calendar {
@@ -49,14 +49,26 @@
             }
         }
     }
+    //positioning for extra links on events calendar page
+    .event-cal-links {
+        float: left;
+        position: relative;
+        top: 4.7rem;
+    }
 }
 @media (max-width:1050px) {
     .page-shows-events-calendar {
         .view-filters {
             .views-exposed-form-events-calendar-events-calendar {
-                //position filter select box vertically on mobile 
                 position: static; 
             } 
         } 
     }    
+}
+@media(max-width:660px) {
+    .page-shows-events-calendar {
+        .event-cal-links {
+            position: static; 
+        }
+    }
 }
