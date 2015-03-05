@@ -33,16 +33,28 @@
     //positioning for event genre filter
     .view-filters {
         position: relative; 
+        max-width: 119rem;
+        margin: 0 auto;
         .views-exposed-form-events-calendar-events-calendar {
-            position: absolute; 
             right: 0;
             top: -12rem;
             .views-exposed-form .views-exposed-widget {
+                float:right;
             }
             #edit-submit-events-calendar {
-                padding: .6rem 3rem;
+                padding: .9rem 3rem;
                 position: relative;
-                top: 2rem;
+                top: 1.8rem;
+                left:48rem;
+            }
+            #edit-field-genre-tid-wrapper {
+                margin-right:10rem; 
+                & > label {
+                    font-weight: 300; 
+                    position: relative;
+                    left: -8rem;
+                    top: 3.4rem;
+                }
             }
             .views-exposed-form {
                 padding: 0; 
@@ -53,8 +65,12 @@
     .event-cal-links {
         float: left;
         position: relative;
-        top: 4.7rem;
+        top: 16rem;
         z-index: 1;
+    }
+    .date-nav-wrapper,.view-header {
+        max-width: 119rem; 
+        margin: 0 auto;
     }
 }
 @media (max-width:1050px) {
@@ -66,14 +82,37 @@
         } 
     }    
 }
-@media(max-width:660px) {
+@media(max-width:840px) {
     .page-shows-events-calendar {
         .event-cal-links {
             position: static; 
         }
     }
 }
-
+@media(max-width:600px){
+.page-shows-events-calendar {
+    //positioning for event genre filter
+    .view-filters {
+        .views-exposed-form-events-calendar-events-calendar {
+            .views-exposed-form .views-exposed-widget {
+                float:none;
+                padding: 0;
+            }
+            #edit-submit-events-calendar {
+                position: static;
+                margin-top:0;
+                width:35rem;
+            }
+            #edit-field-genre-tid-wrapper {
+                margin-right:0; 
+                & > label {
+                    position: static;
+                }
+            }
+        }
+    }
+}
+}
 //related events links
 .related-event-wrap {
     .related-pages-links:first-child::before {

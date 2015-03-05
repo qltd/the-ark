@@ -339,29 +339,55 @@ p {
     max-width: 1160px;
     max-width: 116rem; } }
 .page-shows-events-calendar .view-filters {
-  position: relative; }
+  position: relative;
+  max-width: 119rem;
+  margin: 0 auto; }
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar {
-    position: absolute;
     right: 0;
     top: -12rem; }
+    .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar .views-exposed-form .views-exposed-widget {
+      float: right; }
     .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-submit-events-calendar {
-      padding: .6rem 3rem;
+      padding: .9rem 3rem;
       position: relative;
-      top: 2rem; }
+      top: 1.8rem;
+      left: 48rem; }
+    .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper {
+      margin-right: 10rem; }
+      .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper > label {
+        font-weight: 300;
+        position: relative;
+        left: -8rem;
+        top: 3.4rem; }
     .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar .views-exposed-form {
       padding: 0; }
 .page-shows-events-calendar .event-cal-links {
   float: left;
   position: relative;
-  top: 4.7rem;
+  top: 16rem;
   z-index: 1; }
+.page-shows-events-calendar .date-nav-wrapper, .page-shows-events-calendar .view-header {
+  max-width: 119rem;
+  margin: 0 auto; }
 
 @media (max-width: 1050px) {
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar {
     position: static; } }
-@media (max-width: 660px) {
+@media (max-width: 840px) {
   .page-shows-events-calendar .event-cal-links {
     position: static; } }
+@media (max-width: 600px) {
+  .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar .views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: 0; }
+  .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-submit-events-calendar {
+    position: static;
+    margin-top: 0;
+    width: 35rem; }
+  .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper {
+    margin-right: 0; }
+    .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper > label {
+      position: static; } }
 .related-event-wrap .related-pages-links:first-child::before {
   content: "Relaged Events :"; }
 

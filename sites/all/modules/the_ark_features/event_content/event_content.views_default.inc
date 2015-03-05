@@ -44,7 +44,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['label'] = 'Links';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="event-cal-links"><i class="fa fa-download"></i> <a href="/download-calendar">Download Calendar</a></div>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="event-cal-links"><a href="/download-calendar"><i class="fa fa-download"></i> Download Calendar</a></div>';
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
