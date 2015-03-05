@@ -370,6 +370,11 @@ p {
   max-width: 119rem;
   margin: 0 auto; }
 
+.page-shows-events-calendar .view-filters {
+  position: relative;
+  max-width: 119rem;
+  margin: 0 auto; }
+
 @media (max-width: 1050px) {
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar {
     position: static; } }
@@ -389,7 +394,7 @@ p {
     .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper > label {
       position: static; } }
 .related-event-wrap .related-pages-links:first-child::before {
-  content: "Relaged Events :"; }
+  content: "Related Events :"; }
 
 .node-type-page .node__content {
   margin-bottom: 80px;
