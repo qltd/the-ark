@@ -373,7 +373,7 @@
   </div>
 <!-- related artists/events -->
 <?php if(isset($content['field_related_event'][0])): ?>
-    <div class="block-related-pages">
+    <div class="block-related-pages related-event-wrap">
     <div class="related-pages-links">
     <?php if(!empty($content['field_related_event']['#object']->field_related_event['und'])): ?>
         <?php foreach($content['field_related_event']['#object']->field_related_event['und'] as $related_event): ?>

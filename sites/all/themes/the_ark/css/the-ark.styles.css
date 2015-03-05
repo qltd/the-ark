@@ -362,6 +362,9 @@ p {
 @media (max-width: 660px) {
   .page-shows-events-calendar .event-cal-links {
     position: static; } }
+.related-event-wrap .related-pages-links:first-child::before {
+  content: "Relaged Events :"; }
+
 .node-type-page .node__content {
   margin-bottom: 80px;
   margin-bottom: 8rem; }

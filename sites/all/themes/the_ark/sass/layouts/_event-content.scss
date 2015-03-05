@@ -73,3 +73,10 @@
         }
     }
 }
+
+//related events links
+.related-event-wrap {
+    .related-pages-links:first-child::before {
+        content: "Relaged Events :"; 
+    }
+}
