@@ -344,11 +344,10 @@ p {
     position: absolute;
     right: 0;
     top: -12rem; }
-    .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar .views-exposed-form .views-exposed-widget {
-      float: none;
-      padding: 0; }
     .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-submit-events-calendar {
-      padding: .6rem 3rem; }
+      padding: .6rem 3rem;
+      position: relative;
+      top: 2rem; }
     .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar .views-exposed-form {
       padding: 0; }
 .page-shows-events-calendar .event-cal-links {

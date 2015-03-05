@@ -44,7 +44,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['label'] = 'Links';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="event-cal-links"><a href="/download-calendar">Download PDF</a></div>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="event-cal-links"><i class="fa fa-download"></i> <a href="/download-calendar">Download Calendar</a></div>';
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -194,7 +194,7 @@ function event_content_views_default_views() {
   $handler->display->display_options['filters']['field_genre_tid']['field'] = 'field_genre_tid';
   $handler->display->display_options['filters']['field_genre_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_genre_tid']['expose']['operator_id'] = 'field_genre_tid_op';
-  $handler->display->display_options['filters']['field_genre_tid']['expose']['label'] = 'Filter By:';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['label'] = 'Filter by:';
   $handler->display->display_options['filters']['field_genre_tid']['expose']['operator'] = 'field_genre_tid_op';
   $handler->display->display_options['filters']['field_genre_tid']['expose']['identifier'] = 'field_genre_tid';
   $handler->display->display_options['filters']['field_genre_tid']['expose']['remember_roles'] = array(

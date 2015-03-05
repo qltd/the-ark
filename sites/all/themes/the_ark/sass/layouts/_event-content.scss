@@ -38,11 +38,11 @@
             right: 0;
             top: -12rem;
             .views-exposed-form .views-exposed-widget {
-                float: none;
-                padding: 0;
             }
             #edit-submit-events-calendar {
                 padding: .6rem 3rem;
+                position: relative;
+                top: 2rem;
             }
             .views-exposed-form {
                 padding: 0; 
