@@ -92,6 +92,7 @@
         .event-cal-links {
             float: none;
             text-align:center;
+            top:15rem;
         }
     }
 }
@@ -110,7 +111,8 @@
             }
             #edit-submit-events-calendar {
                 position: static;
-                width:35rem;
+                width: 100%;
+                max-width:35rem;
             }
             #edit-field-genre-tid-wrapper {
                 margin-right:0; 

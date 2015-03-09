@@ -381,7 +381,8 @@ p {
 @media (max-width: 840px) {
   .page-shows-events-calendar .event-cal-links {
     float: none;
-    text-align: center; } }
+    text-align: center;
+    top: 15rem; } }
 @media (max-width: 840px) {
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar {
     text-align: center;
@@ -391,7 +392,8 @@ p {
     padding: 0; }
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-submit-events-calendar {
     position: static;
-    width: 35rem; }
+    width: 100%;
+    max-width: 35rem; }
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper {
     margin-right: 0; }
     .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper > label {
