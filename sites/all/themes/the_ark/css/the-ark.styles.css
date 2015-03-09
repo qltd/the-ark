@@ -422,6 +422,28 @@ p {
     max-width: 1000px;
     max-width: 100rem;
     text-align: center; } }
+.field--name-field-sponsor-s- {
+  max-width: 100rem;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #d6d4d2;
+  border-top: 1px solid #d6d4d2;
+  padding-top: 1rem; }
+  .field--name-field-sponsor-s- .field__item {
+    max-height: 30rem;
+    margin-bottom: 3rem; }
+  .field--name-field-sponsor-s- .field__label {
+    visibility: hidden;
+    margin-bottom: 2rem; }
+    .field--name-field-sponsor-s- .field__label:before {
+      content: "Presented with support from: ";
+      visibility: visible;
+      font-style: italic;
+      font-size: 1.4rem;
+      font-weight: 300;
+      position: relative;
+      left: 4.3rem; }
+
 .l-content {
   padding: 20px 0;
   padding: 2rem 0; }
