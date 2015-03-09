@@ -124,6 +124,22 @@
     }
 }
 }
+@media(max-width:350px){
+.page-shows-events-calendar {
+    .view-filters {
+        .views-exposed-form-events-calendar-events-calendar {
+            #edit-submit-events-calendar {
+                width: 96%;
+                margin-left:2%;
+            }
+            #edit-field-genre-tid {
+                width: 96%;
+                margin-left:2%;
+            }
+        }
+    }
+}
+}
 //related events links
 .related-event-wrap {
     .related-pages-links:first-child::before {
