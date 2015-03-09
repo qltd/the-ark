@@ -90,14 +90,19 @@
 @media(max-width:840px) {
     .page-shows-events-calendar {
         .event-cal-links {
-            position: static; 
+            float: none;
+            text-align:center;
         }
     }
 }
-@media(max-width:600px){
+@media(max-width:840px){
 .page-shows-events-calendar {
     //positioning for event genre filter
     .view-filters {
+        .views-exposed-form-events-calendar-events-calendar {
+            text-align:center; 
+            padding-top:4rem;
+        }
         .views-exposed-form-events-calendar-events-calendar {
             .views-exposed-form .views-exposed-widget {
                 float:none;
@@ -105,7 +110,6 @@
             }
             #edit-submit-events-calendar {
                 position: static;
-                margin-top:0;
                 width:35rem;
             }
             #edit-field-genre-tid-wrapper {

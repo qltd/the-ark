@@ -380,14 +380,17 @@ p {
     position: static; } }
 @media (max-width: 840px) {
   .page-shows-events-calendar .event-cal-links {
-    position: static; } }
-@media (max-width: 600px) {
+    float: none;
+    text-align: center; } }
+@media (max-width: 840px) {
+  .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar {
+    text-align: center;
+    padding-top: 4rem; }
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar .views-exposed-form .views-exposed-widget {
     float: none;
     padding: 0; }
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-submit-events-calendar {
     position: static;
-    margin-top: 0;
     width: 35rem; }
   .page-shows-events-calendar .view-filters .views-exposed-form-events-calendar-events-calendar #edit-field-genre-tid-wrapper {
     margin-right: 0; }
