@@ -359,6 +359,86 @@ function basic_page_content_views_default_views() {
   $export['related_links'] = $view;
 
   $view = new view();
+  $view->name = 'sponsors_for_basic_pages';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Sponsors for Basic Pages';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['css_class'] = 'event-sponsors';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'event-sponsors-list-item';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'event-sponsors-list';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Header: Global: Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['label'] = 'Presented with support from';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h2 class="event-sponsors-title">Presented with support from</h2>';
+  /* Field: Content: Sponsor(s) */
+  $handler->display->display_options['fields']['field_sponsor_s_']['id'] = 'field_sponsor_s_';
+  $handler->display->display_options['fields']['field_sponsor_s_']['table'] = 'field_data_field_sponsor_s_';
+  $handler->display->display_options['fields']['field_sponsor_s_']['field'] = 'field_sponsor_s_';
+  $handler->display->display_options['fields']['field_sponsor_s_']['label'] = '';
+  $handler->display->display_options['fields']['field_sponsor_s_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sponsor_s_']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_sponsor_s_']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  $handler->display->display_options['fields']['field_sponsor_s_']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_sponsor_s_']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_sponsor_s_']['separator'] = '';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'page' => 'page',
+  );
+  /* Filter criterion: Content: Sponsor(s) (field_sponsor_s_:fid) */
+  $handler->display->display_options['filters']['field_sponsor_s__fid']['id'] = 'field_sponsor_s__fid';
+  $handler->display->display_options['filters']['field_sponsor_s__fid']['table'] = 'field_data_field_sponsor_s_';
+  $handler->display->display_options['filters']['field_sponsor_s__fid']['field'] = 'field_sponsor_s__fid';
+  $handler->display->display_options['filters']['field_sponsor_s__fid']['operator'] = 'not empty';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['sponsors_for_basic_pages'] = $view;
+
+  $view = new view();
   $view->name = 'tabs';
   $view->description = '';
   $view->tag = 'default';
