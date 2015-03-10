@@ -49,7 +49,7 @@ function basic_page_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Expandable Details',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_expandable_details',
       1 => 'field_expandable_details_heading',
@@ -78,7 +78,7 @@ function basic_page_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tabs',
-    'weight' => '12',
+    'weight' => '7',
     'children' => array(
       0 => 'field_tabs',
     ),
