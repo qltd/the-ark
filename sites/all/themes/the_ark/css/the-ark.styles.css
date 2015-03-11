@@ -999,6 +999,25 @@ body:after {
   .menu .menu-item {
     list-style: none; }
 
+.special-announcements-wrap {
+  max-width: 119rem;
+  margin: 0 auto;
+  text-align: center; }
+  .special-announcements-wrap .special-announcement-list {
+    background: #f8903b;
+    color: #fff;
+    margin: 0;
+    padding: 0.5rem; }
+    .special-announcements-wrap .special-announcement-list li {
+      list-style: none;
+      margin-bottom: 0; }
+    .special-announcements-wrap .special-announcement-list p {
+      padding: 0;
+      margin: 0;
+      font-size: 1.8rem; }
+  .special-announcements-wrap .node__title {
+    display: none; }
+
 .tabs--primary {
   margin: 25px 0;
   margin: 2.5rem 0;

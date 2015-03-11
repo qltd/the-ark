@@ -1,0 +1,28 @@
+//styles for displaying a special announcement/new alert @rdarling
+.special-announcements-wrap {
+    max-width: 119rem;    
+    margin: 0 auto;
+    text-align: center;
+
+    .special-announcement-list {
+        background: $orange;
+        color: #fff;     
+        margin:0;
+        padding:0.5rem;
+
+        li {
+            list-style: none; 
+            margin-bottom: 0;
+        }
+
+        p {
+            padding:0;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+    }
+
+    .node__title {
+        display:none; 
+    }
+}
