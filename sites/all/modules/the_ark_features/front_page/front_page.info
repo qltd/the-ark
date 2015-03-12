@@ -64,5 +64,5 @@ features[node][] = special_announcements
 features[node][] = tab
 features[views_view][] = billboards
 features[views_view][] = special_announcements
-mtime = 1426163586
+mtime = 1426163876
 project path = sites/all/modules/the_ark_features
