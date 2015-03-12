@@ -142,6 +142,14 @@ function front_page_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'special_announcements' => array(
+      'name' => t('Special Announcements'),
+      'base' => 'node_content',
+      'description' => t('News alerts / special annoucements for the front page'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => t('News alerts / special annoucements for the front page. '),
+    ),
     'tab' => array(
       'name' => t('Homepage Tab'),
       'base' => 'node_content',
