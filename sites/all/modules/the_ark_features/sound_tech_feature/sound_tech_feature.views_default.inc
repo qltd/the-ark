@@ -608,7 +608,7 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['relationship'] = 'reverse_field_event_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
-  /* Field: Content: Date and Time */
+  /* Field: Content: Load-in Time */
   $handler->display->display_options['fields']['field_date_1']['id'] = 'field_date_1';
   $handler->display->display_options['fields']['field_date_1']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date_1']['field'] = 'field_date';
@@ -642,7 +642,7 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Date and Time */
+  /* Field: Content: Load-in Time */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -687,7 +687,7 @@ function sound_tech_feature_views_default_views() {
   );
   $handler->display->display_options['fields']['field_stage_plot']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_stage_plot']['multi_type'] = 'ul';
-  /* Sort criterion: Content: Date and Time (field_date) */
+  /* Sort criterion: Content: Load-in Time (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
@@ -722,6 +722,93 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['content'] = '<a href="/admin/sound-tech/events/archive">Sound Tech Events Archive</a>';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['relationship'] = 'reverse_field_event_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  /* Field: Content: Load-in Time */
+  $handler->display->display_options['fields']['field_date_1']['id'] = 'field_date_1';
+  $handler->display->display_options['fields']['field_date_1']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date_1']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date_1']['label'] = 'Date';
+  $handler->display->display_options['fields']['field_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date_1']['settings'] = array(
+    'format_type' => 'abv_day_name_and_short_date',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Co-headlining Act(s) */
+  $handler->display->display_options['fields']['field_coheadlining_act']['id'] = 'field_coheadlining_act';
+  $handler->display->display_options['fields']['field_coheadlining_act']['table'] = 'field_data_field_coheadlining_act';
+  $handler->display->display_options['fields']['field_coheadlining_act']['field'] = 'field_coheadlining_act';
+  $handler->display->display_options['fields']['field_coheadlining_act']['label'] = '';
+  $handler->display->display_options['fields']['field_coheadlining_act']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_coheadlining_act']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_coheadlining_act']['alter']['text'] = ' // [field_coheadlining_act]';
+  $handler->display->display_options['fields']['field_coheadlining_act']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_coheadlining_act']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_coheadlining_act']['separator'] = ' // ';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Event/Show';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][field_coheadlining_act]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Load-in Time */
+  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['relationship'] = 'reverse_field_event_node';
+  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date']['settings'] = array(
+    'format_type' => 'time',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Sound Tech(s) */
+  $handler->display->display_options['fields']['field_sound_tech']['id'] = 'field_sound_tech';
+  $handler->display->display_options['fields']['field_sound_tech']['table'] = 'field_data_field_sound_tech';
+  $handler->display->display_options['fields']['field_sound_tech']['field'] = 'field_sound_tech';
+  $handler->display->display_options['fields']['field_sound_tech']['relationship'] = 'reverse_field_event_node';
+  $handler->display->display_options['fields']['field_sound_tech']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_sound_tech']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_sound_tech']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_sound_tech']['multi_type'] = 'ul';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['relationship'] = 'reverse_field_event_node';
+  $handler->display->display_options['fields']['body']['label'] = 'Notes';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: Stage Plot(s) */
+  $handler->display->display_options['fields']['field_stage_plot']['id'] = 'field_stage_plot';
+  $handler->display->display_options['fields']['field_stage_plot']['table'] = 'field_data_field_stage_plot';
+  $handler->display->display_options['fields']['field_stage_plot']['field'] = 'field_stage_plot';
+  $handler->display->display_options['fields']['field_stage_plot']['relationship'] = 'reverse_field_event_node';
+  $handler->display->display_options['fields']['field_stage_plot']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_stage_plot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_stage_plot']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_stage_plot']['type'] = 'file_url_plain';
+  $handler->display->display_options['fields']['field_stage_plot']['settings'] = array(
+    'text' => 'View',
+  );
+  $handler->display->display_options['fields']['field_stage_plot']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_stage_plot']['multi_type'] = 'ul';
 
   /* Display: Sound Tech Events Archive - Block */
   $handler = $view->new_display('block', 'Sound Tech Events Archive - Block', 'sound_tech_events_archive_block');
@@ -741,7 +828,7 @@ function sound_tech_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'event' => 'event',
   );
-  /* Filter criterion: Content: Date and Time (field_date) */
+  /* Filter criterion: Content: Load-in Time (field_date) */
   $handler->display->display_options['filters']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['filters']['field_date_value']['table'] = 'field_data_field_date';
   $handler->display->display_options['filters']['field_date_value']['field'] = 'field_date_value';
