@@ -193,6 +193,45 @@ function sound_tech_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-sound_tech-field_sound_tech_information'
+  $field_instances['node-sound_tech-field_sound_tech_information'] = array(
+    'bundle' => 'sound_tech',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sound_tech_information',
+    'label' => 'Sound Tech Information',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-sound_tech-field_stage_plot'
   $field_instances['node-sound_tech-field_stage_plot'] = array(
     'bundle' => 'sound_tech',
@@ -304,6 +343,7 @@ function sound_tech_feature_field_default_field_instances() {
   t('Event');
   t('Load-in Time');
   t('Notes');
+  t('Sound Tech Information');
   t('Sound Tech(s)');
   t('Stage Plot(s)');
 

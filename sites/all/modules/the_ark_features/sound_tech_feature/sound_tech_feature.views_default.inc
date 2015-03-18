@@ -788,6 +788,13 @@ function sound_tech_feature_views_default_views() {
   );
   $handler->display->display_options['fields']['field_sound_tech']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_sound_tech']['multi_type'] = 'ul';
+  /* Field: Content: Sound Tech Information */
+  $handler->display->display_options['fields']['field_sound_tech_information']['id'] = 'field_sound_tech_information';
+  $handler->display->display_options['fields']['field_sound_tech_information']['table'] = 'field_data_field_sound_tech_information';
+  $handler->display->display_options['fields']['field_sound_tech_information']['field'] = 'field_sound_tech_information';
+  $handler->display->display_options['fields']['field_sound_tech_information']['relationship'] = 'reverse_field_event_node';
+  $handler->display->display_options['fields']['field_sound_tech_information']['label'] = 'Sound Tech';
+  $handler->display->display_options['fields']['field_sound_tech_information']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
