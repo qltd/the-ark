@@ -20,10 +20,12 @@
   .event-sponsors-list-item {
     @include font-details($size: 16px, $weight: 700);
     font-size: 1.6rem;
+    display: inline-block;//letting logos lay next to each other @rdar
 
     margin: {
       bottom: 30px;
       bottom: 3rem;
+      right:0.5rem;
     }
   }
 }

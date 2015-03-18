@@ -2238,8 +2238,10 @@ body:after {
     font-size: 16px;
     font-weight: 700;
     font-size: 1.6rem;
+    display: inline-block;
     margin-bottom: 30px;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    margin-right: 0.5rem; }
 
 .event-sponsors-sponsor-link {
   color: #a6a29c; }
