@@ -241,6 +241,42 @@ function event_content_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_date.field_date_value' => 'field_data_field_date.field_date_value',
   );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Genre(s) (field_genre) */
+  $handler->display->display_options['filters']['field_genre_tid']['id'] = 'field_genre_tid';
+  $handler->display->display_options['filters']['field_genre_tid']['table'] = 'field_data_field_genre';
+  $handler->display->display_options['filters']['field_genre_tid']['field'] = 'field_genre_tid';
+  $handler->display->display_options['filters']['field_genre_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['operator_id'] = 'field_genre_tid_op';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['label'] = 'Filter by:';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['operator'] = 'field_genre_tid_op';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['identifier'] = 'field_genre_tid';
+  $handler->display->display_options['filters']['field_genre_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_genre_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_genre_tid']['vocabulary'] = 'genre';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['operator'] = 'not in';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'sound_tech' => 'sound_tech',
+  );
   $handler->display->display_options['path'] = 'shows-events/calendar';
   $handler->display->display_options['menu']['title'] = 'Calendar';
   $handler->display->display_options['menu']['weight'] = '0';
