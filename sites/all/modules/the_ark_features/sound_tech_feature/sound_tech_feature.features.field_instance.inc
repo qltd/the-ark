@@ -51,7 +51,7 @@ function sound_tech_feature_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -104,7 +104,7 @@ function sound_tech_feature_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -175,7 +175,7 @@ function sound_tech_feature_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_sound_tech',
-    'label' => 'Sound Tech(s)',
+    'label' => 'Sound Tech Lead',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -190,6 +190,49 @@ function sound_tech_feature_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-sound_tech-field_sound_tech_ass'
+  $field_instances['node-sound_tech-field_sound_tech_ass'] = array(
+    'bundle' => 'sound_tech',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sound_tech_ass',
+    'label' => 'Sound Tech Assistant',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 2,
     ),
   );
 
@@ -289,7 +332,7 @@ function sound_tech_feature_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -343,8 +386,9 @@ function sound_tech_feature_field_default_field_instances() {
   t('Event');
   t('Load-in Time');
   t('Notes');
+  t('Sound Tech Assistant');
   t('Sound Tech Information');
-  t('Sound Tech(s)');
+  t('Sound Tech Lead');
   t('Stage Plot(s)');
 
   return $field_instances;
