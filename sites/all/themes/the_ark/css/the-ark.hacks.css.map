@@ -1,11 +1,7 @@
 {
 "version": 3,
 "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAoCA,eAAgB;EAEZ,UAAG,EAAE,YAAY;;AAKrB,kBAAmB;EACjB,OAAO,EAAE,IAAI;;AAIf,qBAAsB;EACpB,OAAO,EAAE,IAAI;;ACWX,6BAAwB;EDP1B,eAAgB;IAEZ,UAAG,EAAE,eAAe;IAGpB,UAAG,EAAE,iBAAiB;;EAIxB,yBAAU;IACR,mBAAmB,EAAE,WAAW;IAChC,mBAAmB,EAAE,aAAa;EAEpC,wCAAyB;IACvB,GAAG,EAAE,IAAI;IACT,GAAG,EAAE,MAAM;IACX,2DAAqB;MACnB,GAAG,EAAE,KAAK;MACV,GAAG,EAAE,OAAO;MACZ,iEAAQ;QACN,GAAG,EAAE,IAAI;QACT,GAAG,EAAE,MAAM;EAKf,8DAAyB;IACvB,GAAG,EAAE,IAAI;IACT,GAAG,EAAE,MAAM;;EAKjB,qBAAsB;IACpB,OAAO,EAAE,KAAK",
-<<<<<<< HEAD
-"sources": ["../the-ark.hacks.scss","../../../var/www/vhosts/qltdclient.com/the-ark/sites/all/themes/the_ark/.npm/libraries/compass-breakpoint/stylesheets/_breakpoint.scss"],
-=======
-"sources": ["../the-ark.hacks.scss","../../../home/ramsey/Projects/Q/the_ark/public/sites/all/themes/the_ark/.npm/libraries/compass-breakpoint/stylesheets/_breakpoint.scss"],
->>>>>>> 5263404e461f67c52d00ba72b4e5388780ec8d2b
+"sources": ["../the-ark.hacks.scss","../../../../../../../Users/matt/Projects/The%20Ark/sites/all/themes/the_ark/.npm/libraries/compass-breakpoint/stylesheets/_breakpoint.scss"],
 "names": [],
 "file": "the-ark.hacks.css"
 }

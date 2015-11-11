@@ -237,10 +237,11 @@ select {
 .webform-component-date .day {
   margin-bottom: 0; }
 
-.captcha legend, .captcha .fieldset-description { display: none; }
+.captcha legend, .captcha .fieldset-description {
+  display: none; }
+
 .g-recaptcha {
-    margin: 40px 0px;
-}
+  margin: 40px 0px; }
 
 h1 {
   font-size: 38px;
