@@ -154,3 +154,8 @@ select {
     margin-bottom: 0;
   }
 }
+
+.captcha legend, .captcha .fieldset-description { display: none; }
+.g-recaptcha {
+    margin: 40px 0px;
+}
