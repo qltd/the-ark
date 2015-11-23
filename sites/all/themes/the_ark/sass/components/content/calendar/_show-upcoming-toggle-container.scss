@@ -1,9 +1,0 @@
-.show-upcoming-toggle-container {
-  text-align: center;
-}
-
-@include breakpoint($breakpoint-desktop) {
-  .show-upcoming-toggle-container {
-    display: none;
-  }
-}

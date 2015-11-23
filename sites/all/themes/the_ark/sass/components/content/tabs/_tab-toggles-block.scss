@@ -1,9 +1,0 @@
-.tab-toggles-block {
-  display: none;
-}
-
-@include breakpoint($breakpoint-tablet) {
-  .tab-toggles-block {
-    display: block;
-  }
-}

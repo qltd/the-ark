@@ -1,9 +1,0 @@
-{
-  "name": "the_ark_admin",
-  "version": "1.0.0",
-  "dependencies": {
-    "bourbon ": "4.0.2",
-    "compass-breakpoint": "2.5.0",
-    "susy": "2.1.3"
-  }
-}
