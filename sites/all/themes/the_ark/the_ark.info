@@ -22,6 +22,7 @@ scripts[] = js/the-ark.min.js
 ; ========================================
 regions[header] = Header
 regions[hero] = Hero
+regions[under_hero] = Under Hero
 regions[content] = Content
 regions[sidebar] = Sidebar
 regions[footer] = Footer
