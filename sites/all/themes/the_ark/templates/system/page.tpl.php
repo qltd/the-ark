@@ -94,6 +94,11 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <?php
+        if (drupal_is_front_page()) {
+            print render($page['under_hero']);
+        }
+      ?>
       <?php print render($page['content']); ?>
       <?php // print $feed_icons; ?>
     </div>
