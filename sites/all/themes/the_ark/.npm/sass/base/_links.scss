@@ -1,0 +1,15 @@
+a {
+  color: $teal;
+  text-decoration: none;
+  &.active {
+    color: $teal;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.node-type-page {
+  .node__content {
+    margin: {
+      bottom: 80px;
+      bottom: 8rem;
+    }
+  }
+
+  .field--name-body {
+    margin: {
+      right: auto;
+      left: auto;
+    }
+    padding: 0 20px;
+    padding: 0 2rem;
+    max-width: 600px;
+    max-width: 60rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .node-type-page {
+    .field--name-body {
+      max-width: 1000px;
+      max-width: 100rem;
+      text-align: center;
+    }
+  }
+}
+
+//adding some specific styles for the sponsors area on some basic pages
+.field--name-field-sponsor-s- {
+    max-width:100rem;
+    text-align:center;
+    margin: 0 auto;
+    border-bottom: 1px solid #d6d4d2;
+    border-top: 1px solid #d6d4d2;
+    padding-top:1rem;
+
+    .field__item {
+        max-height:30rem; 
+        margin-bottom:3rem;
+    }
+
+    .field__label {
+        visibility: hidden;
+        margin-bottom: 2rem;
+
+        &:before {
+            content: "Presented with support from: "; 
+            visibility: visible;
+            font-style: italic;
+            font-size: 1.4rem;
+            font-weight: 300;
+            position:relative;
+            left:4.3rem;
+        }
+    }
+}

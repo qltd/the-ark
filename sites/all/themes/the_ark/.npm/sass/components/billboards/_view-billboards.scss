@@ -1,0 +1,5 @@
+@include breakpoint($breakpoint-tablet) {
+  .view-billboards {
+    overflow: hidden;
+  }
+}

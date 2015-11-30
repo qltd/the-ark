@@ -1,0 +1,17 @@
+.corporate-sponsors-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  width: 28rem;
+  height: 125px;
+  height: 12.5rem;
+  overflow: hidden;
+  background-color: $gray-light-background;
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .corporate-sponsors-item {
+    margin: 0 8px 8px;
+  }
+}

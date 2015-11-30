@@ -1,0 +1,156 @@
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=password],
+input[type=button],
+input[type=reset],
+input[type=submit],
+button,
+select,
+textarea { // text, select, and button inputs
+  @include appearance(none);
+  -webkit-appearance: none;
+
+  border-radius: 0;
+  border: none;
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit],
+button { // button inputs
+  @extend .button; // see button component for additional styles
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=password],
+select { // single-line text inputs
+  height: 40px;
+  height: 4rem;
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=password],
+select,
+textarea { // single- and multi-line text inputs
+  @include transition(background-color $transition-duration ease-out);
+  padding: {
+    right: 10px;
+    left: 10px;
+  }
+  padding: {
+    right: 1rem;
+    left: 1rem;
+  }
+  width: 100%;
+  background-color: $gray-light-background;
+  &:focus {
+    outline: 0;
+    background-color: $orange-lighter;
+  }
+}
+
+textarea { // multi-line text inputs
+  padding: {
+    top: 5px;
+  }
+  padding: {
+    top: 0.5rem;
+  }
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=password],
+textarea,
+label,
+input + .description,
+.form-item label,
+.form-actions label { // text inputs, labels, and descriptions
+  @include font-details($size: 18px, $weight: 300, $style: italic);
+  font-size: 1.8rem;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  opacity: 0;
+  display: none;
+}
+
+input[type='checkbox'] + label {
+  display: inline-block;
+  margin: 5px 10px;
+  margin: 0.5rem 1rem;
+  padding: 10px 0 10px 50px;
+  padding: 1rem 0 1rem 5rem;
+  max-height: 50px;
+  max-height: 5rem;
+  cursor: pointer;
+  background: url(../images/checkbox.png) left center no-repeat;
+  background-size: 40px 40px;
+  background-size: 4rem 4rem;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url(../images/checkbox-checked.png) left center no-repeat;
+  background-size: 40px 40px;
+  background-size: 4rem 4rem;
+}
+
+input[type='radio'] + label {
+  display: inline-block;
+  margin: 5px 10px;
+  margin: 0.5rem 1rem;
+  padding: 10px 0 10px 50px;
+  padding: 1rem 0 1rem 5rem;
+  cursor: pointer;
+  background: url(../images/radio-button-off.png) left center no-repeat;
+  background-size: 30px 30px;
+  background-size: 3rem 3rem;
+}
+
+input[type='radio']:checked + label {
+  background: url(../images/radio-button-on.png) left center no-repeat;
+  background-size: 30px 30px;
+  background-size: 3rem 3rem;
+}
+
+select {
+  padding-right: 40px;
+  background: $gray-light-background url(../images/custom-select.png) right center no-repeat;
+  background-size: 40px 40px;
+  border-radius: 0;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+.webform-component-date {
+  select {
+    margin: {
+      bottom: 15px;
+      bottom: 1.5rem;
+    }
+    border-radius: 0;
+  }
+  .day {
+    margin-bottom: 0;
+  }
+}

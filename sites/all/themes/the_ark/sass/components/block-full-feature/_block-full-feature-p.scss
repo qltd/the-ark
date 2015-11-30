@@ -1,0 +1,14 @@
+.block-full-feature {
+  p {
+    margin: 0;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-full-feature {
+    p {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}

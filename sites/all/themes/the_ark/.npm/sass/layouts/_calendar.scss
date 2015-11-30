@@ -1,0 +1,34 @@
+.calendar {
+  margin: 0 auto;
+  width: 160px;
+  width: 16rem;
+
+  .past & {
+    opacity: 0.25;
+  }
+}
+
+// ONLY between tablet and desktop
+@include breakpoint($breakpoint-tablet $breakpoint-desktop - 0.0625) {
+  .calendar {
+    width: auto;
+  }
+}
+
+// tablet and above
+@include breakpoint($breakpoint-tablet) {
+  .calendar {
+    margin: {
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+// ONLY between desktop and desktop-wide
+@include breakpoint($breakpoint-desktop $breakpoint-desktop-wide - 0.0625) {
+  .calendar {
+    width: 115px;
+    width: 11.5rem;
+  }
+}

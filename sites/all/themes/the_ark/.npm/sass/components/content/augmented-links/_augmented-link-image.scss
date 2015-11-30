@@ -1,0 +1,7 @@
+.augmented-link-image {}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-image {
+    float: left;
+  }
+}

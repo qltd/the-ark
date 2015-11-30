@@ -1,0 +1,5 @@
+.billboard-title {
+  margin: 0;
+  @include font-details(14px, #fff, 100, null, italic);
+  font-size: 1.4rem;
+}

@@ -1,0 +1,27 @@
+.tabs--primary {
+  margin: 25px 0;
+  margin: 2.5rem 0;
+  border: {
+    bottom: none;
+  }
+  a {
+    @extend .button;
+  }
+  li {
+    float: none;
+    display: block;
+    margin: 0 20px 2px;
+    margin: 0 2rem 0.2rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .tabs--primary {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      margin: 0 1rem;
+    }
+  }
+}

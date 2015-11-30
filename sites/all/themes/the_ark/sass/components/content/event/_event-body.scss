@@ -1,0 +1,25 @@
+.event-body {
+
+}
+.event-body-content {
+  padding: 10px 20px;
+  padding: 1rem 2rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-body-content {
+    padding: {
+      right: 40px;
+      right: 4rem;
+      left: 40px;
+      left: 4rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .event-body-paragraph {
+    @include font-details($size: 18px);
+    font-size: 1.8rem;
+  }
+}

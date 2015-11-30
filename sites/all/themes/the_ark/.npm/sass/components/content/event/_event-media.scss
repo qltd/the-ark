@@ -1,0 +1,166 @@
+.event-media {
+
+}
+.event-media-content {
+  padding: 20px 0;
+  padding: 2rem 0;
+}
+.event-images-videos {
+  @extend %clearfix;
+
+  padding: 0 20px;
+  padding: 0 2rem;
+  .file {
+    margin: 20px auto;
+    margin: 2rem auto;
+    width: 580px;
+    width: 58rem;
+    max-width: 100%;
+  }
+  .file-video {
+    margin: {
+      top: 12px;
+      top: 1.2rem;
+      bottom: 12px;
+      bottom: 1.2rem;
+    }
+  }
+}
+.event-spotify {
+  overflow: hidden;
+  padding: 0 20px;
+  max-width: 100%;
+  .field__item {
+    overflow: hidden;
+    margin: 0 auto;
+    border: {
+      radius: 3px;
+      radius: 0.3rem;
+    }
+    width: 280px;
+    width: 28rem;
+    height: 80px;
+    height: 8rem;
+  }
+  .spotify-player {
+    width: 280px;
+    width: 28rem;
+    height: 80px;
+    height: 8rem;
+  }
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .event-spotify {
+    .field__item {
+      width: 440px;
+      width: 44rem;
+    }
+    .spotify-player {
+      width: 440px;
+      width: 44rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-media-content {
+    padding: {
+      top: 0;
+    }
+  }
+  .event-images-videos {
+    margin: 0 auto;
+    padding: 0;
+    width: 740px;
+    width: 74rem;
+    .file {
+      float: left;
+      margin: 20px;
+      margin: 2rem;
+      width: 330px;
+      width: 33rem;
+      max-height: 208px;
+      max-height: 20.8rem;
+    }
+  }
+  .event-spotify {
+    margin: {
+      top: 20px;
+      top: 2rem;
+    }
+    .field__item {
+      width: 700px;
+      width: 70rem;
+      height: 780px;
+      height: 78rem;
+    }
+    .spotify-player {
+      width: 700px;
+      width: 70rem;
+      height: 780px;
+      height: 78rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .event-media-content {
+    margin: {
+      top: 10px;
+      top: 1rem;
+    }
+  }
+  .event-images-videos {
+    .file {
+      float: none;
+      margin: 20px 0;
+      margin: 2rem 0;
+      width: 500px;
+      width: 50rem;
+      max-height: 315px;
+      max-height: 31.5rem;
+    }
+  }
+  .event-spotify {
+    margin: 0;
+    padding: 0;
+    .field__item {
+      width: 500px;
+      width: 50rem;
+      height: 580px;
+      height: 58rem;
+    }
+    .spotify-player {
+      width: 500px;
+      width: 50rem;
+      height: 580px;
+      height: 58rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .event-images-videos {
+    .file {
+      width: 580px;
+      width: 58rem;
+      max-height: 365px;
+      max-height: 36.5rem;
+    }
+  }
+  .event-spotify {
+    .field__item {
+      width: 580px;
+      width: 58rem;
+      height: 660px;
+      height: 66rem;
+    }
+    .spotify-player {
+      width: 580px;
+      width: 58rem;
+      height: 660px;
+      height: 66rem;
+    }
+  }
+}

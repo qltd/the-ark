@@ -1,0 +1,18 @@
+.calendar-title-display {
+  @include font-details($weight: 700);
+
+  margin: {
+    top: 5px;
+    top: 0.5rem;
+  }
+
+  .delimiter {
+    margin: {
+      right: 2px;
+      right: 0.2rem;
+    }
+    color: $gray-background;
+    letter-spacing: -2px;
+    letter-spacing: -0.2rem;
+  }
+}

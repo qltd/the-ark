@@ -1,0 +1,20 @@
+<?php
+
+function the_ark_redirect_init () {
+    if (current_path() === 'node/1'){
+        drupal_goto('shows-events/calendar', array(), 301); 
+    }   
+}
+
+global $user;
+
+$current_path = current_path();
+
+if(preg_match('/users/',$current_path)){
+    //Provide a redirect for sound tech users when they login
+    //@rdar
+    if(!empty($user->roles) && in_array('sound tech',$user->roles)){
+        drupal_goto('admin/sound-tech/events'); 
+    }
+}
+

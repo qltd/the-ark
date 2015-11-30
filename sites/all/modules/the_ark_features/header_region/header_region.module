@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Header Region feature.
+ */
+
+include_once 'header_region.features.inc';

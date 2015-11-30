@@ -1,0 +1,21 @@
+.footer-block {
+  margin: {
+    top: 20px;
+  }
+  margin: {
+    top: 2rem;
+  }
+  color: white;
+  text-align: center;
+  .footer-paragraph {
+    @include font-details($size: 14px);
+    font-size: 1.4rem;
+  }
+  .block__title {
+    @include font-details($size: 14px, $weight: 300, $style: italic);
+    font-size: 1.4rem;
+
+    margin: 0 0 10px;
+    margin: 0 0 1rem;
+  }
+}

@@ -1,0 +1,24 @@
+.augmented-link-text {
+  &, & > p {
+    @include font-details($size: 14px, $height: 1.75);
+    font-size: 1.4rem;
+
+    margin: {
+      top: 0;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-text {
+    margin: {
+      left: 300px;
+      left: 30rem;
+    }
+
+    &, & > p {
+      @include font-details($size: 18px, $height: 1.5);
+      font-size: 1.8rem;
+    }
+  }
+}

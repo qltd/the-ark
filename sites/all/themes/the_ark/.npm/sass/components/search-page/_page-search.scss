@@ -1,0 +1,18 @@
+.page-search {
+  h2 {
+    padding: {
+      left: 25px;
+      left: 2.5rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .page-search {
+    h2 {
+      padding: {
+        left: 0;
+      }
+    }
+  }
+}

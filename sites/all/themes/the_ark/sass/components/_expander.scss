@@ -1,0 +1,62 @@
+.expander {
+  @include transition(background-color $transition-duration ease-out);
+  @include font-details($size: 21px, $color: white, $weight: 300, $height: 50px);
+  font-size: 2.1rem;
+  line-height: 5rem;
+
+  margin: 2px 0;
+  margin: 0.2rem 0;
+  padding: {
+    left: 20px;
+    left: 2rem;
+  }
+  background-color: $teal;
+  cursor: pointer;
+  &:hover {
+    background-color: $teal-light;
+    &:before {
+      background-color: $yellow-light;
+    }
+  }
+  &:before {
+    @include transition(background-color $transition-duration ease-out);
+    @include FontAwesome();
+
+    content: '\f068';
+    float: right;
+    border: {
+      left: 1px solid white;
+    }
+    width: 50px;
+    width: 5rem;
+    background-color: $yellow;
+    text-align: center;
+  }
+}
+.expander-collapsed {
+  background-color: $gray-background;
+  &:hover {
+    background-color: $gray-lighter;
+    &:before {
+      background-color: $gray-lighter;
+    }
+  }
+  &:before {
+    content: '\f067';
+    background-color: $gray-background;
+  }
+  & + .expander-content {
+    display: none;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .expander {
+    display: none;
+  }
+  .expander-collapsed {
+    & + .expander-content {
+      display: block;
+    }
+  }
+}

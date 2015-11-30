@@ -1,0 +1,12 @@
+@include breakpoint($breakpoint-desktop) {
+  .header-navigation-promo {
+    img {
+      margin: {
+        bottom: 15px;
+        bottom: 1.5rem;
+      }
+      width: 250px;
+      width: 25rem;
+    }
+  }
+}

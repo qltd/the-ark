@@ -1,0 +1,42 @@
+.footer-development {
+  @include font-details($style: italic);
+}
+.q-ltd {
+  @extend .icon-logo-replace;
+  @include transition(color $transition-duration ease-out);
+  @include font-details($size: 31px, $color: white, $weight: 700, $height: 1);
+  font-size: 3.1rem;
+
+  display: block;
+  margin: 10px auto 0;
+  margin: 1rem auto 0;
+  width: 150px;
+  width: 15rem;
+  height: 31px;
+  height: 3.1rem;
+  &:before {
+    content: "\e601"; // Q LTD logo
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .footer-development {
+    margin: {
+      top: 40px;
+    }
+    margin: {
+      top: 4rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .q-ltd {
+    &:hover{
+      color: $gold;
+    }
+  }
+}

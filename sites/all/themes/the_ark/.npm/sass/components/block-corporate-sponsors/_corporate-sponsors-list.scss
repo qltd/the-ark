@@ -1,0 +1,14 @@
+.corporate-sponsors-list {
+  margin: 0 auto;
+  padding-left: 0;
+  overflow: hidden;
+  list-style: none;
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .corporate-sponsors-list {
+    max-width: 1200px;
+    max-width: 120rem;
+  }
+}

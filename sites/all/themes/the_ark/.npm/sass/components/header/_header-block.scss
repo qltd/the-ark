@@ -1,0 +1,6 @@
+.header-block {
+  @include font-details($color: white);
+  .block__title {
+    margin: 0;
+  }
+}

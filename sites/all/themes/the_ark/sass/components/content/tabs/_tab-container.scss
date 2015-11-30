@@ -1,0 +1,15 @@
+.tab-container {}
+
+@include breakpoint($breakpoint-tablet) {
+  .tab-container {
+    display: none;
+    padding: {
+      top: 70px;
+      top: 7rem;
+    }
+  }
+
+  .tab-container-active {
+    display: block;
+  }
+}

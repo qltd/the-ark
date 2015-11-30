@@ -1,0 +1,93 @@
+.header-search {
+  .form-type-textfield {
+    @include transition(
+      left $transition-duration ease-out,
+      width $transition-duration ease-out
+    );
+
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    left: 240px;
+    left: 24rem;
+  }
+  .form-type-textfield-active {
+    left: 0;
+    width: 240px;
+    width: 24rem;
+  }
+
+  .form-submit {
+    @extend .button-navigation-mobile;
+    @extend .icon-replace;
+
+    position: relative;
+    border: {
+      right: none;
+    }
+    &:before {
+      content: "\f002" // FontAwesome search
+    }
+  }
+
+  .form-submit-desktop {
+    display: none;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .header-search {
+    &:hover {
+      .form-type-textfield {
+        display: block;
+      }
+
+      .form-submit-desktop {
+        display: block;
+      }
+    }
+
+    .form-type-textfield {
+      display: none;
+      top: -#{map_get($navigation-flyup, height-px)};
+      top: -#{map_get($navigation-flyup, height)};
+      left: 0;
+      width: 100%;
+      height: map_get($navigation-flyup, height-px);
+      height: map_get($navigation-flyup, height);
+
+      &:before { // ensures hover is maintained over full width of screen
+        content: '';
+        display: block;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        height: map_get($navigation-flyup, height-px);
+        height: map_get($navigation-flyup, height);
+        width: 100%;
+      }
+    }
+
+    .form-text {
+      position: relative;
+      z-index: 2;
+      margin: {
+        top: 80px;
+        top: 8rem;
+      }
+      padding: 1px 160px 1px 15px;
+      padding: 0.1rem 16rem 0.1rem 1.5rem;
+      height: 70px;
+      height: 7rem;
+    }
+
+    .form-submit-desktop {
+      position: absolute;
+      z-index: 3;
+      top: -#{map_get($navigation-flyup, height-px) - 94};
+      top: -#{map_get($navigation-flyup, height) - 9.4};
+      right: 15px;
+      right: 1.5rem;
+    }
+  }
+}

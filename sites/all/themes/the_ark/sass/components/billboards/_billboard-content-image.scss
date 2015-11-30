@@ -1,0 +1,12 @@
+.content-image {
+  .billboard-link > & {
+    display: block;
+    width: 100%;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .content-image {
+    
+  }
+}

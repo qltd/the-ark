@@ -1,0 +1,17 @@
+.event-title {
+  @extend .content-title;
+
+  margin: {
+    bottom: 10px;
+    bottom: 1rem;
+  }
+
+  .delimiter {
+    margin: {
+      right: 5px;
+      right: 0.5rem;
+    }
+    letter-spacing: -5px;
+    letter-spacing: -0.5rem;
+  }
+}

@@ -1,0 +1,47 @@
+.l-footer {
+  background-attachment: fixed;
+  background-color: $gray-light;
+  background-image: url('/sites/all/themes/the_ark/images/footer/footer.jpg');
+  background-position: center bottom;
+}
+
+.l-regionset--footer {
+  height: 800px;
+  height: 80rem;
+  padding: 42px 20px 0;
+  padding: 4.2rem 2rem 0;
+  background-color: $gray-mask;
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .l-footer {
+    background-image: url('/sites/all/themes/the_ark/images/footer/footer-mobile-wide.jpg');
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .l-footer {
+    background-image: url('/sites/all/themes/the_ark/images/footer/footer-tablet.jpg');
+  }
+
+  .l-regionset--footer {
+    padding: {
+      top: 80px;
+    }
+    padding: {
+      top: 8rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .l-footer {
+    background-image: url('/sites/all/themes/the_ark/images/footer/footer-desktop.jpg');
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .l-footer {
+    background-size: 100% auto;
+  }
+}

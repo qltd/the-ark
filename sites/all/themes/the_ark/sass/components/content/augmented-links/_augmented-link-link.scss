@@ -1,0 +1,17 @@
+.augmented-link-link {
+  @extend .button;
+
+  display: inline-block;
+  margin: {
+    bottom: 40px;
+    bottom: 4rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-link {
+    margin: {
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.calendar-guest-opener {
+  @include font-details($size: 14px, $weight: 300);
+  font-size: 1.4rem;
+
+  .field-content {
+    display: inline;
+  }
+  .delimiter {
+    margin: {
+      right: 3px;
+      right: 0.3rem;
+    }
+    color: $gray-background;
+    letter-spacing: -3px;
+    letter-spacing: -0.3rem;
+  }
+}

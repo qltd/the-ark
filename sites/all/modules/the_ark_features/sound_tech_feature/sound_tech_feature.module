@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sound Tech feature.
+ */
+
+include_once 'sound_tech_feature.features.inc';

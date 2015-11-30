@@ -1,0 +1,4 @@
+.quote-paragraph {
+  @include font-details(18px, null, null, null, italic);
+  font-size: 1.8rem;
+}

@@ -1,0 +1,7 @@
+@include breakpoint($breakpoint-tablet) {
+  .small-feature-left {
+    margin-right: 0.25%;
+    width: 49.75%;
+    float: left;
+  }
+}

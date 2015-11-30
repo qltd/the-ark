@@ -1,0 +1,18 @@
+.block-small-feature {
+  h3 {
+    margin: 0;
+    padding: 0 25px;
+    padding: 0 2.5rem;
+    @include font-details(14px, #fff, 100, null, italic);
+    font-size: 1.4rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .block-small-feature {
+    h3 {
+      padding: 0 50px;
+      padding: 0 5rem;
+    }
+  }
+}

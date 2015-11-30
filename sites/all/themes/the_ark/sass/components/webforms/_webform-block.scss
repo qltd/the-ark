@@ -1,0 +1,26 @@
+.webform-block {
+  padding: 25px;
+  padding: 2.5rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .webform-block {
+    margin: 0 auto;
+    max-width: 600px;
+    max-width: 60rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .webform-block {
+    margin: 0;
+    padding: 0;
+    padding: {
+      left: 20px;
+      left: 2rem;
+    }
+    width: 50%;
+    max-width: auto;
+    float: right;
+  }
+}

@@ -1,0 +1,38 @@
+.block-small-feature {
+  p {
+    margin: 0;
+    padding: 0 25px;
+    padding: 0 2.5rem;
+    @include font-details(16px, #fff, 100);
+    font-size: 1.6rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-small-feature {
+    p {
+      height: 48px;
+      height: 4.8rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .block-small-feature {
+    p {
+      height: 27px;
+      height: 2.7rem;
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .block-small-feature {
+      p {
+        padding: 0 50px;
+        padding: 0 5rem;
+      }
+  }
+}

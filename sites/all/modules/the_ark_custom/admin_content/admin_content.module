@@ -1,0 +1,35 @@
+<?php
+
+function admin_content_permission () {
+  return array(
+    'view header and hero pages' => array(
+      'title' => t('View header and hero pages'),
+      'description' => t('View header and hero pages.'),
+    ),
+  );
+}
+
+function admin_content_allow ($permission) { // helper function for admin_content_node_access()
+  if (user_access($permission)) return NODE_ACCESS_ALLOW;
+  return NODE_ACCESS_DENY;
+}
+
+function admin_content_custom_theme () {
+  if (arg(0) === 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+    if (isset($node->type) && in_array($node->type, array('sound_tech', 'sound_tech_page', 'header_image', 'hero_image'))) {
+      return 'the_ark_admin';
+    }
+  }
+}
+
+function admin_content_node_access ($node, $op, $account) { // deny anonymous or unauthorized access to sound tech content
+  if ($op === 'view') {
+    $type = is_string($node) ? $node : $node->type;
+    if (in_array($type, array('sound_tech', 'sound_tech_page')))
+      return admin_content_allow('view sound tech pages'); // defined in sound_tech module
+    if (in_array($type, array('header_image', 'hero_image')))
+      return admin_content_allow('view header and hero pages');
+  }
+  return NODE_ACCESS_IGNORE;
+}

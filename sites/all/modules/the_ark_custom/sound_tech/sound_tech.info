@@ -1,0 +1,5 @@
+name = The Ark Sound Tech Management
+description = Module that provides management tools for event sound techs.
+core = 7.x
+package = The Ark Custom
+version = 7.x-1.5

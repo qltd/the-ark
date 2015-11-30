@@ -1,0 +1,11 @@
+.l-static--footer {
+
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .l-static--footer {
+    margin: {
+      top: 0;
+    }
+  }
+}
