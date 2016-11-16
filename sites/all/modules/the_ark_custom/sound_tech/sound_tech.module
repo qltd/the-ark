@@ -24,7 +24,7 @@ function sound_tech_menu () {
     'access callback' => 'user_access',
     'page arguments' => array('sound_tech_user_form'),
     'page callback' => 'drupal_get_form',
-    'title' => 'Add Sound Tech Users',
+    'title' => 'Add Sound Tech Users', 
   );
   $items['admin/sound-tech/people/%/edit'] = array(
     'access arguments' => array(3),
