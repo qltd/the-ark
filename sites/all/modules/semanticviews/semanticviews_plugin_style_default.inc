@@ -233,6 +233,9 @@ class semanticviews_plugin_style_default extends views_plugin_style {
    * Return the token replaced class for the specified row.
    */
   function tokenize_class($row_index, $class) {
+    // Replaces the # to the row enumeration.
+    $class = strtr($class, array('#' => $row_index));
+
     if ($this->uses_fields() && $this->view->field) {
       $class = strip_tags($this->tokenize_value($class, $row_index));
     }
