@@ -1,0 +1,24 @@
+.image-credit {
+  @include font-details($size: 10px, $color: white);
+  font-size: 1rem;
+
+  position: absolute;
+  overflow: hidden;
+  margin: {
+    top: -23px;
+    top: -2.3rem;
+  }
+  padding: 5px 15px 3px;
+  padding: 0.5rem 1.5rem 0.3rem;
+  height: 23px;
+  height: 2.3rem;
+  background-color: $gray;
+  background-color: $gray-mask;
+  white-space: nowrap;
+}
+.image-credit-label {
+  margin: {
+    right: 5px;
+    right: 0.5rem;
+  }
+}

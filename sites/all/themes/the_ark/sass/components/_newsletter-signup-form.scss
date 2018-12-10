@@ -1,0 +1,55 @@
+#gdpr_text {
+  display: none;
+}
+
+.ctct-form-embed.form_0 .ctct-form-defaults {
+  background-color: transparent !important;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ctct-form-embed.form_0 .ctct-form-defaults .ctct-form-header {
+  color: white !important;
+  font-family: "Fira Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+  text-align: center;
+}
+
+.ctct-form-embed.form_0 .ctct-form-defaults .ctct-form-text,
+.ctct-form-embed.form_0 .ctct-form-custom .ctct-form-label,
+.ctct-form-embed.form_0 .ctct-form-custom .ctct-form-listname,
+.ctct-form-embed.form_0 .ctct-form-custom .ctct-form-lists-legend,
+.ctct-form-embed.form_0 .ctct-form-custom .ctct-form-date-slash,
+.ctct-form-embed.form_0 .ctct-form-defaults .ctct-gdpr-text,
+.ctct-form-embed.form_0 .ctct-form-defaults .ctct-gdpr-text .ctct-form-footer-link,
+.ctct-form-embed.form_0 .ctct-form-defaults .ctct-gdpr-text .ctct-form-footer-privacy-link {
+  font: 400 1.8rem "Fira Sans",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif !important;
+  color: white !important;
+
+}
+
+div.ctct-form-embed div.ctct-form-defaults p.ctct-form-text {
+  text-align: center;
+}
+
+.ctct-form-embed.form_0 .ctct-form-custom .ctct-form-label {
+  font-style: italic !important;
+}
+
+div.ctct-form-embed form.ctct-form-custom input.ctct-form-element {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+div.ctct-form-embed form.ctct-form-custom button.ctct-form-button {
+  border: none !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+}

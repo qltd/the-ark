@@ -1,0 +1,578 @@
+.event-body {}
+
+.event-body-content {
+  padding: 10px 20px;
+  padding: 1rem 2rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-body-content {
+    padding: {
+      right: 40px;
+      right: 4rem;
+      left: 40px;
+      left: 4rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .event-body-paragraph {
+    @include font-details($size: 18px);
+    font-size: 1.8rem;
+  }
+}
+
+.event-date {
+  @include font-details($size: 18px);
+  font-size: 1.8rem;
+
+  margin: 10px 0;
+  margin: 1rem 0;
+  padding: 0 20px;
+  padding: 0 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.event-endorsement {
+  padding: 20px;
+  padding: 2rem;
+  background-color: $teal-light;
+  color: white;
+  text-align: center;
+}
+
+.event-endorsement-body,
+.event-endorsement-source {
+  margin: 0 auto;
+  max-width: 650px;
+  max-width: 65rem;
+}
+
+.event-endorsement-body {
+  @include font-details($size: 18px, $style: italic);
+  font-size: 1.8rem;
+}
+
+.event-endorsement-source {
+  @include font-details($size: 14px);
+  font-size: 1.4rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-endorsement-body {
+    >.event-endorsement-paragraph {
+      @include font-details($size: 18px);
+      font-size: 1.8rem;
+    }
+  }
+
+  .event-endorsement-source {
+    >.event-endorsement-paragraph {
+      @include font-details($size: 14px);
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.event-genre-list {
+  padding: 0 20px;
+  padding: 0 2rem;
+  list-style: none;
+  text-align: center;
+}
+
+.event-genre-item {
+  @include font-details($size: 14px);
+  font-size: 1.4rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-genre-item {
+    display: inline;
+
+    margin: {
+      right: 10px;
+      right: 1rem;
+    }
+
+    border: {
+      right: 1px solid $gray-background;
+    }
+
+    padding: {
+      right: 5px;
+      right: 0.5rem;
+    }
+
+    &:last-child {
+      margin: {
+        right: 0;
+      }
+
+      border: {
+        right: none;
+      }
+
+      padding: {
+        right: 0;
+      }
+    }
+  }
+}
+
+.event-header {
+  .event-header-label {
+    margin: {
+      right: 6px;
+      right: 0.6rem;
+    }
+  }
+
+  .delimiter {
+    margin: {
+      right: 3px;
+      right: 0.3rem;
+    }
+
+    color: $gray-background;
+    letter-spacing: -3px;
+    letter-spacing: -0.3rem;
+  }
+}
+
+.event-images-videos {}
+
+.event-media {}
+
+.event-media-content {
+  padding: 20px 0;
+  padding: 2rem 0;
+}
+
+.event-images-videos {
+  @extend %clearfix;
+
+  padding: 0 20px;
+  padding: 0 2rem;
+
+  .file {
+    margin: 20px auto;
+    margin: 2rem auto;
+    width: 580px;
+    width: 58rem;
+    max-width: 100%;
+  }
+
+  .file-video {
+    margin: {
+      top: 12px;
+      top: 1.2rem;
+      bottom: 12px;
+      bottom: 1.2rem;
+    }
+  }
+}
+
+.event-spotify {
+  overflow: hidden;
+  padding: 0 20px;
+  max-width: 100%;
+
+  .field__item {
+    overflow: hidden;
+    margin: 0 auto;
+
+    border: {
+      radius: 3px;
+      radius: 0.3rem;
+    }
+
+    width: 280px;
+    width: 28rem;
+    height: 80px;
+    height: 8rem;
+  }
+
+  .spotify-player {
+    width: 280px;
+    width: 28rem;
+    height: 80px;
+    height: 8rem;
+  }
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .event-spotify {
+    .field__item {
+      width: 440px;
+      width: 44rem;
+    }
+
+    .spotify-player {
+      width: 440px;
+      width: 44rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-media-content {
+    padding: {
+      top: 0;
+    }
+  }
+
+  .event-images-videos {
+    margin: 0 auto;
+    padding: 0;
+    width: 740px;
+    width: 74rem;
+
+    .file {
+      float: left;
+      margin: 20px;
+      margin: 2rem;
+      width: 330px;
+      width: 33rem;
+      max-height: 208px;
+      max-height: 20.8rem;
+    }
+  }
+
+  .event-spotify {
+    margin: {
+      top: 20px;
+      top: 2rem;
+    }
+
+    .field__item {
+      width: 700px;
+      width: 70rem;
+      height: 780px;
+      height: 78rem;
+    }
+
+    .spotify-player {
+      width: 700px;
+      width: 70rem;
+      height: 780px;
+      height: 78rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .event-media-content {
+    margin: {
+      top: 10px;
+      top: 1rem;
+    }
+  }
+
+  .event-images-videos {
+    .file {
+      float: none;
+      margin: 20px 0;
+      margin: 2rem 0;
+      width: 500px;
+      width: 50rem;
+      max-height: 315px;
+      max-height: 31.5rem;
+    }
+  }
+
+  .event-spotify {
+    margin: 0;
+    padding: 0;
+
+    .field__item {
+      width: 500px;
+      width: 50rem;
+      height: 580px;
+      height: 58rem;
+    }
+
+    .spotify-player {
+      width: 500px;
+      width: 50rem;
+      height: 580px;
+      height: 58rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .event-images-videos {
+    .file {
+      width: 580px;
+      width: 58rem;
+      max-height: 365px;
+      max-height: 36.5rem;
+    }
+  }
+
+  .event-spotify {
+    .field__item {
+      width: 580px;
+      width: 58rem;
+      height: 660px;
+      height: 66rem;
+    }
+
+    .spotify-player {
+      width: 580px;
+      width: 58rem;
+      height: 660px;
+      height: 66rem;
+    }
+  }
+}
+
+.event-navigation {}
+
+.event-navigation-list {
+  margin: 16px 0 24px;
+  margin: 1.6rem 0 2.4rem;
+  padding: 0 20px;
+  padding: 0 2rem;
+  list-style: none;
+  text-align: center;
+}
+
+.event-navigation-link {
+  @extend .button-gray;
+
+  display: block;
+  margin: 0 0 2px;
+  margin: 0 0 0.2rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-navigation-item {
+    display: inline;
+
+    margin: {
+      right: 10px;
+      right: 1rem;
+    }
+
+    border: {
+      right: 1px solid $gray-background;
+    }
+
+    padding: {
+      right: 5px;
+      right: 0.5rem;
+    }
+
+    &:last-child {
+      margin: {
+        right: 0;
+      }
+
+      border: {
+        right: none;
+      }
+
+      padding: {
+        right: 0;
+      }
+    }
+  }
+
+  .event-navigation-link {
+    @include font-details($weight: 400);
+
+    display: inline;
+    padding: 0;
+    background-color: inherit;
+    color: $teal;
+    text-transform: inherit;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .event-navigation-link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.event-opener {
+  padding: 0 20px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.event-social {
+  margin: {
+    top: 30px;
+    top: 3rem;
+  }
+
+  padding: 0 20px 20px;
+  padding: 0 2rem 2rem;
+  text-align: center;
+}
+
+.event-special-guest {
+  padding: 0 20px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.event-sponsors {
+  margin: 30px 20px;
+  margin: 3rem 2rem;
+
+  border: {
+    top: 1px solid $gray-lighter;
+    bottom: 1px solid $gray-lighter;
+  }
+
+  padding: 10px 0 0;
+  padding: 1rem 0 0;
+  text-align: center;
+  color: $gray-background;
+}
+
+.event-sponsors-title {
+  @include font-details($size: 14px, $style: italic);
+  font-size: 1.4rem;
+}
+
+.event-sponsors-list {
+  padding: 0;
+  list-style: none;
+
+  .event-sponsors-list-item {
+    @include font-details($size: 16px, $weight: 700);
+    font-size: 1.6rem;
+    display: inline-block; //letting logos lay next to each other @rdar
+
+    margin: {
+      bottom: 30px;
+      bottom: 3rem;
+      right: 0.5rem;
+    }
+  }
+}
+
+.event-sponsors-sponsor-link {
+  color: $gray-background;
+}
+
+.event-tickets {
+  margin: 20px 0;
+  margin: 2rem 0;
+  padding: 0 20px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.event-tickets-link,
+.event-tickets-link--sold-out {
+  display: block;
+  margin: 0 0 2px;
+  margin: 0 0 0.2rem;
+}
+
+.event-tickets-link {
+  @extend .button;
+}
+
+.event-tickets-link--sold-out {
+  @extend .button-gray;
+  background-color: $gray-lighter;
+}
+
+@include breakpoint($breakpoint-tablet) {
+
+  .event-tickets-link,
+  .event-tickets-link--sold-out {
+    display: inline-block;
+    margin: 0 10px;
+    margin: 0 1rem;
+  }
+}
+
+.event-time-list {
+  padding: 0 20px;
+  padding: 0 2rem;
+  list-style: none;
+  text-align: center;
+}
+
+.event-time-item {
+  @include font-details($size: 14px);
+  font-size: 1.4rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .event-time-item {
+    display: inline;
+
+    margin: {
+      right: 10px;
+      right: 1rem;
+    }
+
+    border: {
+      right: 1px solid $gray-background;
+    }
+
+    padding: {
+      right: 5px;
+      right: 0.5rem;
+    }
+
+    &:last-child {
+      margin: {
+        right: 0;
+      }
+
+      border: {
+        right: none;
+      }
+
+      padding: {
+        right: 0;
+      }
+    }
+  }
+}
+
+.event-title {
+  @extend .content-title;
+
+  margin: {
+    bottom: 10px;
+    bottom: 1rem;
+  }
+
+  .delimiter {
+    margin: {
+      right: 5px;
+      right: 0.5rem;
+    }
+
+    letter-spacing: -5px;
+    letter-spacing: -0.5rem;
+  }
+}
+
+.event-venue {
+  @include font-details($weight: 400, $style: italic);
+
+  margin: 1rem 0;
+  margin: 10px 0;
+  text-align: center;
+}

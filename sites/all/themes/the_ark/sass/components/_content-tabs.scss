@@ -1,0 +1,294 @@
+.homepage-tabs-block {
+  margin: {
+    bottom: 2px;
+    bottom: 0.2rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .homepage-tabs-block {
+    margin: {
+      bottom: 5px;
+      bottom: 0.5rem;
+    }
+  }
+}
+
+.tab-container {}
+
+@include breakpoint($breakpoint-tablet) {
+  .tab-container {
+    display: none;
+
+    padding: {
+      top: 70px;
+      top: 7rem;
+    }
+  }
+
+  .tab-container-active {
+    display: block;
+  }
+}
+
+.tab-content-body-links {
+  @include font-details($size: 14px, $weight: 300);
+  font-size: 1.4rem;
+}
+
+.tab-content-body-link-span {
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:after {
+    content: '|';
+    display: inline;
+    margin: 0 0.5rem 0 1rem;
+    margin: 0 5px 0 10px;
+  }
+
+  &:first-child {
+    margin: {
+      left: 0;
+    }
+
+    &:before {
+      @include font-details($weight: 400, $style: italic);
+
+      content: 'Related Links:';
+      display: block;
+
+      margin: {
+        bottom: 10px;
+        bottom: 1rem;
+      }
+    }
+  }
+
+  &:last-child {
+    margin: {
+      right: 0;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  >a {
+    @include font-details($weight: 400);
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .tab-content-body-links {
+    .homepage-tabs-block & {
+      margin: {
+        left: 55rem;
+        left: 550px;
+      }
+    }
+  }
+}
+
+.tab-content-body-media {}
+
+@include breakpoint($breakpoint-desktop) {
+  .tab-content-body-media {
+    float: left;
+
+    margin: {
+      right: 50px;
+      right: 5rem;
+    }
+
+    max-width: 500px;
+    max-width: 50rem;
+  }
+}
+
+.tab-content-body-primary-link {
+  >a {
+    @extend .button;
+
+    display: inline-block;
+    margin: 1rem 0 3rem;
+    margin: 10px 0 30px;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .tab-content-body-primary-link {
+    .homepage-tabs-block & {
+      margin: {
+        left: 55rem;
+        left: 550px;
+      }
+    }
+  }
+}
+
+.tab-content-body-text {}
+
+@include breakpoint($breakpoint-desktop) {
+  .tab-content-body-text {
+    .homepage-tabs-block & {
+      margin: {
+        left: 55rem;
+        left: 550px;
+      }
+    }
+  }
+}
+
+.tab-content-body {
+  @extend %clearfix;
+
+  margin: 0 auto;
+  padding: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  max-width: 60rem;
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .tab-content-body {
+    padding: {
+      top: 80px;
+      top: 8rem;
+      bottom: 80px;
+      bottom: 8rem;
+    }
+
+    &,
+    p,
+    li {
+      @include font-details($size: 18px);
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .tab-content-body {
+    max-width: 1000px;
+    max-width: 100rem;
+
+    .homepage-tabs-block & {
+      text-align: left;
+    }
+  }
+}
+
+.tab-content {
+  background: {
+    color: $gray-light-background;
+  }
+}
+
+.tab-title {}
+
+@include breakpoint($breakpoint-tablet) {
+  .tab-title {
+    display: none;
+  }
+}
+
+.tab-toggle {
+  @extend .button-gray;
+  @include font-details($size: 16px);
+  font-size: 1.6rem;
+
+  position: relative;
+  z-index: 1;
+  display: block;
+  float: left;
+  border: 2px solid white;
+  padding: 20px 10px;
+  padding: 2rem 1rem;
+  width: 33.33%;
+  text-align: center;
+  text-transform: none;
+}
+
+.tab-toggle-active {
+  background: {
+    color: $teal;
+  }
+
+  &:after {
+    @include transition(border-color $transition-duration ease-out);
+
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -10px;
+    bottom: -1rem;
+    left: 50%;
+
+    margin: {
+      left: -10px;
+      left: -1rem;
+    }
+
+    border: {
+      top: 10px solid $teal;
+      right: 10px solid transparent;
+      left: 10px solid transparent;
+
+      top: {
+        width: 1rem;
+      }
+
+      right: {
+        width: 1rem;
+      }
+
+      left: {
+        width: 1rem;
+      }
+    }
+  }
+
+  &:hover {
+    background: {
+      color: $teal-light;
+    }
+
+    &:after {
+      border: {
+        top: {
+          color: $teal-light;
+        }
+      }
+    }
+  }
+}
+
+.tab-toggles-block {
+  display: none;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .tab-toggles-block {
+    display: block;
+  }
+}
+
+.tab-toggles-item {}
+
+.tab-toggles-view {
+  margin: 0 auto;
+  max-width: 1000px;
+  max-width: 100rem;
+}
+
+.tabs-block {
+  margin: 0 0 80px;
+  margin: 0 0 8rem;
+}
+
+.tabs-item {}
+
+.tabs-view {}

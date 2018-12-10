@@ -1,0 +1,195 @@
+.billboard-body {
+  p {
+    margin: 0;
+    @include font-details(16px, #fff, 100);
+    font-size: 1.6rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .billboard-body {
+    p {
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.content-image {
+  .billboard-link>& {
+    display: block;
+    width: 100%;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .content-image {}
+}
+
+.billboard-item {}
+
+@include breakpoint($breakpoint-tablet) {
+  .billboard-item {
+    overflow: hidden;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .billboard-item {}
+}
+
+.billboard-link {
+  display: block;
+
+  margin: {
+    bottom: 6px;
+    bottom: 0.6rem;
+  }
+
+  position: relative;
+  overflow: hidden;
+
+  .view-about-page-billboards & {
+    margin-bottom: 0;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .billboard-link {}
+}
+
+.billboard-list-item {
+  text-align: left;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .billboard-list-item {
+    margin: 0 2px 10px;
+    margin: 0 0.2rem;
+
+    &:first-child {
+      margin-left: 0;
+
+      margin: {
+        right: 2px;
+        right: 0.2rem;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      margin: {
+        left: 2px;
+        left: 0.2rem;
+      }
+    }
+
+    display: inline-block;
+    width: 250px;
+    width: 25rem;
+    height: 175px;
+    height: 17.5rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .billboard-list-item {
+    width: 334px;
+    width: 33.4rem;
+    height: 232px;
+    height: 23.2rem;
+  }
+}
+
+.billboard-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .billboard-list {
+    text-align: center;
+  }
+}
+
+.billboard-shelf {
+  padding: 25px;
+  padding: 2.5rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $teal;
+  background-color: $teal-mask;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .billboard-shelf {}
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .billboard-shelf {
+    height: auto;
+    bottom: -99px;
+    bottom: -9.9rem;
+    @include transition(transform $transition-duration ease-out);
+
+    .view-about-page-billboards & {
+      //bottom: -40px;
+      //bottom: -4rem;
+    }
+
+    .billboard-link:hover>& {
+      transform: translateY(-99px);
+      transform: translateY(-9.9rem);
+    }
+  }
+}
+
+.billboard-title {
+  margin: 0;
+  @include font-details(14px, #fff, 100, null, italic);
+  font-size: 1.4rem;
+}
+
+.view-about-page-billboards {
+  padding: 0 25px;
+  padding: 0 2.5rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .view-about-page-billboards {
+    padding: 0;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .view-billboards {
+    overflow: hidden;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .home-page-billboards {
+    .first {
+      padding: {
+        right: 3px;
+        right: 0.3rem;
+      }
+
+      width: 50%;
+      float: left;
+    }
+
+    .last {
+      padding: {
+        left: 3px;
+        left: 0.3rem;
+      }
+
+      width: 50%;
+      float: right;
+    }
+  }
+}

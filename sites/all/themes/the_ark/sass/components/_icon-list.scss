@@ -1,0 +1,73 @@
+.icon-item-copy {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+.icon-item-title {
+  font-size: 18px;
+  @include font-details(1.8rem, null, 700);
+}
+
+.icon-list-item {
+  margin: 0;
+  display: inline-block;
+  width: 175px;
+  width: 17.5rem;
+  vertical-align: top;
+  overflow: hidden;
+  text-align: center;
+}
+
+.icon-list {
+  margin: 0 auto;
+  padding-left: 0;
+  text-align: center;
+}
+
+.icon-wrap {
+  margin: {
+    bottom: 15px;
+    bottom: 1.5rem;
+  }
+
+  width: 175px;
+  width: 17.5rem;
+  height: 175px;
+  height: 17.5rem;
+  font-size: 50px;
+  font-size: 5rem;
+  overflow: hidden;
+  line-height: 175px;
+  background-color: $yellow;
+  color: #fff;
+  @include icon-replace();
+}
+
+.heart:before {
+  content: "\f004";
+}
+
+.print-calendar:before {
+  content: "\f073";
+}
+
+.discount:before {
+  content: "\f02b";
+}
+
+.popcorn,
+.beer {
+  @include icon-replace('The Ark');
+}
+
+.popcorn:before {
+  content: "\e602";
+}
+
+.adv-tickets:before {
+  content: "\f145";
+}
+
+.beer:before {
+  content: "\e603";
+}

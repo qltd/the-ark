@@ -1,0 +1,24 @@
+.block-quotes-display {
+  margin: {
+    bottom: 40px;
+    bottom: 4rem;
+  }
+
+  background: $teal;
+}
+
+.quote-paragraph {
+  @include font-details(18px, null, null, null, italic);
+  font-size: 1.8rem;
+}
+
+.quote-source {
+  @include font-details(14px, null, 300);
+}
+
+.quote-wrap {
+  padding: 40px 25px;
+  padding: 4rem 2.5rem;
+  text-align: center;
+  color: #fff;
+}

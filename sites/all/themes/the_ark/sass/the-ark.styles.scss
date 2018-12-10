@@ -51,31 +51,35 @@
 @import "../libraries/susy/sass/susy";
 
 /*--App Dependencies--*/
-@import "variables/**/*";
-@import "abstractions/**/*";
+@import "variables/breakpoint", "variables/colors", "variables/legacy", "variables/navigation", "variables/susy", "variables/transitions";
+@import "abstractions/clearfix", "abstractions/icon-replace", "abstractions/image-replace", "abstractions/typography";
 
 /*------------------------------------*\
     UNIVERSAL STYLES
 \*------------------------------------*/
 
-*, *:before, *:after {
-    @include box-sizing(border-box);
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
 }
 
 /*------------------------------------*\
     BASE STYLES
 \*------------------------------------*/
 
-@import "base/**/*";
+@import "base/body", "base/forms", "base/headings", "base/html", "base/links", "base/lists", "base/media", "base/paragraph", "base/tables";
 
 /*------------------------------------*\
     LAYOUTS
 \*------------------------------------*/
 
-@import "layouts/**/*";
+@import "layouts/calendar", "layouts/event-content", "layouts/node-type-event", "layouts/node-type-page", "layouts/region-content", "layouts/region-footer", "layouts/region-header", "layouts/view-events-calendar";
 
 /*------------------------------------*\
     COMPONENTS
 \*------------------------------------*/
 
-@import "components/**/*";
+@import "components/billboards", "components/block-ark-map", "components/block-corporate-sponsors", "components/block-full-feature", "components/block-main-feature", "components/block-quotes-display", "components/block-related-pages", "components/block-small-feature", "components/breadcrumb", "components/browsehappy", "components/button-close", "components/button-navigation", "components/button-social", "components/button", "components/content-augmented-links", "components/content-calendar", "components/content-columned-text", "components/content-event", "components/content-expandable-details", "components/content-tabs", "components/content-title", "components/document-modal", "components/expander", "components/footer", "components/header-navigation-promo", "components/header", "components/icon-list", "components/icon-replace", "components/image-credit", "components/image-replace", "components/messages", "components/navigation", "components/search-page", "components/sidebar-navigation", "components/special-announcements", "components/tabs-primary", "components/views-exposed-form", "components/webforms", "components/newsletter-signup-form";
+
+//@import "components/billboards", "components/block-ark-map", "components/block-corporate-sponsors", "components/block-full-feature", "components/block-main-feature", "components/block-quotes-display", "components/block-related-pages", "components/block-small-feature", "components/breadcrumb", "components/browsehappy", "components/button-close", "components/button-navigation", "components/button-social", "components/button", "components/content-augmented-links", "components/content-calendar", "components/content-columned-text", "components/content-event", "components/content-expandable-details", "components/content-tabs", "components/content-title", "components/document-modal", "components/expander", "components/footer", "components/header-navigation-promo", "components/header", "components/icon-list", "components/icon-replace", "components/image-credit", "components/image-replace", "components/messages", "components/navigation", "components/search-page", "components/sidebar-navigation", "components/special-announcements", "components/tabs-primary", "components/views-exposed-form", "components/webforms";

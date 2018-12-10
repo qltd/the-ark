@@ -1,0 +1,46 @@
+.corporate-sponsors-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 280px;
+  width: 28rem;
+  height: 125px;
+  height: 12.5rem;
+  overflow: hidden;
+  background-color: $gray-light-background;
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .corporate-sponsors-item {
+    margin: 0 8px 8px;
+  }
+}
+
+.corporate-sponsors-list {
+  margin: 0 auto;
+  padding-left: 0;
+  overflow: hidden;
+  list-style: none;
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .corporate-sponsors-list {
+    max-width: 1200px;
+    max-width: 120rem;
+  }
+}
+
+.sponsor-logo-wrap {
+  line-height: 125px;
+}
+
+.sponsor-name {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-size: 1.8rem;
+}

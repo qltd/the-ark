@@ -1,0 +1,30 @@
+.header-navigation-promo {
+  a {
+    @extend .button;
+    display: block;
+    text-align: center;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .header-navigation-promo {
+    img {
+      margin: {
+        bottom: 15px;
+        bottom: 1.5rem;
+      }
+
+      width: 250px;
+      width: 25rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .header-navigation-promo {
+    margin: {
+      top: 15px;
+      top: 1.5rem;
+    }
+  }
+}

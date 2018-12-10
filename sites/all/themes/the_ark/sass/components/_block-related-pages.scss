@@ -1,0 +1,57 @@
+.block-related-pages {
+  margin: {
+    bottom: 30px;
+    bottom: 3rem;
+  }
+
+  padding: 0 25px;
+  padding: 0 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-related-pages {
+    margin: 30px auto;
+    margin: 3rem auto;
+    max-width: 650px;
+    max-width: 65rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .block-related-pages {
+    max-width: 900px;
+    max-width: 90rem;
+    clear: left;
+  }
+}
+
+.related-pages-links {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 160%;
+
+  &:first-child {
+    &:before {
+      content: 'Related Pages :';
+      display: block;
+
+      margin: {
+        bottom: 10px;
+        bottom: 1rem;
+      }
+
+      font-size: 16px;
+      @include font-details(1.6rem, null, 400, null, italic);
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .related-pages-links {
+    a {
+      white-space: nowrap;
+    }
+  }
+}

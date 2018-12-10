@@ -1,0 +1,112 @@
+.augmented-link-image {}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-image {
+    float: left;
+  }
+}
+
+.augmented-link-link {
+  @extend .button;
+
+  display: inline-block;
+
+  margin: {
+    bottom: 40px;
+    bottom: 4rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-link {
+    margin: {
+      bottom: 0;
+    }
+  }
+}
+
+.augmented-link-text {
+
+  &,
+  &>p {
+    @include font-details($size: 14px, $height: 1.75);
+    font-size: 1.4rem;
+
+    margin: {
+      top: 0;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-text {
+    margin: {
+      left: 300px;
+      left: 30rem;
+    }
+
+    &,
+    &>p {
+      @include font-details($size: 18px, $height: 1.5);
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.augmented-link-title {
+  @include font-details($size: 14px);
+  font-size: 1.4rem;
+
+  margin: {
+    bottom: 0;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-link-title {
+    @include font-details($size: 18px);
+    font-size: 1.8rem;
+
+    margin: {
+      top: 0;
+    }
+  }
+}
+
+.augmented-links-block {
+  margin: 40px 0;
+  margin: 4rem 0;
+}
+
+.augmented-links-item {
+  @extend %clearfix;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-links-item {
+    margin: {
+      bottom: 75px;
+      bottom: 7.5rem;
+    }
+  }
+}
+
+.augmented-links-view {
+  margin: 0 auto;
+  max-width: 280px;
+  max-width: 28rem;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .augmented-links-view {
+    max-width: 700px;
+    max-width: 70rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .augmented-links-view {
+    max-width: 880px;
+    max-width: 88rem;
+  }
+}

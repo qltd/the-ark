@@ -1,0 +1,72 @@
+.page-search {
+  h2 {
+    padding: {
+      left: 25px;
+      left: 2.5rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .page-search {
+    h2 {
+      padding: {
+        left: 0;
+      }
+    }
+  }
+}
+
+.search-form {
+  padding: 0 25px;
+  padding: 0 2.5rem;
+
+  label {
+    margin: {
+      bottom: 10px;
+      bottom: 1rem;
+    }
+  }
+
+  input {
+    margin: {
+      bottom: 30px;
+      bottom: 3rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .search-form {
+    padding: 0;
+  }
+}
+
+.search-result__info {
+  display: none;
+  visibility: hidden;
+}
+
+.search-result__snippet {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.search-result {
+  h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+}
+
+.search-results {
+  padding: 0 25px;
+  padding: 0 2.5rem;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .search-results {
+    padding: 0;
+  }
+}

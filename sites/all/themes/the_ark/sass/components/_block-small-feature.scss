@@ -1,0 +1,118 @@
+.block-small-feature {
+  h3 {
+    margin: 0;
+    padding: 0 25px;
+    padding: 0 2.5rem;
+    @include font-details(14px, #fff, 100, null, italic);
+    font-size: 1.4rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .block-small-feature {
+    h3 {
+      padding: 0 50px;
+      padding: 0 5rem;
+    }
+  }
+}
+
+.block-small-feature {
+  img {
+    margin: {
+      bottom: 25px;
+      bottom: 2.5rem;
+    }
+
+    width: 100%;
+  }
+}
+
+.block-small-feature {
+  p {
+    margin: 0;
+    padding: 0 25px;
+    padding: 0 2.5rem;
+    @include font-details(16px, #fff, 100);
+    font-size: 1.6rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-small-feature {
+    p {
+      height: 48px;
+      height: 4.8rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .block-small-feature {
+    p {
+      height: 27px;
+      height: 2.7rem;
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .block-small-feature {
+    p {
+      padding: 0 50px;
+      padding: 0 5rem;
+    }
+  }
+}
+
+.block-small-feature {
+  margin-bottom: 0.5%;
+
+  margin: {
+    bottom: 5px;
+    bottom: .5rem;
+  }
+
+  background-color: $teal;
+
+  .block__content {
+    padding: {
+      bottom: 25px;
+      bottom: 2.5rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .block-small-feature {
+    margin-bottom: 0.5%;
+  }
+}
+
+//
+// @include breakpoint($breakpoint-desktop) {
+//   .block-small-feature {
+//     margin: {
+//       bottom: 5px;
+//       bottom: 0.5rem;
+//     }
+//   }
+// }
+//
+// @include breakpoint($breakpoint-desktop-wide) {
+//   .block-small-feature {
+//     margin: {
+//       bottom: 8px;
+//       bottom: 0.8rem;
+//     }
+//   }
+// }
+@include breakpoint($breakpoint-tablet) {
+  .small-feature-right {
+    margin-left: 0.25%;
+    width: 49.75%;
+    float: right;
+  }
+}

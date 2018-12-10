@@ -1,0 +1,663 @@
+.calendar-column-date {
+  @include font-details($weight: 300);
+
+  margin: 20px auto 0;
+  margin: 2rem auto 0;
+  width: 160px;
+  width: 16rem;
+  text-transform: uppercase;
+
+  .day-of-month {
+    @include font-details($size: 30px);
+    font-size: 3rem;
+  }
+
+  .day-of-week {
+    @include font-details($size: 18px);
+    font-size: 1.8rem;
+
+    margin: {
+      left: 5px;
+      left: 0.5rem;
+    }
+  }
+
+  .calendar-column-previous-month &,
+  .calendar-column-next-month & {
+    opacity: 0.25;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .calendar-column-date {
+    margin: {
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop $breakpoint-desktop-wide - 0.0625) {
+  .calendar-column-date {
+    width: 115px;
+    width: 11.5rem;
+
+    .day-of-month {
+      @include font-details($size: 24px);
+      font-size: 2.4rem;
+    }
+
+    .day-of-week {
+      @include font-details($size: 14px);
+      font-size: 1.4rem;
+
+      margin: {
+        left: 5px;
+        left: 0.5rem;
+      }
+    }
+  }
+}
+
+.calendar-column {
+  border: {
+    bottom: 1px solid $gray-lighter;
+  }
+
+  &.no-entry,
+  &.empty,
+  &.past-hidden,
+  &.upcoming-hidden {
+    display: none;
+  }
+
+  .item {
+    @extend %clearfix;
+  }
+
+  .events-upcoming-view & {
+    margin: {
+      bottom: 30px;
+      bottom: 3rem;
+    }
+
+    border: {
+      bottom: none;
+    }
+  }
+}
+
+.calendar-column-previous-month,
+.calendar-column-next-month {
+  display: none;
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .calendar-column {
+    .events-upcoming-view & {
+      margin: {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .calendar-column {
+    float: left;
+    margin: 0 5px;
+    margin: 0 0.5rem;
+
+    border: {
+      bottom: none;
+    }
+
+    min-height: 260px;
+    min-height: 26rem;
+
+    &.no-entry,
+    &.empty,
+    &.past-hidden,
+    &.upcoming-hidden {
+      display: block;
+    }
+  }
+
+  .calendar-column-previous-month,
+  .calendar-column-next-month {
+    display: block;
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .calendar-column {
+    min-height: 300px;
+    min-height: 30rem;
+  }
+}
+
+.calendar-day-month {
+  @include font-details($size: 12px, $weight: 300);
+  font-size: 1.2rem;
+}
+
+.calendar-guest-opener {
+  @include font-details($size: 14px, $weight: 300);
+  font-size: 1.4rem;
+
+  .field-content {
+    display: inline;
+  }
+
+  .delimiter {
+    margin: {
+      right: 3px;
+      right: 0.3rem;
+    }
+
+    color: $gray-background;
+    letter-spacing: -3px;
+    letter-spacing: -0.3rem;
+  }
+}
+
+.calendar-header {
+  display: none;
+}
+
+.calendar-image {
+  margin: {
+    bottom: 5px;
+    bottom: 0.5rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet $breakpoint-desktop - 0.0625) {
+  .calendar-image {
+    float: left;
+
+    margin: {
+      right: 30px;
+      right: 3rem;
+      bottom: 70px;
+      bottom: 7rem;
+    }
+  }
+}
+
+.calendar-month {}
+
+.event-link,
+.spotify-link,
+.spotify-no-link,
+.tickets-link,
+.tickets-no-link {
+  @extend .button-gray;
+  @extend .icon-replace;
+  @include font-details($size: 16px, $color: white, $height: 30px);
+  font-size: 1.6rem;
+  line-height: 3rem;
+
+  display: block;
+  float: left;
+
+  margin: {
+    bottom: 5px;
+    bottom: 0.5rem;
+  }
+
+  border: {
+    right: 1px solid $gray-light;
+  }
+
+  border: {
+    right: 1px solid $white-mask;
+  }
+
+  padding: 0;
+  height: 30px;
+  height: 3rem;
+  width: 53px;
+  width: 5.3rem;
+
+  background: {
+    color: $teal;
+  }
+
+  text-align: center;
+
+  &:hover {
+    background: {
+      color: $gold;
+    }
+  }
+}
+
+.spotify-no-link,
+.tickets-no-link,
+.tickets-link-sold-out {
+
+  &,
+  &:hover {
+    background: {
+      color: $gray-lighter;
+    }
+  }
+}
+
+.event-link {
+  &:before {
+    content: "\f05a";
+  }
+}
+
+.spotify-no-link,
+.spotify-link {
+  &:before {
+    content: "\f028";
+  }
+}
+
+.tickets-no-link,
+.tickets-link {
+  border: {
+    right: none;
+  }
+
+  width: 54px;
+  width: 5.4rem;
+
+  &:before {
+    content: "\f145";
+  }
+}
+
+@include breakpoint($breakpoint-tablet $breakpoint-desktop - 0.0625) {
+
+  .event-link,
+  .spotify-link,
+  .spotify-no-link,
+  .tickets-link,
+  .tickets-no-link {
+    position: absolute;
+
+    margin: {
+      top: 140px;
+      top: 14rem;
+    }
+  }
+
+  .spotify-link,
+  .spotify-no-link {
+    margin: {
+      left: 53px;
+      left: 5.3rem;
+    }
+  }
+
+  .tickets-no-link,
+  .tickets-link {
+    margin: {
+      left: 106px;
+      left: 10.6rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop $breakpoint-desktop-wide - 0.0625) {
+
+  .event-link,
+  .spotify-link,
+  .spotify-no-link {
+    width: 38px;
+    width: 3.8rem;
+  }
+
+  .tickets-link,
+  .tickets-no-link {
+    width: 39px;
+    width: 3.9rem;
+  }
+}
+
+.calendar-row {
+  @extend %clearfix;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .calendar-row {
+    margin: 0 auto;
+    max-width: 875px;
+    max-width: 87.5rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .calendar-row {
+    max-width: 1190px;
+    max-width: 119rem;
+  }
+}
+
+.calendar-time-price {
+  @include font-details($size: 12px, $weight: 300);
+  font-size: 1.2rem;
+}
+
+.calendar-title-display {
+  @include font-details($weight: 700);
+
+  margin: {
+    top: 5px;
+    top: 0.5rem;
+  }
+
+  .delimiter {
+    margin: {
+      right: 2px;
+      right: 0.2rem;
+    }
+
+    color: $gray-background;
+    letter-spacing: -2px;
+    letter-spacing: -0.2rem;
+  }
+}
+
+.calendar-venue {
+  @include font-details($style: italic);
+}
+
+.date-nav-wrapper {
+  border: {
+    bottom: 1px solid $gray-lighter;
+  }
+
+  padding: 30px 0;
+  padding: 3rem 0;
+}
+
+.date-nav {
+  height: 50px;
+  height: 5rem;
+
+  .pager {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 320px;
+    max-width: 32rem;
+    list-style: none;
+  }
+}
+
+.date-prev,
+.date-next {
+  a {
+    @include icon-replace();
+    @include font-details($size: 30px);
+    font-size: 3rem;
+
+    margin: {
+      top: 10px;
+      top: 1rem;
+    }
+
+    height: 30px;
+    height: 3rem;
+    width: 30px;
+    width: 3rem;
+
+    &:hover {
+      text-decoration: none;
+      color: $gold;
+    }
+  }
+}
+
+.date-prev {
+  a {
+    float: left;
+
+    margin: {
+      left: 10px;
+      left: 1rem;
+    }
+
+    &:before {
+      content: "\f0a8";
+    }
+  }
+}
+
+.date-next {
+  a {
+    float: right;
+
+    margin: {
+      right: 10px;
+      right: 1rem;
+    }
+
+    &:before {
+      content: "\f0a9";
+    }
+  }
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .date-nav {
+    height: 60px;
+    height: 6rem;
+
+    .pager {
+      max-width: 480px;
+      max-width: 48rem;
+    }
+  }
+
+  .date-prev,
+  .date-next {
+    a {
+      margin: {
+        top: 12px;
+        top: 1.2rem;
+      }
+    }
+  }
+}
+
+.date-heading {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+
+  margin: {
+    top: 5px;
+    top: 0.5rem;
+  }
+
+  width: 100%;
+  text-align: center;
+
+  h3 {
+    @include font-details($size: 30px, $weight: 300);
+    font-size: 3rem;
+
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}
+
+@include breakpoint($breakpoint-mobile-wide) {
+  .date-heading {
+    margin: {
+      top: 0;
+    }
+
+    h3 {
+      @include font-details($size: 38px);
+      font-size: 3.8rem;
+    }
+  }
+}
+
+.events-upcoming-block {
+  margin: {
+    top: 20px;
+    top: 2rem;
+  }
+}
+
+.events-upcoming-title {
+  margin: {
+    top: 0;
+    bottom: 15px;
+    bottom: 1.5rem;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .events-upcoming-title {
+    margin: 0;
+    float: left;
+  }
+}
+
+.events-upcoming-view-calendar-link {
+  border: 1px solid $teal;
+  padding: 5px 20px;
+  padding: 0.5rem 2rem;
+
+  &:before {
+    @include FontAwesome();
+
+    content: '\f073';
+
+    margin: {
+      right: 10px;
+      right: 1rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .events-upcoming-view-calendar-link {
+    float: right;
+
+    margin: {
+      top: 10px;
+      top: 1rem;
+    }
+
+    border: none;
+    padding: 0;
+  }
+}
+
+.events-upcoming-view {
+  &>.view-header {
+    @extend %clearfix;
+
+    margin: {
+      bottom: 40px;
+      bottom: 4rem;
+    }
+
+    padding: 0 20px;
+    padding: 0 2rem;
+    text-align: center;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .events-upcoming-view {
+    &>.view-header {
+      margin: {
+        bottom: 30px;
+        bottom: 3rem;
+      }
+
+      padding: 0;
+      text-align: left;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .events-upcoming-view {
+    padding: 0;
+
+    &>.view-header {
+      margin: {
+        right: auto;
+        left: auto;
+      }
+
+      padding: 0 20px;
+      padding: 0 2rem;
+      max-width: 1000px;
+      max-width: 100rem;
+    }
+
+    &>.view-content {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 875px;
+      max-width: 87.5rem;
+    }
+  }
+}
+
+@include breakpoint($breakpoint-desktop-wide) {
+  .events-upcoming-view {
+    &>.view-header {
+      padding: 0;
+      max-width: 1190px;
+      max-width: 119rem;
+    }
+
+    &>.view-content {
+      max-width: 1190px;
+      max-width: 119rem;
+    }
+  }
+}
+
+.show-past-toggle-container {
+  padding: {
+    top: 10px;
+    top: 1rem;
+  }
+
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .show-past-toggle-container {
+    display: none;
+  }
+}
+
+.show-past-toggle {
+  @include font-details($weight: 700);
+
+  cursor: pointer;
+}
+
+.show-upcoming-toggle-container {
+  text-align: center;
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .show-upcoming-toggle-container {
+    display: none;
+  }
+}
+
+.show-upcoming-toggle {
+  @include font-details($weight: 700);
+
+  cursor: pointer;
+}
