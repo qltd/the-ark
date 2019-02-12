@@ -81,5 +81,15 @@
   <script> var _ctct_m = "a8def21768b52718cd2a0a2a7871e448"; </script>
   <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
   <!-- End Constant Contact Active Forms -->
+  <script> 
+    var $buoop = {required:{e:-2,f:-6,o:-6,s:-6,c:-6},insecure:true,api:2019.02 }; 
+    function $buo_f(){ 
+    var e = document.createElement("script"); 
+    e.src = "//browser-update.org/update.min.js"; 
+    document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+  </script>
 </body>
 </html>
