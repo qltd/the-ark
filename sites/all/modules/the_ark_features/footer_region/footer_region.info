@@ -10,7 +10,6 @@ dependencies[] = ctools
 dependencies[] = fe_block
 dependencies[] = features
 dependencies[] = menu
-dependencies[] = the_ark_constant_contact
 dependencies[] = views
 features[context][] = footer
 features[ctools][] = context:context:3
