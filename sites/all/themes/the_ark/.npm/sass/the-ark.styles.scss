@@ -58,7 +58,9 @@
     UNIVERSAL STYLES
 \*------------------------------------*/
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   @include box-sizing(border-box);
 }
 

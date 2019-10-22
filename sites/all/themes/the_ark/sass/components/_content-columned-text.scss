@@ -7,6 +7,20 @@
   .columned-text-block {
     overflow: hidden;
 
+    .columned-left {
+      max-width: 100%;
+    }
+
+    .columned-right {
+      max-width: 100%;
+
+      p {
+        margin-top: 0;
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+    }
+
     .page-node-5 &,
     .page-node-97 &,
     .page-node-98 &,
@@ -24,10 +38,21 @@
       max-width: none;
     }
   }
+
+  .columned-left {
+    max-width: 48%;
+    margin-right: 2%;
+    float: left;
+  }
+
+  .columned-right {
+    float: right;
+    max-width: 46%;
+    margin-left: 2%;
+  }
 }
 
 .columned-text-item {
-
   p,
   ul,
   h1,
@@ -53,7 +78,6 @@
 
 @include breakpoint($breakpoint-tablet) {
   .columned-text-item {
-
     &,
     p,
     li {
@@ -75,7 +99,7 @@
     -moz-column-gap: 4rem;
     column-gap: 4rem;
 
-    &>.title-content-pair {
+    & > .title-content-pair {
       display: inline-block;
       page-break-inside: avoid;
       -webkit-column-break-inside: avoid;
