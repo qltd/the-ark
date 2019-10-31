@@ -3,6 +3,16 @@
   margin: 4rem 0;
 }
 
+.columned-left,
+.columned-right {
+  max-width: 100%;
+
+  p {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+
 @include breakpoint($breakpoint-desktop) {
   .columned-text-block {
     overflow: hidden;
@@ -24,10 +34,21 @@
       max-width: none;
     }
   }
+
+  .columned-left {
+    max-width: 48%;
+    margin-right: 2%;
+    float: left;
+  }
+
+  .columned-right {
+    float: right;
+    max-width: 48%;
+    margin-left: 2%;
+  }
 }
 
 .columned-text-item {
-
   p,
   ul,
   h1,
@@ -53,7 +74,6 @@
 
 @include breakpoint($breakpoint-tablet) {
   .columned-text-item {
-
     &,
     p,
     li {
@@ -75,7 +95,7 @@
     -moz-column-gap: 4rem;
     column-gap: 4rem;
 
-    &>.title-content-pair {
+    & > .title-content-pair {
       display: inline-block;
       page-break-inside: avoid;
       -webkit-column-break-inside: avoid;
