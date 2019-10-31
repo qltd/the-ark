@@ -3,23 +3,19 @@
   margin: 4rem 0;
 }
 
+.columned-left,
+.columned-right {
+  max-width: 100%;
+
+  p {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+
 @include breakpoint($breakpoint-desktop) {
   .columned-text-block {
     overflow: hidden;
-
-    .columned-left {
-      max-width: 100%;
-    }
-
-    .columned-right {
-      max-width: 100%;
-
-      p {
-        margin-top: 0;
-        font-size: 18px;
-        font-size: 1.8rem;
-      }
-    }
 
     .page-node-5 &,
     .page-node-97 &,
@@ -47,7 +43,7 @@
 
   .columned-right {
     float: right;
-    max-width: 46%;
+    max-width: 48%;
     margin-left: 2%;
   }
 }
