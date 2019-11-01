@@ -356,6 +356,7 @@
       </section>
     <?php endif; ?>
 
+    <?php /* 
     <div class="event-social">
       <a class="event-social-button button-social facebook-share"
         href="<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
@@ -368,7 +369,14 @@
       <a class="event-social-button button-social twitter-tweet"
         href="https://twitter.com/share?url=<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
         role="button">Tweet</a>
-    </div>
+    </div> */ ?>
+
+    <div class="event-social">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>" role="button" target="_blank" rel="noopener noreferrer" data-network="facebook" class="event-social-button button-social facebook-share">Share</a>
+        <a class="event-social-button button-social twitter-tweet"
+            href="https://twitter.com/share?url=<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
+            role="button" target="_blank" rel="noopener noreferrer">Tweet</a>
+        </div>
 
   </div>
 <!-- related artists/events -->

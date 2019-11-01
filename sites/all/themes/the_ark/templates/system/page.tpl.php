@@ -102,21 +102,13 @@
       <?php print render($page['content']); ?>
       <?php // print $feed_icons; ?>
        
-
-    <?php if ($node->nid == '3573'): ?>
-      <div class="event-social">
-        <a class="event-social-button button-social facebook-share"
-            href="<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
-            role="button"
-            <?php if (isset($content['body'][0]['#markup']))
-            print 'data-description="' . strip_tags(text_summary($content['body'][0]['#markup'], null, 300)) . '"'; ?>
-            <?php if (isset($content['field_image']['#items'][0]['uri']))
-            print 'data-image="' . file_create_url($content['field_image']['#items'][0]['uri']) . '"'; ?>
-            data-title="<?php print $title; ?>">Share</a>
-        <a class="event-social-button button-social twitter-tweet"
-            href="https://twitter.com/share?url=<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
-            role="button">Tweet</a>
-        </div>
+        <?php if ($node->type === 'page'): //3573 ?>
+            <div class="event-social">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>" role="button" target="_blank" rel="noopener noreferrer" data-network="facebook" class="event-social-button button-social facebook-share">Share</a>
+                <a class="event-social-button button-social twitter-tweet"
+                href="https://twitter.com/share?url=<?php print $GLOBALS['base_url'] . '/' . request_path(); ?>"
+                role="button" target="_blank" rel="noopener noreferrer">Tweet</a>
+            </div>
         <?php endif; ?>
     
     
