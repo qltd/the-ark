@@ -23,7 +23,7 @@
  */
 ?>
 <?php if (!empty($output)): ?>
-  <?php $spotify_link = 'http://open.spotify.com/' . str_replace(':', '/', str_replace('spotify:', '', $output)); ?>
+  <?php $spotify_link = 'https://open.spotify.com/' . str_replace(':', '/', str_replace('spotify:', '', $output)); ?>
   <?php print l(t('Spotify'), $spotify_link , array(
     'attributes' => array(
       'class' => array(
