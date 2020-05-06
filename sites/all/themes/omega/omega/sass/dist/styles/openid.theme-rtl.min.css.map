@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,4BAA4B,CAAC,KAAK,AAAC,CACjC,YAAY,CAAE,CAAC,CACf,aAAa,CAAE,IAAI,CACnB,mBAAmB,CAAE,SAAS,CAC/B,AAED,AAAA,aAAa,CAAC,CAAC,AAAC,CACd,OAAO,CAAE,WAAW,CACpB,mBAAmB,CAAE,SAAS,CAC/B",
+    "sources": [
+        "../../modules/openid/openid.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "openid.theme-rtl.min.css"
+}

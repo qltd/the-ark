@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACKA,AAAA,KAAK,AAAC,CACJ,UAAU,CAAE,KAAK,CAMlB,AAPD,AAIE,KAJG,CAIH,UAAU,AAAC,CACT,gBAAgB,CAAE,wCAAwC,CAC3D,ACNH,AACE,EADA,AAAA,OAAO,CACP,EAAE,AAAC,CACD,KAAK,CAAE,KAAK,CACZ,YAAY,CAAE,CAAC,CACf,WAAW,CAAE,GAAG,CACjB",
+    "sources": [
+        "../../modules/system/system.menus.theme-rtl.scss",
+        "../../modules/system/menus/_menutree.theme-rtl.scss",
+        "../../modules/system/menus/_links.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "system.menus.theme-rtl.min.css"
+}

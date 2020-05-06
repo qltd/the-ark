@@ -43,16 +43,17 @@
  *
  * @ingroup themeable
  */
+$spotify_id = explode(':', render($items));
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if (!$label_hidden): ?>
     <div class="field__label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
   <?php endif; ?>
   <div class="field__items"<?php print $content_attributes; ?>>
-    <?php foreach ($items as $delta => $item): ?>
+    <?php //foreach ($items as $delta => $item): print_r($item); ?>
       <div class="field__item <?php print $delta % 2 ? 'odd' : 'even'; ?>"<?php print $item_attributes[$delta]; ?>>
-        <iframe class="spotify-player" src="https://embed.spotify.com/?uri=<?php print render($item); ?>" width="580" height="660" frameborder="0" allowtransparency="true"></iframe>
+        <iframe class="spotify-player" src="https://open.spotify.com/embed/<?php print $spotify_id[1]; ?>/<?php print $spotify_id[2]; ?>" width="580" height="660" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
-    <?php endforeach; ?>
+    <?php //endforeach; ?>
   </div>
 </div>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAEE,kBAFgB,CAEhB,QAAQ,CAAC,YAAY,AAAC,CACpB,KAAK,CAAE,KAAK,CACb",
+    "sources": [
+        "../../modules/field_ui/field_ui.admin-rtl.scss"
+    ],
+    "names": [],
+    "file": "field_ui.admin-rtl.min.css"
+}

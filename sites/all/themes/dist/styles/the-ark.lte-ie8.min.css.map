@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../the_ark/sass/the-ark.lte-ie8.scss"
+    ],
+    "names": [],
+    "file": "the-ark.lte-ie8.min.css"
+}

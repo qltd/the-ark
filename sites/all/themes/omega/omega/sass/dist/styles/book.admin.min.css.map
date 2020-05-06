@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,GAAG,CAAC,kBAAkB,CAAC,YAAY,AAAC,CAClC,OAAO,CAAE,IAAI,CACd,AAID,AAAA,gBAAgB,CAAC,MAAM,AAAC,CACtB,YAAY,CAAE,IAAI,CACnB,AACD,AAAA,gBAAgB,CAAC,kBAAkB,AAAC,CAClC,YAAY,CAAE,CAAC,CAChB,AACD,AAAA,gBAAgB,CAAC,iBAAiB,AAAC,CACjC,gBAAgB,CAAE,IAAI,CACvB,AACD,AAAA,gBAAgB,CAAC,UAAU,AAAC,CAC1B,KAAK,CAAE,IAAI,CACZ",
+    "sources": [
+        "../../modules/book/book.admin.scss"
+    ],
+    "names": [],
+    "file": "book.admin.min.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,WAAW,AAAC,CACV,KAAK,CAAE,KAAK,CACZ,WAAW,CAAE,CAAC,CACd,YAAY,CAAE,KAAK,CACpB",
+    "sources": [
+        "../../modules/forum/forum.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "forum.theme-rtl.min.css"
+}

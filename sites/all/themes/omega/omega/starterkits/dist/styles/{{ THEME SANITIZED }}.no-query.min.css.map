@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../default/sass/{{ THEME SANITIZED }}.no-query.scss",
+        "../../default/sass/{{ THEME SANITIZED }}.styles.scss"
+    ],
+    "names": [],
+    "file": "{{ THEME SANITIZED }}.no-query.min.css"
+}

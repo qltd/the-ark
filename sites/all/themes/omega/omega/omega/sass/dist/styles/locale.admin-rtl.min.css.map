@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AACE,+BAD6B,CAC7B,mBAAmB,CADrB,+BAA+B,CAE7B,sBAAsB,CAFxB,+BAA+B,CAG7B,gBAAgB,AAAC,CACf,KAAK,CAAE,KAAK,CACZ,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,CAAC,CACjB,AAPH,AAQE,+BAR6B,CAQ7B,aAAa,AAAC,CACZ,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,WAAW,CACrB",
+    "sources": [
+        "../../modules/locale/locale.admin-rtl.scss"
+    ],
+    "names": [],
+    "file": "locale.admin-rtl.min.css"
+}

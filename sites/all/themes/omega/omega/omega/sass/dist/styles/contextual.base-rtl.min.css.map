@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAAA,yBAAyB,AAAC,CACxB,IAAI,CAAE,GAAG,CACT,KAAK,CAAE,IAAI,CACZ,AACD,AAAA,yBAAyB,AAAC,CACxB,UAAU,CAAE,IAAI,CACjB",
+    "sources": [
+        "../../modules/contextual/contextual.base-rtl.scss"
+    ],
+    "names": [],
+    "file": "contextual.base-rtl.min.css"
+}

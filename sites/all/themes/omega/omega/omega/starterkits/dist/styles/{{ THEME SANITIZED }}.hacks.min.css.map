@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,MAAM,CAAC,GAAG,MAAM,SAAS,EAAE,KAAK,EAC9B,AAAA,QAAQ,CAAE,WAAW,AAAC,CACpB,OAAO,CAAE,IAAI,CACd,AAED,AACE,IADE,CACF,IAAI,AAAA,QAAQ,CADd,IAAI,CACY,IAAI,AAAA,WAAW,AAAC,CAC5B,WAAW,CAAE,YAAY,CACzB,UAAU,CAAE,YAAY,CACzB",
+    "sources": [
+        "../../dusty/sass/{{ THEME SANITIZED }}.hacks.scss"
+    ],
+    "names": [],
+    "file": "{{ THEME SANITIZED }}.hacks.min.css"
+}

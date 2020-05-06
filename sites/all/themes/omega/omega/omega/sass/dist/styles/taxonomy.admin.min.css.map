@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,0BAA0B,AAAC,CACzB,aAAa,CAAE,IAAI,CACpB,AACD,AAAA,6BAA6B,AAAC,CAC5B,UAAU,CAAE,eAAe,CAC5B",
+    "sources": [
+        "../../modules/taxonomy/taxonomy.admin.scss"
+    ],
+    "names": [],
+    "file": "taxonomy.admin.min.css"
+}

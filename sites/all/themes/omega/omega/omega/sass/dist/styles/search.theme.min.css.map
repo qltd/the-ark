@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAAA,uBAAuB,AAAC,CACtB,YAAY,CAAE,GAAG,CAClB,AACD,AAAA,oBAAoB,AAAC,CACnB,SAAS,CAAE,MAAM,CAClB,AAKD,AACE,gBADc,CACd,UAAU,AAAC,CACT,KAAK,CAAE,IAAI,CACX,YAAY,CAAE,GAAG,CAClB,AAJH,AAKE,gBALc,CAKd,OAAO,AAAC,CACN,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,IAAI,CACZ",
+    "sources": [
+        "../../modules/search/search.theme.scss"
+    ],
+    "names": [],
+    "file": "search.theme.min.css"
+}

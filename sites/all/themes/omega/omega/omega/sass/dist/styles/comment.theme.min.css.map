@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,SAAS,AAAC,CACR,WAAW,CAAE,IAAI,CAClB",
+    "sources": [
+        "../../modules/comment/comment.theme.scss"
+    ],
+    "names": [],
+    "file": "comment.theme.min.css"
+}

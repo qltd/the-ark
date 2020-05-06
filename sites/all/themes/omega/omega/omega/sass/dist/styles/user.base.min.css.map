@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,GAAG,AAAA,iBAAiB,AAAC,CACnB,UAAU,CAAE,MAAM,CACnB",
+    "sources": [
+        "../../modules/user/user.base.scss"
+    ],
+    "names": [],
+    "file": "user.base.min.css"
+}

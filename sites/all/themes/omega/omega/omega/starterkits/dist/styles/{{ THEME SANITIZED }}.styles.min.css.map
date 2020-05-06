@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../default/sass/{{ THEME SANITIZED }}.styles.scss"
+    ],
+    "names": [],
+    "file": "{{ THEME SANITIZED }}.styles.min.css"
+}
