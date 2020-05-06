@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AACE,uBADqB,CACrB,WAAW,AAAC,CACV,YAAY,CAAE,CAAC,CACf,aAAa,CAAE,KAAK,CACrB,AASH,AACE,iBADe,CACf,eAAe,AAAC,CACd,KAAK,CAAE,KAAK,CACZ,WAAW,CAAE,GAAG,CAChB,YAAY,CAAE,CAAC,CAChB",
+    "sources": [
+        "../../modules/user/user.admin-rtl.scss"
+    ],
+    "names": [],
+    "file": "user.admin-rtl.min.css"
+}

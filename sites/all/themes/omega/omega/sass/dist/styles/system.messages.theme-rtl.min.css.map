@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,SAAS,AAAC,CACR,OAAO,CAAE,mBAAmB,CAC5B,mBAAmB,CAAE,OAAO,CAK7B,AAPD,AAIE,SAJO,CAIP,EAAE,AAAC,CACD,MAAM,CAAE,SAAS,CAClB",
+    "sources": [
+        "../../modules/system/system.messages.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "system.messages.theme-rtl.min.css"
+}

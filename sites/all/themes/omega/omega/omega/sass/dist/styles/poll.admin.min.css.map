@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AACE,kBADgB,CAChB,UAAU,AAAC,CACT,OAAO,CAAE,MAAM,CACf,KAAK,CAAE,IAAI,CACZ,AAJH,AAKE,kBALgB,CAKhB,YAAY,AAAC,CACX,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,GAAG,CACX",
+    "sources": [
+        "../../modules/poll/poll.admin.scss"
+    ],
+    "names": [],
+    "file": "poll.admin.min.css"
+}

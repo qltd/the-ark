@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,eAAe,CAAC,WAAW,AAAC,CAC1B,KAAK,CAAE,KAAK,CACb,AACD,AAAA,gBAAgB,AAAC,CACf,UAAU,CAAE,KAAK,CAClB,AACD,AAAA,mBAAmB,AAAC,CAClB,UAAU,CAAE,IAAI,CACjB",
+    "sources": [
+        "../../modules/poll/poll.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "poll.theme-rtl.min.css"
+}

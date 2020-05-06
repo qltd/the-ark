@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAAA,uBAAuB,AAAC,CACtB,YAAY,CAAE,CAAC,CACf,aAAa,CAAE,GAAG,CACnB,AAKD,AACE,gBADc,CACd,UAAU,AAAC,CACT,KAAK,CAAE,KAAK,CACZ,YAAY,CAAE,CAAC,CACf,WAAW,CAAE,GAAG,CACjB,AALH,AAME,gBANc,CAMd,OAAO,AAAC,CACN,KAAK,CAAE,KAAK,CACZ,KAAK,CAAE,KAAK,CACb",
+    "sources": [
+        "../../modules/search/search.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "search.theme-rtl.min.css"
+}

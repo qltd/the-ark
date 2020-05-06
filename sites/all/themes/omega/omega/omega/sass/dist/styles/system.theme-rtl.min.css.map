@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACMA,AAAA,EAAE,AAAC,CACD,YAAY,CAAE,GAAG,CACjB,aAAa,CAAE,CAAC,CAChB,UAAU,CAAE,KAAK,CAClB,ACHD,AAAA,IAAI,AAAA,GAAG,CAAC,QAAQ,AAAA,YAAY,CAAC,gBAAgB,AAAC,CAC5C,YAAY,CAAE,CAAC,CACf,aAAa,CAAE,IAAI,CACnB,mBAAmB,CAAE,OAAO,CAC7B,AACD,AAAA,IAAI,AAAA,GAAG,CAAC,QAAQ,AAAA,UAAU,CAAC,gBAAgB,AAAC,CAC1C,gBAAgB,CAAE,wCAAwC,CAC1D,mBAAmB,CAAE,OAAO,CAC7B,ACVD,AAAA,UAAU,AAAC,CACT,UAAU,CAAE,IAAI,CACjB",
+    "sources": [
+        "../../modules/system/system.theme-rtl.scss",
+        "../../modules/system/elements/_elements.theme-rtl.scss",
+        "../../modules/system/collapsible/_collapsible.theme-rtl.scss",
+        "../../modules/system/morelink/_morelink.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "system.theme-rtl.min.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,0BAA0B,AAAC,CACzB,KAAK,CAAE,KAAK,CACZ,UAAU,CAAE,KAAK,CAClB,AACD,AAAA,oBAAoB,AAAC,CACnB,KAAK,CAAE,KAAK,CACb,AACD,AAAA,sBAAsB,AAAC,CACrB,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,IAAI,CACjB",
+    "sources": [
+        "../../modules/book/book.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "book.theme-rtl.min.css"
+}

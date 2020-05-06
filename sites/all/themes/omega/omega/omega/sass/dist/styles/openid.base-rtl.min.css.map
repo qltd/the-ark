@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,IAAI,AAAA,GAAG,CAAC,gBAAgB,CAAC,YAAY,CACrC,IAAI,AAAA,GAAG,CAAC,WAAW,CAAC,YAAY,AAAC,CAC/B,YAAY,CAAE,CAAC,CAChB",
+    "sources": [
+        "../../modules/openid/openid.base-rtl.scss"
+    ],
+    "names": [],
+    "file": "openid.base-rtl.min.css"
+}

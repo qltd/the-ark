@@ -364,6 +364,21 @@
   }
 }
 
+.virtual-concert-badge {
+    background: #f8903b;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+    font-weight: 300;
+    color: white;
+    font-size: 1.4rem;
+}
+
+
 .calendar-venue {
   @include font-details($style: italic);
 }

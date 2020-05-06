@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAQA,AAAA,cAAc,AAAC,CACb,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,aAAa,CACvB,AACD,AAAA,kBAAkB,AAAC,CACjB,KAAK,CAAE,KAAK,CACb",
+    "sources": [
+        "../../modules/image/image.theme-rtl.scss"
+    ],
+    "names": [],
+    "file": "image.theme-rtl.min.css"
+}

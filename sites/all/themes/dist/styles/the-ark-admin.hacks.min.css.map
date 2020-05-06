@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAgCA,AACE,IADE,AACD,eAAe,AAAC,CAEb,UAAG,CAAE,eAAe,CAEvB,AAIH,MAAM,CAAC,GAAG,MAAM,SAAS,EAAE,MAAM,EAC/B,AACE,IADE,AACD,eAAe,AAAC,CAEb,UAAG,CAAE,YAAY,CAEpB,AAGH,AAAA,QAAQ,CAAE,WAAW,AAAC,CACpB,OAAO,CAAE,IAAI,CACd",
+    "sources": [
+        "../../the_ark_admin/sass/the-ark-admin.hacks.scss"
+    ],
+    "names": [],
+    "file": "the-ark-admin.hacks.min.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AACE,aADW,CACX,aAAa,AAAC,CACZ,WAAW,CAAE,IAAI,CAClB,AAHH,AAIE,aAJW,CAIX,eAAe,AAAC,CACd,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,IAAI,CACZ,AAPH,AAQE,aARW,CAQX,iBAAiB,AAAC,CAChB,OAAO,CAAE,IAAI,CACd",
+    "sources": [
+        "../../modules/block/block.admin.scss"
+    ],
+    "names": [],
+    "file": "block.admin.min.css"
+}

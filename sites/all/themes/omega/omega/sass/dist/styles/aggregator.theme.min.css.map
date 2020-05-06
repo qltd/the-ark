@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAKA,AAAA,YAAY,CAAC,UAAU,AAAC,CACtB,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,KAAK,CACf",
+    "sources": [
+        "../../modules/aggregator/aggregator.theme.scss"
+    ],
+    "names": [],
+    "file": "aggregator.theme.min.css"
+}
