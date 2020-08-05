@@ -140,7 +140,8 @@
         isset($content['field_ticket_url']['#items'][0]['url']) &&
         strpos($content['field_ticket_url']['#items'][0]['url'], 'null') === false &&
         isset($content['field_date']['#items'][0]['value']) &&
-        strtotime($content['field_date']['#items'][0]['value'] . ' UTC') >= time()
+        (strtotime($content['field_date']['#items'][0]['value'] . ' UTC') >= time() ||
+       isset($content['field_virtual_family_room_series']))
       ): ?>
         <div class="event-tickets">
         <?php foreach ($content['field_ticket_url']['#items'] as $key => $item): ?>
